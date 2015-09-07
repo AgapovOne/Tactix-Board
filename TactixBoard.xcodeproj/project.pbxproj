@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		263CB67A74092E93A75EF854 /* Pods_TactixBoard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F686BD448C514F2B0ECE080 /* Pods_TactixBoard.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		8DA4E1811B9AD9B800001794 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1801B9AD9B800001794 /* AppDelegate.swift */; };
-		8DA4E1831B9AD9B800001794 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1821B9AD9B800001794 /* ViewController.swift */; };
 		8DA4E1861B9AD9B800001794 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DA4E1841B9AD9B800001794 /* Main.storyboard */; };
 		8DA4E1881B9AD9B800001794 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DA4E1871B9AD9B800001794 /* Images.xcassets */; };
 		8DA4E18B1B9AD9B800001794 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DA4E1891B9AD9B800001794 /* LaunchScreen.xib */; };
 		8DA4E1971B9AD9B800001794 /* TactixBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1961B9AD9B800001794 /* TactixBoardTests.swift */; };
 		8DA4E1A31B9B35DD00001794 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1A21B9B35DD00001794 /* Views.swift */; };
+		8DA4E1A81B9E11AB00001794 /* BoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1A71B9E11AB00001794 /* BoardVC.swift */; };
+		8DA4E1AA1B9E13D900001794 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1A91B9E13D900001794 /* Buttons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,14 +34,15 @@
 		8DA4E17B1B9AD9B800001794 /* TactixBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TactixBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA4E17F1B9AD9B800001794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DA4E1801B9AD9B800001794 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8DA4E1821B9AD9B800001794 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8DA4E1851B9AD9B800001794 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8DA4E1871B9AD9B800001794 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8DA4E18A1B9AD9B800001794 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8DA4E1901B9AD9B800001794 /* TactixBoardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TactixBoardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA4E1951B9AD9B800001794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DA4E1961B9AD9B800001794 /* TactixBoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TactixBoardTests.swift; sourceTree = "<group>"; };
-		8DA4E1A21B9B35DD00001794 /* Views.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
+		8DA4E1A21B9B35DD00001794 /* Views.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Views.swift; path = Libraries/Classes/Views.swift; sourceTree = "<group>"; };
+		8DA4E1A71B9E11AB00001794 /* BoardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardVC.swift; sourceTree = "<group>"; };
+		8DA4E1A91B9E13D900001794 /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Buttons.swift; path = Libraries/Classes/Buttons.swift; sourceTree = "<group>"; };
 		8F7D55C6B5735053A530757B /* Pods-TactixBoard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TactixBoard.release.xcconfig"; path = "Pods/Target Support Files/Pods-TactixBoard/Pods-TactixBoard.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,8 +76,9 @@
 		8DA4E1721B9AD9B800001794 = {
 			isa = PBXGroup;
 			children = (
-				8DA4E1A01B9B35C700001794 /* Libraries */,
 				8DA4E17D1B9AD9B800001794 /* TactixBoard */,
+				8DA4E1A61B9E114500001794 /* Views */,
+				8DA4E1A01B9B35C700001794 /* Libraries */,
 				8DA4E1931B9AD9B800001794 /* TactixBoardTests */,
 				8DA4E17C1B9AD9B800001794 /* Products */,
 				AB510595C2383ACF371D7116 /* Pods */,
@@ -96,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				8DA4E1801B9AD9B800001794 /* AppDelegate.swift */,
-				8DA4E1821B9AD9B800001794 /* ViewController.swift */,
 				8DA4E1841B9AD9B800001794 /* Main.storyboard */,
 				8DA4E1871B9AD9B800001794 /* Images.xcassets */,
 				8DA4E1891B9AD9B800001794 /* LaunchScreen.xib */,
@@ -142,8 +144,17 @@
 			isa = PBXGroup;
 			children = (
 				8DA4E1A21B9B35DD00001794 /* Views.swift */,
+				8DA4E1A91B9E13D900001794 /* Buttons.swift */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		8DA4E1A61B9E114500001794 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8DA4E1A71B9E11AB00001794 /* BoardVC.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		AB510595C2383ACF371D7116 /* Pods */ = {
@@ -306,9 +317,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DA4E1831B9AD9B800001794 /* ViewController.swift in Sources */,
+				8DA4E1A81B9E11AB00001794 /* BoardVC.swift in Sources */,
 				8DA4E1811B9AD9B800001794 /* AppDelegate.swift in Sources */,
 				8DA4E1A31B9B35DD00001794 /* Views.swift in Sources */,
+				8DA4E1AA1B9E13D900001794 /* Buttons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

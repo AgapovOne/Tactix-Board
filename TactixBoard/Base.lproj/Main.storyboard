@@ -31,7 +31,7 @@
                                 <color key="textColor" red="0.97254901959999995" green="0.98039215690000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHB-qf-tGB">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHB-qf-tGB" customClass="BorderButton" customModule="TactixBoard" customModuleProvider="target">
                                 <rect key="frame" x="184" y="468" width="400" height="88"/>
                                 <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -43,11 +43,6 @@
                                     <color key="titleColor" red="0.97254901959999995" green="0.98039215690000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="44"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="push" id="yYC-B1-B62"/>
                                 </connections>
@@ -76,7 +71,7 @@
         <!--Board-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Board" id="BYZ-38-t0r" customClass="ViewController" customModule="TactixBoard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Board" id="BYZ-38-t0r" customClass="BoardVC" customModule="TactixBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -91,8 +86,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oxc-Ha-mWj">
                                 <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TyS-BJ-wSX">
-                                        <rect key="frame" x="9" y="10" width="751" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TyS-BJ-wSX">
+                                        <rect key="frame" x="347" y="10" width="75" height="30"/>
                                         <state key="normal" title="Add Player">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>

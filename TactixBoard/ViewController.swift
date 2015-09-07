@@ -8,8 +8,6 @@
 
 import UIKit
 
-import UIView_draggable
-
 class ViewController: UIViewController {
 
   @IBOutlet weak var boardView: UIImageView!
