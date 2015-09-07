@@ -1,0 +1,6 @@
+version: "Apple Swift version 1.2 (swiftlang-602.0.53.1 clang-602.0.53)"
+options: "9cb8725b3ebf84ddda4d28cb3afd0eb7"
+inputs: 
+- "/Users/agapov/Developer/TactixBoard/TactixBoard/ViewController.swift"
+- "/Users/agapov/Developer/TactixBoard/TactixBoard/AppDelegate.swift"
+- "/Users/agapov/Developer/TactixBoard/Views.swift"
