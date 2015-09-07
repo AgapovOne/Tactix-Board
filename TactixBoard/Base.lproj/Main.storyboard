@@ -33,36 +33,67 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHB-qf-tGB" customClass="BorderButton" customModule="TactixBoard" customModuleProvider="target">
                                 <rect key="frame" x="184" y="468" width="400" height="88"/>
-                                <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="88" id="djv-2a-Rit"/>
                                     <constraint firstAttribute="width" constant="400" id="rkk-do-Gjr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                <state key="normal" title="Стандартные ситуации">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAO-26-O68" customClass="BorderButton" customModule="TactixBoard" customModuleProvider="target">
+                                <rect key="frame" x="184" y="340" width="400" height="88"/>
+                                <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="0oP-hk-nFG"/>
+                                    <constraint firstAttribute="width" constant="400" id="IcO-ms-55D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                                 <state key="normal" title="Тактическая доска">
-                                    <color key="titleColor" red="0.97254901959999995" green="0.98039215690000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="push" id="yYC-B1-B62"/>
+                                    <segue destination="BYZ-38-t0r" kind="push" id="wSP-Jv-LAF"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELk-Ym-NBh" customClass="BorderButton" customModule="TactixBoard" customModuleProvider="target">
+                                <rect key="frame" x="184" y="596" width="400" height="88"/>
+                                <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="PVN-t8-PbQ"/>
+                                    <constraint firstAttribute="height" constant="88" id="t4b-F6-EjK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                <state key="normal" title="Настройки">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ELk-Ym-NBh" firstAttribute="top" secondItem="dHB-qf-tGB" secondAttribute="bottom" constant="40" id="2kh-92-cdb"/>
                             <constraint firstItem="oRY-fi-AXS" firstAttribute="top" secondItem="7by-1x-FRY" secondAttribute="bottom" id="7Mt-pe-cpe"/>
+                            <constraint firstItem="dHB-qf-tGB" firstAttribute="centerX" secondItem="ELk-Ym-NBh" secondAttribute="centerX" id="7a8-mN-jIs"/>
                             <constraint firstItem="Gzs-g1-xna" firstAttribute="top" secondItem="UFN-ad-hQU" secondAttribute="bottom" constant="8" id="8Hi-OB-Myu"/>
                             <constraint firstItem="Gzs-g1-xna" firstAttribute="centerX" secondItem="7by-1x-FRY" secondAttribute="centerX" id="Jzr-PS-E7G"/>
                             <constraint firstItem="7by-1x-FRY" firstAttribute="centerX" secondItem="UFN-ad-hQU" secondAttribute="centerX" id="MDG-tU-frq"/>
                             <constraint firstItem="7by-1x-FRY" firstAttribute="top" secondItem="pTc-rW-lw7" secondAttribute="top" id="Qvx-ia-Csp"/>
                             <constraint firstItem="dHB-qf-tGB" firstAttribute="centerY" secondItem="7by-1x-FRY" secondAttribute="centerY" id="RHy-Eu-caS"/>
                             <constraint firstItem="7by-1x-FRY" firstAttribute="leading" secondItem="pTc-rW-lw7" secondAttribute="leading" id="Wja-e7-IFv"/>
+                            <constraint firstItem="dHB-qf-tGB" firstAttribute="top" secondItem="rAO-26-O68" secondAttribute="bottom" constant="40" id="XHo-bf-FLz"/>
                             <constraint firstItem="dHB-qf-tGB" firstAttribute="centerX" secondItem="7by-1x-FRY" secondAttribute="centerX" id="Xnx-Pm-u6O"/>
+                            <constraint firstItem="dHB-qf-tGB" firstAttribute="centerX" secondItem="rAO-26-O68" secondAttribute="centerX" id="bUT-9z-6vw"/>
                             <constraint firstAttribute="trailing" secondItem="7by-1x-FRY" secondAttribute="trailing" id="fkN-jI-xod"/>
                             <constraint firstItem="7by-1x-FRY" firstAttribute="top" secondItem="UFN-ad-hQU" secondAttribute="top" constant="-80" id="qHG-Ml-LC8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FO9-EV-Ydy"/>
+                    <nil key="simulatedStatusBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BQs-d3-FCT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,7 +111,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FUTSAL FIELD" translatesAutoresizingMaskIntoConstraints="NO" id="OM0-9N-PxM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FUTSAL FIELD" translatesAutoresizingMaskIntoConstraints="NO" id="OM0-9N-PxM">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oxc-Ha-mWj">
@@ -116,6 +147,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9xr-P7-sz7"/>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="boardView" destination="OM0-9N-PxM" id="QEO-O3-6Oa"/>
                     </connections>

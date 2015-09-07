@@ -123,6 +123,9 @@ SWIFT_CLASS("_TtC11TactixBoard7BoardVC")
 
 SWIFT_CLASS("_TtC11TactixBoard12BorderButton")
 @interface BorderButton : UIButton
+@property (nonatomic, readonly) CGFloat borderWidth;
+@property (nonatomic, readonly) CGColorRef __null_unspecified borderColor;
+@property (nonatomic, readonly) CGFloat cornerRadius;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -136,6 +139,9 @@ SWIFT_CLASS("_TtC11TactixBoard10PlayerView")
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (void)detectPan:(UIPanGestureRecognizer * __nonnull)recognizer;
 - (void)touchesBegan:(NSSet * __nonnull)touches withEvent:(UIEvent * __nonnull)event;
+- (void)touchesMoved:(NSSet * __nonnull)touches withEvent:(UIEvent * __nonnull)event;
+- (void)touchesEnded:(NSSet * __nonnull)touches withEvent:(UIEvent * __nonnull)event;
++ (void)createPlayers:(UIImageView * __nonnull)field;
 @end
 
 #pragma clang diagnostic pop

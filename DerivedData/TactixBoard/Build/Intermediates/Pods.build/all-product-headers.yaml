@@ -4,6 +4,68 @@
   'roots': [
     {
       'type': 'directory',
+      'name': "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/ChameleonFramework.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Chameleon.h",
+          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/ChameleonFramework/Pod/Classes/Objective-C/Chameleon.h"
+        },
+        {
+          'type': 'file',
+          'name': "ChameleonFramework-Swift.h",
+          'external-contents': "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/ChameleonFramework.framework/Headers/ChameleonFramework-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "ChameleonFramework-umbrella.h",
+          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/Target Support Files/ChameleonFramework/ChameleonFramework-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "ChameleonMacros.h",
+          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/ChameleonFramework/Pod/Classes/Objective-C/ChameleonMacros.h"
+        },
+        {
+          'type': 'file',
+          'name': "ChameleonStatusBar.h",
+          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/ChameleonFramework/Pod/Classes/Objective-C/ChameleonStatusBar.h"
+        },
+        {
+          'type': 'file',
+          'name': "NSArray+Chameleon.h",
+          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/ChameleonFramework/Pod/Classes/Objective-C/NSArray+Chameleon.h"
+        },
+        {
+          'type': 'file',
+          'name': "UIColor+CIELAB.h",
+          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/ChameleonFramework/Pod/Classes/Objective-C/UIColor+CIELAB.h"
+        },
+        {
+          'type': 'file',
+          'name': "UIColor+Chameleon.h",
+          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/ChameleonFramework/Pod/Classes/Objective-C/UIColor+Chameleon.h"
+        },
+        {
+          'type': 'file',
+          'name': "UIViewController+Chameleon.h",
+          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/ChameleonFramework/Pod/Classes/Objective-C/UIViewController+Chameleon.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/ChameleonFramework.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Intermediates/Pods.build/Debug-iphonesimulator/ChameleonFramework.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
       'name': "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/Pods_TactixBoard.framework/Headers",
       'contents': [
         {
@@ -26,38 +88,6 @@
           'type': 'file',
           'name': "module.modulemap",
           'external-contents': "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-TactixBoard.build/module.modulemap"
-        }
-      ]
-    },
-    {
-      'type': 'directory',
-      'name': "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/UIView_draggable.framework/Headers",
-      'contents': [
-        {
-          'type': 'file',
-          'name': "UIView+draggable-umbrella.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/Target Support Files/UIView+draggable/UIView+draggable-umbrella.h"
-        },
-        {
-          'type': 'file',
-          'name': "UIView+draggable.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/UIView+draggable/Source/UIView+draggable.h"
-        },
-        {
-          'type': 'file',
-          'name': "UIView_draggable-Swift.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/UIView_draggable.framework/Headers/UIView_draggable-Swift.h"
-        }
-      ]
-    },
-    {
-      'type': 'directory',
-      'name': "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/UIView_draggable.framework/Modules",
-      'contents': [
-        {
-          'type': 'file',
-          'name': "module.modulemap",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Intermediates/Pods.build/Debug-iphonesimulator/UIView+draggable.build/module.modulemap"
         }
       ]
     }

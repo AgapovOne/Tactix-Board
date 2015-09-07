@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "748BB02D633C99BAF175123E"
+               BlueprintIdentifier = "332BDE147741E335CFFAE02A"
                BuildableName = "Pods_TactixBoard.framework"
                BlueprintName = "Pods-TactixBoard"
                ReferencedContainer = "container:Pods.xcodeproj">

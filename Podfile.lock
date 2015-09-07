@@ -1,10 +1,20 @@
 PODS:
-  - UIView+draggable (0.6)
+  - ChameleonFramework/Default (1.2.1)
+  - ChameleonFramework/Swift (1.2.1):
+    - ChameleonFramework/Default
+  - Crashlytics (3.2.0)
+  - Fabric (1.4.1):
+    - Fabric/Base (= 1.4.1)
+  - Fabric/Base (1.4.1)
 
 DEPENDENCIES:
-  - UIView+draggable
+  - ChameleonFramework/Swift
+  - Crashlytics
+  - Fabric
 
 SPEC CHECKSUMS:
-  UIView+draggable: a71f0f2d9fe36dfaa4d6cc1fb9afbcda52818b75
+  ChameleonFramework: 3476f813ac1615aef0a9a958f05520dfca47e09d
+  Crashlytics: a29e4f820aa401482b26043dc5d78adf08ac7573
+  Fabric: 4f718eeca4c02c7d6f6f4e5f0e5f87c63aa38458
 
 COCOAPODS: 0.38.2

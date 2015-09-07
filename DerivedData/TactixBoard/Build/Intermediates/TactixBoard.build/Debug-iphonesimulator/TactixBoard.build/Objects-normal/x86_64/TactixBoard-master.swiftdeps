@@ -1,7 +1,8 @@
 version: "Apple Swift version 1.2 (swiftlang-602.0.53.1 clang-602.0.53)"
-options: "dc08407425a27459e6608d8d60d8bf4e"
+options: "913b8e4ae7159b392d21f1a11451a659"
 inputs: 
-- "/Users/agapov/Developer/TactixBoard/BoardVC.swift"
+- "/Users/agapov/Developer/TactixBoard/Extensions.swift"
+- "/Users/agapov/Developer/TactixBoard/Views/BoardVC.swift"
 - "/Users/agapov/Developer/TactixBoard/TactixBoard/AppDelegate.swift"
 - "/Users/agapov/Developer/TactixBoard/Libraries/Classes/Views.swift"
 - "/Users/agapov/Developer/TactixBoard/Libraries/Classes/Buttons.swift"

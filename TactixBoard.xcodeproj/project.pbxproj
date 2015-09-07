@@ -16,6 +16,7 @@
 		8DA4E1A31B9B35DD00001794 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1A21B9B35DD00001794 /* Views.swift */; };
 		8DA4E1A81B9E11AB00001794 /* BoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1A71B9E11AB00001794 /* BoardVC.swift */; };
 		8DA4E1AA1B9E13D900001794 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1A91B9E13D900001794 /* Buttons.swift */; };
+		8DA4E1AC1B9E31F300001794 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1AB1B9E31F300001794 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +42,9 @@
 		8DA4E1951B9AD9B800001794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DA4E1961B9AD9B800001794 /* TactixBoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TactixBoardTests.swift; sourceTree = "<group>"; };
 		8DA4E1A21B9B35DD00001794 /* Views.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Views.swift; path = Libraries/Classes/Views.swift; sourceTree = "<group>"; };
-		8DA4E1A71B9E11AB00001794 /* BoardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardVC.swift; sourceTree = "<group>"; };
+		8DA4E1A71B9E11AB00001794 /* BoardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoardVC.swift; path = Views/BoardVC.swift; sourceTree = "<group>"; };
 		8DA4E1A91B9E13D900001794 /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Buttons.swift; path = Libraries/Classes/Buttons.swift; sourceTree = "<group>"; };
+		8DA4E1AB1B9E31F300001794 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8F7D55C6B5735053A530757B /* Pods-TactixBoard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TactixBoard.release.xcconfig"; path = "Pods/Target Support Files/Pods-TactixBoard/Pods-TactixBoard.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +147,7 @@
 			children = (
 				8DA4E1A21B9B35DD00001794 /* Views.swift */,
 				8DA4E1A91B9E13D900001794 /* Buttons.swift */,
+				8DA4E1AB1B9E31F300001794 /* Extensions.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DA4E1AC1B9E31F300001794 /* Extensions.swift in Sources */,
 				8DA4E1A81B9E11AB00001794 /* BoardVC.swift in Sources */,
 				8DA4E1811B9AD9B800001794 /* AppDelegate.swift in Sources */,
 				8DA4E1A31B9B35DD00001794 /* Views.swift in Sources */,

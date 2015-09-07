@@ -4,7 +4,9 @@ use_frameworks!
 
 target 'TactixBoard' do
 
-pod 'UIView+draggable'
+  pod 'ChameleonFramework/Swift'
+  pod 'Fabric'
+  pod 'Crashlytics'
 
 end
 

@@ -4,12 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-TactixBoard.xcscheme</key>
+		<key>ChameleonFramework.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>UIView+draggable.xcscheme</key>
+		<key>Pods-TactixBoard.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>DA25A0A75587FCD65FD61961725BAFCF</key>
+		<key>92796B75B2C5870099567133773FD6B2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EC4EFD22D1783DE5C049CC0634826CF6</key>
+		<key>9F846ABBDF7AA55CBF3F71CD25FCDC2E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

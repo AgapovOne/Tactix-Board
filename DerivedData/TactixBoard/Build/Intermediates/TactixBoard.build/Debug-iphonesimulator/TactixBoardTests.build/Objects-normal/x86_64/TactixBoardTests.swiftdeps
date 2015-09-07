@@ -4,21 +4,21 @@ provides:
 nominals:
 - "C16TactixBoardTests16TactixBoardTests"
 class-members:
-- "testPerformanceExample"
 - "tearDown"
 - "testExample"
+- "testPerformanceExample"
 - "setUp"
 top-level:
-- !private "BooleanLiteralType"
-- "XCTestCase"
 - !private "StringLiteralType"
+- "XCTestCase"
 - !private "XCTAssert"
+- !private "BooleanLiteralType"
 member-access:
-- !private "C16TactixBoardTests16TactixBoardTests"
 - "CSo6XCTest"
+- !private "C16TactixBoardTests16TactixBoardTests"
+- "CSo10XCTestCase"
 - "CSo8NSObject"
 - "PSs9AnyObject"
-- "CSo10XCTestCase"
 dynamic-lookup:
 cross-module:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/Swift.swiftmodule"

@@ -52,8 +52,8 @@ code_sign_if_enabled() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework 'Pods-TactixBoard/UIView_draggable.framework'
+  install_framework 'Pods-TactixBoard/ChameleonFramework.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework 'Pods-TactixBoard/UIView_draggable.framework'
+  install_framework 'Pods-TactixBoard/ChameleonFramework.framework'
 fi
