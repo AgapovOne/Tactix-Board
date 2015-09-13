@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 func playerPosition(field:UIImageView, x:CGFloat, y:CGFloat) -> CGRect {
-  return CGRectMake((field.frame.width / 2) - 22 + x, ((field.frame.height - 49) / 2) - 22 + y, 44.0, 44.0)
+  return CGRectMake((field.frame.width / 2) - 16 + x, ((field.frame.height - 49) / 2) - 16 + y, 32.0, 32.0)
 }
 
 func randomColor() -> UIColor {

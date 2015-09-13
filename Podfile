@@ -5,6 +5,9 @@ use_frameworks!
 target 'TactixBoard' do
 
   pod 'ChameleonFramework/Swift'
+  
+  pod 'jot'
+  
   pod 'Fabric'
   pod 'Crashlytics'
 

@@ -116,6 +116,7 @@ SWIFT_CLASS("_TtC11TactixBoard7BoardVC")
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (IBAction)addPlayer:(UIButton * __nonnull)sender;
+- (IBAction)makeDrawView:(UIButton * __nonnull)sender;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -129,7 +130,21 @@ SWIFT_CLASS("_TtC11TactixBoard12BorderButton")
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIBezierPath;
 @class UIPanGestureRecognizer;
+
+SWIFT_CLASS("_TtC11TactixBoard12DrawableView")
+@interface DrawableView : UIView
+@property (nonatomic, readonly) UIBezierPath * __nonnull path;
+@property (nonatomic) CGPoint previousPoint;
+@property (nonatomic) CGFloat lineWidth;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)drawRect:(CGRect)rect;
+- (void)pan:(UIPanGestureRecognizer * __nonnull)panGestureRecognizer;
+- (CGPoint)midPoint:(CGPoint)p0 p1:(CGPoint)p1;
+@end
+
 @class UIEvent;
 
 SWIFT_CLASS("_TtC11TactixBoard10PlayerView")

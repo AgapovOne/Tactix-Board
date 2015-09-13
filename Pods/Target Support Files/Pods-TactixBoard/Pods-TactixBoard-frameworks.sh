@@ -53,7 +53,11 @@ code_sign_if_enabled() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods-TactixBoard/ChameleonFramework.framework'
+  install_framework 'Pods-TactixBoard/Masonry.framework'
+  install_framework 'Pods-TactixBoard/jot.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-TactixBoard/ChameleonFramework.framework'
+  install_framework 'Pods-TactixBoard/Masonry.framework'
+  install_framework 'Pods-TactixBoard/jot.framework'
 fi

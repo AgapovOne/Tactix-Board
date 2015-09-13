@@ -9,7 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Masonry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-TactixBoard.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>jot.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>92796B75B2C5870099567133773FD6B2</key>
+		<key>82A5E47CCEF682B2A2A62D9CABEE39E1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9F846ABBDF7AA55CBF3F71CD25FCDC2E</key>
+		<key>AACD5DBC469ED572A233E8A0F8ACF331</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D21D259B485C8B765C2BF645CF0D17EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E439448630571F34B3CFD1EF3E9FACDC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

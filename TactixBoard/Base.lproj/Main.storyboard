@@ -126,22 +126,41 @@
                                             <action selector="addPlayer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zGN-da-2Yt"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FmR-bv-UBl">
+                                        <rect key="frame" x="430" y="10" width="111" height="30"/>
+                                        <state key="normal" title="Make Drawable!">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="makeDrawView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="loc-hP-yS8"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.97254901959999995" green="0.98039215690000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="FmR-bv-UBl" firstAttribute="centerY" secondItem="TyS-BJ-wSX" secondAttribute="centerY" id="RfA-Qw-bl9"/>
+                                    <constraint firstItem="FmR-bv-UBl" firstAttribute="leading" secondItem="TyS-BJ-wSX" secondAttribute="trailing" constant="8" id="guP-qF-h1Y"/>
                                     <constraint firstAttribute="height" constant="49" id="hox-Me-yzx"/>
                                     <constraint firstAttribute="centerY" secondItem="TyS-BJ-wSX" secondAttribute="centerY" id="r69-B0-z4a"/>
                                 </constraints>
+                            </view>
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hbZ-Jj-FBM" customClass="DrawableView" customModule="TactixBoard" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="967"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="OM0-9N-PxM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Cif-AW-saF"/>
+                            <constraint firstItem="hbZ-Jj-FBM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ITi-Od-3UV"/>
+                            <constraint firstAttribute="trailing" secondItem="hbZ-Jj-FBM" secondAttribute="trailing" id="LeO-he-huO"/>
                             <constraint firstAttribute="trailing" secondItem="oxc-Ha-mWj" secondAttribute="trailing" id="VyX-RB-Mgb"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OM0-9N-PxM" secondAttribute="bottom" id="dJx-yc-o2P"/>
                             <constraint firstItem="oxc-Ha-mWj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eQL-OH-2v2"/>
                             <constraint firstAttribute="bottom" secondItem="oxc-Ha-mWj" secondAttribute="bottom" id="lNf-ux-jeV"/>
                             <constraint firstItem="OM0-9N-PxM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ny5-hH-zxG"/>
+                            <constraint firstItem="hbZ-Jj-FBM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="paQ-Rk-5LU"/>
+                            <constraint firstItem="oxc-Ha-mWj" firstAttribute="top" secondItem="hbZ-Jj-FBM" secondAttribute="bottom" id="r63-RS-nbB"/>
                             <constraint firstAttribute="trailing" secondItem="OM0-9N-PxM" secondAttribute="trailing" id="zAj-w4-XyV"/>
                             <constraint firstItem="TyS-BJ-wSX" firstAttribute="centerX" secondItem="OM0-9N-PxM" secondAttribute="centerX" constant="0.5" id="zUy-jl-Ysg"/>
                         </constraints>
