@@ -7,16 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		263CB67A74092E93A75EF854 /* Pods_TactixBoard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F686BD448C514F2B0ECE080 /* Pods_TactixBoard.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		263CB67A74092E93A75EF854 /* Pods_TactixBoard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F686BD448C514F2B0ECE080 /* Pods_TactixBoard.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		8D17100E1BB9B9350007F919 /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D17100D1BB9B9350007F919 /* Drawing.swift */; settings = {ASSET_TAGS = (); }; };
+		8D1710101BB9BF740007F919 /* Moving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D17100F1BB9BF740007F919 /* Moving.swift */; settings = {ASSET_TAGS = (); }; };
+		8D4F2F231BCBED6000033007 /* AddMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D4F2F221BCBED6000033007 /* AddMenu.xib */; settings = {ASSET_TAGS = (); }; };
+		8D5F87561BCC106200FFE288 /* AddMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F87551BCC106200FFE288 /* AddMenu.swift */; settings = {ASSET_TAGS = (); }; };
+		8D5F87591BCCE27F00FFE288 /* DeleteMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D5F87581BCCE27F00FFE288 /* DeleteMenu.xib */; settings = {ASSET_TAGS = (); }; };
+		8D5F875C1BCCE35B00FFE288 /* DeleteMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F875B1BCCE35B00FFE288 /* DeleteMenu.swift */; settings = {ASSET_TAGS = (); }; };
+		8D6967DA1BADE786005835DB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6967D91BADE786005835DB /* Colors.swift */; };
 		8DA4E1811B9AD9B800001794 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1801B9AD9B800001794 /* AppDelegate.swift */; };
 		8DA4E1861B9AD9B800001794 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DA4E1841B9AD9B800001794 /* Main.storyboard */; };
 		8DA4E1881B9AD9B800001794 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DA4E1871B9AD9B800001794 /* Images.xcassets */; };
 		8DA4E18B1B9AD9B800001794 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DA4E1891B9AD9B800001794 /* LaunchScreen.xib */; };
 		8DA4E1971B9AD9B800001794 /* TactixBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1961B9AD9B800001794 /* TactixBoardTests.swift */; };
-		8DA4E1A31B9B35DD00001794 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1A21B9B35DD00001794 /* Views.swift */; };
 		8DA4E1A81B9E11AB00001794 /* BoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1A71B9E11AB00001794 /* BoardVC.swift */; };
 		8DA4E1AA1B9E13D900001794 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1A91B9E13D900001794 /* Buttons.swift */; };
 		8DA4E1AC1B9E31F300001794 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1AB1B9E31F300001794 /* Extensions.swift */; };
+		8DB0F9291BC59BEC00186C3D /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB0F9281BC59BEC00186C3D /* Menu.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +39,14 @@
 /* Begin PBXFileReference section */
 		0F686BD448C514F2B0ECE080 /* Pods_TactixBoard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TactixBoard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		117E70448D29738857B5C4AE /* Pods-TactixBoard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TactixBoard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TactixBoard/Pods-TactixBoard.debug.xcconfig"; sourceTree = "<group>"; };
+		8D17100D1BB9B9350007F919 /* Drawing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Drawing.swift; path = Libraries/Classes/Views/Drawing.swift; sourceTree = "<group>"; };
+		8D17100F1BB9BF740007F919 /* Moving.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Moving.swift; path = Libraries/Classes/Views/Moving.swift; sourceTree = "<group>"; };
+		8D19EDEC1BA9DAD100A82FD9 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BridgingHeader.h; path = Libraries/BridgingHeader.h; sourceTree = "<group>"; };
+		8D4F2F221BCBED6000033007 /* AddMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddMenu.xib; path = Views/AddMenu.xib; sourceTree = "<group>"; };
+		8D5F87551BCC106200FFE288 /* AddMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddMenu.swift; path = Libraries/Classes/Views/Sidebar/AddMenu.swift; sourceTree = "<group>"; };
+		8D5F87581BCCE27F00FFE288 /* DeleteMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeleteMenu.xib; sourceTree = "<group>"; };
+		8D5F875B1BCCE35B00FFE288 /* DeleteMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeleteMenu.swift; path = Libraries/Classes/Views/Sidebar/DeleteMenu.swift; sourceTree = "<group>"; };
+		8D6967D91BADE786005835DB /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = Libraries/Classes/Colors.swift; sourceTree = "<group>"; };
 		8DA4E17B1B9AD9B800001794 /* TactixBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TactixBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA4E17F1B9AD9B800001794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DA4E1801B9AD9B800001794 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,10 +56,10 @@
 		8DA4E1901B9AD9B800001794 /* TactixBoardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TactixBoardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA4E1951B9AD9B800001794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DA4E1961B9AD9B800001794 /* TactixBoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TactixBoardTests.swift; sourceTree = "<group>"; };
-		8DA4E1A21B9B35DD00001794 /* Views.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Views.swift; path = Libraries/Classes/Views.swift; sourceTree = "<group>"; };
-		8DA4E1A71B9E11AB00001794 /* BoardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoardVC.swift; path = Views/BoardVC.swift; sourceTree = "<group>"; };
+		8DA4E1A71B9E11AB00001794 /* BoardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardVC.swift; sourceTree = "<group>"; };
 		8DA4E1A91B9E13D900001794 /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Buttons.swift; path = Libraries/Classes/Buttons.swift; sourceTree = "<group>"; };
-		8DA4E1AB1B9E31F300001794 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		8DA4E1AB1B9E31F300001794 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Libraries/Classes/Extensions.swift; sourceTree = "<group>"; };
+		8DB0F9281BC59BEC00186C3D /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Menu.swift; path = Libraries/Classes/Menu.swift; sourceTree = "<group>"; };
 		8F7D55C6B5735053A530757B /* Pods-TactixBoard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TactixBoard.release.xcconfig"; path = "Pods/Target Support Files/Pods-TactixBoard/Pods-TactixBoard.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,11 +90,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8D17100C1BB9B8FA0007F919 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8D5F875A1BCCE2A600FFE288 /* Sidebar */,
+				8D17100D1BB9B9350007F919 /* Drawing.swift */,
+				8D17100F1BB9BF740007F919 /* Moving.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8D5F87571BCCE24D00FFE288 /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				8D4F2F221BCBED6000033007 /* AddMenu.xib */,
+				8D5F87581BCCE27F00FFE288 /* DeleteMenu.xib */,
+			);
+			name = Sidebar;
+			sourceTree = "<group>";
+		};
+		8D5F875A1BCCE2A600FFE288 /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				8D5F87551BCC106200FFE288 /* AddMenu.swift */,
+				8D5F875B1BCCE35B00FFE288 /* DeleteMenu.swift */,
+			);
+			name = Sidebar;
+			sourceTree = "<group>";
+		};
 		8DA4E1721B9AD9B800001794 = {
 			isa = PBXGroup;
 			children = (
 				8DA4E17D1B9AD9B800001794 /* TactixBoard */,
-				8DA4E1A61B9E114500001794 /* Views */,
 				8DA4E1A01B9B35C700001794 /* Libraries */,
 				8DA4E1931B9AD9B800001794 /* TactixBoardTests */,
 				8DA4E17C1B9AD9B800001794 /* Products */,
@@ -100,10 +142,9 @@
 		8DA4E17D1B9AD9B800001794 /* TactixBoard */ = {
 			isa = PBXGroup;
 			children = (
+				8DB0F9321BC5A5DA00186C3D /* ViewControllers */,
+				8DA4E1A61B9E114500001794 /* Views */,
 				8DA4E1801B9AD9B800001794 /* AppDelegate.swift */,
-				8DA4E1841B9AD9B800001794 /* Main.storyboard */,
-				8DA4E1871B9AD9B800001794 /* Images.xcassets */,
-				8DA4E1891B9AD9B800001794 /* LaunchScreen.xib */,
 				8DA4E17E1B9AD9B800001794 /* Supporting Files */,
 			);
 			path = TactixBoard;
@@ -112,9 +153,10 @@
 		8DA4E17E1B9AD9B800001794 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8DA4E1871B9AD9B800001794 /* Images.xcassets */,
 				8DA4E17F1B9AD9B800001794 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		8DA4E1931B9AD9B800001794 /* TactixBoardTests */ = {
@@ -131,12 +173,13 @@
 			children = (
 				8DA4E1951B9AD9B800001794 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		8DA4E1A01B9B35C700001794 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				8D19EDEC1BA9DAD100A82FD9 /* BridgingHeader.h */,
 				8DA4E1A11B9B35D100001794 /* Classes */,
 			);
 			name = Libraries;
@@ -145,9 +188,11 @@
 		8DA4E1A11B9B35D100001794 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				8DA4E1A21B9B35DD00001794 /* Views.swift */,
+				8D17100C1BB9B8FA0007F919 /* Views */,
 				8DA4E1A91B9E13D900001794 /* Buttons.swift */,
 				8DA4E1AB1B9E31F300001794 /* Extensions.swift */,
+				8D6967D91BADE786005835DB /* Colors.swift */,
+				8DB0F9281BC59BEC00186C3D /* Menu.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -155,9 +200,19 @@
 		8DA4E1A61B9E114500001794 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8D5F87571BCCE24D00FFE288 /* Sidebar */,
+				8DA4E1841B9AD9B800001794 /* Main.storyboard */,
+				8DA4E1891B9AD9B800001794 /* LaunchScreen.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8DB0F9321BC5A5DA00186C3D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
 				8DA4E1A71B9E11AB00001794 /* BoardVC.swift */,
 			);
-			name = Views;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		AB510595C2383ACF371D7116 /* Pods */ = {
@@ -182,6 +237,7 @@
 				8DA4E1791B9AD9B800001794 /* Resources */,
 				C3115E69475870BEE7855782 /* Embed Pods Frameworks */,
 				60BE92789423F0D773D4BF8B /* Copy Pods Resources */,
+				8D19EDE91BA9D11000A82FD9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -216,11 +272,14 @@
 		8DA4E1731B9AD9B800001794 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = agapov.one.ru;
 				TargetAttributes = {
 					8DA4E17A1B9AD9B800001794 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = SGC7G34VHA;
 					};
 					8DA4E18F1B9AD9B800001794 = {
 						CreatedOnToolsVersion = 6.4;
@@ -254,7 +313,9 @@
 			files = (
 				8DA4E1861B9AD9B800001794 /* Main.storyboard in Resources */,
 				8DA4E18B1B9AD9B800001794 /* LaunchScreen.xib in Resources */,
+				8D4F2F231BCBED6000033007 /* AddMenu.xib in Resources */,
 				8DA4E1881B9AD9B800001794 /* Images.xcassets in Resources */,
+				8D5F87591BCCE27F00FFE288 /* DeleteMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +359,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TactixBoard/Pods-TactixBoard-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8D19EDE91BA9D11000A82FD9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/Fabric.framework/run\" 12b12f3bd2a6722048fe4c7d229ab146f95b4ac6 ea338f8c2c41a0a250fa3103fabd10fa4323e73cb41a89599353c62e28691bf2";
+		};
 		C3115E69475870BEE7855782 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -321,10 +395,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DA4E1AC1B9E31F300001794 /* Extensions.swift in Sources */,
+				8D17100E1BB9B9350007F919 /* Drawing.swift in Sources */,
+				8DB0F9291BC59BEC00186C3D /* Menu.swift in Sources */,
+				8D6967DA1BADE786005835DB /* Colors.swift in Sources */,
 				8DA4E1A81B9E11AB00001794 /* BoardVC.swift in Sources */,
+				8D5F875C1BCCE35B00FFE288 /* DeleteMenu.swift in Sources */,
 				8DA4E1811B9AD9B800001794 /* AppDelegate.swift in Sources */,
-				8DA4E1A31B9B35DD00001794 /* Views.swift in Sources */,
 				8DA4E1AA1B9E13D900001794 /* Buttons.swift in Sources */,
+				8D1710101BB9BF740007F919 /* Moving.swift in Sources */,
+				8D5F87561BCC106200FFE288 /* AddMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +432,7 @@
 				8DA4E1851B9AD9B800001794 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		8DA4E1891B9AD9B800001794 /* LaunchScreen.xib */ = {
@@ -361,6 +441,7 @@
 				8DA4E18A1B9AD9B800001794 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -383,10 +464,12 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -406,6 +489,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = Libraries/BridgingHeader.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -428,9 +512,10 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -444,6 +529,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = Libraries/BridgingHeader.h;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -454,10 +540,15 @@
 			baseConfigurationReference = 117E70448D29738857B5C4AE /* Pods-TactixBoard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = TactixBoard/Info.plist;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "TactixBoard/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "agapov.one.ru.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Libraries/BridgingHeader.h;
 			};
 			name = Debug;
 		};
@@ -466,10 +557,15 @@
 			baseConfigurationReference = 8F7D55C6B5735053A530757B /* Pods-TactixBoard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = TactixBoard/Info.plist;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "TactixBoard/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "agapov.one.ru.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Libraries/BridgingHeader.h;
 			};
 			name = Release;
 		};
@@ -485,8 +581,9 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = TactixBoardTests/Info.plist;
+				INFOPLIST_FILE = "TactixBoardTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "agapov.one.ru.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TactixBoard.app/TactixBoard";
 			};
@@ -500,8 +597,9 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = TactixBoardTests/Info.plist;
+				INFOPLIST_FILE = "TactixBoardTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "agapov.one.ru.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TactixBoard.app/TactixBoard";
 			};

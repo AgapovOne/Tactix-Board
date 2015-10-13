@@ -13,6 +13,16 @@
         },
         {
           'type': 'file',
+          'name': "ChameleonConstants.h",
+          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/ChameleonFramework/Pod/Classes/Objective-C/ChameleonConstants.h"
+        },
+        {
+          'type': 'file',
+          'name': "ChameleonEnums.h",
+          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/ChameleonFramework/Pod/Classes/Objective-C/ChameleonEnums.h"
+        },
+        {
+          'type': 'file',
           'name': "ChameleonFramework-Swift.h",
           'external-contents': "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/ChameleonFramework.framework/Headers/ChameleonFramework-Swift.h"
         },
@@ -28,8 +38,8 @@
         },
         {
           'type': 'file',
-          'name': "ChameleonStatusBar.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/ChameleonFramework/Pod/Classes/Objective-C/ChameleonStatusBar.h"
+          'name': "Chameleon_.h",
+          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/ChameleonFramework/Pod/Classes/Objective-C/Chameleon_.h"
         },
         {
           'type': 'file',
@@ -38,13 +48,38 @@
         },
         {
           'type': 'file',
-          'name': "UIColor+CIELAB.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/ChameleonFramework/Pod/Classes/Objective-C/UIColor+CIELAB.h"
+          'name': "UIButton+Chameleon.h",
+          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/ChameleonFramework/Pod/Classes/Objective-C/UIButton+Chameleon.h"
         },
         {
           'type': 'file',
           'name': "UIColor+Chameleon.h",
           'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/ChameleonFramework/Pod/Classes/Objective-C/UIColor+Chameleon.h"
+        },
+        {
+          'type': 'file',
+          'name': "UIColor+ChameleonPrivate.h",
+          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/ChameleonFramework/Pod/Classes/Objective-C/UIColor+ChameleonPrivate.h"
+        },
+        {
+          'type': 'file',
+          'name': "UIImage+ChameleonPrivate.h",
+          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/ChameleonFramework/Pod/Classes/Objective-C/UIImage+ChameleonPrivate.h"
+        },
+        {
+          'type': 'file',
+          'name': "UILabel+Chameleon.h",
+          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/ChameleonFramework/Pod/Classes/Objective-C/UILabel+Chameleon.h"
+        },
+        {
+          'type': 'file',
+          'name': "UINavigationController+Chameleon.h",
+          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/ChameleonFramework/Pod/Classes/Objective-C/UINavigationController+Chameleon.h"
+        },
+        {
+          'type': 'file',
+          'name': "UIView+ChameleonPrivate.h",
+          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/ChameleonFramework/Pod/Classes/Objective-C/UIView+ChameleonPrivate.h"
         },
         {
           'type': 'file',
@@ -61,108 +96,6 @@
           'type': 'file',
           'name': "module.modulemap",
           'external-contents': "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Intermediates/Pods.build/Debug-iphonesimulator/ChameleonFramework.build/module.modulemap"
-        }
-      ]
-    },
-    {
-      'type': 'directory',
-      'name': "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/Masonry.framework/Headers",
-      'contents': [
-        {
-          'type': 'file',
-          'name': "MASCompositeConstraint.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/Masonry/Masonry/MASCompositeConstraint.h"
-        },
-        {
-          'type': 'file',
-          'name': "MASConstraint+Private.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/Masonry/Masonry/MASConstraint+Private.h"
-        },
-        {
-          'type': 'file',
-          'name': "MASConstraint.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/Masonry/Masonry/MASConstraint.h"
-        },
-        {
-          'type': 'file',
-          'name': "MASConstraintMaker.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/Masonry/Masonry/MASConstraintMaker.h"
-        },
-        {
-          'type': 'file',
-          'name': "MASLayoutConstraint.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/Masonry/Masonry/MASLayoutConstraint.h"
-        },
-        {
-          'type': 'file',
-          'name': "MASUtilities.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/Masonry/Masonry/MASUtilities.h"
-        },
-        {
-          'type': 'file',
-          'name': "MASViewAttribute.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/Masonry/Masonry/MASViewAttribute.h"
-        },
-        {
-          'type': 'file',
-          'name': "MASViewConstraint.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/Masonry/Masonry/MASViewConstraint.h"
-        },
-        {
-          'type': 'file',
-          'name': "Masonry-Swift.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/Masonry.framework/Headers/Masonry-Swift.h"
-        },
-        {
-          'type': 'file',
-          'name': "Masonry-umbrella.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/Target Support Files/Masonry/Masonry-umbrella.h"
-        },
-        {
-          'type': 'file',
-          'name': "Masonry.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/Masonry/Masonry/Masonry.h"
-        },
-        {
-          'type': 'file',
-          'name': "NSArray+MASAdditions.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/Masonry/Masonry/NSArray+MASAdditions.h"
-        },
-        {
-          'type': 'file',
-          'name': "NSArray+MASShorthandAdditions.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/Masonry/Masonry/NSArray+MASShorthandAdditions.h"
-        },
-        {
-          'type': 'file',
-          'name': "NSLayoutConstraint+MASDebugAdditions.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/Masonry/Masonry/NSLayoutConstraint+MASDebugAdditions.h"
-        },
-        {
-          'type': 'file',
-          'name': "View+MASAdditions.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/Masonry/Masonry/View+MASAdditions.h"
-        },
-        {
-          'type': 'file',
-          'name': "View+MASShorthandAdditions.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/Masonry/Masonry/View+MASShorthandAdditions.h"
-        },
-        {
-          'type': 'file',
-          'name': "ViewController+MASAdditions.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/Masonry/Masonry/ViewController+MASAdditions.h"
-        }
-      ]
-    },
-    {
-      'type': 'directory',
-      'name': "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/Masonry.framework/Modules",
-      'contents': [
-        {
-          'type': 'file',
-          'name': "module.modulemap",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Intermediates/Pods.build/Debug-iphonesimulator/Masonry.build/module.modulemap"
         }
       ]
     },
@@ -195,73 +128,28 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/jot.framework/Headers",
+      'name': "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/SnapKit.framework/Headers",
       'contents': [
         {
           'type': 'file',
-          'name': "JotDrawView.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/jot/jot/JotDrawView.h"
+          'name': "SnapKit-Swift.h",
+          'external-contents': "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/SnapKit.framework/Headers/SnapKit-Swift.h"
         },
         {
           'type': 'file',
-          'name': "JotDrawingContainer.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/jot/jot/JotDrawingContainer.h"
-        },
-        {
-          'type': 'file',
-          'name': "JotTextEditView.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/jot/jot/JotTextEditView.h"
-        },
-        {
-          'type': 'file',
-          'name': "JotTextView.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/jot/jot/JotTextView.h"
-        },
-        {
-          'type': 'file',
-          'name': "JotTouchBezier.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/jot/jot/JotTouchBezier.h"
-        },
-        {
-          'type': 'file',
-          'name': "JotTouchPoint.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/jot/jot/JotTouchPoint.h"
-        },
-        {
-          'type': 'file',
-          'name': "JotViewController.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/jot/jot/JotViewController.h"
-        },
-        {
-          'type': 'file',
-          'name': "UIImage+Jot.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/jot/jot/UIImage+Jot.h"
-        },
-        {
-          'type': 'file',
-          'name': "jot-Swift.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/jot.framework/Headers/jot-Swift.h"
-        },
-        {
-          'type': 'file',
-          'name': "jot-umbrella.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/Target Support Files/jot/jot-umbrella.h"
-        },
-        {
-          'type': 'file',
-          'name': "jot.h",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/jot/jot/jot.h"
+          'name': "SnapKit-umbrella.h",
+          'external-contents': "/Users/agapov/Developer/TactixBoard/Pods/Target Support Files/SnapKit/SnapKit-umbrella.h"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/jot.framework/Modules",
+      'name': "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/SnapKit.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Intermediates/Pods.build/Debug-iphonesimulator/jot.build/module.modulemap"
+          'external-contents': "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Intermediates/Pods.build/Debug-iphonesimulator/SnapKit.build/module.modulemap"
         }
       ]
     }

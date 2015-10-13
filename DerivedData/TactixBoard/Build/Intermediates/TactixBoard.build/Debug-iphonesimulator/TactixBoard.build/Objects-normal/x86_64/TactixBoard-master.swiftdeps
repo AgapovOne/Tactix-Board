@@ -1,8 +1,14 @@
-version: "Apple Swift version 1.2 (swiftlang-602.0.53.1 clang-602.0.53)"
-options: "913b8e4ae7159b392d21f1a11451a659"
+version: "Apple Swift version 2.0 (swiftlang-700.0.59 clang-700.0.72)"
+options: "89398ea1af5a1206003e752276df5a0e"
+build_time: [498035580, 152924000]
 inputs: 
-- "/Users/agapov/Developer/TactixBoard/Extensions.swift"
-- "/Users/agapov/Developer/TactixBoard/Views/BoardVC.swift"
-- "/Users/agapov/Developer/TactixBoard/TactixBoard/AppDelegate.swift"
-- "/Users/agapov/Developer/TactixBoard/Libraries/Classes/Views.swift"
-- "/Users/agapov/Developer/TactixBoard/Libraries/Classes/Buttons.swift"
+	"/Users/agapov/Developer/TactixBoard/TactixBoard/ViewControllers/BoardVC.swift": [498035579, 0]
+	"/Users/agapov/Developer/TactixBoard/Libraries/Classes/Buttons.swift": [496774538, 0]
+	"/Users/agapov/Developer/TactixBoard/TactixBoard/AppDelegate.swift": [497558865, 0]
+	"/Users/agapov/Developer/TactixBoard/Libraries/Classes/Extensions.swift": [496849224, 0]
+	"/Users/agapov/Developer/TactixBoard/Libraries/Classes/Colors.swift": [497642383, 0]
+	"/Users/agapov/Developer/TactixBoard/Libraries/Classes/Views/Moving.swift": [498033882, 0]
+	"/Users/agapov/Developer/TactixBoard/Libraries/Classes/Views/Drawing.swift": [497558745, 0]
+	"/Users/agapov/Developer/TactixBoard/Libraries/Classes/Views/Sidebar/DeleteMenu.swift": [498034881, 0]
+	"/Users/agapov/Developer/TactixBoard/Libraries/Classes/Menu.swift": [497558168, 0]
+	"/Users/agapov/Developer/TactixBoard/Libraries/Classes/Views/Sidebar/AddMenu.swift": [497996580, 0]

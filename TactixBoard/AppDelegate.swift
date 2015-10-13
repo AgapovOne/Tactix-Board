@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
+    
+    // RUN ONLY ON FIRST TIME
+    let infoDictionary: NSDictionary? = NSBundle.mainBundle().infoDictionary // Fetch info.plist as a Dictionary
+    let temp: NSString = infoDictionary?.objectForKey("CFBundleVersion") as! NSString
+    let val: Float = temp.floatValue
+    
+    let userDefaults = NSUserDefaults()
+    if userDefaults.valueForKey("version") == nil {
+      NSUserDefaults.standardUserDefaults().setValue("thin", forKey: "currentLineType")
+      
+      // Adding version number to NSUserDefaults for first version
+      userDefaults.setFloat(val, forKey: "version")
+    }
+    // end of RUNNING FIRST TIME
+    
+    Fabric.with([Crashlytics.self()])
+    
     return true
   }
 

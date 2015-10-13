@@ -1,4 +1,5 @@
-version: "Apple Swift version 1.2 (swiftlang-602.0.53.1 clang-602.0.53)"
-options: "b862e90db98d6f05470aa3eb26c59177"
+version: "Apple Swift version 2.0 (swiftlang-700.0.59 clang-700.0.72)"
+options: "7271fe0d9a126cafd0d55ee24b421d4c"
+build_time: [497994639, 795179000]
 inputs: 
-- "/Users/agapov/Developer/TactixBoard/TactixBoardTests/TactixBoardTests.swift"
+	"/Users/agapov/Developer/TactixBoard/TactixBoardTests/TactixBoardTests.swift": [494755512, 0]

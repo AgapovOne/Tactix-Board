@@ -1,26 +1,23 @@
 PODS:
-  - ChameleonFramework/Default (1.2.1)
-  - ChameleonFramework/Swift (1.2.1):
+  - ChameleonFramework/Default (2.0.3)
+  - ChameleonFramework/Swift (2.0.3):
     - ChameleonFramework/Default
-  - Crashlytics (3.3.1)
-  - Fabric (1.5.1):
-    - Fabric/Base (= 1.5.1)
-  - Fabric/Base (1.5.1)
-  - jot (0.1.5):
-    - Masonry (~> 0.6.1)
-  - Masonry (0.6.2)
+  - Crashlytics (3.3.4)
+  - Fabric (1.5.5):
+    - Fabric/Base (= 1.5.5)
+  - Fabric/Base (1.5.5)
+  - SnapKit (0.15.0)
 
 DEPENDENCIES:
   - ChameleonFramework/Swift
   - Crashlytics
   - Fabric
-  - jot
+  - SnapKit
 
 SPEC CHECKSUMS:
-  ChameleonFramework: 3476f813ac1615aef0a9a958f05520dfca47e09d
-  Crashlytics: 0e61bdda9def51f1e99720f804eebe94865442b2
-  Fabric: 03c3b3fe77e11a2bc31421b989a9c7adaa4779a5
-  jot: 0f5dc333defa6ad805d01adc3834b201c22510a7
-  Masonry: 362e8a1cc0beada4a4c4832d5e863da2a51533be
+  ChameleonFramework: 31cf675235772b0fb6f43bf76547eafc2d6442ae
+  Crashlytics: 41c082440d2e14da444186fff65e79c0b4b35d4c
+  Fabric: 190bf1a6eb65f7500de1347d027d2e59a7e53db1
+  SnapKit: 4962eed2ee18e48cbd2b2292fffc57efe7235f87
 
 COCOAPODS: 0.38.2

@@ -1,39 +1,458 @@
 ### Swift dependencies file v0 ###
-provides:
+provides-top-level:
 - "AppDelegate"
-nominals:
+provides-nominal:
 - "C11TactixBoard11AppDelegate"
-class-members:
-- "applicationDidBecomeActive"
-- "applicationWillEnterForeground"
+provides-member:
+- ["C11TactixBoard11AppDelegate", ""]
+provides-dynamic-lookup:
 - "application"
-- "applicationDidEnterBackground"
+- "applicationWillEnterForeground"
+- "applicationDidBecomeActive"
 - "applicationWillTerminate"
 - "applicationWillResignActive"
 - "window"
-top-level:
-- !private "BooleanLiteralType"
-- "UIResponder"
-- "UIApplication"
-- "UIWindow"
-- "Bool"
-- "NSObject"
-- "UIApplicationDelegate"
+- "applicationDidEnterBackground"
+depends-top-level:
 - "AnyObject"
-member-access:
+- "UIResponder"
+- "UIWindow"
+- !private "Fabric"
+- !private "=="
+- !private "NSDictionary"
+- "AppDelegate"
+- !private "StringLiteralType"
+- "NSObject"
+- !private "NSBundle"
+- "Bool"
+- !private "Crashlytics"
+- !private "Array"
+- "UIApplication"
+- !private "NSString"
+- !private "Float"
+- !private "BooleanLiteralType"
+- "UIApplicationDelegate"
+- !private "NSUserDefaults"
+depends-member:
+- !private ["PSs9AnyObject", "Crashlytics"]
+- !private ["PSs9AnyObject", "Fabric"]
+- !private ["PSs9AnyObject", "NSBundle"]
+- !private ["PSs9AnyObject", "NSUserDefaults"]
+- ["PSs9AnyObject", "application"]
+- ["PSs9AnyObject", "applicationDidBecomeActive"]
+- ["PSs9AnyObject", "applicationDidEnterBackground"]
+- ["PSs9AnyObject", "applicationDidFinishLaunching"]
+- ["PSs9AnyObject", "applicationDidReceiveMemoryWarning"]
+- ["PSs9AnyObject", "applicationProtectedDataDidBecomeAvailable"]
+- ["PSs9AnyObject", "applicationProtectedDataWillBecomeUnavailable"]
+- ["PSs9AnyObject", "applicationShouldRequestHealthAuthorization"]
+- ["PSs9AnyObject", "applicationSignificantTimeChange"]
+- ["PSs9AnyObject", "applicationWillEnterForeground"]
+- ["PSs9AnyObject", "applicationWillResignActive"]
+- ["PSs9AnyObject", "applicationWillTerminate"]
+- !private ["PSs9AnyObject", "deinit"]
+- !private ["PSs9AnyObject", "floatValue"]
+- !private ["PSs9AnyObject", "infoDictionary"]
+- ["PSs9AnyObject", "init"]
+- !private ["PSs9AnyObject", "mainBundle"]
+- !private ["PSs9AnyObject", "objectForKey"]
+- !private ["PSs9AnyObject", "setFloat"]
+- !private ["PSs9AnyObject", "setValue"]
+- !private ["PSs9AnyObject", "standardUserDefaults"]
+- !private ["PSs9AnyObject", "valueForKey"]
+- ["PSs9AnyObject", "window"]
+- !private ["PSs9AnyObject", "with"]
+- ["PSs9AnyObject", ""]
+- ["C11TactixBoard11AppDelegate", "AnyObject"]
+- ["C11TactixBoard11AppDelegate", "Bool"]
+- !private ["C11TactixBoard11AppDelegate", "Crashlytics"]
+- !private ["C11TactixBoard11AppDelegate", "Fabric"]
+- !private ["C11TactixBoard11AppDelegate", "Float"]
+- !private ["C11TactixBoard11AppDelegate", "NSBundle"]
+- !private ["C11TactixBoard11AppDelegate", "NSDictionary"]
+- ["C11TactixBoard11AppDelegate", "NSObject"]
+- !private ["C11TactixBoard11AppDelegate", "NSString"]
+- !private ["C11TactixBoard11AppDelegate", "NSUserDefaults"]
+- ["C11TactixBoard11AppDelegate", "UIApplication"]
+- ["C11TactixBoard11AppDelegate", "UIWindow"]
+- ["C11TactixBoard11AppDelegate", "application"]
+- ["C11TactixBoard11AppDelegate", "applicationDidBecomeActive"]
+- ["C11TactixBoard11AppDelegate", "applicationDidEnterBackground"]
+- ["C11TactixBoard11AppDelegate", "applicationDidFinishLaunching"]
+- ["C11TactixBoard11AppDelegate", "applicationDidReceiveMemoryWarning"]
+- ["C11TactixBoard11AppDelegate", "applicationProtectedDataDidBecomeAvailable"]
+- ["C11TactixBoard11AppDelegate", "applicationProtectedDataWillBecomeUnavailable"]
+- ["C11TactixBoard11AppDelegate", "applicationShouldRequestHealthAuthorization"]
+- ["C11TactixBoard11AppDelegate", "applicationSignificantTimeChange"]
+- ["C11TactixBoard11AppDelegate", "applicationWillEnterForeground"]
+- ["C11TactixBoard11AppDelegate", "applicationWillResignActive"]
+- ["C11TactixBoard11AppDelegate", "applicationWillTerminate"]
+- ["C11TactixBoard11AppDelegate", "deinit"]
+- ["C11TactixBoard11AppDelegate", "init"]
+- ["C11TactixBoard11AppDelegate", "window"]
+- !private ["Sa", "Element"]
+- !private ["PSs23ArrayLiteralConvertible", "Element"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["PSs25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["PSs11BooleanType", "_getBuiltinLogicValue"]
+- !private ["PSs11CVarArgType", "Crashlytics"]
+- !private ["PSs11CVarArgType", "Fabric"]
+- !private ["PSs11CVarArgType", "NSBundle"]
+- !private ["PSs11CVarArgType", "NSUserDefaults"]
+- ["PSs11CVarArgType", "application"]
+- ["PSs11CVarArgType", "applicationDidBecomeActive"]
+- ["PSs11CVarArgType", "applicationDidEnterBackground"]
+- ["PSs11CVarArgType", "applicationDidFinishLaunching"]
+- ["PSs11CVarArgType", "applicationDidReceiveMemoryWarning"]
+- ["PSs11CVarArgType", "applicationProtectedDataDidBecomeAvailable"]
+- ["PSs11CVarArgType", "applicationProtectedDataWillBecomeUnavailable"]
+- ["PSs11CVarArgType", "applicationShouldRequestHealthAuthorization"]
+- ["PSs11CVarArgType", "applicationSignificantTimeChange"]
+- ["PSs11CVarArgType", "applicationWillEnterForeground"]
+- ["PSs11CVarArgType", "applicationWillResignActive"]
+- ["PSs11CVarArgType", "applicationWillTerminate"]
+- !private ["PSs11CVarArgType", "floatValue"]
+- !private ["PSs11CVarArgType", "infoDictionary"]
+- ["PSs11CVarArgType", "init"]
+- !private ["PSs11CVarArgType", "mainBundle"]
+- !private ["PSs11CVarArgType", "objectForKey"]
+- !private ["PSs11CVarArgType", "setFloat"]
+- !private ["PSs11CVarArgType", "setValue"]
+- !private ["PSs11CVarArgType", "standardUserDefaults"]
+- !private ["PSs11CVarArgType", "valueForKey"]
+- ["PSs11CVarArgType", "window"]
+- !private ["PSs11CVarArgType", "with"]
+- ["PSs11CVarArgType", ""]
+- !private ["PSs14CollectionType", "Element"]
+- !private ["CSo11Crashlytics", "init"]
+- !private ["PSs28CustomDebugStringConvertible", "Element"]
+- !private ["PSs23CustomStringConvertible", "Crashlytics"]
+- !private ["PSs23CustomStringConvertible", "Element"]
+- !private ["PSs23CustomStringConvertible", "Fabric"]
+- !private ["PSs23CustomStringConvertible", "NSBundle"]
+- !private ["PSs23CustomStringConvertible", "NSUserDefaults"]
+- !private ["PSs23CustomStringConvertible", "_getBuiltinLogicValue"]
+- ["PSs23CustomStringConvertible", "application"]
+- ["PSs23CustomStringConvertible", "applicationDidBecomeActive"]
+- ["PSs23CustomStringConvertible", "applicationDidEnterBackground"]
+- ["PSs23CustomStringConvertible", "applicationDidFinishLaunching"]
+- ["PSs23CustomStringConvertible", "applicationDidReceiveMemoryWarning"]
+- ["PSs23CustomStringConvertible", "applicationProtectedDataDidBecomeAvailable"]
+- ["PSs23CustomStringConvertible", "applicationProtectedDataWillBecomeUnavailable"]
+- ["PSs23CustomStringConvertible", "applicationShouldRequestHealthAuthorization"]
+- ["PSs23CustomStringConvertible", "applicationSignificantTimeChange"]
+- ["PSs23CustomStringConvertible", "applicationWillEnterForeground"]
+- ["PSs23CustomStringConvertible", "applicationWillResignActive"]
+- ["PSs23CustomStringConvertible", "applicationWillTerminate"]
+- !private ["PSs23CustomStringConvertible", "floatValue"]
+- !private ["PSs23CustomStringConvertible", "infoDictionary"]
+- ["PSs23CustomStringConvertible", "init"]
+- !private ["PSs23CustomStringConvertible", "mainBundle"]
+- !private ["PSs23CustomStringConvertible", "objectForKey"]
+- !private ["PSs23CustomStringConvertible", "setFloat"]
+- !private ["PSs23CustomStringConvertible", "setValue"]
+- !private ["PSs23CustomStringConvertible", "standardUserDefaults"]
+- !private ["PSs23CustomStringConvertible", "valueForKey"]
+- ["PSs23CustomStringConvertible", "window"]
+- !private ["PSs23CustomStringConvertible", "with"]
+- ["PSs23CustomStringConvertible", ""]
+- !private ["PSs28DictionaryLiteralConvertible", "objectForKey"]
+- !private ["PSs9Equatable", "Crashlytics"]
+- !private ["PSs9Equatable", "Fabric"]
+- !private ["PSs9Equatable", "NSBundle"]
+- !private ["PSs9Equatable", "NSUserDefaults"]
+- !private ["PSs9Equatable", "_getBuiltinLogicValue"]
+- ["PSs9Equatable", "application"]
+- ["PSs9Equatable", "applicationDidBecomeActive"]
+- ["PSs9Equatable", "applicationDidEnterBackground"]
+- ["PSs9Equatable", "applicationDidFinishLaunching"]
+- ["PSs9Equatable", "applicationDidReceiveMemoryWarning"]
+- ["PSs9Equatable", "applicationProtectedDataDidBecomeAvailable"]
+- ["PSs9Equatable", "applicationProtectedDataWillBecomeUnavailable"]
+- ["PSs9Equatable", "applicationShouldRequestHealthAuthorization"]
+- ["PSs9Equatable", "applicationSignificantTimeChange"]
+- ["PSs9Equatable", "applicationWillEnterForeground"]
+- ["PSs9Equatable", "applicationWillResignActive"]
+- ["PSs9Equatable", "applicationWillTerminate"]
+- !private ["PSs9Equatable", "floatValue"]
+- !private ["PSs9Equatable", "infoDictionary"]
+- ["PSs9Equatable", "init"]
+- !private ["PSs9Equatable", "mainBundle"]
+- !private ["PSs9Equatable", "objectForKey"]
+- !private ["PSs9Equatable", "setFloat"]
+- !private ["PSs9Equatable", "setValue"]
+- !private ["PSs9Equatable", "standardUserDefaults"]
+- !private ["PSs9Equatable", "valueForKey"]
+- ["PSs9Equatable", "window"]
+- !private ["PSs9Equatable", "with"]
+- ["PSs9Equatable", ""]
+- !private ["PSs41ExtendedGraphemeClusterLiteralConvertible", "floatValue"]
+- !private ["CSo6Fabric", "with"]
+- !private ["PSs8Hashable", "Crashlytics"]
+- !private ["PSs8Hashable", "Fabric"]
+- !private ["PSs8Hashable", "NSBundle"]
+- !private ["PSs8Hashable", "NSUserDefaults"]
+- !private ["PSs8Hashable", "_getBuiltinLogicValue"]
+- ["PSs8Hashable", "application"]
+- ["PSs8Hashable", "applicationDidBecomeActive"]
+- ["PSs8Hashable", "applicationDidEnterBackground"]
+- ["PSs8Hashable", "applicationDidFinishLaunching"]
+- ["PSs8Hashable", "applicationDidReceiveMemoryWarning"]
+- ["PSs8Hashable", "applicationProtectedDataDidBecomeAvailable"]
+- ["PSs8Hashable", "applicationProtectedDataWillBecomeUnavailable"]
+- ["PSs8Hashable", "applicationShouldRequestHealthAuthorization"]
+- ["PSs8Hashable", "applicationSignificantTimeChange"]
+- ["PSs8Hashable", "applicationWillEnterForeground"]
+- ["PSs8Hashable", "applicationWillResignActive"]
+- ["PSs8Hashable", "applicationWillTerminate"]
+- !private ["PSs8Hashable", "floatValue"]
+- !private ["PSs8Hashable", "infoDictionary"]
+- ["PSs8Hashable", "init"]
+- !private ["PSs8Hashable", "mainBundle"]
+- !private ["PSs8Hashable", "objectForKey"]
+- !private ["PSs8Hashable", "setFloat"]
+- !private ["PSs8Hashable", "setValue"]
+- !private ["PSs8Hashable", "standardUserDefaults"]
+- !private ["PSs8Hashable", "valueForKey"]
+- ["PSs8Hashable", "window"]
+- !private ["PSs8Hashable", "with"]
+- ["PSs8Hashable", ""]
+- !private ["PSs9Indexable", "Element"]
+- !private ["PSs21MutableCollectionType", "Element"]
+- !private ["PSs16MutableIndexable", "Element"]
+- !private ["PSs16MutableSliceable", "Element"]
+- !private ["CSo8NSBundle", "infoDictionary"]
+- !private ["CSo8NSBundle", "mainBundle"]
+- !private ["PSo8NSCoding", "floatValue"]
+- !private ["PSo8NSCoding", "objectForKey"]
+- !private ["PSo9NSCopying", "floatValue"]
+- !private ["PSo9NSCopying", "objectForKey"]
+- !private ["CSo12NSDictionary", "objectForKey"]
+- !private ["PSo17NSFastEnumeration", "objectForKey"]
+- !private ["PSo16NSMutableCopying", "floatValue"]
+- !private ["PSo16NSMutableCopying", "objectForKey"]
+- ["CSo8NSObject", "AnyObject"]
+- ["CSo8NSObject", "Bool"]
+- !private ["CSo8NSObject", "Crashlytics"]
+- !private ["CSo8NSObject", "Fabric"]
+- !private ["CSo8NSObject", "Float"]
+- !private ["CSo8NSObject", "NSBundle"]
+- !private ["CSo8NSObject", "NSDictionary"]
+- ["CSo8NSObject", "NSObject"]
+- !private ["CSo8NSObject", "NSString"]
+- !private ["CSo8NSObject", "NSUserDefaults"]
+- ["CSo8NSObject", "UIApplication"]
+- ["CSo8NSObject", "UIWindow"]
+- ["CSo8NSObject", "application"]
+- ["CSo8NSObject", "applicationDidBecomeActive"]
+- ["CSo8NSObject", "applicationDidEnterBackground"]
+- ["CSo8NSObject", "applicationDidFinishLaunching"]
+- ["CSo8NSObject", "applicationDidReceiveMemoryWarning"]
+- ["CSo8NSObject", "applicationProtectedDataDidBecomeAvailable"]
+- ["CSo8NSObject", "applicationProtectedDataWillBecomeUnavailable"]
+- ["CSo8NSObject", "applicationShouldRequestHealthAuthorization"]
+- ["CSo8NSObject", "applicationSignificantTimeChange"]
+- ["CSo8NSObject", "applicationWillEnterForeground"]
+- ["CSo8NSObject", "applicationWillResignActive"]
+- ["CSo8NSObject", "applicationWillTerminate"]
+- !private ["CSo8NSObject", "floatValue"]
+- !private ["CSo8NSObject", "infoDictionary"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "mainBundle"]
+- !private ["CSo8NSObject", "objectForKey"]
+- !private ["CSo8NSObject", "setFloat"]
+- !private ["CSo8NSObject", "setValue"]
+- !private ["CSo8NSObject", "standardUserDefaults"]
+- !private ["CSo8NSObject", "valueForKey"]
+- ["CSo8NSObject", "window"]
+- !private ["CSo8NSObject", "with"]
+- !private ["PSo16NSObjectProtocol", "Crashlytics"]
+- !private ["PSo16NSObjectProtocol", "Fabric"]
+- !private ["PSo16NSObjectProtocol", "NSBundle"]
+- !private ["PSo16NSObjectProtocol", "NSUserDefaults"]
+- ["PSo16NSObjectProtocol", "application"]
+- ["PSo16NSObjectProtocol", "applicationDidBecomeActive"]
+- ["PSo16NSObjectProtocol", "applicationDidEnterBackground"]
+- ["PSo16NSObjectProtocol", "applicationDidFinishLaunching"]
+- ["PSo16NSObjectProtocol", "applicationDidReceiveMemoryWarning"]
+- ["PSo16NSObjectProtocol", "applicationProtectedDataDidBecomeAvailable"]
+- ["PSo16NSObjectProtocol", "applicationProtectedDataWillBecomeUnavailable"]
+- ["PSo16NSObjectProtocol", "applicationShouldRequestHealthAuthorization"]
+- ["PSo16NSObjectProtocol", "applicationSignificantTimeChange"]
+- ["PSo16NSObjectProtocol", "applicationWillEnterForeground"]
+- ["PSo16NSObjectProtocol", "applicationWillResignActive"]
+- ["PSo16NSObjectProtocol", "applicationWillTerminate"]
+- !private ["PSo16NSObjectProtocol", "floatValue"]
+- !private ["PSo16NSObjectProtocol", "infoDictionary"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "mainBundle"]
+- !private ["PSo16NSObjectProtocol", "objectForKey"]
+- !private ["PSo16NSObjectProtocol", "setFloat"]
+- !private ["PSo16NSObjectProtocol", "setValue"]
+- !private ["PSo16NSObjectProtocol", "standardUserDefaults"]
+- !private ["PSo16NSObjectProtocol", "valueForKey"]
+- ["PSo16NSObjectProtocol", "window"]
+- !private ["PSo16NSObjectProtocol", "with"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "floatValue"]
+- !private ["PSo14NSSecureCoding", "objectForKey"]
+- !private ["CSo8NSString", "floatValue"]
+- !private ["CSo14NSUserDefaults", "init"]
+- !private ["CSo14NSUserDefaults", "setFloat"]
+- !private ["CSo14NSUserDefaults", "setValue"]
+- !private ["CSo14NSUserDefaults", "standardUserDefaults"]
+- !private ["CSo14NSUserDefaults", "valueForKey"]
+- !private ["Sq", "deinit"]
+- !private ["PSs30RangeReplaceableCollectionType", "Element"]
+- !private ["PSs12SequenceType", "Element"]
+- !private ["PSs12SequenceType", "objectForKey"]
+- !private ["SS", "deinit"]
+- !private ["PSs24StringLiteralConvertible", "floatValue"]
+- !private ["PSo21UIApplicationDelegate", "Crashlytics"]
+- !private ["PSo21UIApplicationDelegate", "Fabric"]
+- !private ["PSo21UIApplicationDelegate", "NSBundle"]
+- !private ["PSo21UIApplicationDelegate", "NSUserDefaults"]
+- ["PSo21UIApplicationDelegate", "application"]
+- ["PSo21UIApplicationDelegate", "applicationDidBecomeActive"]
+- ["PSo21UIApplicationDelegate", "applicationDidEnterBackground"]
+- ["PSo21UIApplicationDelegate", "applicationDidFinishLaunching"]
+- ["PSo21UIApplicationDelegate", "applicationDidReceiveMemoryWarning"]
+- ["PSo21UIApplicationDelegate", "applicationProtectedDataDidBecomeAvailable"]
+- ["PSo21UIApplicationDelegate", "applicationProtectedDataWillBecomeUnavailable"]
+- ["PSo21UIApplicationDelegate", "applicationShouldRequestHealthAuthorization"]
+- ["PSo21UIApplicationDelegate", "applicationSignificantTimeChange"]
+- ["PSo21UIApplicationDelegate", "applicationWillEnterForeground"]
+- ["PSo21UIApplicationDelegate", "applicationWillResignActive"]
+- ["PSo21UIApplicationDelegate", "applicationWillTerminate"]
+- ["PSo21UIApplicationDelegate", "window"]
+- ["PSo21UIApplicationDelegate", ""]
+- ["CSo11UIResponder", "AnyObject"]
+- ["CSo11UIResponder", "Bool"]
+- !private ["CSo11UIResponder", "Crashlytics"]
+- !private ["CSo11UIResponder", "Fabric"]
+- !private ["CSo11UIResponder", "Float"]
+- !private ["CSo11UIResponder", "NSBundle"]
+- !private ["CSo11UIResponder", "NSDictionary"]
+- ["CSo11UIResponder", "NSObject"]
+- !private ["CSo11UIResponder", "NSString"]
+- !private ["CSo11UIResponder", "NSUserDefaults"]
+- ["CSo11UIResponder", "UIApplication"]
+- ["CSo11UIResponder", "UIWindow"]
+- ["CSo11UIResponder", "application"]
+- ["CSo11UIResponder", "applicationDidBecomeActive"]
+- ["CSo11UIResponder", "applicationDidEnterBackground"]
+- ["CSo11UIResponder", "applicationDidFinishLaunching"]
+- ["CSo11UIResponder", "applicationDidReceiveMemoryWarning"]
+- ["CSo11UIResponder", "applicationProtectedDataDidBecomeAvailable"]
+- ["CSo11UIResponder", "applicationProtectedDataWillBecomeUnavailable"]
+- ["CSo11UIResponder", "applicationShouldRequestHealthAuthorization"]
+- ["CSo11UIResponder", "applicationSignificantTimeChange"]
+- ["CSo11UIResponder", "applicationWillEnterForeground"]
+- ["CSo11UIResponder", "applicationWillResignActive"]
+- ["CSo11UIResponder", "applicationWillTerminate"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "window"]
+- ["CSo11UIResponder", ""]
+- !private ["PSs31UnicodeScalarLiteralConvertible", "floatValue"]
+- !private ["PSs10_ArrayType", "Element"]
+- !private ["PSs33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["PSs16_CocoaStringType", "floatValue"]
+- !private ["PSs24_DestructorSafeContainer", "Element"]
+- !private ["PSs21_ObjectiveCBridgeable", "Element"]
+- !private ["PSs21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["PSs12_Reflectable", "Element"]
+- !private ["PSs12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["PSs12_Reflectable", "floatValue"]
+- !private ["PSs12_Reflectable", "objectForKey"]
+depends-nominal:
 - "PSs9AnyObject"
-- "PSo21UIApplicationDelegate"
 - "C11TactixBoard11AppDelegate"
-- "CSo11UIResponder"
+- !private "Sa"
+- !private "PSs23ArrayLiteralConvertible"
+- !private "Sb"
+- !private "PSs25BooleanLiteralConvertible"
+- !private "PSs11BooleanType"
+- "PSs11CVarArgType"
+- !private "PSs14CollectionType"
+- !private "CSo11Crashlytics"
+- !private "PSs28CustomDebugStringConvertible"
+- "PSs23CustomStringConvertible"
+- !private "PSs28DictionaryLiteralConvertible"
+- "PSs9Equatable"
+- !private "PSs41ExtendedGraphemeClusterLiteralConvertible"
+- !private "CSo6Fabric"
+- "PSs8Hashable"
+- !private "PSs9Indexable"
+- !private "PSs21MutableCollectionType"
+- !private "PSs16MutableIndexable"
+- !private "PSs16MutableSliceable"
+- !private "CSo8NSBundle"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "CSo12NSDictionary"
+- !private "PSo17NSFastEnumeration"
+- !private "PSo16NSMutableCopying"
 - "CSo8NSObject"
-dynamic-lookup:
-cross-module:
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/Swift.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/Foundation.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/Darwin.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/Dispatch.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/ObjectiveC.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/CoreGraphics.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/Security.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/UIKit.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/CoreImage.swiftmodule"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "CSo14NSUserDefaults"
+- !private "Sq"
+- !private "PSs30RangeReplaceableCollectionType"
+- !private "PSs12SequenceType"
+- !private "SS"
+- !private "PSs24StringLiteralConvertible"
+- "PSo21UIApplicationDelegate"
+- "CSo11UIResponder"
+- !private "PSs31UnicodeScalarLiteralConvertible"
+- !private "PSs10_ArrayType"
+- !private "PSs33_BuiltinBooleanLiteralConvertible"
+- !private "PSs16_CocoaStringType"
+- !private "PSs24_DestructorSafeContainer"
+- !private "PSs21_ObjectiveCBridgeable"
+- !private "PSs12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Users/agapov/Developer/TactixBoard/Libraries/BridgingHeader.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/SnapKit.framework/Modules/SnapKit.swiftmodule/x86_64.swiftmodule"
+- "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/SnapKit.framework/Headers/SnapKit-Swift.h"
+- "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/SnapKit.framework/Headers/SnapKit-umbrella.h"
+- "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/SnapKit.framework/Modules/module.modulemap"
+- "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/ChameleonFramework.framework/Modules/ChameleonFramework.swiftmodule/x86_64.swiftmodule"
+- "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/ChameleonFramework.framework/Headers/ChameleonFramework-Swift.h"
+- "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/ChameleonFramework.framework/Headers/UIView+ChameleonPrivate.h"
+- "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/ChameleonFramework.framework/Headers/UIImage+ChameleonPrivate.h"
+- "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/ChameleonFramework.framework/Headers/UIColor+ChameleonPrivate.h"
+- "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/ChameleonFramework.framework/Headers/UILabel+Chameleon.h"
+- "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/ChameleonFramework.framework/Headers/UIButton+Chameleon.h"
+- "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/ChameleonFramework.framework/Headers/UIViewController+Chameleon.h"
+- "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/ChameleonFramework.framework/Headers/UINavigationController+Chameleon.h"
+- "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/ChameleonFramework.framework/Headers/NSArray+Chameleon.h"
+- "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/ChameleonFramework.framework/Headers/UIColor+Chameleon.h"
+- "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/ChameleonFramework.framework/Headers/ChameleonMacros.h"
+- "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/ChameleonFramework.framework/Headers/ChameleonEnums.h"
+- "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/ChameleonFramework.framework/Headers/ChameleonConstants.h"
+- "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/ChameleonFramework.framework/Headers/Chameleon_.h"
+- "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/ChameleonFramework.framework/Headers/Chameleon.h"
+- "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/ChameleonFramework.framework/Headers/ChameleonFramework-umbrella.h"
+- "/Users/agapov/Developer/TactixBoard/DerivedData/TactixBoard/Build/Products/Debug-iphonesimulator/ChameleonFramework.framework/Modules/module.modulemap"
+- "/Users/agapov/Developer/TactixBoard/Pods/Fabric/Fabric.framework/Headers/FABAttributes.h"
+- "/Users/agapov/Developer/TactixBoard/Pods/Fabric/Fabric.framework/Headers/Fabric.h"
+- "/Users/agapov/Developer/TactixBoard/Pods/Fabric/Fabric.framework/Modules/module.modulemap"
+- "/Users/agapov/Developer/TactixBoard/Pods/Crashlytics/Crashlytics.framework/Headers/ANSCompatibility.h"
+- "/Users/agapov/Developer/TactixBoard/Pods/Crashlytics/Crashlytics.framework/Headers/Answers.h"
+- "/Users/agapov/Developer/TactixBoard/Pods/Crashlytics/Crashlytics.framework/Headers/CLSStackFrame.h"
+- "/Users/agapov/Developer/TactixBoard/Pods/Crashlytics/Crashlytics.framework/Headers/CLSReport.h"
+- "/Users/agapov/Developer/TactixBoard/Pods/Crashlytics/Crashlytics.framework/Headers/CLSLogging.h"
+- "/Users/agapov/Developer/TactixBoard/Pods/Crashlytics/Crashlytics.framework/Headers/CLSAttributes.h"
+- "/Users/agapov/Developer/TactixBoard/Pods/Crashlytics/Crashlytics.framework/Headers/Crashlytics.h"
+- "/Users/agapov/Developer/TactixBoard/Pods/Crashlytics/Crashlytics.framework/Modules/module.modulemap"
+interface-hash: "70c3eeaeddfb55db5ab6d4ed638fd236"

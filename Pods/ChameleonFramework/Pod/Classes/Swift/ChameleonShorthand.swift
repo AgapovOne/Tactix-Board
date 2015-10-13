@@ -27,15 +27,13 @@
  
  */
 
+import UIKit
+
 // MARK: - Chameleon - UIColor Methods Shorthand
 
 //UIColor Methods Shorthand
 public func ComplementaryFlatColorOf(color: UIColor) -> UIColor {
     return UIColor(complementaryFlatColorOf: color)
-}
-
-public func FlatVersionOf(color: UIColor) -> UIColor {
-    return UIColor(flatVersionOf: color)
 }
 
 public func RandomFlatColorWithShade(shade: UIShadeStyle) -> UIColor {
@@ -50,21 +48,28 @@ public func GradientColor(gradientStyle: UIGradientStyle, frame: CGRect, colors:
     return UIColor(gradientStyle: gradientStyle, withFrame: frame, andColors: colors)
 }
 
+public func HexColor(hexString: String, withAlpha alpha: CGFloat = 1.0) -> UIColor {
+    return UIColor(hexString: hexString, withAlpha: alpha)
+}
 
-// MARK: - Chameleon - UIStatusBar Methods Shorthand
-
-//UIStatusBar Methods Shorthand
-public func StatusBarContrastColorOf(backgroundColor: UIColor) -> UIStatusBarStyle {
-    return ChameleonStatusBar.statusBarStyleForColor(backgroundColor)
+public func AverageColorFromImage(image: UIImage) -> UIColor {
+    return UIColor(averageColorFromImage: image)
 }
 
 // MARK: - Chameleon - NSArray Methods Shorthand
 
 //NSArray Methods Shorthand
 // TODO Array Extension needed ;)
+
+/*
 public func ColorSchemeOf(colorSchemeType:ColorScheme, color:UIColor, isFlatScheme:Bool) -> Array <UIColor> {
     return NSArray(ofColorsWithColorScheme:colorSchemeType, with:color, flatScheme: isFlatScheme) as! [UIColor]
+}*/
+
+public func ColorsFromImage(image: UIImage, _ withFlatScheme: Bool) -> NSArray {
+    return NSArray(ofColorsFromImage: UIImage(), withFlatScheme: true)
 }
+
 
 // MARK: - Chameleon - Special Colors Shorthand
 
