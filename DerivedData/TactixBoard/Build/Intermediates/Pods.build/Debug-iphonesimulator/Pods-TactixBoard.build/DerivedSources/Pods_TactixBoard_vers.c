@@ -1,1 +1,0 @@
- const unsigned char Pods_TactixBoardVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:Pods_TactixBoard  PROJECT:Pods-1" "\n"; const double Pods_TactixBoardVersionNumber __attribute__ ((used)) = (double)1.;

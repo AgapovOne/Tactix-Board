@@ -14,7 +14,11 @@
 		8D5F87561BCC106200FFE288 /* AddMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F87551BCC106200FFE288 /* AddMenu.swift */; settings = {ASSET_TAGS = (); }; };
 		8D5F87591BCCE27F00FFE288 /* DeleteMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D5F87581BCCE27F00FFE288 /* DeleteMenu.xib */; settings = {ASSET_TAGS = (); }; };
 		8D5F875C1BCCE35B00FFE288 /* DeleteMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F875B1BCCE35B00FFE288 /* DeleteMenu.swift */; settings = {ASSET_TAGS = (); }; };
+		8D5F875E1BCCEDFD00FFE288 /* MenuType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F875D1BCCEDFD00FFE288 /* MenuType.swift */; settings = {ASSET_TAGS = (); }; };
+		8D5F87601BCCF72B00FFE288 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F875F1BCCF72B00FFE288 /* Fonts.swift */; settings = {ASSET_TAGS = (); }; };
 		8D6967DA1BADE786005835DB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6967D91BADE786005835DB /* Colors.swift */; };
+		8D884B201BCD609400279F13 /* LineType.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D884B1F1BCD609400279F13 /* LineType.xib */; settings = {ASSET_TAGS = (); }; };
+		8D884B241BCD62F100279F13 /* LineTypeMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D884B231BCD62F100279F13 /* LineTypeMenu.swift */; settings = {ASSET_TAGS = (); }; };
 		8DA4E1811B9AD9B800001794 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1801B9AD9B800001794 /* AppDelegate.swift */; };
 		8DA4E1861B9AD9B800001794 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DA4E1841B9AD9B800001794 /* Main.storyboard */; };
 		8DA4E1881B9AD9B800001794 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DA4E1871B9AD9B800001794 /* Images.xcassets */; };
@@ -46,7 +50,11 @@
 		8D5F87551BCC106200FFE288 /* AddMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddMenu.swift; path = Libraries/Classes/Views/Sidebar/AddMenu.swift; sourceTree = "<group>"; };
 		8D5F87581BCCE27F00FFE288 /* DeleteMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeleteMenu.xib; sourceTree = "<group>"; };
 		8D5F875B1BCCE35B00FFE288 /* DeleteMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeleteMenu.swift; path = Libraries/Classes/Views/Sidebar/DeleteMenu.swift; sourceTree = "<group>"; };
+		8D5F875D1BCCEDFD00FFE288 /* MenuType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuType.swift; path = Libraries/Classes/Views/Sidebar/MenuType.swift; sourceTree = "<group>"; };
+		8D5F875F1BCCF72B00FFE288 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fonts.swift; path = Libraries/Classes/Fonts.swift; sourceTree = "<group>"; };
 		8D6967D91BADE786005835DB /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = Libraries/Classes/Colors.swift; sourceTree = "<group>"; };
+		8D884B1F1BCD609400279F13 /* LineType.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LineType.xib; sourceTree = "<group>"; };
+		8D884B231BCD62F100279F13 /* LineTypeMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LineTypeMenu.swift; path = Libraries/Classes/Views/Sidebar/LineTypeMenu.swift; sourceTree = "<group>"; };
 		8DA4E17B1B9AD9B800001794 /* TactixBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TactixBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA4E17F1B9AD9B800001794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DA4E1801B9AD9B800001794 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +113,7 @@
 			children = (
 				8D4F2F221BCBED6000033007 /* AddMenu.xib */,
 				8D5F87581BCCE27F00FFE288 /* DeleteMenu.xib */,
+				8D884B1F1BCD609400279F13 /* LineType.xib */,
 			);
 			name = Sidebar;
 			sourceTree = "<group>";
@@ -112,8 +121,10 @@
 		8D5F875A1BCCE2A600FFE288 /* Sidebar */ = {
 			isa = PBXGroup;
 			children = (
+				8D5F875D1BCCEDFD00FFE288 /* MenuType.swift */,
 				8D5F87551BCC106200FFE288 /* AddMenu.swift */,
 				8D5F875B1BCCE35B00FFE288 /* DeleteMenu.swift */,
+				8D884B231BCD62F100279F13 /* LineTypeMenu.swift */,
 			);
 			name = Sidebar;
 			sourceTree = "<group>";
@@ -193,6 +204,7 @@
 				8DA4E1AB1B9E31F300001794 /* Extensions.swift */,
 				8D6967D91BADE786005835DB /* Colors.swift */,
 				8DB0F9281BC59BEC00186C3D /* Menu.swift */,
+				8D5F875F1BCCF72B00FFE288 /* Fonts.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -312,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DA4E1861B9AD9B800001794 /* Main.storyboard in Resources */,
+				8D884B201BCD609400279F13 /* LineType.xib in Resources */,
 				8DA4E18B1B9AD9B800001794 /* LaunchScreen.xib in Resources */,
 				8D4F2F231BCBED6000033007 /* AddMenu.xib in Resources */,
 				8DA4E1881B9AD9B800001794 /* Images.xcassets in Resources */,
@@ -396,7 +409,10 @@
 			files = (
 				8DA4E1AC1B9E31F300001794 /* Extensions.swift in Sources */,
 				8D17100E1BB9B9350007F919 /* Drawing.swift in Sources */,
+				8D5F875E1BCCEDFD00FFE288 /* MenuType.swift in Sources */,
 				8DB0F9291BC59BEC00186C3D /* Menu.swift in Sources */,
+				8D5F87601BCCF72B00FFE288 /* Fonts.swift in Sources */,
+				8D884B241BCD62F100279F13 /* LineTypeMenu.swift in Sources */,
 				8D6967DA1BADE786005835DB /* Colors.swift in Sources */,
 				8DA4E1A81B9E11AB00001794 /* BoardVC.swift in Sources */,
 				8D5F875C1BCCE35B00FFE288 /* DeleteMenu.swift in Sources */,
@@ -544,7 +560,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "TactixBoard/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "agapov.one.ru.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -561,7 +577,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "TactixBoard/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "agapov.one.ru.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

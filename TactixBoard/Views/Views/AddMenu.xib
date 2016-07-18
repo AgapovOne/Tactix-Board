@@ -25,18 +25,6 @@
                         <action selector="addRedPlayer:" destination="-1" eventType="touchUpInside" id="Q4T-f8-4gh"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bs6-Z3-dTJ">
-                    <rect key="frame" x="60" y="0.0" width="60" height="60"/>
-                    <animations/>
-                    <color key="backgroundColor" red="0.1334631741" green="0.1823148429" blue="0.25190103050000001" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="Bs6-Z3-dTJ" secondAttribute="height" multiplier="1:1" id="o0T-bU-LAW"/>
-                    </constraints>
-                    <state key="normal" image="AddBlue"/>
-                    <connections>
-                        <action selector="addBluePlayer:" destination="-1" eventType="touchUpInside" id="6zm-uo-6Zg"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeZ-ve-KXW">
                     <rect key="frame" x="120" y="0.0" width="60" height="60"/>
                     <animations/>
@@ -71,6 +59,18 @@
                     <state key="normal" image="AddDeleteOrangeGK"/>
                     <connections>
                         <action selector="addOrangeGK:" destination="-1" eventType="touchUpInside" id="oNp-gl-z1c"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bs6-Z3-dTJ">
+                    <rect key="frame" x="60" y="0.0" width="60" height="60"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.1334631741" green="0.1823148429" blue="0.25190103050000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Bs6-Z3-dTJ" secondAttribute="height" multiplier="1:1" id="o0T-bU-LAW"/>
+                    </constraints>
+                    <state key="normal" image="AddBlue"/>
+                    <connections>
+                        <action selector="addBluePlayer:" destination="-1" eventType="touchUpInside" id="6zm-uo-6Zg"/>
                     </connections>
                 </button>
             </subviews>
@@ -113,7 +113,7 @@
                     <exclude reference="XE9-Li-lL2"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="327" y="658"/>
+            <point key="canvasLocation" x="411" y="611"/>
         </view>
     </objects>
     <resources>

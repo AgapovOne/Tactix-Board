@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 func randomColor() -> UIColor {
   //randomize view color
   let blueValue = CGFloat(Int(arc4random() % 255)) / 255.0

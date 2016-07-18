@@ -8,46 +8,9 @@
 
 import UIKit
 
-
-@IBDesignable class DeleteMenu: UIView {
+@IBDesignable class DeleteMenu: MenuType {
   
-  // Our custom view from the XIB file
-  var view: UIView!
-  
-  override init(frame: CGRect) {
-    // 1. setup any properties here
-    
-    // 2. call super.init(frame:)
-    super.init(frame: frame)
-    
-    // 3. Setup view from .xib file
-    xibSetup()
-  }
-  
-  required init?(coder aDecoder: NSCoder) {
-    // 1. setup any properties here
-    
-    // 2. call super.init(coder:)
-    super.init(coder: aDecoder)
-    
-    // 3. Setup view from .xib file
-    xibSetup()
-  }
-  
-  func xibSetup() {
-    view = loadViewFromNib()
-    
-    // use bounds not frame or it'll be offset
-    view.frame = bounds
-    
-    // Make the view stretch with containing view
-    view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
-    
-    // Adding custom subview on top of our view (over any custom drawing > see note below)
-    addSubview(view)
-  }
-  
-  func loadViewFromNib() -> UIView {
+  override func loadViewFromNib() -> UIView {
     let bundle = NSBundle(forClass: self.dynamicType)
     let nib = UINib(nibName: "DeleteMenu", bundle: bundle)
     
@@ -56,22 +19,51 @@ import UIKit
     return view
   }
   
+  func removePlayerWithColor(color:UIColor) {
+    guard let sup = self.superview else {return}
+    for v in sup.subviews {
+      if v.isKindOfClass(PlayerView) {
+        if v.backgroundColor == color {
+          v.removeFromSuperview()
+          return
+        }
+      }
+    }
+  }
+  
+  func removeTeamWithColor(color:UIColor) {
+    guard let sup = self.superview else {return}
+    for v in sup.subviews {
+      if v.isKindOfClass(PlayerView) {
+        if v.backgroundColor == color {
+          v.removeFromSuperview()
+        }
+      }
+    }
+  }
+  
   @IBAction func deleteRedPlayer(sender: UIButton) {
+    removePlayerWithColor(red)
   }
   
   @IBAction func deleteBluePlayer(sender: UIButton) {
+    removePlayerWithColor(blue)
   }
   
   @IBAction func deleteBlackPlayer(sender: UIButton) {
+    removePlayerWithColor(black)
   }
   
   @IBAction func deleteTeam(sender: UIButton) {
+    removeTeamWithColor(blue)
   }
   
   @IBAction func deleteOrangeGK(sender: UIButton) {
+    removePlayerWithColor(orange)
   }
   
   @IBAction func deleteGreenGK(sender: UIButton) {
+    removePlayerWithColor(green)
   }
 }
 

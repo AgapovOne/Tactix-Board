@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LineTypeMenu" customModule="TactixBoard" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="m6Y-7c-zhE">
+            <rect key="frame" x="0.0" y="0.0" width="180" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdv-k4-UfM">
+                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.1334631741" green="0.1823148429" blue="0.25190103050000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="6UM-sn-Ui5"/>
+                    </constraints>
+                    <state key="normal" image="ThinLine"/>
+                    <connections>
+                        <action selector="setThinLine:" destination="-1" eventType="touchUpInside" id="AE6-R4-V5D"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkB-Nz-kBX">
+                    <rect key="frame" x="120" y="0.0" width="60" height="60"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.1334631741" green="0.1823148429" blue="0.25190103050000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="gNg-RC-Q3i"/>
+                    </constraints>
+                    <state key="normal" image="DashedLine"/>
+                    <connections>
+                        <action selector="setDashedLine:" destination="-1" eventType="touchUpInside" id="fGd-5k-Zaw"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qei-f3-M4R">
+                    <rect key="frame" x="60" y="0.0" width="60" height="60"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.1334631741" green="0.1823148429" blue="0.25190103050000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" image="ThickLine"/>
+                    <connections>
+                        <action selector="setThickLine:" destination="-1" eventType="touchUpInside" id="m7m-36-hd5"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="gdv-k4-UfM" firstAttribute="width" secondItem="qei-f3-M4R" secondAttribute="width" id="0uc-T8-Vvb"/>
+                <constraint firstItem="qkB-Nz-kBX" firstAttribute="width" secondItem="qei-f3-M4R" secondAttribute="width" id="4ZB-yA-IxL"/>
+                <constraint firstItem="qkB-Nz-kBX" firstAttribute="centerY" secondItem="m6Y-7c-zhE" secondAttribute="centerY" id="5b6-tL-Ydw"/>
+                <constraint firstItem="qei-f3-M4R" firstAttribute="centerY" secondItem="m6Y-7c-zhE" secondAttribute="centerY" id="9JT-Ju-wx7"/>
+                <constraint firstItem="gdv-k4-UfM" firstAttribute="height" secondItem="qei-f3-M4R" secondAttribute="height" id="G7B-ut-JXi"/>
+                <constraint firstItem="gdv-k4-UfM" firstAttribute="top" secondItem="m6Y-7c-zhE" secondAttribute="top" id="Hbj-0B-i4B"/>
+                <constraint firstItem="qkB-Nz-kBX" firstAttribute="height" secondItem="qei-f3-M4R" secondAttribute="height" id="IC6-s0-lnu"/>
+                <constraint firstItem="qei-f3-M4R" firstAttribute="leading" secondItem="gdv-k4-UfM" secondAttribute="trailing" id="ISC-K9-KyK"/>
+                <constraint firstItem="qkB-Nz-kBX" firstAttribute="leading" secondItem="qei-f3-M4R" secondAttribute="trailing" id="UNh-EE-ilt"/>
+                <constraint firstItem="qkB-Nz-kBX" firstAttribute="top" secondItem="m6Y-7c-zhE" secondAttribute="top" id="Whi-23-368"/>
+                <constraint firstItem="qei-f3-M4R" firstAttribute="top" secondItem="m6Y-7c-zhE" secondAttribute="top" id="XWg-xL-7b6"/>
+                <constraint firstAttribute="bottom" secondItem="qkB-Nz-kBX" secondAttribute="bottom" id="auV-YH-KpR"/>
+                <constraint firstAttribute="bottom" secondItem="gdv-k4-UfM" secondAttribute="bottom" id="bBR-6t-Huy"/>
+                <constraint firstItem="gdv-k4-UfM" firstAttribute="leading" secondItem="m6Y-7c-zhE" secondAttribute="leading" id="el9-YB-v3j"/>
+                <constraint firstItem="gdv-k4-UfM" firstAttribute="centerY" secondItem="m6Y-7c-zhE" secondAttribute="centerY" id="fcM-ph-fgQ"/>
+                <constraint firstAttribute="trailing" secondItem="qkB-Nz-kBX" secondAttribute="trailing" id="gDf-ec-aXU"/>
+                <constraint firstAttribute="bottom" secondItem="qei-f3-M4R" secondAttribute="bottom" id="nBV-80-60a"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="507" y="980"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="DashedLine" width="32" height="32"/>
+        <image name="ThickLine" width="32" height="32"/>
+        <image name="ThinLine" width="32" height="32"/>
+    </resources>
+</document>

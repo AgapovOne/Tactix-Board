@@ -5,11 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeleteMenu" customModule="TactixBoard" customModuleProvider="target">
-            <connections>
-                <outlet property="deleteRed" destination="NCa-hR-5qp" id="17N-bV-y38"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeleteMenu" customModule="TactixBoard" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="toJ-Vf-yTc">
             <rect key="frame" x="0.0" y="0.0" width="360" height="60"/>
@@ -124,7 +120,7 @@
                     <exclude reference="zL7-MZ-9cX"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="468" y="357"/>
+            <point key="canvasLocation" x="533" y="641"/>
         </view>
     </objects>
     <resources>

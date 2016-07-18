@@ -10,14 +10,14 @@ import UIKit
 
 enum LineType {
   case Dashed,
-    Thin,
-    Thick
+  Thin,
+  Thick
 }
 
 class DrawingView: UIView {
   
-  var drawColor = UIColor.greenColor()
-  var lineWidth: CGFloat = 5
+  var drawColor = white
+  var lineWidth: CGFloat = 3
   
   private var firstPoint = CGPointMake(0,0)
   private var endPoint = CGPointMake(0,0)
@@ -27,7 +27,7 @@ class DrawingView: UIView {
     var firstPoint:CGPoint = CGPointMake(0,0)
     var endPoint = CGPointMake(0,0)
   }
-
+  
   private var pointsArray: [ContextLine] = []
   var isClearing = false
   var isArrows = true
@@ -42,7 +42,7 @@ class DrawingView: UIView {
   override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
     let touch: AnyObject? = touches.first
     let newPoint = touch!.locationInView(self)
-
+    
     endPoint = newPoint
     
     setNeedsDisplay()
@@ -71,57 +71,68 @@ class DrawingView: UIView {
   }
   
   func drawLine(type:LineType, first:CGPoint, end:CGPoint) {
-    let ctx = UIGraphicsGetCurrentContext()
-    switch type {
-    case .Dashed:
-      let dashes: [CGFloat] = [distanceBetweenPoints(first, e: end) / 10, distanceBetweenPoints(first, e: end) / 5]
-      CGContextSetLineDash(ctx, 0, dashes, dashes.count)
-      CGContextSetLineWidth(ctx, lineWidth)
-    case .Thick:
-      CGContextSetLineWidth(ctx, lineWidth * 2)
-    case .Thin:
-      CGContextSetLineWidth(ctx, lineWidth)
-    }
-    
-    CGContextSetLineJoin(ctx, .Round)
-    CGContextSetLineCap(ctx, .Round)
-    CGContextSetStrokeColorWithColor(ctx, drawColor.CGColor)
-    
-    CGContextMoveToPoint(ctx, first.x, first.y)
-    CGContextAddLineToPoint(ctx, end.x, end.y)
-    
-    CGContextClosePath(ctx)
-    CGContextStrokePath(ctx)
-    /*
-    if isArrows {
-      let ax1 = ((cx+end.x)/2) + arrowWidth * ((-1*(end.y-cy)/length))
-      let ax2 = ((cx+end.x)/2) - arrowWidth * ((-1*(end.y-cy)/length))
-      let ay1 = ((cy+end.y)/2) + arrowWidth * (((end.x-cx)/length))
-      let ay2 = ((cy+end.y)/2) - arrowWidth * (((end.x-cx)/length))
+    if !(first == CGPointMake(0,0) && end == CGPointMake(0, 0)) {
+      let ctx = UIGraphicsGetCurrentContext()
+      switch type {
+      case .Dashed:
+        /*
+        let lengths = [
+        32, 16,
+        ].map { CGFloat($0) }
+        
+        CGContextSetLineDash (ctx, 0, lengths, lengths.count)
+        */
+        let parts = distanceBetweenPoints(first, e: end)
+        
+        let dashes: [CGFloat] = [parts/6, parts/12] // FIX!
+        CGContextSetLineDash(ctx, 0, dashes, dashes.count)
+        CGContextSetLineWidth(ctx, lineWidth)
+      case .Thick:
+        CGContextSetLineWidth(ctx, lineWidth * 2)
+      case .Thin:
+        CGContextSetLineWidth(ctx, lineWidth)
+      }
       
-      let ctx2 = UIGraphicsGetCurrentContext()
-      CGContextSetFillColorWithColor(ctx2, drawColor.CGColor)
       CGContextSetLineJoin(ctx, .Round)
       CGContextSetLineCap(ctx, .Round)
+      CGContextSetStrokeColorWithColor(ctx, drawColor.CGColor)
       
-      CGContextMoveToPoint(ctx2, end.x, end.y)
-      CGContextAddLineToPoint(ctx2, ax1, ay1)
-      CGContextAddLineToPoint(ctx2, ax2, ay2)
+      CGContextMoveToPoint(ctx, first.x, first.y)
+      CGContextAddLineToPoint(ctx, end.x, end.y)
       
-      CGContextClosePath(ctx2)
-      CGContextFillPath(ctx2)
-          /*
-        lengthOfArrow = 2;
-        widthOfArrow = 1;
-        length = sqrt((x2-x1)^2+(y2-y2)^2);
-        cx = x2-((x2-x1)/length)*2*lengthOfArrow;
-        cy = y2-((y2-y1)/length)*2*lengthOfArrow;
-        
-        ax1 = ((cx+x2)/2)+(widthOfArrow*((-1*(y2-cy))/length));
-        ax2 = ((cx+x2)/2)-(widthOfArrow*((-1*(y2-cy))/length));
-        ay1 = ((cy+y2)/2)+(widthOfArrow*(((x2-cx))/length));
-        ay2 = ((cy+y2)/2)-(widthOfArrow*(((x2-cx))/length));
-          */
+      CGContextClosePath(ctx)
+      CGContextStrokePath(ctx)
+    }
+    /*
+    if isArrows {
+    let ax1 = ((cx+end.x)/2) + arrowWidth * ((-1*(end.y-cy)/length))
+    let ax2 = ((cx+end.x)/2) - arrowWidth * ((-1*(end.y-cy)/length))
+    let ay1 = ((cy+end.y)/2) + arrowWidth * (((end.x-cx)/length))
+    let ay2 = ((cy+end.y)/2) - arrowWidth * (((end.x-cx)/length))
+    
+    let ctx2 = UIGraphicsGetCurrentContext()
+    CGContextSetFillColorWithColor(ctx2, drawColor.CGColor)
+    CGContextSetLineJoin(ctx, .Round)
+    CGContextSetLineCap(ctx, .Round)
+    
+    CGContextMoveToPoint(ctx2, end.x, end.y)
+    CGContextAddLineToPoint(ctx2, ax1, ay1)
+    CGContextAddLineToPoint(ctx2, ax2, ay2)
+    
+    CGContextClosePath(ctx2)
+    CGContextFillPath(ctx2)
+    /*
+    lengthOfArrow = 2;
+    widthOfArrow = 1;
+    length = sqrt((x2-x1)^2+(y2-y2)^2);
+    cx = x2-((x2-x1)/length)*2*lengthOfArrow;
+    cy = y2-((y2-y1)/length)*2*lengthOfArrow;
+    
+    ax1 = ((cx+x2)/2)+(widthOfArrow*((-1*(y2-cy))/length));
+    ax2 = ((cx+x2)/2)-(widthOfArrow*((-1*(y2-cy))/length));
+    ay1 = ((cy+y2)/2)+(widthOfArrow*(((x2-cx))/length));
+    ay2 = ((cy+y2)/2)-(widthOfArrow*(((x2-cx))/length));
+    */
     }
     */
   }
@@ -138,7 +149,7 @@ class DrawingView: UIView {
       isClearing = false
     }
   }
-
+  
   // MARK: - Clearing
   
   func clear() {

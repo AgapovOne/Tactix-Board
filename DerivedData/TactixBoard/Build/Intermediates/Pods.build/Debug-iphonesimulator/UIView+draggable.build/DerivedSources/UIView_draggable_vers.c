@@ -1,1 +1,0 @@
- const unsigned char UIView_draggableVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:UIView_draggable  PROJECT:Pods-0.6.0" "\n"; const double UIView_draggableVersionNumber __attribute__ ((used)) = (double)0.6;
