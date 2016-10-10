@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="DHe-6R-8tZ">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="DHe-6R-8tZ">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Start Screen-->
@@ -17,72 +17,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="START SCREEN" translatesAutoresizingMaskIntoConstraints="NO" id="7by-1x-FRY">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                                <animations/>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="START SCREEN" translatesAutoresizingMaskIntoConstraints="NO" id="7by-1x-FRY"/>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Table board" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFN-ad-hQU">
-                                <rect key="frame" x="346" y="80" width="76" height="17"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                                <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.96055269241333008" green="0.96052390336990356" blue="0.96054017543792725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gzs-g1-xna">
-                                <rect key="frame" x="317" y="105" width="134" height="58"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
-                                <color key="textColor" red="0.97254901959999995" green="0.98039215690000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.97254901959999995" green="0.98039215690000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHB-qf-tGB" customClass="BorderButton" customModule="TactixBoard" customModuleProvider="target">
-                                <rect key="frame" x="184" y="468" width="400" height="88"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="88" id="djv-2a-Rit"/>
                                     <constraint firstAttribute="width" constant="400" id="rkk-do-Gjr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                                 <state key="normal" title="Стандартные ситуации">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELk-Ym-NBh" customClass="BorderButton" customModule="TactixBoard" customModuleProvider="target">
-                                <rect key="frame" x="184" y="596" width="400" height="88"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="400" id="PVN-t8-PbQ"/>
                                     <constraint firstAttribute="height" constant="88" id="t4b-F6-EjK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                                 <state key="normal" title="Настройки">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAO-26-O68" customClass="BorderButton" customModule="TactixBoard" customModuleProvider="target">
-                                <rect key="frame" x="184" y="340" width="400" height="88"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="88" id="0oP-hk-nFG"/>
                                     <constraint firstAttribute="width" constant="400" id="IcO-ms-55D"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                                 <state key="normal" title="Тактическая доска">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="push" id="wSP-Jv-LAF"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ELk-Ym-NBh" firstAttribute="top" secondItem="dHB-qf-tGB" secondAttribute="bottom" constant="40" id="2kh-92-cdb"/>
                             <constraint firstItem="oRY-fi-AXS" firstAttribute="top" secondItem="7by-1x-FRY" secondAttribute="bottom" id="7Mt-pe-cpe"/>
@@ -120,40 +106,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="obF-fK-z0l">
-                                <rect key="frame" x="60" y="0.0" width="708" height="1024"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.14901960784313725" green="0.22745098039215686" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.14901960784313725" green="0.22745098039215686" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" tag="10" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Futsal Field" translatesAutoresizingMaskIntoConstraints="NO" id="OM0-9N-PxM">
-                                <rect key="frame" x="60" y="0.0" width="708" height="1024"/>
-                                <animations/>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="10" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Futsal Field" translatesAutoresizingMaskIntoConstraints="NO" id="OM0-9N-PxM"/>
                             <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbZ-Jj-FBM" customClass="DrawingView" customModule="TactixBoard" customModuleProvider="target">
-                                <rect key="frame" x="60" y="0.0" width="708" height="1024"/>
                                 <subviews>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEt-FB-A3F" customClass="LineTypeMenu" customModule="TactixBoard" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="244" width="180" height="60"/>
-                                        <animations/>
-                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEt-FB-A3F" customClass="LineTypeMenu" customModule="TactixBoard" customModuleProvider="target"/>
                                 </subviews>
-                                <animations/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3wB-RX-HKO" customClass="AddMenu" customModule="TactixBoard" customModuleProvider="target">
-                                <rect key="frame" x="60" y="60" width="300" height="60"/>
-                                <animations/>
-                            </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xnw-c3-di2" customClass="DeleteMenu" customModule="TactixBoard" customModuleProvider="target">
-                                <rect key="frame" x="60" y="120" width="360" height="60"/>
-                                <animations/>
-                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3wB-RX-HKO" customClass="AddMenu" customModule="TactixBoard" customModuleProvider="target"/>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xnw-c3-di2" customClass="DeleteMenu" customModule="TactixBoard" customModuleProvider="target"/>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oxc-Ha-mWj">
-                                <rect key="frame" x="0.0" y="0.0" width="60" height="1024"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNN-7f-cgJ">
-                                        <rect key="frame" x="0.0" y="184" width="60" height="60"/>
-                                        <animations/>
-                                        <color key="backgroundColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="1bd-2y-XxC"/>
                                             <constraint firstAttribute="width" constant="60" id="sMu-H5-RWZ"/>
@@ -164,9 +131,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzh-4o-caF">
-                                        <rect key="frame" x="0.0" y="60" width="60" height="60"/>
-                                        <animations/>
-                                        <color key="backgroundColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="FVg-yr-YS0"/>
                                             <constraint firstAttribute="width" constant="60" id="pQj-t3-q0v"/>
@@ -178,18 +143,14 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tXf-Xc-Vqx">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJa-Iv-29x">
-                                                <rect key="frame" x="12" y="12" width="36" height="36"/>
-                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
-                                                <color key="textColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <animations/>
-                                        <color key="backgroundColor" red="0.19376453757286072" green="0.50850099325180054" blue="0.85232251882553101" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.19376453757286072" green="0.50850099325180054" blue="0.85232251882553101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="AJa-Iv-29x" firstAttribute="centerX" secondItem="tXf-Xc-Vqx" secondAttribute="centerX" id="Ius-XC-7Yv"/>
                                             <constraint firstItem="AJa-Iv-29x" firstAttribute="centerY" secondItem="tXf-Xc-Vqx" secondAttribute="centerY" id="nvc-2X-kWH"/>
@@ -197,9 +158,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SdI-vD-nZK">
-                                        <rect key="frame" x="0.0" y="120" width="60" height="60"/>
-                                        <animations/>
-                                        <color key="backgroundColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="0K4-OV-ddG"/>
                                             <constraint firstAttribute="height" constant="60" id="tbB-7n-VoA"/>
@@ -211,24 +170,20 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FmR-bv-UBl">
-                                        <rect key="frame" x="0.0" y="304" width="60" height="60"/>
-                                        <animations/>
-                                        <color key="backgroundColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="MAU-na-MmL"/>
                                             <constraint firstAttribute="height" constant="60" id="e8m-0Y-zNV"/>
                                         </constraints>
                                         <state key="normal" image="Clear">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="clearDrawings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zs5-L6-tTa"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YfP-5C-7fc">
-                                        <rect key="frame" x="0.0" y="244" width="60" height="60"/>
-                                        <animations/>
-                                        <color key="backgroundColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="04o-Y6-cGT"/>
                                             <constraint firstAttribute="width" constant="60" id="ato-HG-8C9"/>
@@ -239,8 +194,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <animations/>
-                                <color key="backgroundColor" red="0.098039215686274508" green="0.16078431372549018" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.098039215686274508" green="0.16078431372549018" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="FmR-bv-UBl" firstAttribute="top" secondItem="YfP-5C-7fc" secondAttribute="bottom" id="0aK-Ls-orF"/>
                                     <constraint firstItem="FmR-bv-UBl" firstAttribute="centerX" secondItem="oxc-Ha-mWj" secondAttribute="centerX" id="6wg-SF-ET7"/>
@@ -261,8 +215,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3wB-RX-HKO" firstAttribute="centerY" secondItem="xzh-4o-caF" secondAttribute="centerY" id="1HF-81-xXd"/>
                             <constraint firstItem="CEt-FB-A3F" firstAttribute="leading" secondItem="YfP-5C-7fc" secondAttribute="trailing" id="2fQ-6T-4Ou"/>
@@ -313,7 +266,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qLr-vw-PPc">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="sEW-OC-gxB" kind="relationship" relationship="rootViewController" id="9n4-AN-5nm"/>
@@ -333,5 +285,10 @@
         <image name="START SCREEN" width="768" height="1024"/>
         <image name="ThinLine" width="32" height="32"/>
     </resources>
-    <color key="tintColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+    <color key="tintColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

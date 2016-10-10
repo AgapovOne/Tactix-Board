@@ -7,18 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		263CB67A74092E93A75EF854 /* Pods_TactixBoard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F686BD448C514F2B0ECE080 /* Pods_TactixBoard.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		8D17100E1BB9B9350007F919 /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D17100D1BB9B9350007F919 /* Drawing.swift */; settings = {ASSET_TAGS = (); }; };
-		8D1710101BB9BF740007F919 /* Moving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D17100F1BB9BF740007F919 /* Moving.swift */; settings = {ASSET_TAGS = (); }; };
-		8D4F2F231BCBED6000033007 /* AddMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D4F2F221BCBED6000033007 /* AddMenu.xib */; settings = {ASSET_TAGS = (); }; };
-		8D5F87561BCC106200FFE288 /* AddMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F87551BCC106200FFE288 /* AddMenu.swift */; settings = {ASSET_TAGS = (); }; };
-		8D5F87591BCCE27F00FFE288 /* DeleteMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D5F87581BCCE27F00FFE288 /* DeleteMenu.xib */; settings = {ASSET_TAGS = (); }; };
-		8D5F875C1BCCE35B00FFE288 /* DeleteMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F875B1BCCE35B00FFE288 /* DeleteMenu.swift */; settings = {ASSET_TAGS = (); }; };
-		8D5F875E1BCCEDFD00FFE288 /* MenuType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F875D1BCCEDFD00FFE288 /* MenuType.swift */; settings = {ASSET_TAGS = (); }; };
-		8D5F87601BCCF72B00FFE288 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F875F1BCCF72B00FFE288 /* Fonts.swift */; settings = {ASSET_TAGS = (); }; };
+		56743339D0F8772A47A83FD6 /* Pods_TactixBoard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D8546945CD977668288E4F /* Pods_TactixBoard.framework */; };
+		6AC5A9B7563E3545EE57038B /* Pods_TactixBoardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA322F262674E4C828BCBEF /* Pods_TactixBoardTests.framework */; };
+		8D17100E1BB9B9350007F919 /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D17100D1BB9B9350007F919 /* Drawing.swift */; };
+		8D1710101BB9BF740007F919 /* Moving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D17100F1BB9BF740007F919 /* Moving.swift */; };
+		8D4F2F231BCBED6000033007 /* AddMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D4F2F221BCBED6000033007 /* AddMenu.xib */; };
+		8D5F87561BCC106200FFE288 /* AddMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F87551BCC106200FFE288 /* AddMenu.swift */; };
+		8D5F87591BCCE27F00FFE288 /* DeleteMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D5F87581BCCE27F00FFE288 /* DeleteMenu.xib */; };
+		8D5F875C1BCCE35B00FFE288 /* DeleteMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F875B1BCCE35B00FFE288 /* DeleteMenu.swift */; };
+		8D5F875E1BCCEDFD00FFE288 /* MenuType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F875D1BCCEDFD00FFE288 /* MenuType.swift */; };
+		8D5F87601BCCF72B00FFE288 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F875F1BCCF72B00FFE288 /* Fonts.swift */; };
 		8D6967DA1BADE786005835DB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6967D91BADE786005835DB /* Colors.swift */; };
-		8D884B201BCD609400279F13 /* LineType.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D884B1F1BCD609400279F13 /* LineType.xib */; settings = {ASSET_TAGS = (); }; };
-		8D884B241BCD62F100279F13 /* LineTypeMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D884B231BCD62F100279F13 /* LineTypeMenu.swift */; settings = {ASSET_TAGS = (); }; };
+		8D884B201BCD609400279F13 /* LineType.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D884B1F1BCD609400279F13 /* LineType.xib */; };
+		8D884B241BCD62F100279F13 /* LineTypeMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D884B231BCD62F100279F13 /* LineTypeMenu.swift */; };
 		8DA4E1811B9AD9B800001794 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1801B9AD9B800001794 /* AppDelegate.swift */; };
 		8DA4E1861B9AD9B800001794 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DA4E1841B9AD9B800001794 /* Main.storyboard */; };
 		8DA4E1881B9AD9B800001794 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DA4E1871B9AD9B800001794 /* Images.xcassets */; };
@@ -27,7 +28,6 @@
 		8DA4E1A81B9E11AB00001794 /* BoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1A71B9E11AB00001794 /* BoardVC.swift */; };
 		8DA4E1AA1B9E13D900001794 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1A91B9E13D900001794 /* Buttons.swift */; };
 		8DA4E1AC1B9E31F300001794 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1AB1B9E31F300001794 /* Extensions.swift */; };
-		8DB0F9291BC59BEC00186C3D /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB0F9281BC59BEC00186C3D /* Menu.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F686BD448C514F2B0ECE080 /* Pods_TactixBoard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TactixBoard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		117E70448D29738857B5C4AE /* Pods-TactixBoard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TactixBoard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TactixBoard/Pods-TactixBoard.debug.xcconfig"; sourceTree = "<group>"; };
+		73D98DE3B3B39F49C1578A43 /* Pods-TactixBoard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TactixBoard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TactixBoard/Pods-TactixBoard.debug.xcconfig"; sourceTree = "<group>"; };
 		8D17100D1BB9B9350007F919 /* Drawing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Drawing.swift; path = Libraries/Classes/Views/Drawing.swift; sourceTree = "<group>"; };
 		8D17100F1BB9BF740007F919 /* Moving.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Moving.swift; path = Libraries/Classes/Views/Moving.swift; sourceTree = "<group>"; };
 		8D19EDEC1BA9DAD100A82FD9 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BridgingHeader.h; path = Libraries/BridgingHeader.h; sourceTree = "<group>"; };
@@ -56,10 +55,10 @@
 		8D884B1F1BCD609400279F13 /* LineType.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LineType.xib; sourceTree = "<group>"; };
 		8D884B231BCD62F100279F13 /* LineTypeMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LineTypeMenu.swift; path = Libraries/Classes/Views/Sidebar/LineTypeMenu.swift; sourceTree = "<group>"; };
 		8DA4E17B1B9AD9B800001794 /* TactixBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TactixBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DA4E17F1B9AD9B800001794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DA4E17F1B9AD9B800001794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
 		8DA4E1801B9AD9B800001794 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DA4E1851B9AD9B800001794 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8DA4E1871B9AD9B800001794 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8DA4E1871B9AD9B800001794 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Supporting Files/Images.xcassets"; sourceTree = "<group>"; };
 		8DA4E18A1B9AD9B800001794 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8DA4E1901B9AD9B800001794 /* TactixBoardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TactixBoardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA4E1951B9AD9B800001794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -67,8 +66,11 @@
 		8DA4E1A71B9E11AB00001794 /* BoardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardVC.swift; sourceTree = "<group>"; };
 		8DA4E1A91B9E13D900001794 /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Buttons.swift; path = Libraries/Classes/Buttons.swift; sourceTree = "<group>"; };
 		8DA4E1AB1B9E31F300001794 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Libraries/Classes/Extensions.swift; sourceTree = "<group>"; };
-		8DB0F9281BC59BEC00186C3D /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Menu.swift; path = Libraries/Classes/Menu.swift; sourceTree = "<group>"; };
-		8F7D55C6B5735053A530757B /* Pods-TactixBoard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TactixBoard.release.xcconfig"; path = "Pods/Target Support Files/Pods-TactixBoard/Pods-TactixBoard.release.xcconfig"; sourceTree = "<group>"; };
+		B4D8546945CD977668288E4F /* Pods_TactixBoard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TactixBoard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCA322F262674E4C828BCBEF /* Pods_TactixBoardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TactixBoardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E67D5E52CE95CB618B316C3A /* Pods-TactixBoard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TactixBoard.release.xcconfig"; path = "Pods/Target Support Files/Pods-TactixBoard/Pods-TactixBoard.release.xcconfig"; sourceTree = "<group>"; };
+		F4CD081267B6912CC35357DE /* Pods-TactixBoardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TactixBoardTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TactixBoardTests/Pods-TactixBoardTests.release.xcconfig"; sourceTree = "<group>"; };
+		F7EF742D2028522C73DEBC63 /* Pods-TactixBoardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TactixBoardTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TactixBoardTests/Pods-TactixBoardTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				263CB67A74092E93A75EF854 /* Pods_TactixBoard.framework in Frameworks */,
+				56743339D0F8772A47A83FD6 /* Pods_TactixBoard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,16 +86,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AC5A9B7563E3545EE57038B /* Pods_TactixBoardTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		857A73BA835B101388F17BEE /* Frameworks */ = {
+		88460CEA1FD3BD8FDD2CFEF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0F686BD448C514F2B0ECE080 /* Pods_TactixBoard.framework */,
+				B4D8546945CD977668288E4F /* Pods_TactixBoard.framework */,
+				CCA322F262674E4C828BCBEF /* Pods_TactixBoardTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -106,6 +110,7 @@
 				8D17100F1BB9BF740007F919 /* Moving.swift */,
 			);
 			name = Views;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		8D5F87571BCCE24D00FFE288 /* Sidebar */ = {
@@ -133,11 +138,10 @@
 			isa = PBXGroup;
 			children = (
 				8DA4E17D1B9AD9B800001794 /* TactixBoard */,
-				8DA4E1A01B9B35C700001794 /* Libraries */,
 				8DA4E1931B9AD9B800001794 /* TactixBoardTests */,
 				8DA4E17C1B9AD9B800001794 /* Products */,
-				AB510595C2383ACF371D7116 /* Pods */,
-				857A73BA835B101388F17BEE /* Frameworks */,
+				9B8C3CA1BC5F48EB268585B4 /* Pods */,
+				88460CEA1FD3BD8FDD2CFEF4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,21 +157,15 @@
 		8DA4E17D1B9AD9B800001794 /* TactixBoard */ = {
 			isa = PBXGroup;
 			children = (
-				8DB0F9321BC5A5DA00186C3D /* ViewControllers */,
-				8DA4E1A61B9E114500001794 /* Views */,
+				8DA4E17F1B9AD9B800001794 /* Info.plist */,
+				8DA4E1871B9AD9B800001794 /* Images.xcassets */,
 				8DA4E1801B9AD9B800001794 /* AppDelegate.swift */,
-				8DA4E17E1B9AD9B800001794 /* Supporting Files */,
+				8DA4E1A01B9B35C700001794 /* Libraries */,
+				8D17100C1BB9B8FA0007F919 /* Views */,
+				8DB0F9321BC5A5DA00186C3D /* ViewControllers */,
+				8DA4E1A61B9E114500001794 /* UI */,
 			);
 			path = TactixBoard;
-			sourceTree = "<group>";
-		};
-		8DA4E17E1B9AD9B800001794 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8DA4E1871B9AD9B800001794 /* Images.xcassets */,
-				8DA4E17F1B9AD9B800001794 /* Info.plist */,
-			);
-			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		8DA4E1931B9AD9B800001794 /* TactixBoardTests */ = {
@@ -194,28 +192,28 @@
 				8DA4E1A11B9B35D100001794 /* Classes */,
 			);
 			name = Libraries;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		8DA4E1A11B9B35D100001794 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				8D17100C1BB9B8FA0007F919 /* Views */,
 				8DA4E1A91B9E13D900001794 /* Buttons.swift */,
 				8DA4E1AB1B9E31F300001794 /* Extensions.swift */,
 				8D6967D91BADE786005835DB /* Colors.swift */,
-				8DB0F9281BC59BEC00186C3D /* Menu.swift */,
 				8D5F875F1BCCF72B00FFE288 /* Fonts.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
 		};
-		8DA4E1A61B9E114500001794 /* Views */ = {
+		8DA4E1A61B9E114500001794 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				8D5F87571BCCE24D00FFE288 /* Sidebar */,
 				8DA4E1841B9AD9B800001794 /* Main.storyboard */,
 				8DA4E1891B9AD9B800001794 /* LaunchScreen.xib */,
 			);
+			name = UI;
 			path = Views;
 			sourceTree = "<group>";
 		};
@@ -227,11 +225,13 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		AB510595C2383ACF371D7116 /* Pods */ = {
+		9B8C3CA1BC5F48EB268585B4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				117E70448D29738857B5C4AE /* Pods-TactixBoard.debug.xcconfig */,
-				8F7D55C6B5735053A530757B /* Pods-TactixBoard.release.xcconfig */,
+				73D98DE3B3B39F49C1578A43 /* Pods-TactixBoard.debug.xcconfig */,
+				E67D5E52CE95CB618B316C3A /* Pods-TactixBoard.release.xcconfig */,
+				F7EF742D2028522C73DEBC63 /* Pods-TactixBoardTests.debug.xcconfig */,
+				F4CD081267B6912CC35357DE /* Pods-TactixBoardTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -243,13 +243,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8DA4E19A1B9AD9B800001794 /* Build configuration list for PBXNativeTarget "TactixBoard" */;
 			buildPhases = (
-				0A3F768BD263D5B0C20E5C26 /* Check Pods Manifest.lock */,
+				1F2CA0BEB63443FE7A11AA86 /* [CP] Check Pods Manifest.lock */,
 				8DA4E1771B9AD9B800001794 /* Sources */,
 				8DA4E1781B9AD9B800001794 /* Frameworks */,
 				8DA4E1791B9AD9B800001794 /* Resources */,
-				C3115E69475870BEE7855782 /* Embed Pods Frameworks */,
-				60BE92789423F0D773D4BF8B /* Copy Pods Resources */,
 				8D19EDE91BA9D11000A82FD9 /* ShellScript */,
+				A366CA5A6A8504979FB3C176 /* [CP] Embed Pods Frameworks */,
+				F3848A2FDF53F6E89413EEDD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,9 +264,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8DA4E19D1B9AD9B800001794 /* Build configuration list for PBXNativeTarget "TactixBoardTests" */;
 			buildPhases = (
+				4F47C60CDBDF2FC4691C87DA /* [CP] Check Pods Manifest.lock */,
 				8DA4E18C1B9AD9B800001794 /* Sources */,
 				8DA4E18D1B9AD9B800001794 /* Frameworks */,
 				8DA4E18E1B9AD9B800001794 /* Resources */,
+				63D871D52FD4AA5C30C129A6 /* [CP] Embed Pods Frameworks */,
+				5264E8CCD7919B20C4C04466 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -286,15 +289,16 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = agapov.one.ru;
 				TargetAttributes = {
 					8DA4E17A1B9AD9B800001794 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = SGC7G34VHA;
+						LastSwiftMigration = 0800;
 					};
 					8DA4E18F1B9AD9B800001794 = {
 						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 0800;
 						TestTargetID = 8DA4E17A1B9AD9B800001794;
 					};
 				};
@@ -342,34 +346,64 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0A3F768BD263D5B0C20E5C26 /* Check Pods Manifest.lock */ = {
+		1F2CA0BEB63443FE7A11AA86 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		60BE92789423F0D773D4BF8B /* Copy Pods Resources */ = {
+		4F47C60CDBDF2FC4691C87DA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TactixBoard/Pods-TactixBoard-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5264E8CCD7919B20C4C04466 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TactixBoardTests/Pods-TactixBoardTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63D871D52FD4AA5C30C129A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TactixBoardTests/Pods-TactixBoardTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8D19EDE91BA9D11000A82FD9 /* ShellScript */ = {
@@ -383,21 +417,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/Fabric.framework/run\" 12b12f3bd2a6722048fe4c7d229ab146f95b4ac6 ea338f8c2c41a0a250fa3103fabd10fa4323e73cb41a89599353c62e28691bf2";
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 12b12f3bd2a6722048fe4c7d229ab146f95b4ac6 ea338f8c2c41a0a250fa3103fabd10fa4323e73cb41a89599353c62e28691bf2";
 		};
-		C3115E69475870BEE7855782 /* Embed Pods Frameworks */ = {
+		A366CA5A6A8504979FB3C176 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TactixBoard/Pods-TactixBoard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3848A2FDF53F6E89413EEDD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TactixBoard/Pods-TactixBoard-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -410,7 +459,6 @@
 				8DA4E1AC1B9E31F300001794 /* Extensions.swift in Sources */,
 				8D17100E1BB9B9350007F919 /* Drawing.swift in Sources */,
 				8D5F875E1BCCEDFD00FFE288 /* MenuType.swift in Sources */,
-				8DB0F9291BC59BEC00186C3D /* Menu.swift in Sources */,
 				8D5F87601BCCF72B00FFE288 /* Fonts.swift in Sources */,
 				8D884B241BCD62F100279F13 /* LineTypeMenu.swift in Sources */,
 				8D6967DA1BADE786005835DB /* Colors.swift in Sources */,
@@ -476,8 +524,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -501,7 +551,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -524,8 +574,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -542,10 +594,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = Libraries/BridgingHeader.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -553,40 +606,47 @@
 		};
 		8DA4E19B1B9AD9B800001794 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 117E70448D29738857B5C4AE /* Pods-TactixBoard.debug.xcconfig */;
+			baseConfigurationReference = 73D98DE3B3B39F49C1578A43 /* Pods-TactixBoard.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "TactixBoard/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "agapov.one.ru.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = Libraries/BridgingHeader.h;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		8DA4E19C1B9AD9B800001794 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8F7D55C6B5735053A530757B /* Pods-TactixBoard.release.xcconfig */;
+			baseConfigurationReference = E67D5E52CE95CB618B316C3A /* Pods-TactixBoard.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "TactixBoard/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "agapov.one.ru.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = Libraries/BridgingHeader.h;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		8DA4E19E1B9AD9B800001794 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7EF742D2028522C73DEBC63 /* Pods-TactixBoardTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -601,12 +661,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "agapov.one.ru.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TactixBoard.app/TactixBoard";
 			};
 			name = Debug;
 		};
 		8DA4E19F1B9AD9B800001794 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4CD081267B6912CC35357DE /* Pods-TactixBoardTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -617,6 +679,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "agapov.one.ru.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TactixBoard.app/TactixBoard";
 			};
 			name = Release;

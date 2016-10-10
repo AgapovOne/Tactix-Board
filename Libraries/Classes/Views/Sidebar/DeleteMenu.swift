@@ -11,18 +11,18 @@ import UIKit
 @IBDesignable class DeleteMenu: MenuType {
   
   override func loadViewFromNib() -> UIView {
-    let bundle = NSBundle(forClass: self.dynamicType)
+    let bundle = Bundle(for: type(of: self))
     let nib = UINib(nibName: "DeleteMenu", bundle: bundle)
     
     // Assumes UIView is top level and only object in AddMenu.xib file
-    let view = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
+    let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
     return view
   }
   
-  func removePlayerWithColor(color:UIColor) {
+  func removePlayerWithColor(_ color:UIColor) {
     guard let sup = self.superview else {return}
     for v in sup.subviews {
-      if v.isKindOfClass(PlayerView) {
+      if v.isKind(of: PlayerView.self) {
         if v.backgroundColor == color {
           v.removeFromSuperview()
           return
@@ -31,10 +31,10 @@ import UIKit
     }
   }
   
-  func removeTeamWithColor(color:UIColor) {
+  func removeTeamWithColor(_ color:UIColor) {
     guard let sup = self.superview else {return}
     for v in sup.subviews {
-      if v.isKindOfClass(PlayerView) {
+      if v.isKind(of: PlayerView.self) {
         if v.backgroundColor == color {
           v.removeFromSuperview()
         }
@@ -42,27 +42,27 @@ import UIKit
     }
   }
   
-  @IBAction func deleteRedPlayer(sender: UIButton) {
+  @IBAction func deleteRedPlayer(_ sender: UIButton) {
     removePlayerWithColor(red)
   }
   
-  @IBAction func deleteBluePlayer(sender: UIButton) {
+  @IBAction func deleteBluePlayer(_ sender: UIButton) {
     removePlayerWithColor(blue)
   }
   
-  @IBAction func deleteBlackPlayer(sender: UIButton) {
+  @IBAction func deleteBlackPlayer(_ sender: UIButton) {
     removePlayerWithColor(black)
   }
   
-  @IBAction func deleteTeam(sender: UIButton) {
+  @IBAction func deleteTeam(_ sender: UIButton) {
     removeTeamWithColor(blue)
   }
   
-  @IBAction func deleteOrangeGK(sender: UIButton) {
+  @IBAction func deleteOrangeGK(_ sender: UIButton) {
     removePlayerWithColor(orange)
   }
   
-  @IBAction func deleteGreenGK(sender: UIButton) {
+  @IBAction func deleteGreenGK(_ sender: UIButton) {
     removePlayerWithColor(green)
   }
 }

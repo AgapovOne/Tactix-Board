@@ -9,9 +9,9 @@
 import UIKit
 
 enum LineType {
-  case Dashed,
-  Thin,
-  Thick
+  case dashed,
+  thin,
+  thick
 }
 
 class DrawingView: UIView {
@@ -19,62 +19,62 @@ class DrawingView: UIView {
   var drawColor = white
   var lineWidth: CGFloat = 3
   
-  private var firstPoint = CGPointMake(0,0)
-  private var endPoint = CGPointMake(0,0)
+  fileprivate var firstPoint = CGPoint(x: 0,y: 0)
+  fileprivate var endPoint = CGPoint(x: 0,y: 0)
   
-  private struct ContextLine {
-    var lineType = LineType.Thin
-    var firstPoint:CGPoint = CGPointMake(0,0)
-    var endPoint = CGPointMake(0,0)
+  fileprivate struct ContextLine {
+    var lineType = LineType.thin
+    var firstPoint:CGPoint = CGPoint(x: 0,y: 0)
+    var endPoint = CGPoint(x: 0,y: 0)
   }
   
-  private var pointsArray: [ContextLine] = []
+  fileprivate var pointsArray: [ContextLine] = []
   var isClearing = false
   var isArrows = true
   
   // MARK: - Touch handling
   
-  override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     let touch: AnyObject? = touches.first
-    firstPoint = touch!.locationInView(self)
+    firstPoint = touch!.location(in: self)
   }
   
-  override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+  override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
     let touch: AnyObject? = touches.first
-    let newPoint = touch!.locationInView(self)
+    let newPoint = touch!.location(in: self)
     
     endPoint = newPoint
     
     setNeedsDisplay()
   }
   
-  override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+  override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
     let touch: AnyObject? = touches.first
-    let newPoint = touch!.locationInView(self)
+    let newPoint = touch!.location(in: self)
     
     endPoint = newPoint
     
     setNeedsDisplay()
     
-    let currentLineType:LineType = getLineTypeFromString(NSUserDefaults.standardUserDefaults().stringForKey("currentLineType")!)
+    let currentLineType:LineType = getLineTypeFromString(UserDefaults.standard.string(forKey: "currentLineType")!)
     pointsArray.append(ContextLine(lineType: currentLineType, firstPoint: firstPoint, endPoint: endPoint))
   }
   
-  override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
-    touchesEnded(touches!, withEvent: event)
+  override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+    touchesEnded(touches, with: event)
   }
   
   // MARK: - Render
   
-  func distanceBetweenPoints(f:CGPoint,e:CGPoint) -> CGFloat {
+  func distanceBetweenPoints(_ f:CGPoint,e:CGPoint) -> CGFloat {
     return hypot(f.x - e.x, f.y - e.y)
   }
   
-  func drawLine(type:LineType, first:CGPoint, end:CGPoint) {
-    if !(first == CGPointMake(0,0) && end == CGPointMake(0, 0)) {
+  func drawLine(_ type:LineType, first:CGPoint, end:CGPoint) {
+    if !(first == CGPoint(x: 0,y: 0) && end == CGPoint(x: 0, y: 0)) {
       let ctx = UIGraphicsGetCurrentContext()
       switch type {
-      case .Dashed:
+      case .dashed:
         /*
         let lengths = [
         32, 16,
@@ -86,22 +86,22 @@ class DrawingView: UIView {
         
         let dashes: [CGFloat] = [parts/6, parts/12] // FIX!
         CGContextSetLineDash(ctx, 0, dashes, dashes.count)
-        CGContextSetLineWidth(ctx, lineWidth)
-      case .Thick:
-        CGContextSetLineWidth(ctx, lineWidth * 2)
-      case .Thin:
-        CGContextSetLineWidth(ctx, lineWidth)
+        ctx?.setLineWidth(lineWidth)
+      case .thick:
+        ctx?.setLineWidth(lineWidth * 2)
+      case .thin:
+        ctx?.setLineWidth(lineWidth)
       }
       
-      CGContextSetLineJoin(ctx, .Round)
-      CGContextSetLineCap(ctx, .Round)
-      CGContextSetStrokeColorWithColor(ctx, drawColor.CGColor)
+      ctx?.setLineJoin(.round)
+      ctx?.setLineCap(.round)
+      ctx?.setStrokeColor(drawColor.cgColor)
       
-      CGContextMoveToPoint(ctx, first.x, first.y)
-      CGContextAddLineToPoint(ctx, end.x, end.y)
+      ctx?.move(to: CGPoint(x: first.x, y: first.y))
+      ctx?.addLine(to: CGPoint(x: end.x, y: end.y))
       
-      CGContextClosePath(ctx)
-      CGContextStrokePath(ctx)
+      ctx?.closePath()
+      ctx?.strokePath()
     }
     /*
     if isArrows {
@@ -137,13 +137,13 @@ class DrawingView: UIView {
     */
   }
   
-  override func drawRect(rect: CGRect) {
-    super.drawRect(rect)
+  override func draw(_ rect: CGRect) {
+    super.draw(rect)
     for contextLine in pointsArray {
       drawLine(contextLine.lineType, first: contextLine.firstPoint, end: contextLine.endPoint)
     }
     if isClearing == false {
-      let currentLineType:LineType = getLineTypeFromString(NSUserDefaults.standardUserDefaults().stringForKey("currentLineType")!)
+      let currentLineType:LineType = getLineTypeFromString(UserDefaults.standard.string(forKey: "currentLineType")!)
       drawLine(currentLineType, first: self.firstPoint, end: self.endPoint)
     } else {
       isClearing = false
@@ -153,38 +153,38 @@ class DrawingView: UIView {
   // MARK: - Clearing
   
   func clear() {
-    self.pointsArray.removeAll(keepCapacity: false)
+    self.pointsArray.removeAll(keepingCapacity: false)
     isClearing = true
     setNeedsDisplay()
   }
   
   // MARK: - Settings
   
-  func setLineType(lineType:LineType) {
-    NSUserDefaults.standardUserDefaults().setValue(getStringFromLineType(lineType), forKey: "currentLineType")
+  func setLineType(_ lineType:LineType) {
+    UserDefaults.standard.setValue(getStringFromLineType(lineType), forKey: "currentLineType")
   }
   
-  func getStringFromLineType(lineType: LineType) -> String {
+  func getStringFromLineType(_ lineType: LineType) -> String {
     switch lineType {
-    case .Dashed:
+    case .dashed:
       return "dashed"
-    case .Thick:
+    case .thick:
       return "thick"
-    case .Thin:
+    case .thin:
       return "thin"
     }
   }
   
-  func getLineTypeFromString(str:String) -> LineType {
+  func getLineTypeFromString(_ str:String) -> LineType {
     switch str {
     case "dashed":
-      return .Dashed
+      return .dashed
     case "thick":
-      return .Thick
+      return .thick
     case "thin":
-      return .Thin
+      return .thin
     default:
-      return .Thin
+      return .thin
     }
   }
 }

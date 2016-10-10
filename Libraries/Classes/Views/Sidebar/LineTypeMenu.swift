@@ -13,27 +13,27 @@ import UIKit
   //var mainPic:UIImage = UIImage(named: "ThinLine.png")!
   
   override func loadViewFromNib() -> UIView {
-    let bundle = NSBundle(forClass: self.dynamicType)
+    let bundle = Bundle(for: type(of: self))
     let nib = UINib(nibName: "LineType", bundle: bundle)
     
     // Assumes UIView is top level and only object in AddMenu.xib file
-    let view = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
+    let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
     return view
   }
   
-  func setLineType(type: LineType) {
+  func setLineType(_ type: LineType) {
     DrawingView().setLineType(type)
   }
   
-  @IBAction func setThinLine(sender: UIButton) {
-    setLineType(.Thin)
+  @IBAction func setThinLine(_ sender: UIButton) {
+    setLineType(.thin)
   }
   
-  @IBAction func setThickLine(sender: UIButton) {
-    setLineType(.Thick)
+  @IBAction func setThickLine(_ sender: UIButton) {
+    setLineType(.thick)
   }
   
-  @IBAction func setDashedLine(sender: UIButton) {
-    setLineType(.Dashed)
+  @IBAction func setDashedLine(_ sender: UIButton) {
+    setLineType(.dashed)
   }
 }

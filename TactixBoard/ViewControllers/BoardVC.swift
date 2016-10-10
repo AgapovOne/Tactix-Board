@@ -28,12 +28,12 @@ class BoardVC: UIViewController {
     
     loadPlayers()
     
-    drawView.userInteractionEnabled = false
+    drawView.isUserInteractionEnabled = false
     // Do any additional setup after loading the view, typically from a nib.
     menuBar.layer.zPosition = 3
     popAddMenu.layer.zPosition = 3
     popDeleteMenu.layer.zPosition = 3
-    DrawingView().setLineType(.Thin)
+    DrawingView().setLineType(.thin)
   }
   
   // MARK: - Players part
@@ -41,7 +41,7 @@ class BoardVC: UIViewController {
   func loadPlayers() {
     PlayerView.initPlayers(boardView) // FIX!
     for v in self.view.subviews {
-      if v.isKindOfClass(PlayerView) {
+      if v.isKind(of: PlayerView.self) {
         v.layer.zPosition = 2
       }
     }
@@ -53,34 +53,34 @@ class BoardVC: UIViewController {
   
   // MARK: - Drawing part
   
-  @IBAction func clearDrawings(sender: UIButton) {
+  @IBAction func clearDrawings(_ sender: UIButton) {
     drawView.clear()
-    DrawingView().setLineType(.Thick)
+    DrawingView().setLineType(.thick)
   }
   
-  @IBAction func popLineTypeMenuShow(sender: UIButton) {
+  @IBAction func popLineTypeMenuShow(_ sender: UIButton) {
     let menu = popLineTypeMenu
-    showHide(menu,sender: sender)
+    showHide(menu!,sender: sender)
   }
   
-  @IBAction func startDrawings(sender: UIButton) {
+  @IBAction func startDrawings(_ sender: UIButton) {
     if isDrawing == false {
-      drawView.userInteractionEnabled = true
-      sender.backgroundColor = UIColor.flatGreenColor()
+      drawView.isUserInteractionEnabled = true
+      sender.backgroundColor = UIColor.flatGreen()
       
       for view in self.view.subviews {
-        if view.isKindOfClass(MovingView) {
+        if view.isKind(of: MovingView.self) {
           let movingView = view as! MovingView
           movingView.disableMoves()
         }
       }
       self.isDrawing = true
     } else {
-      drawView.userInteractionEnabled = false
+      drawView.isUserInteractionEnabled = false
       sender.backgroundColor = sidebarColor
       
       for view in self.view.subviews {
-        if view.isKindOfClass(MovingView) {
+        if view.isKind(of: MovingView.self) {
           let movingView = view as! MovingView
           movingView.enableMoves()
         }
@@ -90,22 +90,22 @@ class BoardVC: UIViewController {
   }
   
   // MARK: - Sidebar Menu
-  func showHide(menu:UIView,sender:UIButton) {
-    if menu.hidden == true {
-      menu.hidden = false
-      sender.backgroundColor = UIColor.flatGreenColor()
+  func showHide(_ menu:UIView,sender:UIButton) {
+    if menu.isHidden == true {
+      menu.isHidden = false
+      sender.backgroundColor = UIColor.flatGreen()
     } else {
-      menu.hidden = true
+      menu.isHidden = true
       sender.backgroundColor = sidebarColor
     }
   }
-  @IBAction func popAddMenuShow(sender: UIButton) {
+  @IBAction func popAddMenuShow(_ sender: UIButton) {
     let menu = popAddMenu
-    showHide(menu,sender: sender)
+    showHide(menu!,sender: sender)
   }
   
-  @IBAction func popDeleteMenuShow(sender: UIButton) {
+  @IBAction func popDeleteMenuShow(_ sender: UIButton) {
     let menu = popDeleteMenu
-    showHide(menu,sender: sender)
+    showHide(menu!,sender: sender)
   }
 }

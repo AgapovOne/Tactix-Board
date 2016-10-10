@@ -11,15 +11,15 @@ import UIKit
 @IBDesignable class AddMenu: MenuType {
   
   override func loadViewFromNib() -> UIView {
-    let bundle = NSBundle(forClass: self.dynamicType)
+    let bundle = Bundle(for: type(of: self))
     let nib = UINib(nibName: "AddMenu", bundle: bundle)
     
     // Assumes UIView is top level and only object in AddMenu.xib file
-    let view = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
+    let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
     return view
   }
   
-  func addPlayerWithColor(color:PlayerColor, num:String) {
+  func addPlayerWithColor(_ color:PlayerColor, num:String) {
     guard let sup = self.superview else {return}
     for v in sup.subviews {
       if v.tag == 10 {
@@ -30,24 +30,24 @@ import UIKit
     }
   }
   
-  @IBAction func addRedPlayer(sender: UIButton) {
-    addPlayerWithColor(.Red, num: "3")
+  @IBAction func addRedPlayer(_ sender: UIButton) {
+    addPlayerWithColor(.red, num: "3")
   }
   
-  @IBAction func addBluePlayer(sender: UIButton) {
-    addPlayerWithColor(.Blue, num: "2")
+  @IBAction func addBluePlayer(_ sender: UIButton) {
+    addPlayerWithColor(.blue, num: "2")
   }
   
-  @IBAction func addBlackPlayer(sender: UIButton) {
-    addPlayerWithColor(.Black, num: "2")
+  @IBAction func addBlackPlayer(_ sender: UIButton) {
+    addPlayerWithColor(.black, num: "2")
   }
   
-  @IBAction func addOrangeGK(sender: UIButton) {
-    addPlayerWithColor(.Orange, num: "В")
+  @IBAction func addOrangeGK(_ sender: UIButton) {
+    addPlayerWithColor(.orange, num: "В")
     
   }
   
-  @IBAction func addGreenGK(sender: UIButton) {
-    addPlayerWithColor(.Green, num: "В")
+  @IBAction func addGreenGK(_ sender: UIButton) {
+    addPlayerWithColor(.green, num: "В")
   }
 }

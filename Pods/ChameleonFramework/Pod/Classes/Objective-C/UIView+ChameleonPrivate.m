@@ -20,9 +20,9 @@
                                             CGRectGetMidY(self.bounds));
     
     CGPoint centerPointOfSelfInWindow = [self convertPoint:centerPointInSelf
-                                                    toView:self.window];
+                                                    toView:(UIView *)self.window];
     
-    UIView *view = [self.window findTopMostViewForPoint:centerPointOfSelfInWindow];
+    UIView *view = [(UIView *)self.window findTopMostViewForPoint:centerPointOfSelfInWindow];
     BOOL isTopMost = view == self || [view isDescendantOfView:self];
     
     return isTopMost;
@@ -32,7 +32,7 @@
     
     for (int i = (int)self.subviews.count - 1; i >= 0; i--) {
         
-        UIView *subview = [self.subviews objectAtIndex:i];
+        UIView *subview = self.subviews[i];
         
         if (!subview.hidden && CGRectContainsPoint(subview.frame, point) && subview.alpha > 0.01) {
             CGPoint pointConverted = [self convertPoint:point toView:subview];
