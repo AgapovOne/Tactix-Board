@@ -1,5 +1,5 @@
 //
-//  Drawing.swift
+//  LineView.swift
 //  TactixBoard
 //
 //  Created by Алексей Агапов on 28/09/15.
@@ -14,9 +14,9 @@ enum LineType {
   thick
 }
 
-class DrawingView: UIView {
+class LineView: UIView {
   
-  var drawColor = white
+  var drawColor = Color.white
   var lineWidth: CGFloat = 3
   
   fileprivate var firstPoint = CGPoint(x: 0,y: 0)
@@ -75,17 +75,8 @@ class DrawingView: UIView {
       let ctx = UIGraphicsGetCurrentContext()
       switch type {
       case .dashed:
-        /*
-        let lengths = [
-        32, 16,
-        ].map { CGFloat($0) }
-        
-        CGContextSetLineDash (ctx, 0, lengths, lengths.count)
-        */
-        let parts = distanceBetweenPoints(first, e: end)
-        
-        let dashes: [CGFloat] = [parts/6, parts/12] // FIX!
-        CGContextSetLineDash(ctx, 0, dashes, dashes.count)
+//        let parts = distanceBetweenPoints(first, e: end)
+//        ctx?.setLineDash(phase: 0, lengths: [parts/6, parts/12])
         ctx?.setLineWidth(lineWidth)
       case .thick:
         ctx?.setLineWidth(lineWidth * 2)

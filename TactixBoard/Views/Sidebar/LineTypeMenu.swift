@@ -9,9 +9,7 @@
 import UIKit
 
 @IBDesignable class LineTypeMenu: MenuType {
-  
-  //var mainPic:UIImage = UIImage(named: "ThinLine.png")!
-  
+
   override func loadViewFromNib() -> UIView {
     let bundle = Bundle(for: type(of: self))
     let nib = UINib(nibName: "LineType", bundle: bundle)
@@ -22,7 +20,7 @@ import UIKit
   }
   
   func setLineType(_ type: LineType) {
-    DrawingView().setLineType(type)
+    LineView().setLineType(type)
   }
   
   @IBAction func setThinLine(_ sender: UIButton) {

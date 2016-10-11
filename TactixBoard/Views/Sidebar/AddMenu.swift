@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable class AddMenu: MenuType {
-  
+
   override func loadViewFromNib() -> UIView {
     let bundle = Bundle(for: type(of: self))
     let nib = UINib(nibName: "AddMenu", bundle: bundle)
@@ -19,13 +19,12 @@ import UIKit
     return view
   }
   
-  func addPlayerWithColor(_ color:PlayerColor, num:String) {
+  func addPlayerWithColor(_ color: UIColor, num: String) {
     guard let sup = self.superview else {return}
     for v in sup.subviews {
       if v.tag == 10 {
         let pl = PlayerView(color: color, num: num, x: 400, y: 500)
         v.superview?.addSubview(pl)
-        pl.layer.zPosition = 2
       }
     }
   }

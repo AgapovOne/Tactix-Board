@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable class DeleteMenu: MenuType {
-  
+
   override func loadViewFromNib() -> UIView {
     let bundle = Bundle(for: type(of: self))
     let nib = UINib(nibName: "DeleteMenu", bundle: bundle)
@@ -43,27 +43,27 @@ import UIKit
   }
   
   @IBAction func deleteRedPlayer(_ sender: UIButton) {
-    removePlayerWithColor(red)
+    removePlayerWithColor(Color.red)
   }
   
   @IBAction func deleteBluePlayer(_ sender: UIButton) {
-    removePlayerWithColor(blue)
+    removePlayerWithColor(Color.blue)
   }
   
   @IBAction func deleteBlackPlayer(_ sender: UIButton) {
-    removePlayerWithColor(black)
+    removePlayerWithColor(Color.black)
   }
   
   @IBAction func deleteTeam(_ sender: UIButton) {
-    removeTeamWithColor(blue)
+    removeTeamWithColor(Color.blue)
   }
   
   @IBAction func deleteOrangeGK(_ sender: UIButton) {
-    removePlayerWithColor(orange)
+    removePlayerWithColor(Color.orange)
   }
   
   @IBAction func deleteGreenGK(_ sender: UIButton) {
-    removePlayerWithColor(green)
+    removePlayerWithColor(Color.green)
   }
 }
 
