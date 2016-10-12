@@ -148,10 +148,19 @@
                                                 <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcm-Ua-YNN">
+                                                <connections>
+                                                    <action selector="clickLogotype:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HyH-HA-DeO"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.19376453760000001" green="0.50850099329999998" blue="0.85232251879999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="fcm-Ua-YNN" firstAttribute="height" secondItem="NIJ-Sg-sJi" secondAttribute="height" id="ATQ-6Y-NKs"/>
+                                            <constraint firstItem="fcm-Ua-YNN" firstAttribute="width" secondItem="NIJ-Sg-sJi" secondAttribute="width" id="ENq-cy-oRj"/>
+                                            <constraint firstItem="fcm-Ua-YNN" firstAttribute="centerY" secondItem="NIJ-Sg-sJi" secondAttribute="centerY" id="M63-Cm-cso"/>
                                             <constraint firstItem="8xu-yb-2EI" firstAttribute="centerY" secondItem="NIJ-Sg-sJi" secondAttribute="centerY" id="PJL-bQ-qch"/>
+                                            <constraint firstItem="fcm-Ua-YNN" firstAttribute="centerX" secondItem="NIJ-Sg-sJi" secondAttribute="centerX" id="RHL-cb-wYi"/>
                                             <constraint firstAttribute="height" constant="60" id="reF-WB-ZZT"/>
                                             <constraint firstItem="8xu-yb-2EI" firstAttribute="centerX" secondItem="NIJ-Sg-sJi" secondAttribute="centerX" id="wuD-Gj-A11"/>
                                         </constraints>
@@ -192,6 +201,19 @@
                                             <action selector="popLineTypeMenuShow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SHk-3b-mf2"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWm-dR-E8X">
+                                        <color key="backgroundColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="VgV-5h-XCr"/>
+                                            <constraint firstAttribute="height" constant="60" id="k0t-cC-dhj"/>
+                                        </constraints>
+                                        <state key="normal" image="Rec">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveState:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xbO-VZ-VWN"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -205,9 +227,11 @@
                                     <constraint firstItem="Z8N-2I-D6X" firstAttribute="top" secondItem="2EE-oa-nYY" secondAttribute="bottom" id="S8d-Zd-gQ0"/>
                                     <constraint firstItem="S2M-9Z-ig6" firstAttribute="centerX" secondItem="bs7-H1-J9L" secondAttribute="centerX" id="WIc-Pl-cdx"/>
                                     <constraint firstItem="Z8N-2I-D6X" firstAttribute="centerX" secondItem="Gd8-xu-KUB" secondAttribute="centerX" id="XOM-xO-UW3"/>
+                                    <constraint firstItem="WWm-dR-E8X" firstAttribute="centerX" secondItem="Gd8-xu-KUB" secondAttribute="centerX" id="YM4-DQ-AxW"/>
                                     <constraint firstItem="UBG-ln-Ohn" firstAttribute="centerX" secondItem="Gd8-xu-KUB" secondAttribute="centerX" id="dxb-gv-ey4"/>
                                     <constraint firstAttribute="width" constant="60" id="fLy-9C-XbL"/>
                                     <constraint firstItem="2EE-oa-nYY" firstAttribute="top" secondItem="S2M-9Z-ig6" secondAttribute="bottom" constant="16" id="kuv-Nu-Gjb"/>
+                                    <constraint firstItem="WWm-dR-E8X" firstAttribute="top" secondItem="UBG-ln-Ohn" secondAttribute="bottom" constant="16" id="p0A-Uj-xVK"/>
                                     <constraint firstAttribute="trailing" secondItem="NIJ-Sg-sJi" secondAttribute="trailing" id="rzS-hF-y9f"/>
                                     <constraint firstItem="UBG-ln-Ohn" firstAttribute="top" secondItem="Z8N-2I-D6X" secondAttribute="bottom" id="v5w-OP-Hik"/>
                                     <constraint firstItem="bs7-H1-J9L" firstAttribute="top" secondItem="NIJ-Sg-sJi" secondAttribute="bottom" id="wIM-PB-F7a"/>
@@ -279,6 +303,7 @@
         <image name="Delete" width="32" height="32"/>
         <image name="Draw" width="32" height="32"/>
         <image name="Futsal Field" width="626" height="994"/>
+        <image name="Rec" width="32" height="32"/>
         <image name="START SCREEN" width="768" height="1024"/>
         <image name="ThinLine" width="32" height="32"/>
     </resources>

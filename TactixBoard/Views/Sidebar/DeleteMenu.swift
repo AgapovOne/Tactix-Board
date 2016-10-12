@@ -11,12 +11,7 @@ import UIKit
 @IBDesignable class DeleteMenu: MenuType {
 
   override func loadViewFromNib() -> UIView {
-    let bundle = Bundle(for: type(of: self))
-    let nib = UINib(nibName: "DeleteMenu", bundle: bundle)
-    
-    // Assumes UIView is top level and only object in AddMenu.xib file
-    let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
-    return view
+    return super.loadView(withName: "DeleteMenu")
   }
   
   func removePlayerWithColor(_ color:UIColor) {

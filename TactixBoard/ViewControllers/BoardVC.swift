@@ -8,7 +8,6 @@
 
 import UIKit
 import SnapKit
-import ChameleonFramework
 
 class BoardVC: UIViewController {
 
@@ -21,48 +20,58 @@ class BoardVC: UIViewController {
     @IBOutlet weak var popDeleteMenu: DeleteMenu!
     @IBOutlet weak var popLineTypeMenu: LineTypeMenu!
 
-
     var isDrawing = false
+    var tactic: Tactic?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         LineView().setLineType(.thin)
 
-        menuBar.layer.zPosition = 3
-        popAddMenu.layer.zPosition = 3
-        popDeleteMenu.layer.zPosition = 3
-        popLineTypeMenu.layer.zPosition = 3
+        menuBar.layer.zPosition = 20
+        popAddMenu.layer.zPosition = 20
+        popDeleteMenu.layer.zPosition = 20
+        popLineTypeMenu.layer.zPosition = 20
+
+        let bounds = UIScreen.main.bounds
+        let center = CGPoint(x: bounds.midX + 30, y: bounds.midY)
+        tactic = MovableManager.shared.defaultTactic(for: center)
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        loadPlayers()
+        setupBoard()
 
-        MovingManager.shared.movableZone = CGRect(x: boardView.frame.minX, y: boardView.frame.minY, width: boardView.frame.width, height: boardView.frame.height)
     }
 
 
     // MARK: - Players part
 
-    func loadPlayers() {
-        PlayerView.initPlayers(boardView as UIView)
-        let boardFrame = boardView.frame
-        let ball = BallView(x: boardFrame.width / 2 + menuBar.frame.width, y: boardFrame.height / 2)
-        boardView.superview?.addSubview(ball)
-    }
+    func setupBoard() {
+        tactic?.movableViews.forEach {
+            boardView.superview?.addSubview($0)
+        }
 
+        MovableManager.shared.movableZone = CGRect(x: boardView.frame.minX + 30,
+                                                  y: boardView.frame.minY + 30,
+                                                  width: boardView.frame.width - 60,
+                                                  height: boardView.frame.height - 60)
+    }
 
     // MARK: - Sidebar Menu
 
-    func showHide(_ menu:UIView,sender:UIButton) {
+    func toggle(menu: UIView, sender: UIButton) {
         if menu.isHidden == true {
             menu.isHidden = false
-            sender.backgroundColor = UIColor.flatGreen()
+            sender.backgroundColor = Color.sidebarButtonActiveColor
         } else {
             menu.isHidden = true
-            sender.backgroundColor = Color.sidebarColor
+            sender.backgroundColor = Color.sidebarButtonColor
         }
+    }
+
+    @IBAction func clickLogotype(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
 
     @IBAction func clearDrawings(_ sender: UIButton) {
@@ -72,29 +81,29 @@ class BoardVC: UIViewController {
 
     @IBAction func popLineTypeMenuShow(_ sender: UIButton) {
         let menu = popLineTypeMenu
-        showHide(menu!,sender: sender)
+        toggle(menu: menu!,sender: sender)
     }
 
     @IBAction func startDrawings(_ sender: UIButton) {
         if isDrawing == false {
             drawView.isUserInteractionEnabled = true
-            sender.backgroundColor = UIColor.flatGreen()
+            sender.backgroundColor = Color.sidebarButtonActiveColor
 
             for view in self.view.subviews {
-                if view.isKind(of: MovingView.self) {
-                    let movingView = view as! MovingView
-                    movingView.disableMoves()
+                if view is MovableView {
+                    let movableView = view as! MovableView
+                    movableView.disableMoves()
                 }
             }
             self.isDrawing = true
         } else {
             drawView.isUserInteractionEnabled = false
-            sender.backgroundColor = Color.sidebarColor
+            sender.backgroundColor = Color.sidebarButtonColor
 
             for view in self.view.subviews {
-                if view.isKind(of: MovingView.self) {
-                    let movingView = view as! MovingView
-                    movingView.enableMoves()
+                if view is MovableView {
+                    let movableView = view as! MovableView
+                    movableView.enableMoves()
                 }
             }
             self.isDrawing = false
@@ -103,11 +112,23 @@ class BoardVC: UIViewController {
     
     @IBAction func popAddMenuShow(_ sender: UIButton) {
         let menu = popAddMenu
-        showHide(menu!, sender: sender)
+        toggle(menu: menu!, sender: sender)
+
+        let view = (self.view.subviews.filter({ $0 is MovableView }) as! [MovableView])[0]
+
+        UIView.animate(withDuration: 1.0, animations: {
+            view.center = CGPoint(x: 200, y: 200)
+        })
     }
     
     @IBAction func popDeleteMenuShow(_ sender: UIButton) {
         let menu = popDeleteMenu
-        showHide(menu!, sender: sender)
+        toggle(menu: menu!, sender: sender)
+    }
+
+    @IBAction func saveState(_ sender: UIButton) {
+        let movableViews = self.view.subviews.filter({ $0 is MovableView }) as! [MovableView]
+        let state = Tactic.State(positions: movableViews.map({ $0.center }))
+        tactic = Tactic(states: [state], movableViews: movableViews)
     }
 }
