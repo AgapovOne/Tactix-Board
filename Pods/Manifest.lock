@@ -5,12 +5,18 @@ PODS:
   - Crashlytics (3.8.2):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.9)
+  - Realm (2.0.2):
+    - Realm/Headers (= 2.0.2)
+  - Realm/Headers (2.0.2)
+  - RealmSwift (2.0.2):
+    - Realm (= 2.0.2)
   - SnapKit (3.0.2)
 
 DEPENDENCIES:
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`, branch `swift3`)
   - Crashlytics
   - Fabric
+  - RealmSwift
   - SnapKit (~> 3.0.2)
 
 EXTERNAL SOURCES:
@@ -27,8 +33,10 @@ SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Crashlytics: 27acca95a01b042a8294291dd6dff27f8f6af6d7
   Fabric: bc5bec42cef4bcf1ee3ce0e218fc518e4b44dfbb
+  Realm: 0f5a194af0b7e6158b83db41b4ee1a00be7ddf1a
+  RealmSwift: 0eb5070d851cba7c66e841ca756d83609dc78bc8
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
 
-PODFILE CHECKSUM: 5205dec70c0e47000feb65696bc31b81dabe42d0
+PODFILE CHECKSUM: 8b79ac241fca68b5fef37cb4621c463af065c2fc
 
 COCOAPODS: 1.1.0.rc.2

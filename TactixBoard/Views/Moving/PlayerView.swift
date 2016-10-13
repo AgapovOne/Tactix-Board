@@ -11,12 +11,12 @@ import UIKit
 class PlayerView: MovableView {
     private static let size: CGSize = CGSize(width: 44, height: 44)
 
-    convenience init(color: UIColor, num: String?, center: CGPoint) {
+    convenience init(id: Int, color: UIColor, num: String?, center: CGPoint) {
         self.init(frame: CGRect(x: center.x - PlayerView.size.width / 2, y: center.y - PlayerView.size.height / 2, width: PlayerView.size.width, height: PlayerView.size.height))
+        self.id = id
 
         self.layer.borderColor = Color.white.cgColor
         self.layer.borderWidth = 2.0
-
 
         self.backgroundColor = color
 
@@ -30,8 +30,15 @@ class PlayerView: MovableView {
         self.addSubview(number)
     }
 
+    convenience init(movableObject: MovableObject) {
+        self.init(id: movableObject.id,
+                  color: UIColor(hexString: movableObject.color),
+                  num: movableObject.number,
+                  center: CGPoint(x: movableObject.centerX, y: movableObject.centerY))
+    }
+
     convenience init() {
-        self.init(color: Color.black, num: nil, center: CGPoint(x: 400, y: 400))
+        self.init(id: 0, color: Color.black, num: nil, center: CGPoint(x: 400, y: 400))
     }
 
     override init(frame: CGRect) {

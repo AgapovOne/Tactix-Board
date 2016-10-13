@@ -21,7 +21,15 @@ class BoardVC: UIViewController {
     @IBOutlet weak var popLineTypeMenu: LineTypeMenu!
 
     var isDrawing = false
-    var tactic: Tactic?
+    var isRecording = false {
+        didSet {
+//            if isRecording = true {
+//                popAddMenuButton.isHidden = true
+//                popDeleteMenuButton.isHidden = true
+//            }
+        }
+    }
+    var tactic: TacticStruct?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +64,22 @@ class BoardVC: UIViewController {
                                                   y: boardView.frame.minY + 30,
                                                   width: boardView.frame.width - 60,
                                                   height: boardView.frame.height - 60)
+    }
+
+    func animatePlayers(index:Int = 0) {
+        if let tactic = tactic {
+            UIView.animate(withDuration: 1.0, animations: {
+//                tactic.movableViews.forEach {
+//                    $0.center = tactic.states[index].positions
+//                }
+            }) { finished in
+                if finished {
+                    if index <= tactic.states.count {
+                        self.animatePlayers(index: index + 1)
+                    }
+                }
+            }
+        }
     }
 
     // MARK: - Sidebar Menu
@@ -126,9 +150,40 @@ class BoardVC: UIViewController {
         toggle(menu: menu!, sender: sender)
     }
 
-    @IBAction func saveState(_ sender: UIButton) {
-        let movableViews = self.view.subviews.filter({ $0 is MovableView }) as! [MovableView]
-        let state = Tactic.State(positions: movableViews.map({ $0.center }))
-        tactic = Tactic(states: [state], movableViews: movableViews)
+    @IBAction func startRecording(_ sender: UIButton) {
+        isRecording = !isRecording
+        if isRecording == true {
+            sender.setImage(#imageLiteral(resourceName: "Stop"), for: .normal)
+            sender.backgroundColor = Color.sidebarButtonActiveColor
+
+            let movableViews = self.view.subviews.filter({ $0 is MovableView }) as! [MovableView]
+            let positions = movableViews.reduce([Int: CGPoint]) { $0 = [$1.id: $1.center] }
+            let state = TacticStruct.State(positions: positions)
+            tactic = TacticStruct(states: [state], movableViews: movableViews)
+        } else {
+            sender.setImage(#imageLiteral(resourceName: "Rec"), for: .normal)
+            sender.backgroundColor = Color.sidebarButtonColor
+
+            // remember tactic
+        }
     }
+
+    @IBAction func saveState(_ sender: UIButton) {
+        if isRecording {
+            let movableViews = self.view.subviews.filter({ $0 is MovableView }) as! [MovableView]
+            let positions = movableViews.reduce([Int: CGPoint]) { $0 = [$1.id: $1.center] }
+            let state = TacticStruct.State(positions: positions)
+            tactic?.states.append(state)
+        }
+    }
+
+    @IBAction func stopRecording(_ sender: UIButton) {
+        // ???
+    }
+
+    @IBAction func playTactic(_ sender: UIButton) {
+        setupBoard()
+        animatePlayers()
+    }
+
 }

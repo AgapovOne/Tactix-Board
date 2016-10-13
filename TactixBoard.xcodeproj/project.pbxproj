@@ -13,7 +13,11 @@
 		372969F91DACE84E00831162 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372969F81DACE84E00831162 /* Colors.swift */; };
 		37701C021DAE641D007EB0E9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37701C011DAE641D007EB0E9 /* Images.xcassets */; };
 		37701C041DAE7D53007EB0E9 /* Tactic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37701C031DAE7D53007EB0E9 /* Tactic.swift */; };
+		37701C061DAF4955007EB0E9 /* MovableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37701C051DAF4955007EB0E9 /* MovableObject.swift */; };
+		37701C081DAF4BCE007EB0E9 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37701C071DAF4BCE007EB0E9 /* State.swift */; };
 		378D9DAB1DAD0C50007AFE1D /* MovableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D9DAA1DAD0C50007AFE1D /* MovableManager.swift */; };
+		37BAE7DE1DAF92AA0075DBC5 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BAE7DD1DAF92AA0075DBC5 /* RealmManager.swift */; };
+		37BAE7E01DAFA3710075DBC5 /* DrawManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BAE7DF1DAFA3710075DBC5 /* DrawManager.swift */; };
 		56743339D0F8772A47A83FD6 /* Pods_TactixBoard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D8546945CD977668288E4F /* Pods_TactixBoard.framework */; };
 		6AC5A9B7563E3545EE57038B /* Pods_TactixBoardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA322F262674E4C828BCBEF /* Pods_TactixBoardTests.framework */; };
 		8D17100E1BB9B9350007F919 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D17100D1BB9B9350007F919 /* LineView.swift */; };
@@ -52,7 +56,11 @@
 		372969F81DACE84E00831162 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		37701C011DAE641D007EB0E9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		37701C031DAE7D53007EB0E9 /* Tactic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tactic.swift; sourceTree = "<group>"; };
+		37701C051DAF4955007EB0E9 /* MovableObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovableObject.swift; sourceTree = "<group>"; };
+		37701C071DAF4BCE007EB0E9 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		378D9DAA1DAD0C50007AFE1D /* MovableManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovableManager.swift; sourceTree = "<group>"; };
+		37BAE7DD1DAF92AA0075DBC5 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		37BAE7DF1DAFA3710075DBC5 /* DrawManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawManager.swift; sourceTree = "<group>"; };
 		73D98DE3B3B39F49C1578A43 /* Pods-TactixBoard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TactixBoard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TactixBoard/Pods-TactixBoard.debug.xcconfig"; sourceTree = "<group>"; };
 		8D17100D1BB9B9350007F919 /* LineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		8D17100F1BB9BF740007F919 /* MovableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovableView.swift; sourceTree = "<group>"; };
@@ -137,6 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				378D9DAA1DAD0C50007AFE1D /* MovableManager.swift */,
+				37BAE7DD1DAF92AA0075DBC5 /* RealmManager.swift */,
+				37BAE7DF1DAFA3710075DBC5 /* DrawManager.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -145,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				37701C031DAE7D53007EB0E9 /* Tactic.swift */,
+				37701C051DAF4955007EB0E9 /* MovableObject.swift */,
+				37701C071DAF4BCE007EB0E9 /* State.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -514,9 +526,12 @@
 				8D17100E1BB9B9350007F919 /* LineView.swift in Sources */,
 				8D5F875E1BCCEDFD00FFE288 /* MenuType.swift in Sources */,
 				372969F61DACE6D900831162 /* PlayerView.swift in Sources */,
+				37701C081DAF4BCE007EB0E9 /* State.swift in Sources */,
 				37701C041DAE7D53007EB0E9 /* Tactic.swift in Sources */,
 				8D5F87601BCCF72B00FFE288 /* Fonts.swift in Sources */,
 				8D884B241BCD62F100279F13 /* LineTypeMenu.swift in Sources */,
+				37701C061DAF4955007EB0E9 /* MovableObject.swift in Sources */,
+				37BAE7E01DAFA3710075DBC5 /* DrawManager.swift in Sources */,
 				372969F01DACC41D00831162 /* DrawingView.swift in Sources */,
 				8DA4E1A81B9E11AB00001794 /* BoardVC.swift in Sources */,
 				372969F91DACE84E00831162 /* Colors.swift in Sources */,
@@ -525,6 +540,7 @@
 				372969F41DACE66900831162 /* BallView.swift in Sources */,
 				8DA4E1811B9AD9B800001794 /* AppDelegate.swift in Sources */,
 				8DA4E1AA1B9E13D900001794 /* Buttons.swift in Sources */,
+				37BAE7DE1DAF92AA0075DBC5 /* RealmManager.swift in Sources */,
 				8D1710101BB9BF740007F919 /* MovableView.swift in Sources */,
 				8D5F87561BCC106200FFE288 /* AddMenu.swift in Sources */,
 			);
@@ -667,7 +683,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 73D98DE3B3B39F49C1578A43 /* Pods-TactixBoard.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -687,7 +703,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E67D5E52CE95CB618B316C3A /* Pods-TactixBoard.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

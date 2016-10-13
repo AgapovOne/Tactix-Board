@@ -18,7 +18,7 @@ import UIKit
     guard let sup = self.superview else {return}
     for v in sup.subviews {
       if v.tag == 10 {
-        let pl = PlayerView(color: color, num: num, center: CGPoint(x: 400, y: 500))
+        let pl = PlayerView(id: 0, color: color, num: num, center: CGPoint(x: 400, y: 500))
         v.superview?.addSubview(pl)
       }
     }

@@ -9,6 +9,7 @@
 import UIKit
 
 class MovableView: UIView {
+    var id: Int = 0
     var lastLocation: CGPoint = CGPoint(x: 0, y: 0)
 
     var currentPosition: CGPoint = CGPoint.zero {
@@ -17,9 +18,14 @@ class MovableView: UIView {
         }
     }
 
+    convenience init(id: Int, frame:CGRect) {
+        self.init(frame: frame)
+        self.id = id
+    }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
-        // Initialization code
+
         let panRecognizer = UIPanGestureRecognizer(target:self, action:#selector(MovableView.detectPan(_:)))
         self.gestureRecognizers = [panRecognizer]
 
@@ -29,7 +35,7 @@ class MovableView: UIView {
         self.layer.shadowOffset = CGSize(width: 0, height: 1)
 
         self.layer.cornerRadius = frame.width / 2
-        
+
         self.layer.zPosition = 10
     }
 

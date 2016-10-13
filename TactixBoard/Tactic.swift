@@ -7,13 +7,20 @@
 //
 
 import CoreGraphics
+import RealmSwift
 
-struct Tactic {
-
+struct TacticStruct {
     struct State {
-        var positions: [CGPoint]
+        var positions: [Int: CGPoint]
     }
+
     var states: [State]
     var movableViews: [MovableView]
+}
 
+class Tactic: Object {
+    dynamic var name = ""
+
+    let states = List<State>()
+    let movableObjects = List<MovableObject>()
 }
