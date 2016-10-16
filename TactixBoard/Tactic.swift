@@ -11,7 +11,7 @@ import RealmSwift
 
 struct TacticStruct {
     struct State {
-        var positions: [Int: CGPoint]
+        var positions: [MovableView: CGPoint]
     }
 
     var states: [State]

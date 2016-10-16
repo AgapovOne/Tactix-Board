@@ -30,6 +30,9 @@
 		8D5F87601BCCF72B00FFE288 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F875F1BCCF72B00FFE288 /* Fonts.swift */; };
 		8D884B201BCD609400279F13 /* LineType.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D884B1F1BCD609400279F13 /* LineType.xib */; };
 		8D884B241BCD62F100279F13 /* LineTypeMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D884B231BCD62F100279F13 /* LineTypeMenu.swift */; };
+		8D8BB17D1DB3F44000514F87 /* BasicAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8BB17B1DB3F44000514F87 /* BasicAlertVC.swift */; };
+		8D8BB17E1DB3F44000514F87 /* BasicAlertVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D8BB17C1DB3F44000514F87 /* BasicAlertVC.xib */; };
+		8D8BB1801DB3F5AF00514F87 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8BB17F1DB3F5AF00514F87 /* RoundView.swift */; };
 		8DA4E1811B9AD9B800001794 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1801B9AD9B800001794 /* AppDelegate.swift */; };
 		8DA4E1861B9AD9B800001794 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DA4E1841B9AD9B800001794 /* Main.storyboard */; };
 		8DA4E18B1B9AD9B800001794 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DA4E1891B9AD9B800001794 /* LaunchScreen.xib */; };
@@ -73,6 +76,9 @@
 		8D5F875F1BCCF72B00FFE288 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fonts.swift; path = ../Libraries/Classes/Fonts.swift; sourceTree = "<group>"; };
 		8D884B1F1BCD609400279F13 /* LineType.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LineType.xib; sourceTree = "<group>"; };
 		8D884B231BCD62F100279F13 /* LineTypeMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineTypeMenu.swift; sourceTree = "<group>"; };
+		8D8BB17B1DB3F44000514F87 /* BasicAlertVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasicAlertVC.swift; path = Alerts/BasicAlertVC.swift; sourceTree = "<group>"; };
+		8D8BB17C1DB3F44000514F87 /* BasicAlertVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BasicAlertVC.xib; path = Alerts/BasicAlertVC.xib; sourceTree = "<group>"; };
+		8D8BB17F1DB3F5AF00514F87 /* RoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 		8DA4E17B1B9AD9B800001794 /* TactixBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TactixBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA4E17F1B9AD9B800001794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DA4E1801B9AD9B800001794 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +143,7 @@
 				372969F81DACE84E00831162 /* Colors.swift */,
 				8D5F875F1BCCF72B00FFE288 /* Fonts.swift */,
 				8DA4E1AB1B9E31F300001794 /* Extensions.swift */,
+				8D8BB17F1DB3F5AF00514F87 /* RoundView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -173,6 +180,7 @@
 		8D17100C1BB9B8FA0007F919 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8D8BB1761DB3F3E500514F87 /* Alerts */,
 				372969F21DACE65300831162 /* Drawing */,
 				372969F11DACE63800831162 /* Movable */,
 				8D5F875A1BCCE2A600FFE288 /* Sidebar */,
@@ -199,6 +207,15 @@
 				8D5F875D1BCCEDFD00FFE288 /* MenuType.swift */,
 			);
 			path = Sidebar;
+			sourceTree = "<group>";
+		};
+		8D8BB1761DB3F3E500514F87 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				8D8BB17B1DB3F44000514F87 /* BasicAlertVC.swift */,
+				8D8BB17C1DB3F44000514F87 /* BasicAlertVC.xib */,
+			);
+			name = Alerts;
 			sourceTree = "<group>";
 		};
 		8DA4E1721B9AD9B800001794 = {
@@ -359,6 +376,7 @@
 				TargetAttributes = {
 					8DA4E17A1B9AD9B800001794 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = X76MKT7DV3;
 						LastSwiftMigration = 0800;
 					};
 					8DA4E18F1B9AD9B800001794 = {
@@ -392,6 +410,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D8BB17E1DB3F44000514F87 /* BasicAlertVC.xib in Resources */,
 				8DA4E1861B9AD9B800001794 /* Main.storyboard in Resources */,
 				8D884B201BCD609400279F13 /* LineType.xib in Resources */,
 				8DA4E18B1B9AD9B800001794 /* LaunchScreen.xib in Resources */,
@@ -522,6 +541,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DA4E1AC1B9E31F300001794 /* Extensions.swift in Sources */,
+				8D8BB1801DB3F5AF00514F87 /* RoundView.swift in Sources */,
 				8D17100E1BB9B9350007F919 /* LineView.swift in Sources */,
 				8D5F875E1BCCEDFD00FFE288 /* MenuType.swift in Sources */,
 				372969F61DACE6D900831162 /* PlayerView.swift in Sources */,
@@ -541,6 +561,7 @@
 				8DA4E1AA1B9E13D900001794 /* Buttons.swift in Sources */,
 				37BAE7DE1DAF92AA0075DBC5 /* RealmManager.swift in Sources */,
 				8D1710101BB9BF740007F919 /* MovableView.swift in Sources */,
+				8D8BB17D1DB3F44000514F87 /* BasicAlertVC.swift in Sources */,
 				8D5F87561BCC106200FFE288 /* AddMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -685,15 +706,16 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = X76MKT7DV3;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/TactixBoard/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "agapov.one.ru.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -705,15 +727,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = X76MKT7DV3;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/TactixBoard/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "agapov.one.ru.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

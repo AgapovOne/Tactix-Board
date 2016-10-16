@@ -72,8 +72,8 @@ class BoardVC: UIViewController {
                 ? 0.2
                 : 1.0
             UIView.animate(withDuration: duration, animations: {
-                tactic.states[index].positions.forEach({ (id, position) in
-                    tactic.movableViews.filter({ $0.id == id })[0].center = position // FIXME: Always filtering movableView is a bad idea.
+                tactic.states[index].positions.forEach({ (el, position) in
+                    el.center = position
                 })
             }) { finished in
                 if finished {
@@ -90,10 +90,10 @@ class BoardVC: UIViewController {
     func toggle(menu: UIView, sender: UIButton) {
         if menu.isHidden == true {
             menu.isHidden = false
-            sender.backgroundColor = Color.sidebarButtonActiveColor
+            sender.backgroundColor = Color.Sidebar.buttonActiveColor
         } else {
             menu.isHidden = true
-            sender.backgroundColor = Color.sidebarButtonColor
+            sender.backgroundColor = Color.Sidebar.buttonColor
         }
     }
 
@@ -114,7 +114,7 @@ class BoardVC: UIViewController {
     @IBAction func startDrawings(_ sender: UIButton) {
         if isDrawing == false {
             drawView.isUserInteractionEnabled = true
-            sender.backgroundColor = Color.sidebarButtonActiveColor
+            sender.backgroundColor = Color.Sidebar.buttonActiveColor
 
             for view in self.view.subviews {
                 if view is MovableView {
@@ -125,7 +125,7 @@ class BoardVC: UIViewController {
             self.isDrawing = true
         } else {
             drawView.isUserInteractionEnabled = false
-            sender.backgroundColor = Color.sidebarButtonColor
+            sender.backgroundColor = Color.Sidebar.buttonColor
 
             for view in self.view.subviews {
                 if view is MovableView {
@@ -157,20 +157,27 @@ class BoardVC: UIViewController {
         isRecording = !isRecording
         if isRecording == true {
             sender.setImage(#imageLiteral(resourceName: "Stop"), for: .normal)
-            sender.backgroundColor = Color.sidebarButtonActiveColor
+            sender.backgroundColor = Color.Sidebar.buttonActiveColor
 
             let movableViews = self.view.subviews.filter({ $0 is MovableView }) as! [MovableView]
-            var positions: [Int: CGPoint] = [:]
+            var positions: [MovableView: CGPoint] = [:]
             for el in movableViews {
-                positions[el.id] = el.center
+                positions[el] = el.center
             }
             let state = TacticStruct.State(positions: positions)
             tactic = TacticStruct(states: [state], movableViews: movableViews)
         } else {
             sender.setImage(#imageLiteral(resourceName: "Rec"), for: .normal)
-            sender.backgroundColor = Color.sidebarButtonColor
+            sender.backgroundColor = Color.Sidebar.buttonColor
 
             // remember tactic
+            
+            let alert = BasicAlertVC()
+            alert.addTextField()
+            alert.delegate = self
+            present(alert, animated: true, completion: {
+                print("alert")
+            })
             /*
             let realm = try! RealmManager.shared.defaultRealm
             
@@ -185,9 +192,9 @@ class BoardVC: UIViewController {
     @IBAction func saveState(_ sender: UIButton) {
         if isRecording {
             let movableViews = self.view.subviews.filter({ $0 is MovableView }) as! [MovableView]
-            var positions: [Int: CGPoint] = [:]
+            var positions: [MovableView: CGPoint] = [:]
             for el in movableViews {
-                positions[el.id] = el.center
+                positions[el] = el.center
             }
             let state = TacticStruct.State(positions: positions)
             tactic?.states.append(state)
@@ -198,5 +205,10 @@ class BoardVC: UIViewController {
         setupBoard()
         animatePlayers()
     }
+}
 
+extension BoardVC: BasicAlertVCDelegate {
+    func didClickSubmitButton(text: String) {
+        dismiss(animated: true, completion: nil)
+    }
 }

@@ -113,15 +113,9 @@
                             <view multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbZ-Jj-FBM" customClass="LineView" customModule="TactixBoard" customModuleProvider="target">
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Ed-UM-p40" customClass="DeleteMenu" customModule="TactixBoard" customModuleProvider="target">
-                                <frame key="frameInset" width="1000" height="1000"/>
-                            </view>
-                            <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kmb-L3-dfE" customClass="LineTypeMenu" customModule="TactixBoard" customModuleProvider="target">
-                                <frame key="frameInset" width="1000" height="1000"/>
-                            </view>
-                            <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qOH-GF-FoM" customClass="AddMenu" customModule="TactixBoard" customModuleProvider="target">
-                                <frame key="frameInset" width="1000" height="1000"/>
-                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ed-UM-p40" customClass="DeleteMenu" customModule="TactixBoard" customModuleProvider="target"/>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmb-L3-dfE" customClass="LineTypeMenu" customModule="TactixBoard" customModuleProvider="target"/>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOH-GF-FoM" customClass="AddMenu" customModule="TactixBoard" customModuleProvider="target"/>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gd8-xu-KUB">
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2EE-oa-nYY">
@@ -233,16 +227,6 @@
                                             <action selector="saveState:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tqV-ar-veU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxG-wB-2cc">
-                                        <color key="backgroundColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="YQJ-Oh-esu"/>
-                                            <constraint firstAttribute="height" constant="60" id="Zkf-Rd-teh"/>
-                                        </constraints>
-                                        <state key="normal" image="Stop">
-                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3O-J4-Yjt">
                                         <color key="backgroundColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -265,24 +249,22 @@
                                     <constraint firstItem="bs7-H1-J9L" firstAttribute="centerX" secondItem="Gd8-xu-KUB" secondAttribute="centerX" id="8FP-bj-iqP"/>
                                     <constraint firstItem="NIJ-Sg-sJi" firstAttribute="leading" secondItem="Gd8-xu-KUB" secondAttribute="leading" id="CMp-5F-jfh"/>
                                     <constraint firstAttribute="trailing" secondItem="S2M-9Z-ig6" secondAttribute="trailing" id="EaH-P3-lnc"/>
-                                    <constraint firstItem="YxG-wB-2cc" firstAttribute="centerX" secondItem="vPh-XC-lpv" secondAttribute="centerX" id="Gf7-hH-ZH7"/>
                                     <constraint firstItem="vPh-XC-lpv" firstAttribute="centerX" secondItem="WWm-dR-E8X" secondAttribute="centerX" id="NER-Mz-E23"/>
                                     <constraint firstItem="S2M-9Z-ig6" firstAttribute="leading" secondItem="Gd8-xu-KUB" secondAttribute="leading" id="P9h-bY-9yL"/>
                                     <constraint firstItem="Z8N-2I-D6X" firstAttribute="top" secondItem="2EE-oa-nYY" secondAttribute="bottom" id="S8d-Zd-gQ0"/>
-                                    <constraint firstItem="YxG-wB-2cc" firstAttribute="top" secondItem="vPh-XC-lpv" secondAttribute="bottom" id="VDq-y3-k3c"/>
+                                    <constraint firstItem="A3O-J4-Yjt" firstAttribute="top" secondItem="vPh-XC-lpv" secondAttribute="bottom" constant="16" id="SjN-Iv-61L"/>
                                     <constraint firstItem="S2M-9Z-ig6" firstAttribute="centerX" secondItem="bs7-H1-J9L" secondAttribute="centerX" id="WIc-Pl-cdx"/>
                                     <constraint firstItem="Z8N-2I-D6X" firstAttribute="centerX" secondItem="Gd8-xu-KUB" secondAttribute="centerX" id="XOM-xO-UW3"/>
                                     <constraint firstItem="WWm-dR-E8X" firstAttribute="centerX" secondItem="Gd8-xu-KUB" secondAttribute="centerX" id="YM4-DQ-AxW"/>
                                     <constraint firstItem="UBG-ln-Ohn" firstAttribute="centerX" secondItem="Gd8-xu-KUB" secondAttribute="centerX" id="dxb-gv-ey4"/>
-                                    <constraint firstItem="A3O-J4-Yjt" firstAttribute="centerX" secondItem="YxG-wB-2cc" secondAttribute="centerX" id="eGy-Pk-29T"/>
                                     <constraint firstAttribute="width" constant="60" id="fLy-9C-XbL"/>
                                     <constraint firstItem="2EE-oa-nYY" firstAttribute="top" secondItem="S2M-9Z-ig6" secondAttribute="bottom" constant="16" id="kuv-Nu-Gjb"/>
                                     <constraint firstItem="WWm-dR-E8X" firstAttribute="top" secondItem="UBG-ln-Ohn" secondAttribute="bottom" constant="16" id="p0A-Uj-xVK"/>
-                                    <constraint firstItem="A3O-J4-Yjt" firstAttribute="top" secondItem="YxG-wB-2cc" secondAttribute="bottom" constant="16" id="pxB-W8-3n8"/>
                                     <constraint firstAttribute="trailing" secondItem="NIJ-Sg-sJi" secondAttribute="trailing" id="rzS-hF-y9f"/>
                                     <constraint firstItem="UBG-ln-Ohn" firstAttribute="top" secondItem="Z8N-2I-D6X" secondAttribute="bottom" id="v5w-OP-Hik"/>
                                     <constraint firstItem="vPh-XC-lpv" firstAttribute="top" secondItem="WWm-dR-E8X" secondAttribute="bottom" id="wCM-Jt-a9T"/>
                                     <constraint firstItem="bs7-H1-J9L" firstAttribute="top" secondItem="NIJ-Sg-sJi" secondAttribute="bottom" id="wIM-PB-F7a"/>
+                                    <constraint firstItem="A3O-J4-Yjt" firstAttribute="centerX" secondItem="Gd8-xu-KUB" secondAttribute="centerX" id="z9d-HC-GCw"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -355,7 +337,6 @@
         <image name="Rec" width="32" height="32"/>
         <image name="START SCREEN" width="768" height="1024"/>
         <image name="Save" width="32" height="32"/>
-        <image name="Stop" width="32" height="32"/>
         <image name="ThinLine" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

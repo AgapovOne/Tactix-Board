@@ -10,19 +10,27 @@ import UIKit
 import ChameleonFramework
 
 struct Color {
-    static let sidebarColor = colorWith(r: 25, g: 41, b: 52)
-
     static let mainBgColor = colorWith(r: 38, g: 58, b: 71)
 
     static let black = colorWith(r: 75, g: 80, b: 85)
 
-    static let buttonColor = color(hex: "#0C6B92")
-
-    static let buttonActiveColor = color(hex: "#00ADEF")
-
-    static let sidebarButtonColor = sidebarColor
-
-    static let sidebarButtonActiveColor = color(hex: "#73B938")
+    struct Button {
+        static let buttonColor = color(hex: "#0C6B92")
+        
+        static let buttonActiveColor = color(hex: "#00ADEF")
+    }
+    
+    struct Sidebar {
+        static let backgroundColor = colorWith(r: 25, g: 41, b: 52)
+        
+        static let buttonColor = backgroundColor
+        
+        static let buttonActiveColor = color(hex: "#73B938")
+    }
+    
+    struct Alert {
+        static let textFieldColor = color(hex: "#263A47")
+    }
 
     static let lightBlue = colorWith(r: 51, g: 189, b: 242)
 
