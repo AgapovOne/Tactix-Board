@@ -55,26 +55,29 @@ class BoardVC: UIViewController {
 
     // MARK: - Players part
 
-    func setupBoard() {
+    private func setupBoard() {
         tactic?.movableViews.forEach {
             boardView.superview?.addSubview($0)
         }
 
         MovableManager.shared.movableZone = CGRect(x: boardView.frame.minX + 30,
-                                                  y: boardView.frame.minY + 30,
-                                                  width: boardView.frame.width - 60,
-                                                  height: boardView.frame.height - 60)
+                                                   y: boardView.frame.minY + 30,
+                                                   width: boardView.frame.width - 60,
+                                                   height: boardView.frame.height - 60)
     }
 
-    func animatePlayers(index:Int = 0) {
+    func animatePlayers(index: Int = 0) {
         if let tactic = tactic {
-            UIView.animate(withDuration: 1.0, animations: {
-//                tactic.movableViews.forEach {
-//                    $0.center = tactic.states[index].positions
-//                }
+            let duration = index == 0
+                ? 0.2
+                : 1.0
+            UIView.animate(withDuration: duration, animations: {
+                tactic.states[index].positions.forEach({ (id, position) in
+                    tactic.movableViews.filter({ $0.id == id })[0].center = position // FIXME: Always filtering movableView is a bad idea.
+                })
             }) { finished in
                 if finished {
-                    if index <= tactic.states.count {
+                    if index < tactic.states.count - 1 {
                         self.animatePlayers(index: index + 1)
                     }
                 }
@@ -95,7 +98,7 @@ class BoardVC: UIViewController {
     }
 
     @IBAction func clickLogotype(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+//        self.navigationController?.popViewController(animated: true)
     }
 
     @IBAction func clearDrawings(_ sender: UIButton) {
@@ -150,14 +153,17 @@ class BoardVC: UIViewController {
         toggle(menu: menu!, sender: sender)
     }
 
-    @IBAction func startRecording(_ sender: UIButton) {
+    @IBAction func toggleRecording(_ sender: UIButton) {
         isRecording = !isRecording
         if isRecording == true {
             sender.setImage(#imageLiteral(resourceName: "Stop"), for: .normal)
             sender.backgroundColor = Color.sidebarButtonActiveColor
 
             let movableViews = self.view.subviews.filter({ $0 is MovableView }) as! [MovableView]
-            let positions = movableViews.reduce([Int: CGPoint]) { $0 = [$1.id: $1.center] }
+            var positions: [Int: CGPoint] = [:]
+            for el in movableViews {
+                positions[el.id] = el.center
+            }
             let state = TacticStruct.State(positions: positions)
             tactic = TacticStruct(states: [state], movableViews: movableViews)
         } else {
@@ -165,20 +171,27 @@ class BoardVC: UIViewController {
             sender.backgroundColor = Color.sidebarButtonColor
 
             // remember tactic
+            /*
+            let realm = try! RealmManager.shared.defaultRealm
+            
+            let state = State()
+            
+            try! realm.write {
+                realm.add(Tactic())
+            }*/
         }
     }
 
     @IBAction func saveState(_ sender: UIButton) {
         if isRecording {
             let movableViews = self.view.subviews.filter({ $0 is MovableView }) as! [MovableView]
-            let positions = movableViews.reduce([Int: CGPoint]) { $0 = [$1.id: $1.center] }
+            var positions: [Int: CGPoint] = [:]
+            for el in movableViews {
+                positions[el.id] = el.center
+            }
             let state = TacticStruct.State(positions: positions)
             tactic?.states.append(state)
         }
-    }
-
-    @IBAction func stopRecording(_ sender: UIButton) {
-        // ???
     }
 
     @IBAction func playTactic(_ sender: UIButton) {

@@ -83,5 +83,117 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TactixBoard/ViewControllers/BoardVC.swift"
+            timestampString = "498319003.71876"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
+            landmarkName = "playTactic(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TactixBoard/ViewControllers/BoardVC.swift"
+            timestampString = "498319003.71876"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "animatePlayers(index:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TactixBoard.BoardVC.animatePlayers (index : Swift.Int) -&gt; ()"
+                  moduleName = "TactixBoard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/agapov/Developer/git/TactixBoard/TactixBoard/ViewControllers/BoardVC.swift"
+                  timestampString = "498318691.088359"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TactixBoard.BoardVC.animatePlayers (index : Swift.Int) -&gt; ()"
+                  moduleName = "TactixBoard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/agapov/Developer/git/TactixBoard/TactixBoard/ViewControllers/BoardVC.swift"
+                  timestampString = "498318691.090385"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "105">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TactixBoard/ViewControllers/BoardVC.swift"
+            timestampString = "498319003.71876"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "animatePlayers(index:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TactixBoard.BoardVC.animatePlayers (index : Swift.Int) -&gt; ()"
+                  moduleName = "TactixBoard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/agapov/Developer/git/TactixBoard/TactixBoard/ViewControllers/BoardVC.swift"
+                  timestampString = "498318694.320522"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TactixBoard.BoardVC.(animatePlayers (index : Swift.Int) -&gt; ()).(closure #1)"
+                  moduleName = "TactixBoard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/agapov/Developer/git/TactixBoard/TactixBoard/ViewControllers/BoardVC.swift"
+                  timestampString = "498318694.324454"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

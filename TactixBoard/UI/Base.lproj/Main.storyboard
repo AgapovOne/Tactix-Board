@@ -113,9 +113,15 @@
                             <view multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbZ-Jj-FBM" customClass="LineView" customModule="TactixBoard" customModuleProvider="target">
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ed-UM-p40" customClass="DeleteMenu" customModule="TactixBoard" customModuleProvider="target"/>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmb-L3-dfE" customClass="LineTypeMenu" customModule="TactixBoard" customModuleProvider="target"/>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOH-GF-FoM" customClass="AddMenu" customModule="TactixBoard" customModuleProvider="target"/>
+                            <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Ed-UM-p40" customClass="DeleteMenu" customModule="TactixBoard" customModuleProvider="target">
+                                <frame key="frameInset" width="1000" height="1000"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kmb-L3-dfE" customClass="LineTypeMenu" customModule="TactixBoard" customModuleProvider="target">
+                                <frame key="frameInset" width="1000" height="1000"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qOH-GF-FoM" customClass="AddMenu" customModule="TactixBoard" customModuleProvider="target">
+                                <frame key="frameInset" width="1000" height="1000"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gd8-xu-KUB">
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2EE-oa-nYY">
@@ -211,7 +217,7 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="startRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IZP-UT-N73"/>
+                                            <action selector="toggleRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C2T-Hp-XRw"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPh-XC-lpv">
@@ -236,9 +242,6 @@
                                         <state key="normal" image="Stop">
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S1T-2c-L44"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3O-J4-Yjt">
                                         <color key="backgroundColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
