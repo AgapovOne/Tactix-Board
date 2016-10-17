@@ -113,9 +113,6 @@
                             <view multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbZ-Jj-FBM" customClass="LineView" customModule="TactixBoard" customModuleProvider="target">
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ed-UM-p40" customClass="DeleteMenu" customModule="TactixBoard" customModuleProvider="target"/>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmb-L3-dfE" customClass="LineTypeMenu" customModule="TactixBoard" customModuleProvider="target"/>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOH-GF-FoM" customClass="AddMenu" customModule="TactixBoard" customModuleProvider="target"/>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gd8-xu-KUB">
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2EE-oa-nYY">
@@ -272,7 +269,6 @@
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Gd8-xu-KUB" secondAttribute="bottom" id="0ax-2B-5ZV"/>
                             <constraint firstAttribute="trailing" secondItem="OM0-9N-PxM" secondAttribute="trailing" id="3j8-Zq-leF"/>
-                            <constraint firstItem="qOH-GF-FoM" firstAttribute="centerY" secondItem="bs7-H1-J9L" secondAttribute="centerY" id="4KB-TV-pXU"/>
                             <constraint firstItem="OM0-9N-PxM" firstAttribute="leading" secondItem="Gd8-xu-KUB" secondAttribute="trailing" id="6es-wT-rUh"/>
                             <constraint firstItem="obF-fK-z0l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6te-6d-SWd"/>
                             <constraint firstItem="Gd8-xu-KUB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7g3-wC-UVq"/>
@@ -280,14 +276,9 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="obF-fK-z0l" secondAttribute="bottom" id="FzX-hN-Yjz"/>
                             <constraint firstAttribute="topMargin" secondItem="hbZ-Jj-FBM" secondAttribute="top" id="H1z-RU-B3W"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OM0-9N-PxM" secondAttribute="bottom" id="Jei-B0-Ts1"/>
-                            <constraint firstItem="qOH-GF-FoM" firstAttribute="leading" secondItem="bs7-H1-J9L" secondAttribute="trailing" id="L4W-ql-tya"/>
                             <constraint firstAttribute="bottomMargin" secondItem="hbZ-Jj-FBM" secondAttribute="bottom" id="L5w-Gt-jet"/>
                             <constraint firstItem="Gd8-xu-KUB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="QCe-Cj-dy0"/>
-                            <constraint firstItem="kmb-L3-dfE" firstAttribute="centerY" secondItem="Z8N-2I-D6X" secondAttribute="centerY" id="Yej-uL-htB"/>
-                            <constraint firstItem="4Ed-UM-p40" firstAttribute="leading" secondItem="S2M-9Z-ig6" secondAttribute="trailing" id="dAl-Ji-lBL"/>
-                            <constraint firstItem="4Ed-UM-p40" firstAttribute="centerY" secondItem="S2M-9Z-ig6" secondAttribute="centerY" id="hyx-sq-ouQ"/>
                             <constraint firstItem="OM0-9N-PxM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="t4F-dE-uaz"/>
-                            <constraint firstItem="kmb-L3-dfE" firstAttribute="leading" secondItem="Z8N-2I-D6X" secondAttribute="trailing" id="wOb-ml-uNz"/>
                             <constraint firstItem="hbZ-Jj-FBM" firstAttribute="leading" secondItem="Gd8-xu-KUB" secondAttribute="trailing" id="wOn-MF-jxe"/>
                             <constraint firstItem="obF-fK-z0l" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zNz-mV-bgm"/>
                             <constraint firstAttribute="trailing" secondItem="obF-fK-z0l" secondAttribute="trailing" id="zV2-dV-hbZ"/>
@@ -299,9 +290,6 @@
                         <outlet property="boardView" destination="OM0-9N-PxM" id="QEO-O3-6Oa"/>
                         <outlet property="drawView" destination="hbZ-Jj-FBM" id="sh3-Lj-gWL"/>
                         <outlet property="menuBar" destination="Gd8-xu-KUB" id="HWt-aa-821"/>
-                        <outlet property="popAddMenu" destination="qOH-GF-FoM" id="hjs-w4-F0x"/>
-                        <outlet property="popDeleteMenu" destination="4Ed-UM-p40" id="Snm-VF-CSe"/>
-                        <outlet property="popLineTypeMenu" destination="kmb-L3-dfE" id="MAX-kh-KgM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -11,17 +11,13 @@ import SnapKit
 
 class BoardVC: UIViewController {
 
-    @IBOutlet weak var boardView: UIImageView!
-    @IBOutlet weak var drawView: LineView!
+    @IBOutlet private var boardView: UIImageView!
+    @IBOutlet private var drawView: LineView!
 
-    @IBOutlet weak var menuBar: UIView!
+    @IBOutlet private var menuBar: UIView!
 
-    @IBOutlet weak var popAddMenu: AddMenu!
-    @IBOutlet weak var popDeleteMenu: DeleteMenu!
-    @IBOutlet weak var popLineTypeMenu: LineTypeMenu!
-
-    var isDrawing = false
-    var isRecording = false {
+    private var isDrawing = false
+    private var isRecording = false {
         didSet {
 //            if isRecording = true {
 //                popAddMenuButton.isHidden = true
@@ -37,9 +33,6 @@ class BoardVC: UIViewController {
         LineView().setLineType(.thin)
 
         menuBar.layer.zPosition = 20
-        popAddMenu.layer.zPosition = 20
-        popDeleteMenu.layer.zPosition = 20
-        popLineTypeMenu.layer.zPosition = 20
 
         let bounds = UIScreen.main.bounds
         let center = CGPoint(x: bounds.midX + 30, y: bounds.midY)
@@ -49,12 +42,9 @@ class BoardVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setupBoard()
-
     }
 
-
     // MARK: - Players part
-
     private func setupBoard() {
         tactic?.movableViews.forEach {
             boardView.superview?.addSubview($0)
@@ -98,17 +88,12 @@ class BoardVC: UIViewController {
     }
 
     @IBAction func clickLogotype(_ sender: UIButton) {
-//        self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
 
     @IBAction func clearDrawings(_ sender: UIButton) {
         drawView.clear()
         LineView().setLineType(.thick)
-    }
-
-    @IBAction func popLineTypeMenuShow(_ sender: UIButton) {
-        let menu = popLineTypeMenu
-        toggle(menu: menu!,sender: sender)
     }
 
     @IBAction func startDrawings(_ sender: UIButton) {
@@ -136,7 +121,12 @@ class BoardVC: UIViewController {
             self.isDrawing = false
         }
     }
-    
+    /*
+    @IBAction func popLineTypeMenuShow(_ sender: UIButton) {
+        let menu = popLineTypeMenu
+        toggle(menu: menu!,sender: sender)
+    }
+
     @IBAction func popAddMenuShow(_ sender: UIButton) {
         let menu = popAddMenu
         toggle(menu: menu!, sender: sender)
@@ -152,6 +142,8 @@ class BoardVC: UIViewController {
         let menu = popDeleteMenu
         toggle(menu: menu!, sender: sender)
     }
+
+    */
 
     @IBAction func toggleRecording(_ sender: UIButton) {
         isRecording = !isRecording
