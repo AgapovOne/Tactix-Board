@@ -237,17 +237,23 @@
                                             <action selector="playTactic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Brd-dy-STv"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rbw-QB-F9V" customClass="SidebarMenu" customModule="TactixBoard" customModuleProvider="target">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="Rbw-QB-F9V" firstAttribute="top" secondItem="A3O-J4-Yjt" secondAttribute="bottom" id="44m-Bh-Bpi"/>
                                     <constraint firstItem="NIJ-Sg-sJi" firstAttribute="top" secondItem="Gd8-xu-KUB" secondAttribute="top" id="65j-Gt-jSu"/>
                                     <constraint firstItem="2EE-oa-nYY" firstAttribute="centerX" secondItem="Gd8-xu-KUB" secondAttribute="centerX" id="7GP-E4-8QX"/>
                                     <constraint firstItem="S2M-9Z-ig6" firstAttribute="top" secondItem="bs7-H1-J9L" secondAttribute="bottom" id="7Uh-fh-HZE"/>
                                     <constraint firstItem="bs7-H1-J9L" firstAttribute="centerX" secondItem="Gd8-xu-KUB" secondAttribute="centerX" id="8FP-bj-iqP"/>
                                     <constraint firstItem="NIJ-Sg-sJi" firstAttribute="leading" secondItem="Gd8-xu-KUB" secondAttribute="leading" id="CMp-5F-jfh"/>
                                     <constraint firstAttribute="trailing" secondItem="S2M-9Z-ig6" secondAttribute="trailing" id="EaH-P3-lnc"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rbw-QB-F9V" secondAttribute="trailing" id="K2e-9J-aZI"/>
                                     <constraint firstItem="vPh-XC-lpv" firstAttribute="centerX" secondItem="WWm-dR-E8X" secondAttribute="centerX" id="NER-Mz-E23"/>
                                     <constraint firstItem="S2M-9Z-ig6" firstAttribute="leading" secondItem="Gd8-xu-KUB" secondAttribute="leading" id="P9h-bY-9yL"/>
+                                    <constraint firstAttribute="bottom" secondItem="Rbw-QB-F9V" secondAttribute="bottom" id="PDm-zu-RBX"/>
                                     <constraint firstItem="Z8N-2I-D6X" firstAttribute="top" secondItem="2EE-oa-nYY" secondAttribute="bottom" id="S8d-Zd-gQ0"/>
                                     <constraint firstItem="A3O-J4-Yjt" firstAttribute="top" secondItem="vPh-XC-lpv" secondAttribute="bottom" constant="16" id="SjN-Iv-61L"/>
                                     <constraint firstItem="S2M-9Z-ig6" firstAttribute="centerX" secondItem="bs7-H1-J9L" secondAttribute="centerX" id="WIc-Pl-cdx"/>
@@ -262,6 +268,7 @@
                                     <constraint firstItem="vPh-XC-lpv" firstAttribute="top" secondItem="WWm-dR-E8X" secondAttribute="bottom" id="wCM-Jt-a9T"/>
                                     <constraint firstItem="bs7-H1-J9L" firstAttribute="top" secondItem="NIJ-Sg-sJi" secondAttribute="bottom" id="wIM-PB-F7a"/>
                                     <constraint firstItem="A3O-J4-Yjt" firstAttribute="centerX" secondItem="Gd8-xu-KUB" secondAttribute="centerX" id="z9d-HC-GCw"/>
+                                    <constraint firstItem="Rbw-QB-F9V" firstAttribute="leading" secondItem="Gd8-xu-KUB" secondAttribute="leading" id="zDI-Pv-0ly"/>
                                 </constraints>
                             </view>
                         </subviews>
