@@ -15,6 +15,7 @@ class BoardVC: UIViewController {
     @IBOutlet private var drawView: LineView!
 
     @IBOutlet private var menuBar: UIView!
+    @IBOutlet fileprivate var sidebarMenu: SidebarMenu!
 
     private var isDrawing = false
     private var isRecording = false {
@@ -30,13 +31,15 @@ class BoardVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        LineView().setLineType(.thin)
+        DrawManager.shared.lineType = .thin
 
         menuBar.layer.zPosition = 20
 
         let bounds = UIScreen.main.bounds
         let center = CGPoint(x: bounds.midX + 30, y: bounds.midY)
         tactic = MovableManager.shared.defaultTactic(for: center)
+
+        sidebarMenu.delegate = self
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -58,17 +61,19 @@ class BoardVC: UIViewController {
 
     func animatePlayers(index: Int = 0) {
         if let tactic = tactic {
-            let duration = index == 0
-                ? 0.2
-                : 1.0
-            UIView.animate(withDuration: duration, animations: {
-                tactic.states[index].positions.forEach({ (el, position) in
-                    el.center = position
-                })
-            }) { finished in
-                if finished {
-                    if index < tactic.states.count - 1 {
-                        self.animatePlayers(index: index + 1)
+            if tactic.states.isEmpty == false {
+                let duration = index == 0
+                    ? 0.2
+                    : 1.0
+                UIView.animate(withDuration: duration, animations: {
+                    tactic.states[index].positions.forEach({ (el, position) in
+                        el.center = position
+                    })
+                }) { finished in
+                    if finished {
+                        if index < tactic.states.count - 1 {
+                            self.animatePlayers(index: index + 1)
+                        }
                     }
                 }
             }
@@ -76,7 +81,6 @@ class BoardVC: UIViewController {
     }
 
     // MARK: - Sidebar Menu
-
     func toggle(menu: UIView, sender: UIButton) {
         if menu.isHidden == true {
             menu.isHidden = false
@@ -93,7 +97,7 @@ class BoardVC: UIViewController {
 
     @IBAction func clearDrawings(_ sender: UIButton) {
         drawView.clear()
-        LineView().setLineType(.thick)
+        DrawManager.shared.lineType = .thick
     }
 
     @IBAction func startDrawings(_ sender: UIButton) {
@@ -197,10 +201,85 @@ class BoardVC: UIViewController {
         setupBoard()
         animatePlayers()
     }
+
+    // MARK: Private methods
+
+    fileprivate func addPlayerWithColor(_ color: UIColor, num: String) {
+        var id = 0
+        let movableViews = self.view.subviews.filter({ $0 is MovableView }) as! [MovableView]
+        movableViews.forEach { (view) in
+            if view.id > id {
+                id = view.id
+            }
+        }
+        let pl = PlayerView(id: id + 1, color: color, num: num, center: self.boardView.center)
+        view?.addSubview(pl)
+        tactic?.movableViews.append(pl)
+    }
+
+    fileprivate func removePlayerWithColor(_ color:UIColor) {
+        let movableViews = self.view.subviews.filter({ $0 is MovableView && $0.backgroundColor == color }) as! [MovableView]
+        if movableViews.isEmpty == false {
+            movableViews[0].removeFromSuperview()
+        }
+    }
+
+    fileprivate func removeTeamWithColor(_ color:UIColor) {
+        let movableViews = self.view.subviews.filter({ $0 is MovableView && $0.backgroundColor == color }) as! [MovableView]
+        if movableViews.isEmpty == false {
+            movableViews.forEach { $0.removeFromSuperview() }
+        }
+    }
+
+    fileprivate func saveImage() {
+
+    }
 }
 
 extension BoardVC: BasicAlertVCDelegate {
     func didClickSubmitButton(text: String) {
         dismiss(animated: true, completion: nil)
+    }
+}
+
+extension BoardVC: SidebarDelegate {
+    func didClick(button: SidebarButton, type: SidebarButtonEnum) {
+        switch type {
+        case .addRed:
+            addPlayerWithColor(Color.red, num: "3")
+        case .addBlue:
+            addPlayerWithColor(Color.blue, num: "2")
+        case .addBlack:
+            addPlayerWithColor(Color.black, num: "2")
+        case .addOrangeGK:
+            addPlayerWithColor(Color.orange, num: "G")
+        case .addGreenGK:
+            addPlayerWithColor(Color.green, num: "G")
+
+        case .deleteRed:
+            removePlayerWithColor(Color.red)
+        case .deleteBlue:
+            removePlayerWithColor(Color.blue)
+        case .deleteBlack:
+            removePlayerWithColor(Color.black)
+        case .deleteBlueTeam:
+            removeTeamWithColor(Color.blue)
+        case .deleteOrangeGK:
+            removePlayerWithColor(Color.orange)
+        case .deleteGreenGK:
+            removePlayerWithColor(Color.green)
+
+        case .thinLine:
+            DrawManager.shared.lineType = .thin
+        case .thickLine:
+            DrawManager.shared.lineType = .thick
+        case .dashedLine:
+            DrawManager.shared.lineType = .dashed
+        case .save:
+            saveImage()
+
+        default:
+            print("Click unknown button")
+        }
     }
 }

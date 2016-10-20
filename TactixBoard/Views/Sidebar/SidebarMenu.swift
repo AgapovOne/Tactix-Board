@@ -8,37 +8,13 @@
 
 import UIKit
 
+protocol SidebarDelegate: class {
+    func didClick(button: SidebarButton, type: SidebarButtonEnum)
+}
+
 class SidebarMenu: UIView {
-    enum Menu {
-        case add,
-        delete,
-        draw,
-        clear,
-        save,
-        record,
-        play
-
-        var image: UIImage {
-            switch self {
-            case .add:
-                return #imageLiteral(resourceName: "Add")
-            case .delete:
-                return #imageLiteral(resourceName: "Delete")
-            case .draw:
-                return #imageLiteral(resourceName: "Draw")
-            case .clear:
-                return #imageLiteral(resourceName: "Clear")
-            case .save:
-                return #imageLiteral(resourceName: "Save")
-            case .record:
-                return #imageLiteral(resourceName: "Rec")
-            case .play:
-                return #imageLiteral(resourceName: "Play")
-            }
-        }
-    }
-
-    static let defaultState: [Menu] = [.add, .delete, .draw, .clear, .save, .record, .play]
+    weak var delegate: SidebarDelegate?
+    static let defaultState: [SidebarButtonEnum] = [.add, .delete, .draw, .clear, .save, .record, .play]
 
     // MARK: - Initialization
     override init(frame: CGRect) {
@@ -52,7 +28,7 @@ class SidebarMenu: UIView {
     }
 
     // MARK: Public methods
-    func buildMenu(with state: [Menu] = defaultState, animated: Bool = false) {
+    func buildMenu(with state: [SidebarButtonEnum] = defaultState, animated: Bool = false) {
         if animated {
             for view in subviews {
                 UIView.animate(withDuration: 1.0, animations: {
@@ -67,10 +43,10 @@ class SidebarMenu: UIView {
             view.removeFromSuperview()
         }
 
-        var previousButton: UIButton?
-        for menu in state {
-            let button = UIButton()
-            button.setImage(menu.image, for: .normal)
+        var previousButton: SidebarButton?
+        for buttonEnum in state {
+            let button = SidebarButton()
+            button.setImage(buttonEnum.image, for: .normal)
             self.addSubview(button)
             button.snp.makeConstraints({ (make) in
                 make.height.width.equalTo(60)
@@ -81,17 +57,27 @@ class SidebarMenu: UIView {
                 } else {
                     make.top.equalToSuperview()
                 }
-
             })
+            if buttonEnum.type == .action {
+                button.action = {
+                    self.delegate?.didClick(button: button, type: buttonEnum)
+                }
+            } else {
+                button.addTarget(self, action: #selector(rebuildMenu(_:)), for: .touchUpInside)
+            }
+            button.type = buttonEnum
             button.addTarget(self, action: #selector(buttonClick(_:)), for: .touchUpInside)
             previousButton = button
         }
     }
 
-    func buttonClick(_ sender: UIButton) {
-        print("hello")
-        UIView.animate(withDuration: 1.0) {
-            self.buildMenu(with: [.add,.delete])
+    func buttonClick(_ sender: SidebarButton) {
+        sender.action?()
+    }
+
+    func rebuildMenu(_ sender: SidebarButton) {
+        if let state = sender.type?.state {
+            buildMenu(with: state)
         }
     }
 }

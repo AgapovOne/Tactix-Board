@@ -11,6 +11,7 @@
 		372969F41DACE66900831162 /* BallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372969F31DACE66900831162 /* BallView.swift */; };
 		372969F61DACE6D900831162 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372969F51DACE6D900831162 /* PlayerView.swift */; };
 		372969F91DACE84E00831162 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372969F81DACE84E00831162 /* Colors.swift */; };
+		372C1F861DB8A49E0006315B /* SidebarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C1F851DB8A49E0006315B /* SidebarButton.swift */; };
 		37625D7E1DB4FBE00048EE01 /* SidebarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37625D7D1DB4FBE00048EE01 /* SidebarMenu.swift */; };
 		37701C021DAE641D007EB0E9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37701C011DAE641D007EB0E9 /* Images.xcassets */; };
 		37701C041DAE7D53007EB0E9 /* Tactic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37701C031DAE7D53007EB0E9 /* Tactic.swift */; };
@@ -58,6 +59,7 @@
 		372969F31DACE66900831162 /* BallView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BallView.swift; sourceTree = "<group>"; };
 		372969F51DACE6D900831162 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		372969F81DACE84E00831162 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		372C1F851DB8A49E0006315B /* SidebarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarButton.swift; sourceTree = "<group>"; };
 		37625D7D1DB4FBE00048EE01 /* SidebarMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarMenu.swift; sourceTree = "<group>"; };
 		37701C011DAE641D007EB0E9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		37701C031DAE7D53007EB0E9 /* Tactic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tactic.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				8D884B231BCD62F100279F13 /* LineTypeMenu.swift */,
 				8D5F875D1BCCEDFD00FFE288 /* MenuType.swift */,
 				37625D7D1DB4FBE00048EE01 /* SidebarMenu.swift */,
+				372C1F851DB8A49E0006315B /* SidebarButton.swift */,
 			);
 			path = Sidebar;
 			sourceTree = "<group>";
@@ -565,6 +568,7 @@
 				8DA4E1AA1B9E13D900001794 /* Buttons.swift in Sources */,
 				37BAE7DE1DAF92AA0075DBC5 /* RealmManager.swift in Sources */,
 				8D1710101BB9BF740007F919 /* MovableView.swift in Sources */,
+				372C1F861DB8A49E0006315B /* SidebarButton.swift in Sources */,
 				8D8BB17D1DB3F44000514F87 /* BasicAlertVC.swift in Sources */,
 				8D5F87561BCC106200FFE288 /* AddMenu.swift in Sources */,
 			);

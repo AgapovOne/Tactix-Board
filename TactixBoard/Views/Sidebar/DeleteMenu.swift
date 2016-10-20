@@ -13,7 +13,7 @@ import UIKit
   override func loadViewFromNib() -> UIView {
     return super.loadView(withName: "DeleteMenu")
   }
-  
+
   func removePlayerWithColor(_ color:UIColor) {
     guard let sup = self.superview else {return}
     for v in sup.subviews {

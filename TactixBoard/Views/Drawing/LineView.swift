@@ -141,10 +141,4 @@ class LineView: UIView {
         isClearing = true
         setNeedsDisplay()
     }
-    
-    // MARK: - Settings
-    
-    func setLineType(_ lineType:LineType) {
-        DrawManager.shared.lineType = lineType
-    }
 }

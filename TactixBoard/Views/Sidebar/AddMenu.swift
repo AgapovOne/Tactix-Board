@@ -38,7 +38,6 @@ import UIKit
   
   @IBAction func addOrangeGK(_ sender: UIButton) {
     addPlayerWithColor(Color.orange, num: "В")
-    
   }
   
   @IBAction func addGreenGK(_ sender: UIButton) {
