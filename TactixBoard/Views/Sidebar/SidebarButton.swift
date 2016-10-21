@@ -10,20 +10,21 @@ import UIKit
 
 enum SidebarButtonType {
     case expand,
-    action
+    action,
+    expandableAction
 }
 
 enum SidebarButtonEnum {
     case addMenu,
     deleteMenu,
-    drawMenu,
-    clearMenu,
-    saveMenu,
+    draw,
+    clear,
+    save,
     recordMenu,
     playMenu,
 
     back,
-    base,
+    base(Int),
 
     addRed,
     addBlue,
@@ -45,6 +46,7 @@ enum SidebarButtonEnum {
     next,
     previous,
     stop,
+    play,
 
     more,
     settings
@@ -55,11 +57,11 @@ enum SidebarButtonEnum {
             return #imageLiteral(resourceName: "Add")
         case .deleteMenu:
             return #imageLiteral(resourceName: "Delete")
-        case .drawMenu:
+        case .draw:
             return #imageLiteral(resourceName: "Draw")
-        case .clearMenu:
+        case .clear:
             return #imageLiteral(resourceName: "Clear")
-        case .saveMenu:
+        case .save:
             return #imageLiteral(resourceName: "Save")
         case .recordMenu:
             return #imageLiteral(resourceName: "Rec")
@@ -69,7 +71,7 @@ enum SidebarButtonEnum {
         case .back:
             return #imageLiteral(resourceName: "Back")
         case .base:
-            return #imageLiteral(resourceName: "Base Icon")
+            return #imageLiteral(resourceName: "Base")
 
         case .addRed:
             return #imageLiteral(resourceName: "AddRed")
@@ -108,6 +110,8 @@ enum SidebarButtonEnum {
             return #imageLiteral(resourceName: "Previous")
         case .stop:
             return #imageLiteral(resourceName: "Stop")
+        case .play:
+            return #imageLiteral(resourceName: "Play")
 
         case .more:
             return #imageLiteral(resourceName: "More")
@@ -116,31 +120,31 @@ enum SidebarButtonEnum {
         }
     }
 
-    var type: SidebarButtonType? {
+    var type: SidebarButtonType {
         switch self {
-        case .add, .delete, .draw, .record, .play, .back:
+        case .addMenu, .deleteMenu, .recordMenu, .playMenu:
             return .expand
+        case .draw, .back:
+            return .expandableAction
         default:
             return .action
         }
     }
 
-    var state: [SidebarButtonEnum]? {
+    var state: [SidebarButtonEnum] {
         switch self {
-        case .add:
+        case .addMenu:
             return [.back, .addRed, .addBlue, .addBlack, .addOrangeGK, .addGreenGK]
-        case .delete:
+        case .deleteMenu:
             return [.back, .deleteRed, .deleteBlue, .deleteBlack, .deleteBlueTeam, .deleteOrangeGK, .deleteGreenGK]
         case .draw:
-            return [.back, .thinLine, .thickLine, .dashedLine]
-        case .record:
-            return [.back, .base, .previous, .next, .stop]
-        case .play:
-            return [.back, .play, .previous, .next, .base]
-        case .back:
-            return SidebarMenu.defaultState
+            return [.back, .clear, .thinLine, .thickLine, .dashedLine]
+        case .recordMenu:
+            return [.back, .base(0), .previous, .next, .stop]
+        case .playMenu:
+            return [.back, .play, .previous, .next, .base(0)]
         default:
-            return nil
+            return SidebarMenu.defaultState
         }
     }
 }

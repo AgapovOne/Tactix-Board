@@ -43,6 +43,8 @@ struct Color {
     static let green = colorWith(r: 80, g: 168, b: 6)
     
     static let white = colorWith(r: 247, g: 243, b: 235)
+
+    static let cream = color(hex: "#F7F3EB")
 }
 
 fileprivate func color(hex: String) -> UIColor {

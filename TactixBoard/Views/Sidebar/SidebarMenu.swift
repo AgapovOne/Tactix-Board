@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyAttributes
 
 protocol SidebarDelegate: class {
     func didClick(button: SidebarButton, type: SidebarButtonEnum)
@@ -14,7 +15,7 @@ protocol SidebarDelegate: class {
 
 class SidebarMenu: UIView {
     weak var delegate: SidebarDelegate?
-    static let defaultState: [SidebarButtonEnum] = [.add, .delete, .draw, .clear, .save, .record, .play]
+    static let defaultState: [SidebarButtonEnum] = [.addMenu, .deleteMenu, .draw, .clear, .save, .recordMenu, .playMenu]
 
     // MARK: - Initialization
     override init(frame: CGRect) {
@@ -46,7 +47,12 @@ class SidebarMenu: UIView {
         var previousButton: SidebarButton?
         for buttonEnum in state {
             let button = SidebarButton()
-            button.setImage(buttonEnum.image, for: .normal)
+            if case .base(let value) = buttonEnum {
+                button.setAttributedTitle("\(value)".withFont(UIFont.systemFont(ofSize: 18)).withTextColor(Color.cream), for: .normal)
+                button.setBackgroundImage(buttonEnum.image, for: .normal)
+            } else {
+                button.setImage(buttonEnum.image, for: .normal)
+            }
             self.addSubview(button)
             button.snp.makeConstraints({ (make) in
                 make.height.width.equalTo(60)
@@ -58,11 +64,17 @@ class SidebarMenu: UIView {
                     make.top.equalToSuperview()
                 }
             })
-            if buttonEnum.type == .action {
+            switch buttonEnum.type {
+            case .action:
                 button.action = {
                     self.delegate?.didClick(button: button, type: buttonEnum)
                 }
-            } else {
+            case .expand:
+                button.addTarget(self, action: #selector(rebuildMenu(_:)), for: .touchUpInside)
+            case .expandableAction:
+                button.action = {
+                    self.delegate?.didClick(button: button, type: buttonEnum)
+                }
                 button.addTarget(self, action: #selector(rebuildMenu(_:)), for: .touchUpInside)
             }
             button.type = buttonEnum

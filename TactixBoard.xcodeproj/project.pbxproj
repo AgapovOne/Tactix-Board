@@ -12,6 +12,7 @@
 		372969F61DACE6D900831162 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372969F51DACE6D900831162 /* PlayerView.swift */; };
 		372969F91DACE84E00831162 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372969F81DACE84E00831162 /* Colors.swift */; };
 		372C1F861DB8A49E0006315B /* SidebarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C1F851DB8A49E0006315B /* SidebarButton.swift */; };
+		372C1F8A1DBA34F50006315B /* MovableTactic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C1F891DBA34F50006315B /* MovableTactic.swift */; };
 		37625D7E1DB4FBE00048EE01 /* SidebarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37625D7D1DB4FBE00048EE01 /* SidebarMenu.swift */; };
 		37701C021DAE641D007EB0E9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37701C011DAE641D007EB0E9 /* Images.xcassets */; };
 		37701C041DAE7D53007EB0E9 /* Tactic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37701C031DAE7D53007EB0E9 /* Tactic.swift */; };
@@ -60,6 +61,7 @@
 		372969F51DACE6D900831162 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		372969F81DACE84E00831162 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		372C1F851DB8A49E0006315B /* SidebarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarButton.swift; sourceTree = "<group>"; };
+		372C1F891DBA34F50006315B /* MovableTactic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovableTactic.swift; sourceTree = "<group>"; };
 		37625D7D1DB4FBE00048EE01 /* SidebarMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarMenu.swift; sourceTree = "<group>"; };
 		37701C011DAE641D007EB0E9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		37701C031DAE7D53007EB0E9 /* Tactic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tactic.swift; sourceTree = "<group>"; };
@@ -77,11 +79,11 @@
 		8D5F87581BCCE27F00FFE288 /* DeleteMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeleteMenu.xib; sourceTree = "<group>"; };
 		8D5F875B1BCCE35B00FFE288 /* DeleteMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteMenu.swift; sourceTree = "<group>"; };
 		8D5F875D1BCCEDFD00FFE288 /* MenuType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuType.swift; sourceTree = "<group>"; };
-		8D5F875F1BCCF72B00FFE288 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fonts.swift; path = ../Libraries/Classes/Fonts.swift; sourceTree = "<group>"; };
+		8D5F875F1BCCF72B00FFE288 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		8D884B1F1BCD609400279F13 /* LineType.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LineType.xib; sourceTree = "<group>"; };
 		8D884B231BCD62F100279F13 /* LineTypeMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineTypeMenu.swift; sourceTree = "<group>"; };
-		8D8BB17B1DB3F44000514F87 /* BasicAlertVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasicAlertVC.swift; path = Alerts/BasicAlertVC.swift; sourceTree = "<group>"; };
-		8D8BB17C1DB3F44000514F87 /* BasicAlertVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BasicAlertVC.xib; path = Alerts/BasicAlertVC.xib; sourceTree = "<group>"; };
+		8D8BB17B1DB3F44000514F87 /* BasicAlertVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicAlertVC.swift; sourceTree = "<group>"; };
+		8D8BB17C1DB3F44000514F87 /* BasicAlertVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BasicAlertVC.xib; sourceTree = "<group>"; };
 		8D8BB17F1DB3F5AF00514F87 /* RoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 		8DA4E17B1B9AD9B800001794 /* TactixBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TactixBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA4E17F1B9AD9B800001794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,7 +95,7 @@
 		8DA4E1961B9AD9B800001794 /* TactixBoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TactixBoardTests.swift; sourceTree = "<group>"; };
 		8DA4E1A71B9E11AB00001794 /* BoardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardVC.swift; sourceTree = "<group>"; };
 		8DA4E1A91B9E13D900001794 /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
-		8DA4E1AB1B9E31F300001794 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = ../Libraries/Classes/Extensions.swift; sourceTree = "<group>"; };
+		8DA4E1AB1B9E31F300001794 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B4D8546945CD977668288E4F /* Pods_TactixBoard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TactixBoard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCA322F262674E4C828BCBEF /* Pods_TactixBoardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TactixBoardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E67D5E52CE95CB618B316C3A /* Pods-TactixBoard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TactixBoard.release.xcconfig"; path = "Pods/Target Support Files/Pods-TactixBoard/Pods-TactixBoard.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,8 +130,7 @@
 				8D17100F1BB9BF740007F919 /* MovableView.swift */,
 				372969F51DACE6D900831162 /* PlayerView.swift */,
 			);
-			name = Movable;
-			path = Moving;
+			path = Movable;
 			sourceTree = "<group>";
 		};
 		372969F21DACE65300831162 /* Drawing */ = {
@@ -145,31 +146,48 @@
 			isa = PBXGroup;
 			children = (
 				372969F81DACE84E00831162 /* Colors.swift */,
-				8D5F875F1BCCF72B00FFE288 /* Fonts.swift */,
 				8DA4E1AB1B9E31F300001794 /* Extensions.swift */,
+				8D5F875F1BCCF72B00FFE288 /* Fonts.swift */,
 				8D8BB17F1DB3F5AF00514F87 /* RoundView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		372C1F871DBA34C20006315B /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				37701C051DAF4955007EB0E9 /* MovableObject.swift */,
+				37701C071DAF4BCE007EB0E9 /* State.swift */,
+				37701C031DAE7D53007EB0E9 /* Tactic.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		372C1F881DBA34DD0006315B /* Movable */ = {
+			isa = PBXGroup;
+			children = (
+				372C1F891DBA34F50006315B /* MovableTactic.swift */,
+			);
+			path = Movable;
+			sourceTree = "<group>";
+		};
 		378D9DA91DAD0C40007AFE1D /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				37BAE7DF1DAFA3710075DBC5 /* DrawManager.swift */,
 				378D9DAA1DAD0C50007AFE1D /* MovableManager.swift */,
 				37BAE7DD1DAF92AA0075DBC5 /* RealmManager.swift */,
-				37BAE7DF1DAFA3710075DBC5 /* DrawManager.swift */,
 			);
-			name = Managers;
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		37A9AF8F1DAE3D0700CA6D1F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				37701C031DAE7D53007EB0E9 /* Tactic.swift */,
-				37701C051DAF4955007EB0E9 /* MovableObject.swift */,
-				37701C071DAF4BCE007EB0E9 /* State.swift */,
+				372C1F881DBA34DD0006315B /* Movable */,
+				372C1F871DBA34C20006315B /* Realm */,
 			);
-			name = Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		88460CEA1FD3BD8FDD2CFEF4 /* Frameworks */ = {
@@ -209,8 +227,8 @@
 				8D5F875B1BCCE35B00FFE288 /* DeleteMenu.swift */,
 				8D884B231BCD62F100279F13 /* LineTypeMenu.swift */,
 				8D5F875D1BCCEDFD00FFE288 /* MenuType.swift */,
-				37625D7D1DB4FBE00048EE01 /* SidebarMenu.swift */,
 				372C1F851DB8A49E0006315B /* SidebarButton.swift */,
+				37625D7D1DB4FBE00048EE01 /* SidebarMenu.swift */,
 			);
 			path = Sidebar;
 			sourceTree = "<group>";
@@ -221,16 +239,16 @@
 				8D8BB17B1DB3F44000514F87 /* BasicAlertVC.swift */,
 				8D8BB17C1DB3F44000514F87 /* BasicAlertVC.xib */,
 			);
-			name = Alerts;
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 		8DA4E1721B9AD9B800001794 = {
 			isa = PBXGroup;
 			children = (
-				8DA4E17D1B9AD9B800001794 /* TactixBoard */,
 				88460CEA1FD3BD8FDD2CFEF4 /* Frameworks */,
 				9B8C3CA1BC5F48EB268585B4 /* Pods */,
 				8DA4E17C1B9AD9B800001794 /* Products */,
+				8DA4E17D1B9AD9B800001794 /* TactixBoard */,
 				8DA4E1931B9AD9B800001794 /* TactixBoardTests */,
 			);
 			sourceTree = "<group>";
@@ -247,10 +265,10 @@
 		8DA4E17D1B9AD9B800001794 /* TactixBoard */ = {
 			isa = PBXGroup;
 			children = (
-				37A9AF8F1DAE3D0700CA6D1F /* Models */,
-				378D9DA91DAD0C40007AFE1D /* Managers */,
 				372969F71DACE84300831162 /* Helpers */,
 				8DA4E1A01B9B35C700001794 /* Libraries */,
+				378D9DA91DAD0C40007AFE1D /* Managers */,
+				37A9AF8F1DAE3D0700CA6D1F /* Models */,
 				8DA4E1A61B9E114500001794 /* UI */,
 				8DB0F9321BC5A5DA00186C3D /* ViewControllers */,
 				8D17100C1BB9B8FA0007F919 /* Views */,
@@ -554,6 +572,7 @@
 				372969F61DACE6D900831162 /* PlayerView.swift in Sources */,
 				37701C081DAF4BCE007EB0E9 /* State.swift in Sources */,
 				37701C041DAE7D53007EB0E9 /* Tactic.swift in Sources */,
+				372C1F8A1DBA34F50006315B /* MovableTactic.swift in Sources */,
 				8D5F87601BCCF72B00FFE288 /* Fonts.swift in Sources */,
 				8D884B241BCD62F100279F13 /* LineTypeMenu.swift in Sources */,
 				37701C061DAF4955007EB0E9 /* MovableObject.swift in Sources */,

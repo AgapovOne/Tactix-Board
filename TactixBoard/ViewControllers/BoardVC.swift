@@ -12,13 +12,13 @@ import SnapKit
 class BoardVC: UIViewController {
 
     @IBOutlet private var boardView: UIImageView!
-    @IBOutlet private var drawView: LineView!
+    @IBOutlet fileprivate var drawView: LineView!
 
     @IBOutlet private var menuBar: UIView!
     @IBOutlet fileprivate var sidebarMenu: SidebarMenu!
 
-    private var isDrawing = false
-    private var isRecording = false {
+    fileprivate var isDrawing = false
+    fileprivate var isRecording = false {
         didSet {
 //            if isRecording = true {
 //                popAddMenuButton.isHidden = true
@@ -26,7 +26,7 @@ class BoardVC: UIViewController {
 //            }
         }
     }
-    var tactic: TacticStruct?
+    var tactic: MovableTactic?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,7 +59,7 @@ class BoardVC: UIViewController {
                                                    height: boardView.frame.height - 60)
     }
 
-    func animatePlayers(index: Int = 0) {
+    fileprivate func animatePlayers(index: Int = 0) {
         if let tactic = tactic {
             if tactic.states.isEmpty == false {
                 let duration = index == 0
@@ -81,142 +81,26 @@ class BoardVC: UIViewController {
     }
 
     // MARK: - Sidebar Menu
-    func toggle(menu: UIView, sender: UIButton) {
-        if menu.isHidden == true {
-            menu.isHidden = false
-            sender.backgroundColor = Color.Sidebar.buttonActiveColor
-        } else {
-            menu.isHidden = true
-            sender.backgroundColor = Color.Sidebar.buttonColor
-        }
-    }
-
     @IBAction func clickLogotype(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+        let _ = self.navigationController?.popViewController(animated: true)
     }
 
-    @IBAction func clearDrawings(_ sender: UIButton) {
-        drawView.clear()
-        DrawManager.shared.lineType = .thick
-    }
-
-    @IBAction func startDrawings(_ sender: UIButton) {
-        if isDrawing == false {
-            drawView.isUserInteractionEnabled = true
-            sender.backgroundColor = Color.Sidebar.buttonActiveColor
-
-            for view in self.view.subviews {
-                if view is MovableView {
-                    let movableView = view as! MovableView
-                    movableView.disableMoves()
-                }
-            }
-            self.isDrawing = true
-        } else {
-            drawView.isUserInteractionEnabled = false
-            sender.backgroundColor = Color.Sidebar.buttonColor
-
-            for view in self.view.subviews {
-                if view is MovableView {
-                    let movableView = view as! MovableView
-                    movableView.enableMoves()
-                }
-            }
-            self.isDrawing = false
-        }
-    }
-    /*
-    @IBAction func popLineTypeMenuShow(_ sender: UIButton) {
-        let menu = popLineTypeMenu
-        toggle(menu: menu!,sender: sender)
-    }
-
-    @IBAction func popAddMenuShow(_ sender: UIButton) {
-        let menu = popAddMenu
-        toggle(menu: menu!, sender: sender)
-
-        let view = (self.view.subviews.filter({ $0 is MovableView }) as! [MovableView])[0]
-
-        UIView.animate(withDuration: 1.0, animations: {
-            view.center = CGPoint(x: 200, y: 200)
-        })
-    }
-    
-    @IBAction func popDeleteMenuShow(_ sender: UIButton) {
-        let menu = popDeleteMenu
-        toggle(menu: menu!, sender: sender)
-    }
-
-    */
-
-    @IBAction func toggleRecording(_ sender: UIButton) {
-        isRecording = !isRecording
-        if isRecording == true {
-            sender.setImage(#imageLiteral(resourceName: "Stop"), for: .normal)
-            sender.backgroundColor = Color.Sidebar.buttonActiveColor
-
-            let movableViews = self.view.subviews.filter({ $0 is MovableView }) as! [MovableView]
-            var positions: [MovableView: CGPoint] = [:]
-            for el in movableViews {
-                positions[el] = el.center
-            }
-            let state = TacticStruct.State(positions: positions)
-            tactic = TacticStruct(states: [state], movableViews: movableViews)
-        } else {
-            sender.setImage(#imageLiteral(resourceName: "Rec"), for: .normal)
-            sender.backgroundColor = Color.Sidebar.buttonColor
-
-            // remember tactic
-            
-            let alert = BasicAlertVC()
-            alert.addTextField()
-            alert.delegate = self
-            present(alert, animated: true, completion: {
-                print("alert")
-            })
-            /*
-            let realm = try! RealmManager.shared.defaultRealm
-            
-            let state = State()
-            
-            try! realm.write {
-                realm.add(Tactic())
-            }*/
-        }
-    }
-
-    @IBAction func saveState(_ sender: UIButton) {
-        if isRecording {
-            let movableViews = self.view.subviews.filter({ $0 is MovableView }) as! [MovableView]
-            var positions: [MovableView: CGPoint] = [:]
-            for el in movableViews {
-                positions[el] = el.center
-            }
-            let state = TacticStruct.State(positions: positions)
-            tactic?.states.append(state)
-        }
-    }
-
-    @IBAction func playTactic(_ sender: UIButton) {
-        setupBoard()
-        animatePlayers()
-    }
-
-    // MARK: Private methods
-
-    fileprivate func addPlayerWithColor(_ color: UIColor, num: String) {
+    // MARK: Add players
+    fileprivate func addPlayerWithColor(_ color: UIColor, num: String = "P") {
         var id = 0
+        // Can make number generation here.
         let movableViews = self.view.subviews.filter({ $0 is MovableView }) as! [MovableView]
-        movableViews.forEach { (view) in
-            if view.id > id {
-                id = view.id
+        movableViews.forEach {
+            if $0.id >= id {
+                id = $0.id + 1
             }
         }
-        let pl = PlayerView(id: id + 1, color: color, num: num, center: self.boardView.center)
+        let pl = PlayerView(id: id, color: color, num: num, center: self.boardView.center)
         view?.addSubview(pl)
         tactic?.movableViews.append(pl)
     }
 
+    // MARK: Delete players
     fileprivate func removePlayerWithColor(_ color:UIColor) {
         let movableViews = self.view.subviews.filter({ $0 is MovableView && $0.backgroundColor == color }) as! [MovableView]
         if movableViews.isEmpty == false {
@@ -231,26 +115,107 @@ class BoardVC: UIViewController {
         }
     }
 
+    // MARK: Drawing
+    fileprivate func toggleDrawing(enabled: Bool) {
+        drawView.isUserInteractionEnabled = enabled
+
+        for view in self.view.subviews {
+            if view is MovableView {
+                let movableView = view as! MovableView
+                movableView.toggleMoves(enabled: !enabled)
+            }
+        }
+        self.isDrawing = enabled
+    }
+
+    fileprivate func clearDrawing() {
+        drawView.clear()
+    }
+
+    // MARK: Save
     fileprivate func saveImage() {
 
     }
+
+    // MARK: Recording
+    fileprivate func toggleRecording(enabled: Bool) {
+        isRecording = enabled
+        if isRecording == true {
+            let movableViews = self.view.subviews.filter({ $0 is MovableView }) as! [MovableView]
+            var positions: [MovableView: CGPoint] = [:]
+            for el in movableViews {
+                positions[el] = el.center
+            }
+            let state = MovableState(frame: 0, positions: positions)
+            tactic = MovableTactic(states: [state], movableViews: movableViews)
+        } else {
+            // remember tactic
+            let alert = BasicAlertVC()
+            alert.addTextField()
+            alert.delegate = self
+            present(alert, animated: true, completion: {
+                print("alert")
+            })
+            /*
+             let realm = try! RealmManager.shared.defaultRealm
+
+             let state = State()
+
+             try! realm.write {
+             realm.add(Tactic())
+             }*/
+        }
+    }
+
+    fileprivate func saveState(_ sender: UIButton) {
+        if isRecording {
+            let movableViews = self.view.subviews.filter({ $0 is MovableView }) as! [MovableView]
+            var positions: [MovableView: CGPoint] = [:]
+            for el in movableViews {
+                positions[el] = el.center
+            }
+            let frame = tactic?.states.last?.frame ?? 0
+            let state = MovableState(frame: frame + 1, positions: positions)
+            tactic?.states.append(state)
+        }
+    }
+
+    fileprivate func saveFrame() {
+        // Save image
+        /*let movableViews = self.view.subviews.filter({ $0 is MovableView }) as! [MovableView]
+         var positions: [MovableView: CGPoint] = [:]
+         for el in movableViews {
+         positions[el] = el.center
+         }
+         let state = MovableTactic.State(frame: 0, positions: positions)
+         tactic = MovableTactic(states: [state], movableViews: movableViews)*/
+    }
+    
+
+    // MARK: Play
+    fileprivate func playTactic() {
+        setupBoard()
+        animatePlayers()
+    }
 }
 
+// MARK: - Alert delegate
 extension BoardVC: BasicAlertVCDelegate {
     func didClickSubmitButton(text: String) {
         dismiss(animated: true, completion: nil)
     }
 }
 
+// MARK: - Sidebar delegate
 extension BoardVC: SidebarDelegate {
     func didClick(button: SidebarButton, type: SidebarButtonEnum) {
         switch type {
         case .addRed:
-            addPlayerWithColor(Color.red, num: "3")
+            addPlayerWithColor(Color.red)
         case .addBlue:
-            addPlayerWithColor(Color.blue, num: "2")
+            addPlayerWithColor(Color.blue)
         case .addBlack:
-            addPlayerWithColor(Color.black, num: "2")
+            addPlayerWithColor(Color.black)
         case .addOrangeGK:
             addPlayerWithColor(Color.orange, num: "G")
         case .addGreenGK:
@@ -269,14 +234,34 @@ extension BoardVC: SidebarDelegate {
         case .deleteGreenGK:
             removePlayerWithColor(Color.green)
 
+        case .draw:
+            toggleDrawing(enabled: true)
+        case .clear:
+            clearDrawing()
         case .thinLine:
             DrawManager.shared.lineType = .thin
         case .thickLine:
             DrawManager.shared.lineType = .thick
         case .dashedLine:
             DrawManager.shared.lineType = .dashed
-        case .save:
-            saveImage()
+
+        case .base(var value):
+            button.setAttributedTitle("\(value + 1)".withFont(UIFont.systemFont(ofSize: 18)).withTextColor(Color.cream), for: .normal)
+            value += 1
+
+        case .play:
+            playTactic()
+
+        case .back:
+            if isDrawing == true {
+                toggleDrawing(enabled: false)
+            }
+            if isRecording == true {
+                toggleRecording(enabled: false)
+            }
+
+//        case .save:
+//            saveImage()
 
         default:
             print("Click unknown button")

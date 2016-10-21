@@ -2,15 +2,16 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
-  - Crashlytics (3.8.2):
+  - Crashlytics (3.8.3):
     - Fabric (~> 1.6.3)
-  - Fabric (1.6.9)
+  - Fabric (1.6.10)
   - Realm (2.0.2):
     - Realm/Headers (= 2.0.2)
   - Realm/Headers (2.0.2)
   - RealmSwift (2.0.2):
     - Realm (= 2.0.2)
   - SnapKit (3.0.2)
+  - SwiftyAttributes (2.0)
 
 DEPENDENCIES:
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`, branch `swift3`)
@@ -18,6 +19,7 @@ DEPENDENCIES:
   - Fabric
   - RealmSwift
   - SnapKit (~> 3.0.2)
+  - SwiftyAttributes
 
 EXTERNAL SOURCES:
   ChameleonFramework:
@@ -31,12 +33,13 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
-  Crashlytics: 27acca95a01b042a8294291dd6dff27f8f6af6d7
-  Fabric: bc5bec42cef4bcf1ee3ce0e218fc518e4b44dfbb
+  Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
+  Fabric: c73f371ee543e3f0b80608f2674750e4910d1669
   Realm: 0f5a194af0b7e6158b83db41b4ee1a00be7ddf1a
   RealmSwift: 0eb5070d851cba7c66e841ca756d83609dc78bc8
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
+  SwiftyAttributes: 27efd47ca5d41e72139d21f8fbe2f131bb3fbe0d
 
-PODFILE CHECKSUM: 8b79ac241fca68b5fef37cb4621c463af065c2fc
+PODFILE CHECKSUM: 84fec4384bedf9deb49c4657a4e31044475cd440
 
-COCOAPODS: 1.1.0.rc.2
+COCOAPODS: 1.1.0.rc.3
