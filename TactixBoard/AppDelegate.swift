@@ -29,9 +29,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             defaults.set(true, forKey: hasLaunchedKey)
         }
-        
+
+
+        Alert.setup()
+
         Fabric.with([Crashlytics.self()])
-        
+
         return true
     }
 }

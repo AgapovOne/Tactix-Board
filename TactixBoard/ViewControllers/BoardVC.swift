@@ -8,10 +8,11 @@
 
 import UIKit
 import SnapKit
+import PopupDialog
 
 class BoardVC: UIViewController {
 
-    @IBOutlet private var boardView: UIImageView!
+    @IBOutlet fileprivate var boardView: UIImageView!
     @IBOutlet fileprivate var drawView: LineView!
 
     @IBOutlet private var menuBar: UIView!
@@ -134,7 +135,35 @@ class BoardVC: UIViewController {
 
     // MARK: Save
     fileprivate func saveImage() {
+        // make screenshot
+//        UIGraphicsBeginImageContextWithOptions(self.boardView.bounds.size, false, 0)
+////        self.boardView.drawHierarchy(in: boardView.bounds, afterScreenUpdates: true)
+//        self.boardView.snapshotView(afterScreenUpdates: true)
+//        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+//        UIGraphicsEndImageContext()
 
+        UIGraphicsBeginImageContextWithOptions(boardView.bounds.size, false, UIScreen.main.scale)
+        boardView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+
+        let textFieldAlert = TextFieldAlertVC(nibName: "TextFieldAlertVC", bundle: nil)
+        textFieldAlert.titleLabelText = "Введите название:"
+
+        let popup = PopupDialog(viewController: textFieldAlert, buttonAlignment: .horizontal, transitionStyle: .bounceDown, gestureDismissal: true)
+
+        let buttonOne = BlackButton(title: "OK") {
+            print(textFieldAlert.textField.text)
+            // save to photos
+//            UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
+            UIImageWriteToSavedPhotosAlbum(image!, self, #selector(self.image(_:didFinishSavingWithError:contextInfo:)), nil)
+        }
+        popup.addButton(buttonOne)
+
+        present(popup, animated: true) {
+            textFieldAlert.textField.becomeFirstResponder()
+        }
     }
 
     // MARK: Recording
@@ -260,11 +289,26 @@ extension BoardVC: SidebarDelegate {
                 toggleRecording(enabled: false)
             }
 
-//        case .save:
-//            saveImage()
+        case .save:
+            saveImage()
 
         default:
             print("Click unknown button")
+        }
+    }
+}
+
+extension BoardVC {
+    func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            // we got back an error!
+            let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        } else {
+            let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved to your photos.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
         }
     }
 }

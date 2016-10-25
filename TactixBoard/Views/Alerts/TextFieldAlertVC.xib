@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextFieldAlertVC" customModule="TactixBoard" customModuleProvider="target">
+            <connections>
+                <outlet property="textField" destination="kOp-lJ-tub" id="ipZ-8B-rU0"/>
+                <outlet property="titleLabel" destination="t90-kr-UKb" id="xoN-Kz-jw5"/>
+                <outlet property="view" destination="5r9-tS-cEE" id="OJj-bW-lUO"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="G4r-rx-nRw">
+            <rect key="frame" x="0.0" y="0.0" width="290" height="130"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5r9-tS-cEE">
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите название:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t90-kr-UKb">
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                            <color key="textColor" red="0.45098039215686275" green="0.72549019607843135" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kOp-lJ-tub">
+                            <color key="backgroundColor" red="0.14901960784313725" green="0.22745098039215686" blue="0.27843137254901962" alpha="1" colorSpace="deviceRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="0Sz-W5-ZC4"/>
+                            </constraints>
+                            <color key="textColor" red="0.96862745098039216" green="0.95294117647058818" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" red="0.098039215686274508" green="0.16078431372549018" blue="0.20392156862745098" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstItem="kOp-lJ-tub" firstAttribute="top" secondItem="t90-kr-UKb" secondAttribute="bottom" constant="16" id="0Iw-Bd-6Hb"/>
+                        <constraint firstAttribute="bottom" secondItem="kOp-lJ-tub" secondAttribute="bottom" constant="24" id="4WO-RR-oyE"/>
+                        <constraint firstAttribute="trailing" secondItem="kOp-lJ-tub" secondAttribute="trailing" constant="16" id="GC9-Hg-Oif"/>
+                        <constraint firstItem="kOp-lJ-tub" firstAttribute="leading" secondItem="5r9-tS-cEE" secondAttribute="leading" constant="16" id="TGA-cO-NQ8"/>
+                        <constraint firstItem="t90-kr-UKb" firstAttribute="leading" secondItem="5r9-tS-cEE" secondAttribute="leading" constant="16" id="X4H-yh-PCG"/>
+                        <constraint firstItem="t90-kr-UKb" firstAttribute="top" secondItem="5r9-tS-cEE" secondAttribute="top" constant="24" id="bIZ-JN-Fs5"/>
+                        <constraint firstAttribute="trailing" secondItem="t90-kr-UKb" secondAttribute="trailing" constant="16" id="wNL-Ap-E7q"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="5r9-tS-cEE" firstAttribute="top" secondItem="G4r-rx-nRw" secondAttribute="top" id="5Jy-Tl-WRz"/>
+                <constraint firstAttribute="trailing" secondItem="5r9-tS-cEE" secondAttribute="trailing" id="Bfl-UO-pFd"/>
+                <constraint firstAttribute="bottom" secondItem="5r9-tS-cEE" secondAttribute="bottom" id="Sgg-I2-ltt"/>
+                <constraint firstItem="5r9-tS-cEE" firstAttribute="leading" secondItem="G4r-rx-nRw" secondAttribute="leading" id="esD-v0-OE9"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="259" y="241"/>
+        </view>
+    </objects>
+</document>

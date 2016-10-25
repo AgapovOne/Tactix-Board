@@ -13,6 +13,10 @@
 		372969F91DACE84E00831162 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372969F81DACE84E00831162 /* Colors.swift */; };
 		372C1F861DB8A49E0006315B /* SidebarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C1F851DB8A49E0006315B /* SidebarButton.swift */; };
 		372C1F8A1DBA34F50006315B /* MovableTactic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C1F891DBA34F50006315B /* MovableTactic.swift */; };
+		372C1F8F1DBDE6DB0006315B /* Alerts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372C1F8E1DBDE6DB0006315B /* Alerts.storyboard */; };
+		372C1F911DBDEC200006315B /* TextFieldAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C1F901DBDEC200006315B /* TextFieldAlertVC.swift */; };
+		372C1F941DBE25EC0006315B /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C1F931DBE25EC0006315B /* Alert.swift */; };
+		372C1F961DBF27590006315B /* TextFieldAlertVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 372C1F951DBF27590006315B /* TextFieldAlertVC.xib */; };
 		37625D7E1DB4FBE00048EE01 /* SidebarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37625D7D1DB4FBE00048EE01 /* SidebarMenu.swift */; };
 		37701C021DAE641D007EB0E9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37701C011DAE641D007EB0E9 /* Images.xcassets */; };
 		37701C041DAE7D53007EB0E9 /* Tactic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37701C031DAE7D53007EB0E9 /* Tactic.swift */; };
@@ -62,6 +66,10 @@
 		372969F81DACE84E00831162 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		372C1F851DB8A49E0006315B /* SidebarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarButton.swift; sourceTree = "<group>"; };
 		372C1F891DBA34F50006315B /* MovableTactic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovableTactic.swift; sourceTree = "<group>"; };
+		372C1F8E1DBDE6DB0006315B /* Alerts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Alerts.storyboard; sourceTree = "<group>"; };
+		372C1F901DBDEC200006315B /* TextFieldAlertVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldAlertVC.swift; sourceTree = "<group>"; };
+		372C1F931DBE25EC0006315B /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		372C1F951DBF27590006315B /* TextFieldAlertVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldAlertVC.xib; sourceTree = "<group>"; };
 		37625D7D1DB4FBE00048EE01 /* SidebarMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarMenu.swift; sourceTree = "<group>"; };
 		37701C011DAE641D007EB0E9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		37701C031DAE7D53007EB0E9 /* Tactic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tactic.swift; sourceTree = "<group>"; };
@@ -236,8 +244,11 @@
 		8D8BB1761DB3F3E500514F87 /* Alerts */ = {
 			isa = PBXGroup;
 			children = (
+				372C1F901DBDEC200006315B /* TextFieldAlertVC.swift */,
+				372C1F951DBF27590006315B /* TextFieldAlertVC.xib */,
 				8D8BB17B1DB3F44000514F87 /* BasicAlertVC.swift */,
 				8D8BB17C1DB3F44000514F87 /* BasicAlertVC.xib */,
+				372C1F931DBE25EC0006315B /* Alert.swift */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
@@ -245,11 +256,11 @@
 		8DA4E1721B9AD9B800001794 = {
 			isa = PBXGroup;
 			children = (
+				8DA4E17D1B9AD9B800001794 /* TactixBoard */,
+				8DA4E1931B9AD9B800001794 /* TactixBoardTests */,
 				88460CEA1FD3BD8FDD2CFEF4 /* Frameworks */,
 				9B8C3CA1BC5F48EB268585B4 /* Pods */,
 				8DA4E17C1B9AD9B800001794 /* Products */,
-				8DA4E17D1B9AD9B800001794 /* TactixBoard */,
-				8DA4E1931B9AD9B800001794 /* TactixBoardTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -319,6 +330,7 @@
 				8D5F87571BCCE24D00FFE288 /* Sidebar */,
 				8DA4E1891B9AD9B800001794 /* LaunchScreen.xib */,
 				8DA4E1841B9AD9B800001794 /* Main.storyboard */,
+				372C1F8E1DBDE6DB0006315B /* Alerts.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -434,9 +446,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				372C1F961DBF27590006315B /* TextFieldAlertVC.xib in Resources */,
 				8D8BB17E1DB3F44000514F87 /* BasicAlertVC.xib in Resources */,
 				8DA4E1861B9AD9B800001794 /* Main.storyboard in Resources */,
 				8D884B201BCD609400279F13 /* LineType.xib in Resources */,
+				372C1F8F1DBDE6DB0006315B /* Alerts.storyboard in Resources */,
 				8DA4E18B1B9AD9B800001794 /* LaunchScreen.xib in Resources */,
 				37701C021DAE641D007EB0E9 /* Images.xcassets in Resources */,
 				8D4F2F231BCBED6000033007 /* AddMenu.xib in Resources */,
@@ -567,8 +581,10 @@
 				8DA4E1AC1B9E31F300001794 /* Extensions.swift in Sources */,
 				8D8BB1801DB3F5AF00514F87 /* RoundView.swift in Sources */,
 				8D17100E1BB9B9350007F919 /* LineView.swift in Sources */,
+				372C1F911DBDEC200006315B /* TextFieldAlertVC.swift in Sources */,
 				37625D7E1DB4FBE00048EE01 /* SidebarMenu.swift in Sources */,
 				8D5F875E1BCCEDFD00FFE288 /* MenuType.swift in Sources */,
+				372C1F941DBE25EC0006315B /* Alert.swift in Sources */,
 				372969F61DACE6D900831162 /* PlayerView.swift in Sources */,
 				37701C081DAF4BCE007EB0E9 /* State.swift in Sources */,
 				37701C041DAE7D53007EB0E9 /* Tactic.swift in Sources */,

@@ -4,7 +4,9 @@ PODS:
     - ChameleonFramework/Default
   - Crashlytics (3.8.3):
     - Fabric (~> 1.6.3)
+  - CWStatusBarNotification (2.3.5)
   - Fabric (1.6.10)
+  - PopupDialog (0.5.0)
   - Realm (2.0.2):
     - Realm/Headers (= 2.0.2)
   - Realm/Headers (2.0.2)
@@ -16,7 +18,9 @@ PODS:
 DEPENDENCIES:
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`, branch `swift3`)
   - Crashlytics
+  - CWStatusBarNotification
   - Fabric
+  - PopupDialog
   - RealmSwift
   - SnapKit (~> 3.0.2)
   - SwiftyAttributes
@@ -34,12 +38,14 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
+  CWStatusBarNotification: 3d2738b25c3207f60cc50201388d3c96182545ff
   Fabric: c73f371ee543e3f0b80608f2674750e4910d1669
+  PopupDialog: 9890441b81105b9076757af2afe2b037be682f3e
   Realm: 0f5a194af0b7e6158b83db41b4ee1a00be7ddf1a
   RealmSwift: 0eb5070d851cba7c66e841ca756d83609dc78bc8
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   SwiftyAttributes: 27efd47ca5d41e72139d21f8fbe2f131bb3fbe0d
 
-PODFILE CHECKSUM: 84fec4384bedf9deb49c4657a4e31044475cd440
+PODFILE CHECKSUM: 7cb367cff2c42fbf2c923c53e229bc328d85ccc8
 
-COCOAPODS: 1.1.0.rc.3
+COCOAPODS: 1.1.1

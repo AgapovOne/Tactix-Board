@@ -29,7 +29,15 @@ struct Color {
     }
     
     struct Alert {
+        static let backgroundColor = color(hex: "#192934")
+
         static let textFieldColor = color(hex: "#263A47")
+
+        static let separatorColor = textFieldColor
+
+        static let titleColor = color(hex: "#73B938")
+
+        static let textColor = color(hex: "#F7F3EB")
     }
 
     static let lightBlue = colorWith(r: 51, g: 189, b: 242)
