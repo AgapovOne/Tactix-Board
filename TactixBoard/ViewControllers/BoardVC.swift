@@ -19,14 +19,14 @@ class BoardVC: UIViewController {
     @IBOutlet fileprivate var sidebarMenu: SidebarMenu!
 
     fileprivate var isDrawing = false
-    fileprivate var isRecording = false {
-        didSet {
-//            if isRecording = true {
-//                popAddMenuButton.isHidden = true
-//                popDeleteMenuButton.isHidden = true
-//            }
-        }
+    fileprivate var isRecording = false
+    fileprivate var isPlaying = false
+    var currentFrame = 0
+
+    enum Direction {
+        case previous, next
     }
+
     var tactic: MovableTactic?
 
     override func viewDidLoad() {
@@ -118,6 +118,7 @@ class BoardVC: UIViewController {
 
     // MARK: Drawing
     fileprivate func toggleDrawing(enabled: Bool) {
+        isDrawing = enabled
         drawView.isUserInteractionEnabled = enabled
 
         for view in self.view.subviews {
@@ -126,7 +127,6 @@ class BoardVC: UIViewController {
                 movableView.toggleMoves(enabled: !enabled)
             }
         }
-        self.isDrawing = enabled
     }
 
     fileprivate func clearDrawing() {
@@ -134,14 +134,20 @@ class BoardVC: UIViewController {
     }
 
     // MARK: Save
+    /**
+     Saves image to photos. 
+     // TODO: Save to db/documents to use later in trainings :)
+     */
     fileprivate func saveImage() {
         // make screenshot
+        // 1 option
 //        UIGraphicsBeginImageContextWithOptions(self.boardView.bounds.size, false, 0)
 ////        self.boardView.drawHierarchy(in: boardView.bounds, afterScreenUpdates: true)
 //        self.boardView.snapshotView(afterScreenUpdates: true)
 //        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
 //        UIGraphicsEndImageContext()
 
+        // 2 option
         UIGraphicsBeginImageContextWithOptions(boardView.bounds.size, false, UIScreen.main.scale)
         boardView.layer.render(in: UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext()
@@ -153,13 +159,17 @@ class BoardVC: UIViewController {
 
         let popup = PopupDialog(viewController: textFieldAlert, buttonAlignment: .horizontal, transitionStyle: .bounceDown, gestureDismissal: true)
 
-        let buttonOne = BlackButton(title: "OK") {
-            print(textFieldAlert.textField.text)
-            // save to photos
-//            UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
-            UIImageWriteToSavedPhotosAlbum(image!, self, #selector(self.image(_:didFinishSavingWithError:contextInfo:)), nil)
+        let buttonOne = CancelButton(title: "Отменить") {
+            print("Cancelled")
         }
-        popup.addButton(buttonOne)
+        let buttonTwo = DefaultButton(title: "Сохранить") {
+            let tacticName: String = textFieldAlert.textField.text ?? ""
+            print(tacticName) // use name somehow.
+
+            // save to photos
+//            UIImageWriteToSavedPhotosAlbum(image!, self, #selector(self.image(_:didFinishSavingWithError:contextInfo:)), nil)
+        }
+        popup.addButtons([buttonOne, buttonTwo])
 
         present(popup, animated: true) {
             textFieldAlert.textField.becomeFirstResponder()
@@ -169,62 +179,78 @@ class BoardVC: UIViewController {
     // MARK: Recording
     fileprivate func toggleRecording(enabled: Bool) {
         isRecording = enabled
-        if isRecording == true {
-            let movableViews = self.view.subviews.filter({ $0 is MovableView }) as! [MovableView]
-            var positions: [MovableView: CGPoint] = [:]
-            for el in movableViews {
-                positions[el] = el.center
-            }
-            let state = MovableState(frame: 0, positions: positions)
+    }
+
+    fileprivate func saveState() {
+        let movableViews = self.view.subviews.filter({ $0 is MovableView }) as! [MovableView]
+        var positions: [MovableView: CGPoint] = [:]
+        for el in movableViews {
+            positions[el] = el.center
+        }
+        let frame = currentFrame
+        let state = MovableState(frame: frame, positions: positions)
+        if frame == 0 {
             tactic = MovableTactic(states: [state], movableViews: movableViews)
-        } else {
-            // remember tactic
-            let alert = BasicAlertVC()
-            alert.addTextField()
-            alert.delegate = self
-            present(alert, animated: true, completion: {
-                print("alert")
-            })
-            /*
-             let realm = try! RealmManager.shared.defaultRealm
-
-             let state = State()
-
-             try! realm.write {
-             realm.add(Tactic())
-             }*/
-        }
-    }
-
-    fileprivate func saveState(_ sender: UIButton) {
-        if isRecording {
-            let movableViews = self.view.subviews.filter({ $0 is MovableView }) as! [MovableView]
-            var positions: [MovableView: CGPoint] = [:]
-            for el in movableViews {
-                positions[el] = el.center
-            }
-            let frame = tactic?.states.last?.frame ?? 0
-            let state = MovableState(frame: frame + 1, positions: positions)
+        } else if frame == tactic?.states.count {
             tactic?.states.append(state)
+        } else {
+            tactic?.states[currentFrame] = state
         }
+        currentFrame += 1
     }
 
-    fileprivate func saveFrame() {
-        // Save image
-        /*let movableViews = self.view.subviews.filter({ $0 is MovableView }) as! [MovableView]
-         var positions: [MovableView: CGPoint] = [:]
-         for el in movableViews {
-         positions[el] = el.center
-         }
-         let state = MovableTactic.State(frame: 0, positions: positions)
-         tactic = MovableTactic(states: [state], movableViews: movableViews)*/
+    fileprivate func changeRecordingFrame(direction: Direction) {
+        if let tactic = tactic {
+            switch direction {
+            case .previous:
+                if currentFrame > 0 {
+                    currentFrame -= 1
+                    tactic.states[currentFrame].positions.forEach({ (el, position) in
+                        el.center = position
+                    })
+                }
+            case .next:
+                if currentFrame + 1 < tactic.states.count {
+                    currentFrame += 1
+                    tactic.states[currentFrame].positions.forEach({ (el, position) in
+                        el.center = position
+                    })
+                }
+            }
+        }
+
+        // CHANGE FRAME NUMBER ON A BUTTON!
     }
-    
+
+    fileprivate func saveTactic() {
+
+        /*let realm = try! RealmManager.shared.defaultRealm
+
+        let state = State()
+
+        try! realm.write {
+            realm.add(Tactic())
+        }*/
+    }
+
 
     // MARK: Play
+    fileprivate func togglePlaying(enabled: Bool) {
+        isPlaying = enabled
+        if isPlaying {
+
+        } else {
+
+        }
+    }
+
     fileprivate func playTactic() {
         setupBoard()
         animatePlayers()
+    }
+
+    fileprivate func playFrame() {
+
     }
 }
 
@@ -239,6 +265,7 @@ extension BoardVC: BasicAlertVCDelegate {
 extension BoardVC: SidebarDelegate {
     func didClick(button: SidebarButton, type: SidebarButtonEnum) {
         switch type {
+        // Add
         case .addRed:
             addPlayerWithColor(Color.red)
         case .addBlue:
@@ -250,6 +277,7 @@ extension BoardVC: SidebarDelegate {
         case .addGreenGK:
             addPlayerWithColor(Color.green, num: "G")
 
+        // Delete
         case .deleteRed:
             removePlayerWithColor(Color.red)
         case .deleteBlue:
@@ -263,6 +291,7 @@ extension BoardVC: SidebarDelegate {
         case .deleteGreenGK:
             removePlayerWithColor(Color.green)
 
+        // Draw
         case .draw:
             toggleDrawing(enabled: true)
         case .clear:
@@ -274,23 +303,59 @@ extension BoardVC: SidebarDelegate {
         case .dashedLine:
             DrawManager.shared.lineType = .dashed
 
-        case .base(var value):
-            button.setAttributedTitle("\(value + 1)".withFont(UIFont.systemFont(ofSize: 18)).withTextColor(Color.cream), for: .normal)
-            value += 1
+        case .save:
+            saveImage()
 
+        // Recording
+        case .recordMenu:
+            toggleRecording(enabled: true)
+        case .stop:
+            saveTactic()
+
+        // Play
+        case .playMenu:
+            togglePlaying(enabled: true)
         case .play:
             playTactic()
 
-        case .back:
-            if isDrawing == true {
-                toggleDrawing(enabled: false)
+
+        // Basic
+        case .base:
+            if isRecording {
+                print("record")
+                saveState()
             }
-            if isRecording == true {
-                toggleRecording(enabled: false)
+            if isPlaying {
+                print("play")
+            }
+            button.setAttributedTitle("\(currentFrame)".withFont(UIFont.systemFont(ofSize: 18)).withTextColor(Color.cream), for: .normal)
+
+        case .previous:
+            if isRecording {
+                changeRecordingFrame(direction: .previous)
+            }
+            if isPlaying {
+
+            }
+        case .next:
+            if isRecording {
+                changeRecordingFrame(direction: .next)
+            }
+            if isPlaying {
+                
             }
 
-        case .save:
-            saveImage()
+        case .back:
+            if isDrawing {
+                toggleDrawing(enabled: false)
+            }
+            if isRecording {
+                toggleRecording(enabled: false)
+            }
+            if isPlaying {
+                togglePlaying(enabled: false)
+            }
+            currentFrame = 0
 
         default:
             print("Click unknown button")

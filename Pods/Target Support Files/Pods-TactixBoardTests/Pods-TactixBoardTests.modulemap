@@ -1,6 +1,0 @@
-framework module Pods_TactixBoardTests {
-  umbrella header "Pods-TactixBoardTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -7,17 +7,13 @@ target 'TactixBoard' do
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git', :branch => 'swift3'
   pod 'SnapKit', '~> 3.0.2'
   pod 'SwiftyAttributes'
-  pod 'CWStatusBarNotification'
+  #pod 'StatusBarNotificationCenter', :git => 'https://github.com/36Kr-Mobile/StatusBarNotificationCenter.git'
   pod 'PopupDialog'
 
   pod 'RealmSwift'
 
   pod 'Fabric'
   pod 'Crashlytics'
-
-end
-
-target 'TactixBoardTests' do
 
 end
 

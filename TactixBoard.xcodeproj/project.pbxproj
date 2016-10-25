@@ -26,7 +26,6 @@
 		37BAE7DE1DAF92AA0075DBC5 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BAE7DD1DAF92AA0075DBC5 /* RealmManager.swift */; };
 		37BAE7E01DAFA3710075DBC5 /* DrawManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BAE7DF1DAFA3710075DBC5 /* DrawManager.swift */; };
 		56743339D0F8772A47A83FD6 /* Pods_TactixBoard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D8546945CD977668288E4F /* Pods_TactixBoard.framework */; };
-		6AC5A9B7563E3545EE57038B /* Pods_TactixBoardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA322F262674E4C828BCBEF /* Pods_TactixBoardTests.framework */; };
 		8D17100E1BB9B9350007F919 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D17100D1BB9B9350007F919 /* LineView.swift */; };
 		8D1710101BB9BF740007F919 /* MovableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D17100F1BB9BF740007F919 /* MovableView.swift */; };
 		8D4F2F231BCBED6000033007 /* AddMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D4F2F221BCBED6000033007 /* AddMenu.xib */; };
@@ -107,8 +106,6 @@
 		B4D8546945CD977668288E4F /* Pods_TactixBoard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TactixBoard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCA322F262674E4C828BCBEF /* Pods_TactixBoardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TactixBoardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E67D5E52CE95CB618B316C3A /* Pods-TactixBoard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TactixBoard.release.xcconfig"; path = "Pods/Target Support Files/Pods-TactixBoard/Pods-TactixBoard.release.xcconfig"; sourceTree = "<group>"; };
-		F4CD081267B6912CC35357DE /* Pods-TactixBoardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TactixBoardTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TactixBoardTests/Pods-TactixBoardTests.release.xcconfig"; sourceTree = "<group>"; };
-		F7EF742D2028522C73DEBC63 /* Pods-TactixBoardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TactixBoardTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TactixBoardTests/Pods-TactixBoardTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +121,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AC5A9B7563E3545EE57038B /* Pods_TactixBoardTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,8 +344,6 @@
 			children = (
 				73D98DE3B3B39F49C1578A43 /* Pods-TactixBoard.debug.xcconfig */,
 				E67D5E52CE95CB618B316C3A /* Pods-TactixBoard.release.xcconfig */,
-				F7EF742D2028522C73DEBC63 /* Pods-TactixBoardTests.debug.xcconfig */,
-				F4CD081267B6912CC35357DE /* Pods-TactixBoardTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -382,12 +376,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8DA4E19D1B9AD9B800001794 /* Build configuration list for PBXNativeTarget "TactixBoardTests" */;
 			buildPhases = (
-				4F47C60CDBDF2FC4691C87DA /* [CP] Check Pods Manifest.lock */,
 				8DA4E18C1B9AD9B800001794 /* Sources */,
 				8DA4E18D1B9AD9B800001794 /* Frameworks */,
 				8DA4E18E1B9AD9B800001794 /* Resources */,
-				63D871D52FD4AA5C30C129A6 /* [CP] Embed Pods Frameworks */,
-				5264E8CCD7919B20C4C04466 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -481,51 +472,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		4F47C60CDBDF2FC4691C87DA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		5264E8CCD7919B20C4C04466 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TactixBoardTests/Pods-TactixBoardTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		63D871D52FD4AA5C30C129A6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TactixBoardTests/Pods-TactixBoardTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8D19EDE91BA9D11000A82FD9 /* ShellScript */ = {
@@ -785,7 +731,6 @@
 		};
 		8DA4E19E1B9AD9B800001794 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7EF742D2028522C73DEBC63 /* Pods-TactixBoardTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -807,7 +752,6 @@
 		};
 		8DA4E19F1B9AD9B800001794 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F4CD081267B6912CC35357DE /* Pods-TactixBoardTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

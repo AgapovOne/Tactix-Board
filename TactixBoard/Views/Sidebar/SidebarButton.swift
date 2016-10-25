@@ -25,6 +25,8 @@ enum SidebarButtonEnum {
 
     back,
     base(Int),
+    previous,
+    next,
 
     addRed,
     addBlue,
@@ -43,8 +45,6 @@ enum SidebarButtonEnum {
     thickLine,
     dashedLine,
 
-    next,
-    previous,
     stop,
     play,
 
@@ -110,6 +110,7 @@ enum SidebarButtonEnum {
             return #imageLiteral(resourceName: "Previous")
         case .stop:
             return #imageLiteral(resourceName: "Stop")
+
         case .play:
             return #imageLiteral(resourceName: "Play")
 
@@ -122,9 +123,9 @@ enum SidebarButtonEnum {
 
     var type: SidebarButtonType {
         switch self {
-        case .addMenu, .deleteMenu, .recordMenu, .playMenu:
+        case .addMenu, .deleteMenu:
             return .expand
-        case .draw, .back:
+        case .draw, .back, .playMenu, .recordMenu:
             return .expandableAction
         default:
             return .action

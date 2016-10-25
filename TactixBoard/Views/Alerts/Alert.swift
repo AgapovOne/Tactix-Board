@@ -27,23 +27,16 @@ class Alert {
         db.separatorColor = Color.Alert.separatorColor
 
         // Customize cancel button appearance
-        CancelButton.appearance().titleFont = UIFont.systemFont(ofSize: 14, weight: UIFontWeightRegular)
+        let cb = CancelButton.appearance()
+        cb.titleFont = UIFont.systemFont(ofSize: 14, weight: UIFontWeightRegular)
+        cb.titleColor = Color.Alert.textColor
+        cb.buttonColor = Color.Alert.backgroundColor
+        cb.separatorColor = Color.Alert.separatorColor
 
         // Customize overlay appearance
         let overlayAppearance = PopupDialogOverlayView.appearance()
         overlayAppearance.color = UIColor.black
-        overlayAppearance.blurRadius = 20
-        overlayAppearance.blurEnabled = true
+        overlayAppearance.blurEnabled = false
         overlayAppearance.opacity = 0.7
-    }
-}
-
-public final class BlackButton: PopupDialogButton {
-    override public func setupView() {
-        titleFont = UIFont.systemFont(ofSize: 14, weight: UIFontWeightLight)
-        defaultTitleColor = Color.Alert.textColor
-        defaultButtonColor = Color.Alert.backgroundColor
-        defaultSeparatorColor = Color.Alert.separatorColor
-        super.setupView()
     }
 }
