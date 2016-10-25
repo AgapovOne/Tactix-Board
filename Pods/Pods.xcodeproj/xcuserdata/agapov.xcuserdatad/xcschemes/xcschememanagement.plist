@@ -19,6 +19,11 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>PopupDialog.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 		<key>Realm.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -34,10 +39,25 @@
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
+		<key>SwiftyAttributes.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>1C9D85349A4B3BD39012C27D3A28B9E0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1DBA966246FA07557D359E9073B261D5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>30A12E619A7F12B1B38541E6FB0C34EE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,7 +72,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>76EE56681C19221104154D0F756B454A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>79FB73223A0A775A02A6BE9541268533</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8348BC65F358AAAD71DD60FD7FC1FD86</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>86AEBC8260E71DE34071F275BFA32A78</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -63,6 +98,11 @@
 			<true/>
 		</dict>
 		<key>A2D4A65230FF53936544E8DC686F631F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C8A2E11AA358D1D4338623132E6A0921</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -90,12 +90,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TactixBoard/ViewControllers/BoardVC.swift"
-            timestampString = "498338637.04059"
+            timestampString = "499106799.84691"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "205"
-            endingLineNumber = "205"
-            landmarkName = "playTactic(_:)"
+            startingLineNumber = "209"
+            endingLineNumber = "209"
+            landmarkName = "changeRecordingFrame(direction:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

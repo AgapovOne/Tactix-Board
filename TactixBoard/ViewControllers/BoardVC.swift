@@ -139,25 +139,26 @@ class BoardVC: UIViewController {
      // TODO: Save to db/documents to use later in trainings :)
      */
     fileprivate func saveImage() {
-        // make screenshot
+        // make screenshot 
+        // TODO: Screenshot only for board view, without sidebar.
         // 1 option
-//        UIGraphicsBeginImageContextWithOptions(self.boardView.bounds.size, false, 0)
-////        self.boardView.drawHierarchy(in: boardView.bounds, afterScreenUpdates: true)
-//        self.boardView.snapshotView(afterScreenUpdates: true)
-//        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-//        UIGraphicsEndImageContext()
+        UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, false, 0)
+        self.view.drawHierarchy(in: view.bounds.offsetBy(dx: -60, dy: 0), afterScreenUpdates: true)
+//        self.view.snapshotView(afterScreenUpdates: true)
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
 
         // 2 option
-        UIGraphicsBeginImageContextWithOptions(boardView.bounds.size, false, UIScreen.main.scale)
-        boardView.layer.render(in: UIGraphicsGetCurrentContext()!)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
+//        UIGraphicsBeginImageContextWithOptions(boardView.bounds.size, false, UIScreen.main.scale)
+//        boardView.layer.render(in: UIGraphicsGetCurrentContext()!)
+//        let image = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
 
 
         let textFieldAlert = TextFieldAlertVC(nibName: "TextFieldAlertVC", bundle: nil)
         textFieldAlert.titleLabelText = "Введите название:"
 
-        let popup = PopupDialog(viewController: textFieldAlert, buttonAlignment: .horizontal, transitionStyle: .bounceDown, gestureDismissal: true)
+        let popup = PopupDialog(viewController: textFieldAlert, buttonAlignment: .horizontal, transitionStyle: .bounceUp, gestureDismissal: true)
 
         let buttonOne = CancelButton(title: "Отменить") {
             print("Cancelled")
@@ -167,12 +168,12 @@ class BoardVC: UIViewController {
             print(tacticName) // use name somehow.
 
             // save to photos
-//            UIImageWriteToSavedPhotosAlbum(image!, self, #selector(self.image(_:didFinishSavingWithError:contextInfo:)), nil)
+            UIImageWriteToSavedPhotosAlbum(cropped, self, #selector(self.image(_:didFinishSavingWithError:contextInfo:)), nil)
         }
         popup.addButtons([buttonOne, buttonTwo])
 
         present(popup, animated: true) {
-            textFieldAlert.textField.becomeFirstResponder()
+//            textFieldAlert.textField.becomeFirstResponder()
         }
     }
 
@@ -219,7 +220,7 @@ class BoardVC: UIViewController {
             }
         }
 
-        // CHANGE FRAME NUMBER ON A BUTTON!
+        // TODO: CHANGE FRAME NUMBER ON A BUTTON!
     }
 
     fileprivate func saveTactic() {
@@ -251,13 +252,6 @@ class BoardVC: UIViewController {
 
     fileprivate func playFrame() {
 
-    }
-}
-
-// MARK: - Alert delegate
-extension BoardVC: BasicAlertVCDelegate {
-    func didClickSubmitButton(text: String) {
-        dismiss(animated: true, completion: nil)
     }
 }
 

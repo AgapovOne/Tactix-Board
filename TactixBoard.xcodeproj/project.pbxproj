@@ -36,8 +36,6 @@
 		8D5F87601BCCF72B00FFE288 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F875F1BCCF72B00FFE288 /* Fonts.swift */; };
 		8D884B201BCD609400279F13 /* LineType.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D884B1F1BCD609400279F13 /* LineType.xib */; };
 		8D884B241BCD62F100279F13 /* LineTypeMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D884B231BCD62F100279F13 /* LineTypeMenu.swift */; };
-		8D8BB17D1DB3F44000514F87 /* BasicAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8BB17B1DB3F44000514F87 /* BasicAlertVC.swift */; };
-		8D8BB17E1DB3F44000514F87 /* BasicAlertVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D8BB17C1DB3F44000514F87 /* BasicAlertVC.xib */; };
 		8D8BB1801DB3F5AF00514F87 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8BB17F1DB3F5AF00514F87 /* RoundView.swift */; };
 		8DA4E1811B9AD9B800001794 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1801B9AD9B800001794 /* AppDelegate.swift */; };
 		8DA4E1861B9AD9B800001794 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DA4E1841B9AD9B800001794 /* Main.storyboard */; };
@@ -89,8 +87,6 @@
 		8D5F875F1BCCF72B00FFE288 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		8D884B1F1BCD609400279F13 /* LineType.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LineType.xib; sourceTree = "<group>"; };
 		8D884B231BCD62F100279F13 /* LineTypeMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineTypeMenu.swift; sourceTree = "<group>"; };
-		8D8BB17B1DB3F44000514F87 /* BasicAlertVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicAlertVC.swift; sourceTree = "<group>"; };
-		8D8BB17C1DB3F44000514F87 /* BasicAlertVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BasicAlertVC.xib; sourceTree = "<group>"; };
 		8D8BB17F1DB3F5AF00514F87 /* RoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 		8DA4E17B1B9AD9B800001794 /* TactixBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TactixBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA4E17F1B9AD9B800001794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -242,8 +238,6 @@
 			children = (
 				372C1F901DBDEC200006315B /* TextFieldAlertVC.swift */,
 				372C1F951DBF27590006315B /* TextFieldAlertVC.xib */,
-				8D8BB17B1DB3F44000514F87 /* BasicAlertVC.swift */,
-				8D8BB17C1DB3F44000514F87 /* BasicAlertVC.xib */,
 				372C1F931DBE25EC0006315B /* Alert.swift */,
 			);
 			path = Alerts;
@@ -403,11 +397,13 @@
 				TargetAttributes = {
 					8DA4E17A1B9AD9B800001794 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = X76MKT7DV3;
+						DevelopmentTeam = 7J9NCU659T;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 					8DA4E18F1B9AD9B800001794 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 7J9NCU659T;
 						LastSwiftMigration = 0800;
 						TestTargetID = 8DA4E17A1B9AD9B800001794;
 					};
@@ -438,7 +434,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				372C1F961DBF27590006315B /* TextFieldAlertVC.xib in Resources */,
-				8D8BB17E1DB3F44000514F87 /* BasicAlertVC.xib in Resources */,
 				8DA4E1861B9AD9B800001794 /* Main.storyboard in Resources */,
 				8D884B201BCD609400279F13 /* LineType.xib in Resources */,
 				372C1F8F1DBDE6DB0006315B /* Alerts.storyboard in Resources */,
@@ -550,7 +545,6 @@
 				37BAE7DE1DAF92AA0075DBC5 /* RealmManager.swift in Sources */,
 				8D1710101BB9BF740007F919 /* MovableView.swift in Sources */,
 				372C1F861DB8A49E0006315B /* SidebarButton.swift in Sources */,
-				8D8BB17D1DB3F44000514F87 /* BasicAlertVC.swift in Sources */,
 				8D5F87561BCC106200FFE288 /* AddMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -697,7 +691,8 @@
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = X76MKT7DV3;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7J9NCU659T;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/TactixBoard/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -718,7 +713,8 @@
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = X76MKT7DV3;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7J9NCU659T;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/TactixBoard/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -733,6 +729,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 7J9NCU659T;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -754,6 +751,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 7J9NCU659T;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
