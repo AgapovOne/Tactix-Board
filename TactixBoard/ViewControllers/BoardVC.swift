@@ -23,7 +23,7 @@ class BoardVC: UIViewController {
     fileprivate var isPlaying = false
     var currentFrame = 0
 
-    enum Direction {
+    private enum Direction {
         case previous, next
     }
 
@@ -63,14 +63,10 @@ class BoardVC: UIViewController {
     fileprivate func animatePlayers(index: Int = 0) {
         if let tactic = tactic {
             if tactic.states.isEmpty == false {
-                let duration = index == 0
-                    ? 0.2
-                    : 1.0
-                UIView.animate(withDuration: duration, animations: {
-                    tactic.states[index].positions.forEach({ (el, position) in
-                        el.center = position
-                    })
-                }) { finished in
+                if self.isPlaying {
+                    self.sidebarMenu.setBase(number: index)
+                }
+                movePlayers(to: index) { finished in
                     if finished {
                         if index < tactic.states.count - 1 {
                             self.animatePlayers(index: index + 1)
@@ -79,6 +75,14 @@ class BoardVC: UIViewController {
                 }
             }
         }
+    }
+
+    fileprivate func movePlayers(to frame: Int, completion: ((Bool) -> ())? = nil) {
+        UIView.animate(withDuration: 0.35, animations: {
+            self.tactic?.states[frame].positions.forEach({ (el, position) in
+                el.center = position
+            })
+            }, completion: completion)
     }
 
     // MARK: - Sidebar Menu
@@ -134,46 +138,25 @@ class BoardVC: UIViewController {
     }
 
     // MARK: Save
-    /**
-     Saves image to photos. 
-     // TODO: Save to db/documents to use later in trainings :)
-     */
     fileprivate func saveImage() {
-        // make screenshot 
+        // make screenshot
         // TODO: Screenshot only for board view, without sidebar.
         // 1 option
         UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, false, 0)
         self.view.drawHierarchy(in: view.bounds.offsetBy(dx: -60, dy: 0), afterScreenUpdates: true)
-//        self.view.snapshotView(afterScreenUpdates: true)
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
 
-        // 2 option
-//        UIGraphicsBeginImageContextWithOptions(boardView.bounds.size, false, UIScreen.main.scale)
-//        boardView.layer.render(in: UIGraphicsGetCurrentContext()!)
-//        let image = UIGraphicsGetImageFromCurrentImageContext()
-//        UIGraphicsEndImageContext()
-
-
-        let textFieldAlert = TextFieldAlertVC(nibName: "TextFieldAlertVC", bundle: nil)
-        textFieldAlert.titleLabelText = "Введите название:"
-
-        let popup = PopupDialog(viewController: textFieldAlert, buttonAlignment: .horizontal, transitionStyle: .bounceUp, gestureDismissal: true)
-
-        let buttonOne = CancelButton(title: "Отменить") {
-            print("Cancelled")
-        }
-        let buttonTwo = DefaultButton(title: "Сохранить") {
-            let tacticName: String = textFieldAlert.textField.text ?? ""
-            print(tacticName) // use name somehow.
+        let popup = Alert.PopupWithTextField(title: "Введите название:") { name in
+            print(name) // use name somehow.
 
             // save to photos
-            UIImageWriteToSavedPhotosAlbum(cropped, self, #selector(self.image(_:didFinishSavingWithError:contextInfo:)), nil)
+            //UIImageWriteToSavedPhotosAlbum(cropped, self, #selector(self.image(_:didFinishSavingWithError:contextInfo:)), nil)
+            // TODO: Save to db/documents to use later in trainings :)
         }
-        popup.addButtons([buttonOne, buttonTwo])
 
         present(popup, animated: true) {
-//            textFieldAlert.textField.becomeFirstResponder()
+            //textFieldAlert.textField.becomeFirstResponder()
         }
     }
 
@@ -188,11 +171,10 @@ class BoardVC: UIViewController {
         for el in movableViews {
             positions[el] = el.center
         }
-        let frame = currentFrame
-        let state = MovableState(frame: frame, positions: positions)
-        if frame == 0 {
+        let state = MovableState(frame: currentFrame, positions: positions)
+        if currentFrame == 0 {
             tactic = MovableTactic(states: [state], movableViews: movableViews)
-        } else if frame == tactic?.states.count {
+        } else if currentFrame == tactic?.states.count {
             tactic?.states.append(state)
         } else {
             tactic?.states[currentFrame] = state
@@ -206,52 +188,62 @@ class BoardVC: UIViewController {
             case .previous:
                 if currentFrame > 0 {
                     currentFrame -= 1
-                    tactic.states[currentFrame].positions.forEach({ (el, position) in
-                        el.center = position
-                    })
+                    movePlayers(to: currentFrame)
                 }
             case .next:
                 if currentFrame + 1 < tactic.states.count {
                     currentFrame += 1
-                    tactic.states[currentFrame].positions.forEach({ (el, position) in
-                        el.center = position
-                    })
+                    movePlayers(to: currentFrame)
+                } else if currentFrame + 1 == tactic.states.count {
+                    currentFrame += 1
                 }
             }
         }
 
-        // TODO: CHANGE FRAME NUMBER ON A BUTTON!
+        sidebarMenu.setBase(number: currentFrame)
     }
 
     fileprivate func saveTactic() {
+        guard tactic != nil, tactic!.states.isEmpty == false else {
+            return
+        }
+        movePlayers(to: 0)
+        sidebarMenu.setBase(number: currentFrame)
 
         /*let realm = try! RealmManager.shared.defaultRealm
-
-        let state = State()
 
         try! realm.write {
             realm.add(Tactic())
         }*/
     }
 
-
     // MARK: Play
     fileprivate func togglePlaying(enabled: Bool) {
         isPlaying = enabled
-        if isPlaying {
-
-        } else {
-
-        }
     }
 
     fileprivate func playTactic() {
         setupBoard()
         animatePlayers()
+        currentFrame = (tactic?.states.count ?? 1) - 1
     }
 
-    fileprivate func playFrame() {
-
+    fileprivate func playFrame(direction: Direction) {
+        if let tactic = tactic {
+            switch direction {
+            case .previous:
+                if currentFrame > 0 {
+                    currentFrame -= 1
+                    movePlayers(to: currentFrame)
+                }
+            case .next:
+                if currentFrame + 1 < tactic.states.count {
+                    currentFrame += 1
+                    movePlayers(to: currentFrame)
+                }
+            }
+        }
+        sidebarMenu.setBase(number: currentFrame)
     }
 }
 
@@ -318,25 +310,25 @@ extension BoardVC: SidebarDelegate {
             if isRecording {
                 print("record")
                 saveState()
+                button.setAttributedTitle("\(currentFrame)".withFont(UIFont.systemFont(ofSize: 18)).withTextColor(Color.cream), for: .normal)
             }
             if isPlaying {
                 print("play")
             }
-            button.setAttributedTitle("\(currentFrame)".withFont(UIFont.systemFont(ofSize: 18)).withTextColor(Color.cream), for: .normal)
 
         case .previous:
             if isRecording {
                 changeRecordingFrame(direction: .previous)
             }
             if isPlaying {
-
+                playFrame(direction: .previous)
             }
         case .next:
             if isRecording {
                 changeRecordingFrame(direction: .next)
             }
             if isPlaying {
-                
+                playFrame(direction: .next)
             }
 
         case .back:

@@ -39,4 +39,21 @@ class Alert {
         overlayAppearance.blurEnabled = false
         overlayAppearance.opacity = 0.7
     }
+
+    static func PopupWithTextField(title: String, completion: @escaping (String) -> ()) -> PopupDialog {
+        let textFieldAlert = TextFieldAlertVC(nibName: "TextFieldAlertVC", bundle: nil)
+        textFieldAlert.titleLabelText = title
+
+        let popup = PopupDialog(viewController: textFieldAlert, buttonAlignment: .horizontal, transitionStyle: .bounceUp, gestureDismissal: true)
+
+        let buttonOne = CancelButton(title: "Отменить") {
+            print("Cancelled button clicked")
+        }
+
+        let buttonTwo = DefaultButton(title: "Сохранить") {
+            completion(textFieldAlert.textField.text ?? "")
+        }
+        popup.addButtons([buttonOne, buttonTwo])
+        return popup
+    }
 }

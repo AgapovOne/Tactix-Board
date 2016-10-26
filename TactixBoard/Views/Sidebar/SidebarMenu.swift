@@ -17,6 +17,10 @@ class SidebarMenu: UIView {
     weak var delegate: SidebarDelegate?
     static let defaultState: [SidebarButtonEnum] = [.addMenu, .deleteMenu, .draw, .clear, .save, .recordMenu, .playMenu]
 
+    var buttons: [SidebarButton] {
+        return subviews.map({ $0 as! SidebarButton })
+    }
+
     // MARK: - Initialization
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -90,6 +94,19 @@ class SidebarMenu: UIView {
     func rebuildMenu(_ sender: SidebarButton) {
         if let state = sender.type?.state {
             buildMenu(with: state)
+        }
+    }
+
+    func setBase(number: Int) {
+        buttons.filter({
+            if let type = $0.type {
+                if case .base = type {
+                    return true
+                }
+            }
+            return false
+        }).forEach {
+            $0.setAttributedTitle("\(number)".withFont(UIFont.systemFont(ofSize: 18)).withTextColor(Color.cream), for: .normal)
         }
     }
 }
