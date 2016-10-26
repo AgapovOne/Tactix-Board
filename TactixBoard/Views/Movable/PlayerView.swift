@@ -53,7 +53,7 @@ class PlayerView: MovableView {
     }
 
     // MARK: Public methods
-    func toMovableObject() -> MovableObject {
+    override func toMovableObject() -> MovableObject {
         let object = MovableObject()
         object.color = self.backgroundColor?.hexValue()
         object.id = self.id

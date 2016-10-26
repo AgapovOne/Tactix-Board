@@ -96,4 +96,17 @@ class MovableView: UIView {
 
         self.isUserInteractionEnabled = enabled
     }
+
+    // MARK: Public methods
+    func toMovableObject() -> MovableObject {
+        let object = MovableObject()
+        object.color = self.backgroundColor?.hexValue()
+        object.id = self.id
+        object.type = "default"
+
+        object.centerX = Double(self.center.x)
+        object.centerY = Double(self.center.y)
+
+        return object
+    }
 }

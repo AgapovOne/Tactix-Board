@@ -23,6 +23,10 @@
 		37701C061DAF4955007EB0E9 /* MovableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37701C051DAF4955007EB0E9 /* MovableObject.swift */; };
 		37701C081DAF4BCE007EB0E9 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37701C071DAF4BCE007EB0E9 /* State.swift */; };
 		378D9DAB1DAD0C50007AFE1D /* MovableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D9DAA1DAD0C50007AFE1D /* MovableManager.swift */; };
+		37B056961DC0C6A3002F639E /* LoadTacticAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B056941DC0C6A3002F639E /* LoadTacticAlertVC.swift */; };
+		37B056971DC0C6A3002F639E /* LoadTacticAlertVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37B056951DC0C6A3002F639E /* LoadTacticAlertVC.xib */; };
+		37B0569C1DC0E6F0002F639E /* TacticAlertCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0569A1DC0E6F0002F639E /* TacticAlertCell.swift */; };
+		37B0569D1DC0E6F0002F639E /* TacticAlertCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37B0569B1DC0E6F0002F639E /* TacticAlertCell.xib */; };
 		37BAE7DE1DAF92AA0075DBC5 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BAE7DD1DAF92AA0075DBC5 /* RealmManager.swift */; };
 		37BAE7E01DAFA3710075DBC5 /* DrawManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BAE7DF1DAFA3710075DBC5 /* DrawManager.swift */; };
 		56743339D0F8772A47A83FD6 /* Pods_TactixBoard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D8546945CD977668288E4F /* Pods_TactixBoard.framework */; };
@@ -73,6 +77,10 @@
 		37701C051DAF4955007EB0E9 /* MovableObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovableObject.swift; sourceTree = "<group>"; };
 		37701C071DAF4BCE007EB0E9 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		378D9DAA1DAD0C50007AFE1D /* MovableManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovableManager.swift; sourceTree = "<group>"; };
+		37B056941DC0C6A3002F639E /* LoadTacticAlertVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadTacticAlertVC.swift; sourceTree = "<group>"; };
+		37B056951DC0C6A3002F639E /* LoadTacticAlertVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadTacticAlertVC.xib; sourceTree = "<group>"; };
+		37B0569A1DC0E6F0002F639E /* TacticAlertCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TacticAlertCell.swift; sourceTree = "<group>"; };
+		37B0569B1DC0E6F0002F639E /* TacticAlertCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TacticAlertCell.xib; sourceTree = "<group>"; };
 		37BAE7DD1DAF92AA0075DBC5 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		37BAE7DF1DAFA3710075DBC5 /* DrawManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawManager.swift; sourceTree = "<group>"; };
 		73D98DE3B3B39F49C1578A43 /* Pods-TactixBoard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TactixBoard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TactixBoard/Pods-TactixBoard.debug.xcconfig"; sourceTree = "<group>"; };
@@ -239,6 +247,10 @@
 				372C1F901DBDEC200006315B /* TextFieldAlertVC.swift */,
 				372C1F951DBF27590006315B /* TextFieldAlertVC.xib */,
 				372C1F931DBE25EC0006315B /* Alert.swift */,
+				37B056941DC0C6A3002F639E /* LoadTacticAlertVC.swift */,
+				37B056951DC0C6A3002F639E /* LoadTacticAlertVC.xib */,
+				37B0569A1DC0E6F0002F639E /* TacticAlertCell.swift */,
+				37B0569B1DC0E6F0002F639E /* TacticAlertCell.xib */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
@@ -433,7 +445,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37B0569D1DC0E6F0002F639E /* TacticAlertCell.xib in Resources */,
 				372C1F961DBF27590006315B /* TextFieldAlertVC.xib in Resources */,
+				37B056971DC0C6A3002F639E /* LoadTacticAlertVC.xib in Resources */,
 				8DA4E1861B9AD9B800001794 /* Main.storyboard in Resources */,
 				8D884B201BCD609400279F13 /* LineType.xib in Resources */,
 				372C1F8F1DBDE6DB0006315B /* Alerts.storyboard in Resources */,
@@ -526,10 +540,12 @@
 				37625D7E1DB4FBE00048EE01 /* SidebarMenu.swift in Sources */,
 				8D5F875E1BCCEDFD00FFE288 /* MenuType.swift in Sources */,
 				372C1F941DBE25EC0006315B /* Alert.swift in Sources */,
+				37B056961DC0C6A3002F639E /* LoadTacticAlertVC.swift in Sources */,
 				372969F61DACE6D900831162 /* PlayerView.swift in Sources */,
 				37701C081DAF4BCE007EB0E9 /* State.swift in Sources */,
 				37701C041DAE7D53007EB0E9 /* Tactic.swift in Sources */,
 				372C1F8A1DBA34F50006315B /* MovableTactic.swift in Sources */,
+				37B0569C1DC0E6F0002F639E /* TacticAlertCell.swift in Sources */,
 				8D5F87601BCCF72B00FFE288 /* Fonts.swift in Sources */,
 				8D884B241BCD62F100279F13 /* LineTypeMenu.swift in Sources */,
 				37701C061DAF4955007EB0E9 /* MovableObject.swift in Sources */,

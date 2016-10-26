@@ -20,10 +20,4 @@ class TextFieldAlertVC: UIViewController {
 
         titleLabel.text = titleLabelText
     }
-
-    /*static func instantiate(title: String) -> TextFieldAlertView {
-        let textFieldAlertVC = UIStoryboard(name: "Alerts", bundle: Bundle.main).instantiateViewController(withIdentifier: "TextFieldAlertVC") as! TextFieldAlertVC
-        textFieldAlertVC.titleLabelText = title
-        return textFieldAlertVC
-    }*/
 }

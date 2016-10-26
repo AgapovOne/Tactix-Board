@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadTacticAlertVC" customModule="TactixBoard" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="Y52-I8-16w" id="Z8M-Oa-J3f"/>
+                <outlet property="view" destination="d0s-VF-tRQ" id="dyV-K0-vrC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="d0s-VF-tRQ">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="386"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OGC-38-LIh">
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y52-I8-16w">
+                            <color key="backgroundColor" red="0.14901960780000001" green="0.2274509804" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="emM-WB-FkK"/>
+                            </constraints>
+                            <color key="separatorColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="0tT-dC-Anp"/>
+                                <outlet property="delegate" destination="-1" id="lTM-lz-JeV"/>
+                            </connections>
+                        </tableView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите комбинацию:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMT-ce-tYt">
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                            <color key="textColor" red="0.45098039220000002" green="0.72549019609999998" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.098039215690000001" green="0.16078431369999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Y52-I8-16w" secondAttribute="bottom" constant="24" id="6bW-tb-LmM"/>
+                        <constraint firstItem="uMT-ce-tYt" firstAttribute="leading" secondItem="OGC-38-LIh" secondAttribute="leading" constant="16" id="C03-HV-n4T"/>
+                        <constraint firstAttribute="trailing" secondItem="uMT-ce-tYt" secondAttribute="trailing" constant="16" id="POZ-hH-QTz"/>
+                        <constraint firstItem="Y52-I8-16w" firstAttribute="leading" secondItem="OGC-38-LIh" secondAttribute="leading" constant="16" id="bbZ-Fi-os5"/>
+                        <constraint firstAttribute="trailing" secondItem="Y52-I8-16w" secondAttribute="trailing" constant="16" id="pZm-2P-0Lh"/>
+                        <constraint firstItem="Y52-I8-16w" firstAttribute="top" secondItem="uMT-ce-tYt" secondAttribute="bottom" constant="16" id="r5z-fp-jLD"/>
+                        <constraint firstItem="uMT-ce-tYt" firstAttribute="top" secondItem="OGC-38-LIh" secondAttribute="top" constant="24" id="s15-V4-mwp"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="OGC-38-LIh" secondAttribute="bottom" id="0Pg-ld-3yf"/>
+                <constraint firstItem="OGC-38-LIh" firstAttribute="top" secondItem="d0s-VF-tRQ" secondAttribute="top" id="HRy-oj-dSc"/>
+                <constraint firstItem="OGC-38-LIh" firstAttribute="leading" secondItem="d0s-VF-tRQ" secondAttribute="leading" id="mgv-pL-nGl"/>
+                <constraint firstAttribute="trailing" secondItem="OGC-38-LIh" secondAttribute="trailing" id="zxS-7x-AnV"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="64" y="-44"/>
+        </view>
+    </objects>
+</document>

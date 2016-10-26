@@ -23,4 +23,18 @@ struct MovableState {
 struct MovableTactic {
     var states: [MovableState]
     var movableViews: [MovableView]
+
+    func toTactic(name: String) -> Tactic {
+        let states = self.states.map { $0.toState() }
+        let movableObjects: [MovableObject] = self.movableViews.map {
+            if let view = $0 as? PlayerView {
+                return view.toMovableObject()
+            }
+            if let view = $0 as? BallView {
+                return view.toMovableObject()
+            }
+            return $0.toMovableObject()
+        }
+        return Tactic(name: name, states: states, movableObjects: movableObjects)
+    }
 }

@@ -56,4 +56,18 @@ class Alert {
         popup.addButtons([buttonOne, buttonTwo])
         return popup
     }
+
+    static func PopupWithTactics<T: LoadTacticAlertDelegate>(title: String, tactics: [Tactic], delegate: T) -> PopupDialog {
+        let loadTacticAlert = LoadTacticAlertVC(nibName: String(describing: LoadTacticAlertVC.self), bundle: nil)
+        loadTacticAlert.tactics = tactics
+        loadTacticAlert.delegate = delegate
+
+        let popup = PopupDialog(viewController: loadTacticAlert, buttonAlignment: .horizontal, transitionStyle: .bounceUp, gestureDismissal: true)
+
+        let buttonOne = CancelButton(title: "Отменить") {
+            print("Cancelled button clicked")
+        }
+        popup.addButton(buttonOne)
+        return popup
+    }
 }

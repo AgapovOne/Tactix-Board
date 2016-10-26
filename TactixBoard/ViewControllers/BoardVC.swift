@@ -109,7 +109,7 @@ class BoardVC: UIViewController {
     fileprivate func removePlayerWithColor(_ color:UIColor) {
         let movableViews = self.view.subviews.filter({ $0 is MovableView && $0.backgroundColor == color }) as! [MovableView]
         if movableViews.isEmpty == false {
-            movableViews[0].removeFromSuperview()
+            movableViews.last?.removeFromSuperview()
         }
     }
 
@@ -208,18 +208,45 @@ class BoardVC: UIViewController {
             return
         }
         movePlayers(to: 0)
+        currentFrame = 0
         sidebarMenu.setBase(number: currentFrame)
 
-        /*let realm = try! RealmManager.shared.defaultRealm
+        let popup = Alert.PopupWithTextField(title: "Введите название:") { name in
+            do {
+                let realm = RealmManager.shared.defaultRealm
 
-        try! realm.write {
-            realm.add(Tactic())
-        }*/
+                try realm.write {
+                    realm.add(self.tactic!.toTactic(name: name))
+                    print("Saved")
+
+                    self.tactic?.states = []
+                }
+            } catch(let err) {
+                self.present(PopupDialog(title: "Ошибка", message: err.localizedDescription), animated: true, completion: nil)
+            }
+        }
+
+        present(popup, animated: true) {
+            //textFieldAlert.textField.becomeFirstResponder()
+        }
     }
 
     // MARK: Play
     fileprivate func togglePlaying(enabled: Bool) {
         isPlaying = enabled
+
+        if isPlaying {
+            let realm = RealmManager.shared.defaultRealm
+
+            let tactics = realm.objects(Tactic.self)
+            print(tactics.count)
+
+            let popup = Alert.PopupWithTactics(title: "", tactics: Array(tactics), delegate: self)
+
+            present(popup, animated: true) {
+                
+            }
+        }
     }
 
     fileprivate func playTactic() {
@@ -346,6 +373,13 @@ extension BoardVC: SidebarDelegate {
         default:
             print("Click unknown button")
         }
+    }
+}
+
+extension BoardVC: LoadTacticAlertDelegate {
+    func didClick(tactic: Tactic) {
+//        self.tactic = tactic
+        print("HEllo ITS A CLICK!")
     }
 }
 
