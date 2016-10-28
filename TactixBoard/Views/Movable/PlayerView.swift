@@ -41,7 +41,7 @@ class PlayerView: MovableView {
     }
 
     convenience init() {
-        self.init(id: 0, color: Color.black, num: nil, center: CGPoint(x: 400, y: 400))
+        self.init(id: 0, color: Color.Player.black, num: nil, center: CGPoint(x: 400, y: 400))
     }
 
     override init(frame: CGRect) {

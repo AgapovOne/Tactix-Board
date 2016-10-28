@@ -143,7 +143,7 @@ enum SidebarButtonEnum {
         case .recordMenu:
             return [.back, .base(0), .previous, .next, .stop]
         case .playMenu:
-            return [.back, .play, .previous, .next, .base(0)]
+            return [.back, .more, .play, .previous, .next, .base(0)]
         default:
             return SidebarMenu.defaultState
         }

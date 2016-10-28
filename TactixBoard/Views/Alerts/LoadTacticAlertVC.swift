@@ -9,7 +9,7 @@
 import UIKit
 
 protocol LoadTacticAlertDelegate: class {
-    func didClick(tactic: Tactic)
+    func didClick(with tactic: Tactic)
 }
 
 class LoadTacticAlertVC: UIViewController {
@@ -20,8 +20,9 @@ class LoadTacticAlertVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         tableView.register(UINib(nibName: "TacticAlertCell", bundle: nil), forCellReuseIdentifier: String(describing: TacticAlertCell.self))
+        tableView.tableFooterView = UIView()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -29,7 +30,7 @@ class LoadTacticAlertVC: UIViewController {
     }
 }
 
-extension LoadTacticAlertVC: UITableViewDelegate, UITableViewDataSource {
+extension LoadTacticAlertVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tactics.count
     }
@@ -39,8 +40,11 @@ extension LoadTacticAlertVC: UITableViewDelegate, UITableViewDataSource {
         cell.titleLabel?.text = tactics[indexPath.row].name
         return cell
     }
+}
 
+extension LoadTacticAlertVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.delegate?.didClick(tactic: tactics[indexPath.row])
+        tableView.deselectRow(at: indexPath, animated: true)
+        self.delegate?.didClick(with: tactics[indexPath.row])
     }
 }

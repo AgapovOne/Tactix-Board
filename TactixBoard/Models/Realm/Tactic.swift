@@ -6,8 +6,19 @@
 //  Copyright © 2016 agapov.one.ru. All rights reserved.
 //
 
+import Foundation
 import CoreGraphics
 import RealmSwift
+
+extension Array {
+    public func toDictionary<Key: Hashable>(with selectKey: (Element) -> Key) -> [Key:Element] {
+        var dict = [Key:Element]()
+        for element in self {
+            dict[selectKey(element)] = element
+        }
+        return dict
+    }
+}
 
 class Tactic: Object {
     dynamic var name = ""
@@ -40,5 +51,30 @@ class Tactic: Object {
             $0.toState()
         }
         self.states.append(objectsIn: states)
+    }
+
+    func toMovableTactic() -> MovableTactic {
+        let movableViews: [MovableView] = self.movableObjects.map {
+            switch $0.type {
+            case "player":
+                return PlayerView(id: $0.id, color: Color.color(hex: $0.color ?? Color.Player.black.hexValue()), num: $0.number, center: CGPoint(x: $0.centerX, y: $0.centerY))
+            case "ball":
+                return BallView(centerX: CGFloat($0.centerX), centerY: CGFloat($0.centerY))
+            default:
+                return PlayerView(id: $0.id, color: Color.Player.black, num: "?", center: CGPoint(x: $0.centerX, y: $0.centerY))
+            }
+        }
+
+        let states: [MovableState] = self.states.map {
+            var positions: [MovableView: CGPoint] = [:]
+            for position in Array($0.positions) {
+                let key = movableViews.filter { $0.id == position.id }[0]
+                positions[key] = CGPoint(x: position.centerX, y: position.centerY)
+            }
+            return MovableState(frame: $0.frame, positions: positions)
+        }
+
+        let tactic = MovableTactic(states: states, movableViews: movableViews)
+        return tactic
     }
 }

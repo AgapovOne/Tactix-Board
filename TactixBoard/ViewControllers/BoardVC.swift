@@ -23,7 +23,7 @@ class BoardVC: UIViewController {
     fileprivate var isPlaying = false
     var currentFrame = 0
 
-    private enum Direction {
+    fileprivate enum Direction {
         case previous, next
     }
 
@@ -36,9 +36,7 @@ class BoardVC: UIViewController {
 
         menuBar.layer.zPosition = 20
 
-        let bounds = UIScreen.main.bounds
-        let center = CGPoint(x: bounds.midX + 30, y: bounds.midY)
-        tactic = MovableManager.shared.defaultTactic(for: center)
+        resetBoard()
 
         sidebarMenu.delegate = self
     }
@@ -49,7 +47,7 @@ class BoardVC: UIViewController {
     }
 
     // MARK: - Players part
-    private func setupBoard() {
+    fileprivate func setupBoard() {
         tactic?.movableViews.forEach {
             boardView.superview?.addSubview($0)
         }
@@ -58,6 +56,22 @@ class BoardVC: UIViewController {
                                                    y: boardView.frame.minY + 30,
                                                    width: boardView.frame.width - 60,
                                                    height: boardView.frame.height - 60)
+    }
+
+    fileprivate func resetBoard() {
+        let bounds = UIScreen.main.bounds
+        let center = CGPoint(x: bounds.midX + 30, y: bounds.midY)
+        tactic = MovableManager.shared.defaultTactic(for: center)
+        cleanView()
+        setupBoard()
+    }
+
+    fileprivate func cleanView() {
+        boardView.superview?.subviews.forEach {
+            if let view = $0 as? MovableView {
+                view.removeFromSuperview()
+            }
+        }
     }
 
     fileprivate func animatePlayers(index: Int = 0) {
@@ -78,7 +92,7 @@ class BoardVC: UIViewController {
     }
 
     fileprivate func movePlayers(to frame: Int, completion: ((Bool) -> ())? = nil) {
-        UIView.animate(withDuration: 0.35, animations: {
+        UIView.animate(withDuration: 0.75, animations: {
             self.tactic?.states[frame].positions.forEach({ (el, position) in
                 el.center = position
             })
@@ -211,18 +225,21 @@ class BoardVC: UIViewController {
         currentFrame = 0
         sidebarMenu.setBase(number: currentFrame)
 
-        let popup = Alert.PopupWithTextField(title: "Введите название:") { name in
+        let popup = Alert.PopupWithTextField(title: "Введите название:") { [weak self] name in
             do {
-                let realm = RealmManager.shared.defaultRealm
+                if let tactic = self?.tactic?.toTactic(name: name) {
+                    let realm = RealmManager.shared.defaultRealm
 
-                try realm.write {
-                    realm.add(self.tactic!.toTactic(name: name))
-                    print("Saved")
+                    try realm.write {
+                        realm.add(tactic)
+                        print("Saved")
 
-                    self.tactic?.states = []
+//                        self.tactic?.states = []
+                        self?.resetBoard()
+                    }
                 }
             } catch(let err) {
-                self.present(PopupDialog(title: "Ошибка", message: err.localizedDescription), animated: true, completion: nil)
+                self?.present(PopupDialog(title: "Ошибка", message: err.localizedDescription), animated: true, completion: nil)
             }
         }
 
@@ -234,17 +251,19 @@ class BoardVC: UIViewController {
     // MARK: Play
     fileprivate func togglePlaying(enabled: Bool) {
         isPlaying = enabled
+        showTactics()
+    }
 
+    fileprivate func showTactics() {
         if isPlaying {
             let realm = RealmManager.shared.defaultRealm
 
-            let tactics = realm.objects(Tactic.self)
-            print(tactics.count)
+            let tactics = Array(realm.objects(Tactic.self))
 
-            let popup = Alert.PopupWithTactics(title: "", tactics: Array(tactics), delegate: self)
-
+            let (table, popup) = Alert.PopupWithTactics(title: "", tactics: tactics)
+            table.delegate = self
             present(popup, animated: true) {
-                
+
             }
         }
     }
@@ -280,29 +299,29 @@ extension BoardVC: SidebarDelegate {
         switch type {
         // Add
         case .addRed:
-            addPlayerWithColor(Color.red)
+            addPlayerWithColor(Color.Player.red)
         case .addBlue:
-            addPlayerWithColor(Color.blue)
+            addPlayerWithColor(Color.Player.blue)
         case .addBlack:
-            addPlayerWithColor(Color.black)
+            addPlayerWithColor(Color.Player.black)
         case .addOrangeGK:
-            addPlayerWithColor(Color.orange, num: "G")
+            addPlayerWithColor(Color.Player.orange, num: "G")
         case .addGreenGK:
-            addPlayerWithColor(Color.green, num: "G")
+            addPlayerWithColor(Color.Player.green, num: "G")
 
         // Delete
         case .deleteRed:
-            removePlayerWithColor(Color.red)
+            removePlayerWithColor(Color.Player.red)
         case .deleteBlue:
-            removePlayerWithColor(Color.blue)
+            removePlayerWithColor(Color.Player.blue)
         case .deleteBlack:
-            removePlayerWithColor(Color.black)
+            removePlayerWithColor(Color.Player.black)
         case .deleteBlueTeam:
-            removeTeamWithColor(Color.blue)
+            removeTeamWithColor(Color.Player.blue)
         case .deleteOrangeGK:
-            removePlayerWithColor(Color.orange)
+            removePlayerWithColor(Color.Player.orange)
         case .deleteGreenGK:
-            removePlayerWithColor(Color.green)
+            removePlayerWithColor(Color.Player.green)
 
         // Draw
         case .draw:
@@ -322,6 +341,8 @@ extension BoardVC: SidebarDelegate {
         // Recording
         case .recordMenu:
             toggleRecording(enabled: true)
+        case .more:
+            showTactics()
         case .stop:
             saveTactic()
 
@@ -377,9 +398,13 @@ extension BoardVC: SidebarDelegate {
 }
 
 extension BoardVC: LoadTacticAlertDelegate {
-    func didClick(tactic: Tactic) {
-//        self.tactic = tactic
-        print("HEllo ITS A CLICK!")
+    func didClick(with tactic: Tactic) {
+        print("Hello it's a click!")
+        self.tactic = tactic.toMovableTactic()
+        dismiss(animated: true) {
+            self.cleanView()
+            self.setupBoard()
+        }
     }
 }
 

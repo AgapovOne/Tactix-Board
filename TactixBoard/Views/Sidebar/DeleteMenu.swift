@@ -38,27 +38,27 @@ import UIKit
   }
   
   @IBAction func deleteRedPlayer(_ sender: UIButton) {
-    removePlayerWithColor(Color.red)
+    removePlayerWithColor(Color.Player.red)
   }
   
   @IBAction func deleteBluePlayer(_ sender: UIButton) {
-    removePlayerWithColor(Color.blue)
+    removePlayerWithColor(Color.Player.blue)
   }
   
   @IBAction func deleteBlackPlayer(_ sender: UIButton) {
-    removePlayerWithColor(Color.black)
+    removePlayerWithColor(Color.Player.black)
   }
   
   @IBAction func deleteTeam(_ sender: UIButton) {
-    removeTeamWithColor(Color.blue)
+    removeTeamWithColor(Color.Player.blue)
   }
   
   @IBAction func deleteOrangeGK(_ sender: UIButton) {
-    removePlayerWithColor(Color.orange)
+    removePlayerWithColor(Color.Player.orange)
   }
   
   @IBAction func deleteGreenGK(_ sender: UIButton) {
-    removePlayerWithColor(Color.green)
+    removePlayerWithColor(Color.Player.green)
   }
 }
 

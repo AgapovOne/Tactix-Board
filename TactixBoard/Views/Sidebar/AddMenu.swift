@@ -25,22 +25,22 @@ import UIKit
   }
   
   @IBAction func addRedPlayer(_ sender: UIButton) {
-    addPlayerWithColor(Color.red, num: "3")
+    addPlayerWithColor(Color.Player.red, num: "3")
   }
   
   @IBAction func addBluePlayer(_ sender: UIButton) {
-    addPlayerWithColor(Color.blue, num: "2")
+    addPlayerWithColor(Color.Player.blue, num: "2")
   }
   
   @IBAction func addBlackPlayer(_ sender: UIButton) {
-    addPlayerWithColor(Color.black, num: "2")
+    addPlayerWithColor(Color.Player.black, num: "2")
   }
   
   @IBAction func addOrangeGK(_ sender: UIButton) {
-    addPlayerWithColor(Color.orange, num: "В")
+    addPlayerWithColor(Color.Player.orange, num: "В")
   }
   
   @IBAction func addGreenGK(_ sender: UIButton) {
-    addPlayerWithColor(Color.green, num: "В")
+    addPlayerWithColor(Color.Player.green, num: "В")
   }
 }

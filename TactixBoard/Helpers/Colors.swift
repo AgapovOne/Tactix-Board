@@ -12,12 +12,22 @@ import ChameleonFramework
 struct Color {
     static let mainBgColor = colorWith(r: 38, g: 58, b: 71)
 
-    static let black = colorWith(r: 75, g: 80, b: 85)
+    struct Player {
+        static let black = colorWith(r: 75, g: 80, b: 85)
+
+        static let red = colorWith(r: 205, g: 54, b: 54)
+
+        static let blue = colorWith(r: 0, g: 173, b: 239)
+
+        static let orange = colorWith(r: 238, g: 178, b: 50)
+
+        static let green = colorWith(r: 80, g: 168, b: 6)
+    }
 
     struct Button {
-        static let buttonColor = color(hex: "#0C6B92")
+        static let buttonColor = Color.color(hex: "#0C6B92")
         
-        static let buttonActiveColor = color(hex: "#00ADEF")
+        static let buttonActiveColor = Color.color(hex: "#00ADEF")
     }
     
     struct Sidebar {
@@ -25,38 +35,30 @@ struct Color {
         
         static let buttonColor = backgroundColor
         
-        static let buttonActiveColor = color(hex: "#73B938")
+        static let buttonActiveColor = Color.color(hex: "#73B938")
     }
     
     struct Alert {
-        static let backgroundColor = color(hex: "#192934")
+        static let backgroundColor = Color.color(hex: "#192934")
 
-        static let textFieldColor = color(hex: "#263A47")
+        static let textFieldColor = Color.color(hex: "#263A47")
 
         static let separatorColor = textFieldColor
 
-        static let titleColor = color(hex: "#73B938")
+        static let titleColor = Color.color(hex: "#73B938")
 
-        static let textColor = color(hex: "#F7F3EB")
+        static let textColor = Color.color(hex: "#F7F3EB")
     }
 
     static let lightBlue = colorWith(r: 51, g: 189, b: 242)
 
-    static let red = colorWith(r: 205, g: 54, b: 54)
-
-    static let blue = colorWith(r: 0, g: 173, b: 239)
-
-    static let orange = colorWith(r: 238, g: 178, b: 50)
-
-    static let green = colorWith(r: 80, g: 168, b: 6)
-    
     static let white = colorWith(r: 247, g: 243, b: 235)
 
-    static let cream = color(hex: "#F7F3EB")
-}
+    static let cream = Color.color(hex: "#F7F3EB")
 
-fileprivate func color(hex: String) -> UIColor {
-    return UIColor(hexString: hex)
+    static func color(hex: String) -> UIColor {
+        return UIColor(hexString: hex)
+    }
 }
 
 private func colorWith(r red: CGFloat, g green: CGFloat, b blue: CGFloat) -> UIColor {

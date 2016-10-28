@@ -9,9 +9,9 @@
 import UIKit
 
 class BallView: MovableView {
-    convenience init(x: CGFloat, y: CGFloat) {
-        self.init(frame: CGRect(x: x - 18,y: y - 18,width: 36.0,height: 36.0))
-        self.backgroundColor = UIColor(patternImage: UIImage(named: "ball.png")!)
+    convenience init(centerX: CGFloat, centerY: CGFloat) {
+        self.init(frame: CGRect(x: centerX - 18, y: centerY - 18, width: 36.0, height: 36.0))
+        self.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "ball"))
         self.layer.zPosition = 11
     }
 

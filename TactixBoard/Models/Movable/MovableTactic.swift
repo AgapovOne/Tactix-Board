@@ -15,7 +15,10 @@ struct MovableState {
     func toState() -> State {
         let state = State()
         state.frame = self.frame
-//        state.
+        let positions = self.positions.map {
+            Position(id: $0.key.id, center: $0.value)
+        }
+        state.positions.append(objectsIn: positions)
         return state
     }
 }

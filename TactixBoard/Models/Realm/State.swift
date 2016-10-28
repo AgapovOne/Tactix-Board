@@ -17,11 +17,6 @@ class State: Object {
         self.frame = frame
         self.positions.append(objectsIn: positions)
     }
-
-//    func toState() -> MovableTactic.State {
-//        let positions =
-//        return MovableTactic.State(frame: self.frame, positions: <#T##[MovableView : CGPoint]#>)
-//    }
 }
 
 class Position: Object {

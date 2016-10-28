@@ -16,6 +16,8 @@ enum LineType {
 
 class DrawManager {
     static let shared = DrawManager()
+    private init() {
+    }
 
 
     var lineType: LineType = .thin
