@@ -13,13 +13,13 @@ class LineView: UIView {
     var drawColor = Color.white
     var lineWidth: CGFloat = 3
 
-    fileprivate var firstPoint = CGPoint(x: 0,y: 0)
-    fileprivate var endPoint = CGPoint(x: 0,y: 0)
+    fileprivate var firstPoint = CGPoint(x: 0, y: 0)
+    fileprivate var endPoint = CGPoint(x: 0, y: 0)
 
     fileprivate struct ContextLine {
         var lineType = LineType.thin
-        var firstPoint:CGPoint = CGPoint(x: 0,y: 0)
-        var endPoint = CGPoint(x: 0,y: 0)
+        var firstPoint: CGPoint = CGPoint(x: 0, y: 0)
+        var endPoint = CGPoint(x: 0, y: 0)
     }
 
     fileprivate var pointsArray: [ContextLine] = []
@@ -59,12 +59,12 @@ class LineView: UIView {
 
     // MARK: - Render
 
-    func distanceBetweenPoints(_ f:CGPoint,e:CGPoint) -> CGFloat {
+    func distanceBetweenPoints(_ f: CGPoint, e: CGPoint) -> CGFloat {
         return hypot(f.x - e.x, f.y - e.y)
     }
 
     func drawLine(_ type: LineType, first: CGPoint, end: CGPoint) {
-        if !(first == CGPoint(x: 0,y: 0) && end == CGPoint(x: 0, y: 0)) {
+        if !(first == CGPoint(x: 0, y: 0) && end == CGPoint(x: 0, y: 0)) {
             let ctx = UIGraphicsGetCurrentContext()
             ctx?.setLineDash(phase: 0, lengths: [])
             switch type {

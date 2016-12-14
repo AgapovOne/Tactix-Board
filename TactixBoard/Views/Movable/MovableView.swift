@@ -18,7 +18,7 @@ class MovableView: UIView {
         }
     }
 
-    convenience init(id: Int, frame:CGRect) {
+    convenience init(id: Int, frame: CGRect) {
         self.init(frame: frame)
         self.id = id
     }
@@ -43,7 +43,7 @@ class MovableView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func detectPan(_ recognizer:UIPanGestureRecognizer) {
+    func detectPan(_ recognizer: UIPanGestureRecognizer) {
         let translation  = recognizer.translation(in: self.superview!)
         var x = lastLocation.x + translation.x
         var y = lastLocation.y + translation.y
@@ -64,14 +64,14 @@ class MovableView: UIView {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if (self.gestureRecognizers?.isEmpty == false) {
+        if self.gestureRecognizers?.isEmpty == false {
             self.superview?.bringSubview(toFront: self)
             lastLocation = self.center
         }
     }
 
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-        if (self.gestureRecognizers?.isEmpty == false) {
+        if self.gestureRecognizers?.isEmpty == false {
             let frame = self.bounds.insetBy(dx: -15, dy: -15) // enlarge touch area for 15 px around
             return frame.contains(point) ? self : nil
         } else {
@@ -80,7 +80,7 @@ class MovableView: UIView {
         }
     }
 
-    func setBackgroundImage(_ imgName:String) {
+    func setBackgroundImage(_ imgName: String) {
         UIGraphicsBeginImageContext(self.frame.size)
         UIImage(named: imgName)?.draw(in: self.bounds)
         let image = UIGraphicsGetImageFromCurrentImageContext()

@@ -12,7 +12,7 @@ class MovableObject: Object {
     dynamic var id: Int = 1
     dynamic var type = ""
     
-    dynamic var number:String? = ""
+    dynamic var number: String? = ""
     dynamic var color: String? = ""
     dynamic var image: String? = ""
 

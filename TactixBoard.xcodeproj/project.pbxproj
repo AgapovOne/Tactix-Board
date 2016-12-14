@@ -35,6 +35,7 @@
 		8D5F875C1BCCE35B00FFE288 /* DeleteMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F875B1BCCE35B00FFE288 /* DeleteMenu.swift */; };
 		8D5F875E1BCCEDFD00FFE288 /* MenuType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F875D1BCCEDFD00FFE288 /* MenuType.swift */; };
 		8D5F87601BCCF72B00FFE288 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F875F1BCCF72B00FFE288 /* Fonts.swift */; };
+		8D7A4F711E01D4F400048C3D /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A4F701E01D4F400048C3D /* Array+Extensions.swift */; };
 		8D884B241BCD62F100279F13 /* LineTypeMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D884B231BCD62F100279F13 /* LineTypeMenu.swift */; };
 		8D8BB1801DB3F5AF00514F87 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8BB17F1DB3F5AF00514F87 /* RoundView.swift */; };
 		8DA4E1811B9AD9B800001794 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1801B9AD9B800001794 /* AppDelegate.swift */; };
@@ -43,7 +44,6 @@
 		8DA4E1971B9AD9B800001794 /* TactixBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1961B9AD9B800001794 /* TactixBoardTests.swift */; };
 		8DA4E1A81B9E11AB00001794 /* BoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1A71B9E11AB00001794 /* BoardVC.swift */; };
 		8DA4E1AA1B9E13D900001794 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1A91B9E13D900001794 /* Buttons.swift */; };
-		8DA4E1AC1B9E31F300001794 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1AB1B9E31F300001794 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +86,7 @@
 		8D5F875B1BCCE35B00FFE288 /* DeleteMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteMenu.swift; sourceTree = "<group>"; };
 		8D5F875D1BCCEDFD00FFE288 /* MenuType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuType.swift; sourceTree = "<group>"; };
 		8D5F875F1BCCF72B00FFE288 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		8D7A4F701E01D4F400048C3D /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		8D884B231BCD62F100279F13 /* LineTypeMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineTypeMenu.swift; sourceTree = "<group>"; };
 		8D8BB17F1DB3F5AF00514F87 /* RoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 		8DA4E17B1B9AD9B800001794 /* TactixBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TactixBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,7 +99,6 @@
 		8DA4E1961B9AD9B800001794 /* TactixBoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TactixBoardTests.swift; sourceTree = "<group>"; };
 		8DA4E1A71B9E11AB00001794 /* BoardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardVC.swift; sourceTree = "<group>"; };
 		8DA4E1A91B9E13D900001794 /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
-		8DA4E1AB1B9E31F300001794 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B4D8546945CD977668288E4F /* Pods_TactixBoard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TactixBoard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCA322F262674E4C828BCBEF /* Pods_TactixBoardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TactixBoardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E67D5E52CE95CB618B316C3A /* Pods-TactixBoard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TactixBoard.release.xcconfig"; path = "Pods/Target Support Files/Pods-TactixBoard/Pods-TactixBoard.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,8 +145,8 @@
 		372969F71DACE84300831162 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				8D7A4F6F1E01D4E900048C3D /* Extensions */,
 				372969F81DACE84E00831162 /* Colors.swift */,
-				8DA4E1AB1B9E31F300001794 /* Extensions.swift */,
 				8D5F875F1BCCF72B00FFE288 /* Fonts.swift */,
 				8D8BB17F1DB3F5AF00514F87 /* RoundView.swift */,
 			);
@@ -223,16 +223,25 @@
 			path = Sidebar;
 			sourceTree = "<group>";
 		};
+		8D7A4F6F1E01D4E900048C3D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8D7A4F701E01D4F400048C3D /* Array+Extensions.swift */,
+			);
+			name = Extensions;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		8D8BB1761DB3F3E500514F87 /* Alerts */ = {
 			isa = PBXGroup;
 			children = (
 				372C1F931DBE25EC0006315B /* Alert.swift */,
-				372C1F901DBDEC200006315B /* TextFieldAlertVC.swift */,
-				372C1F951DBF27590006315B /* TextFieldAlertVC.xib */,
 				37B056941DC0C6A3002F639E /* LoadTacticAlertVC.swift */,
 				37B056951DC0C6A3002F639E /* LoadTacticAlertVC.xib */,
 				37B0569A1DC0E6F0002F639E /* TacticAlertCell.swift */,
 				37B0569B1DC0E6F0002F639E /* TacticAlertCell.xib */,
+				372C1F901DBDEC200006315B /* TextFieldAlertVC.swift */,
+				372C1F951DBF27590006315B /* TextFieldAlertVC.xib */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
@@ -240,11 +249,11 @@
 		8DA4E1721B9AD9B800001794 = {
 			isa = PBXGroup;
 			children = (
-				8DA4E17D1B9AD9B800001794 /* TactixBoard */,
-				8DA4E1931B9AD9B800001794 /* TactixBoardTests */,
 				88460CEA1FD3BD8FDD2CFEF4 /* Frameworks */,
 				9B8C3CA1BC5F48EB268585B4 /* Pods */,
 				8DA4E17C1B9AD9B800001794 /* Products */,
+				8DA4E17D1B9AD9B800001794 /* TactixBoard */,
+				8DA4E1931B9AD9B800001794 /* TactixBoardTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -525,7 +534,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DA4E1AC1B9E31F300001794 /* Extensions.swift in Sources */,
+				8D7A4F711E01D4F400048C3D /* Array+Extensions.swift in Sources */,
 				8D8BB1801DB3F5AF00514F87 /* RoundView.swift in Sources */,
 				8D17100E1BB9B9350007F919 /* LineView.swift in Sources */,
 				372C1F911DBDEC200006315B /* TextFieldAlertVC.swift in Sources */,

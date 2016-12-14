@@ -23,7 +23,8 @@ force_try: warning
 function_body_length:
   - 300 # warning
   - 500 # error
-function_parameter_count:  - 20 # warning
+function_parameter_count:  
+  - 20 # warning
   - 30 # error
 cyclomatic_complexity:
   - 30 # warning

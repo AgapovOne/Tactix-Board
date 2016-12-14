@@ -14,7 +14,7 @@ import UIKit
     return super.loadView(withName: "DeleteMenu")
   }
 
-  func removePlayerWithColor(_ color:UIColor) {
+  func removePlayerWithColor(_ color: UIColor) {
     guard let sup = self.superview else {return}
     for v in sup.subviews {
       if v.isKind(of: PlayerView.self) {
@@ -26,7 +26,7 @@ import UIKit
     }
   }
   
-  func removeTeamWithColor(_ color:UIColor) {
+  func removeTeamWithColor(_ color: UIColor) {
     guard let sup = self.superview else {return}
     for v in sup.subviews {
       if v.isKind(of: PlayerView.self) {
@@ -61,4 +61,3 @@ import UIKit
     removePlayerWithColor(Color.Player.green)
   }
 }
-

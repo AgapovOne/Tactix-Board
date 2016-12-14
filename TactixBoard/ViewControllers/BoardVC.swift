@@ -120,14 +120,14 @@ class BoardVC: UIViewController {
     }
 
     // MARK: Delete players
-    fileprivate func removePlayerWithColor(_ color:UIColor) {
+    fileprivate func removePlayerWithColor(_ color: UIColor) {
         let movableViews = self.view.subviews.filter({ $0 is MovableView && $0.backgroundColor == color }) as! [MovableView]
         if movableViews.isEmpty == false {
             movableViews.last?.removeFromSuperview()
         }
     }
 
-    fileprivate func removeTeamWithColor(_ color:UIColor) {
+    fileprivate func removeTeamWithColor(_ color: UIColor) {
         let movableViews = self.view.subviews.filter({ $0 is MovableView && $0.backgroundColor == color }) as! [MovableView]
         if movableViews.isEmpty == false {
             movableViews.forEach { $0.removeFromSuperview() }

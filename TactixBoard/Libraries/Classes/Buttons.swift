@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-class BorderButton:UIButton {
+class BorderButton: UIButton {
   
-  let borderWidth:CGFloat = 2
+  let borderWidth: CGFloat = 2
   let borderColor = UIColor.white.withAlphaComponent(0.4).cgColor // CGColor!
-  let cornerRadius:CGFloat = 44
+  let cornerRadius: CGFloat = 44
   
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)

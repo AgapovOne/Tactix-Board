@@ -22,7 +22,7 @@ class PlayerView: MovableView {
 
         self.backgroundColor = color
 
-        let number = UILabel(frame:CGRect(x: 0,y: 0,width: PlayerView.size.width, height: PlayerView.size.height))
+        let number = UILabel(frame:CGRect(x: 0, y: 0, width: PlayerView.size.width, height: PlayerView.size.height))
         number.text = num
         number.font = numberFont
         number.textAlignment = .center
