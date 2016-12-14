@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A2D4A65230FF53936544E8DC686F631F"
+               BlueprintIdentifier = "76EE56681C19221104154D0F756B454A"
                BuildableName = "Pods_TactixBoard.framework"
                BlueprintName = "Pods-TactixBoard"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A2D4A65230FF53936544E8DC686F631F"
+            BlueprintIdentifier = "76EE56681C19221104154D0F756B454A"
             BuildableName = "Pods_TactixBoard.framework"
             BlueprintName = "Pods-TactixBoard"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -60,15 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A2D4A65230FF53936544E8DC686F631F"
-            BuildableName = "Pods_TactixBoard.framework"
-            BlueprintName = "Pods-TactixBoard"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

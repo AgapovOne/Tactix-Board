@@ -6,52 +6,42 @@
 	<dict>
 		<key>ChameleonFramework.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-TactixBoard.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
-		<key>Pods-TactixBoardTests.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>PopupDialog.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>7</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Realm.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>RealmSwift.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SnapKit.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>6</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SwiftyAttributes.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>8</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1C9D85349A4B3BD39012C27D3A28B9E0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>1DBA966246FA07557D359E9073B261D5</key>
 		<dict>
 			<key>primary</key>
@@ -67,17 +57,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6D6C72621D3615875742BCFFC554F5B6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>76EE56681C19221104154D0F756B454A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>79FB73223A0A775A02A6BE9541268533</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -88,16 +68,6 @@
 			<true/>
 		</dict>
 		<key>86AEBC8260E71DE34071F275BFA32A78</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8FBAA1C5581BF5840C3A016CC6ED539B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A2D4A65230FF53936544E8DC686F631F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
