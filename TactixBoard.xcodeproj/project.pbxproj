@@ -345,9 +345,10 @@
 				8DA4E1771B9AD9B800001794 /* Sources */,
 				8DA4E1781B9AD9B800001794 /* Frameworks */,
 				8DA4E1791B9AD9B800001794 /* Resources */,
-				8D19EDE91BA9D11000A82FD9 /* ShellScript */,
+				8D19EDE91BA9D11000A82FD9 /* Fabric */,
 				A366CA5A6A8504979FB3C176 /* [CP] Embed Pods Frameworks */,
 				F3848A2FDF53F6E89413EEDD /* [CP] Copy Pods Resources */,
+				8DE5413C1DF7242F003CB25B /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -459,18 +460,33 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		8D19EDE91BA9D11000A82FD9 /* ShellScript */ = {
+		8D19EDE91BA9D11000A82FD9 /* Fabric */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = Fabric;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" 12b12f3bd2a6722048fe4c7d229ab146f95b4ac6 ea338f8c2c41a0a250fa3103fabd10fa4323e73cb41a89599353c62e28691bf2";
+		};
+		8DE5413C1DF7242F003CB25B /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint \nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		A366CA5A6A8504979FB3C176 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
