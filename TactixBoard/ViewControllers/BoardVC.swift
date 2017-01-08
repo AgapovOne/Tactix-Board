@@ -15,7 +15,7 @@ class BoardVC: UIViewController {
     @IBOutlet fileprivate var boardView: UIImageView!
     @IBOutlet fileprivate var drawView: LineView!
 
-    @IBOutlet private var menuBar: UIView!
+    @IBOutlet fileprivate var menuBar: UIView!
     @IBOutlet fileprivate var sidebarMenu: SidebarMenu!
 
     fileprivate var isDrawing = false
