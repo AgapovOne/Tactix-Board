@@ -10,7 +10,7 @@ import UIKit
 import SwiftyAttributes
 
 protocol SidebarDelegate: class {
-    func didClick(button: SidebarButton, type: SidebarButtonEnum)
+    func didClick(_ button: SidebarButton, type: SidebarButtonEnum)
 }
 
 class SidebarMenu: UIView {
@@ -71,13 +71,13 @@ class SidebarMenu: UIView {
             switch buttonEnum.type {
             case .action:
                 button.action = {
-                    self.delegate?.didClick(button: button, type: buttonEnum)
+                    self.delegate?.didClick(button, type: buttonEnum)
                 }
             case .expand:
                 button.addTarget(self, action: #selector(rebuildMenu(_:)), for: .touchUpInside)
             case .expandableAction:
                 button.action = {
-                    self.delegate?.didClick(button: button, type: buttonEnum)
+                    self.delegate?.didClick(button, type: buttonEnum)
                 }
                 button.addTarget(self, action: #selector(rebuildMenu(_:)), for: .touchUpInside)
             }

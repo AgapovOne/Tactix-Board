@@ -9,7 +9,7 @@
 import UIKit
 
 class PlayerView: MovableView {
-    private static let size: CGSize = CGSize(width: 44, height: 44)
+    fileprivate static let size: CGSize = CGSize(width: 44, height: 44)
 
     var num: String?
 
@@ -35,7 +35,7 @@ class PlayerView: MovableView {
 
     convenience init(movableObject: MovableObject) {
         self.init(id: movableObject.id,
-                  color: UIColor(hexString: movableObject.color),
+                  color: UIColor(hexString: movableObject.color!)!,
                   num: movableObject.number,
                   center: CGPoint(x: movableObject.centerX, y: movableObject.centerY))
     }

@@ -25,9 +25,9 @@ struct Color {
     }
 
     struct Button {
-        static let buttonColor = Color.color(hex: "#0C6B92")
+        static let buttonColor = Color.color(hex: "#0C6B92")!
         
-        static let buttonActiveColor = Color.color(hex: "#00ADEF")
+        static let buttonActiveColor = Color.color(hex: "#00ADEF")!
     }
     
     struct Sidebar {
@@ -35,28 +35,28 @@ struct Color {
         
         static let buttonColor = backgroundColor
         
-        static let buttonActiveColor = Color.color(hex: "#73B938")
+        static let buttonActiveColor = Color.color(hex: "#73B938")!
     }
     
     struct Alert {
-        static let backgroundColor = Color.color(hex: "#192934")
+        static let backgroundColor = Color.color(hex: "#192934")!
 
-        static let textFieldColor = Color.color(hex: "#263A47")
+        static let textFieldColor = Color.color(hex: "#263A47")!
 
         static let separatorColor = textFieldColor
 
-        static let titleColor = Color.color(hex: "#73B938")
+        static let titleColor = Color.color(hex: "#73B938")!
 
-        static let textColor = Color.color(hex: "#F7F3EB")
+        static let textColor = Color.color(hex: "#F7F3EB")!
     }
 
     static let lightBlue = colorWith(r: 51, g: 189, b: 242)
 
     static let white = colorWith(r: 247, g: 243, b: 235)
 
-    static let cream = Color.color(hex: "#F7F3EB")
+    static let cream = Color.color(hex: "#F7F3EB")!
 
-    static func color(hex: String) -> UIColor {
+    static func color(hex: String) -> UIColor? {
         return UIColor(hexString: hex)
     }
 }

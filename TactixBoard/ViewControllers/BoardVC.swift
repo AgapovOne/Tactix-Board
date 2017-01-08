@@ -274,7 +274,7 @@ class BoardVC: UIViewController {
         currentFrame = (tactic?.states.count ?? 1) - 1
     }
 
-    fileprivate func playFrame(direction: Direction) {
+    fileprivate func playFrame(_ direction: Direction) {
         if let tactic = tactic {
             switch direction {
             case .previous:
@@ -295,7 +295,7 @@ class BoardVC: UIViewController {
 
 // MARK: - Sidebar delegate
 extension BoardVC: SidebarDelegate {
-    func didClick(button: SidebarButton, type: SidebarButtonEnum) {
+    func didClick(_ button: SidebarButton, type: SidebarButtonEnum) {
         switch type {
         // Add
         case .addRed:
@@ -369,14 +369,14 @@ extension BoardVC: SidebarDelegate {
                 changeRecordingFrame(direction: .previous)
             }
             if isPlaying {
-                playFrame(direction: .previous)
+                playFrame(.previous)
             }
         case .next:
             if isRecording {
                 changeRecordingFrame(direction: .next)
             }
             if isPlaying {
-                playFrame(direction: .next)
+                playFrame(.next)
             }
 
         case .back:

@@ -47,7 +47,7 @@ class Tactic: Object {
         let movableViews: [MovableView] = self.movableObjects.map {
             switch $0.type {
             case "player":
-                return PlayerView(id: $0.id, color: Color.color(hex: $0.color ?? Color.Player.black.hexValue()), num: $0.number, center: CGPoint(x: $0.centerX, y: $0.centerY))
+                return PlayerView(id: $0.id, color: Color.color(hex: $0.color ?? Color.Player.black.hexValue())!, num: $0.number, center: CGPoint(x: $0.centerX, y: $0.centerY))
             case "ball":
                 return BallView(centerX: CGFloat($0.centerX), centerY: CGFloat($0.centerY))
             default:
