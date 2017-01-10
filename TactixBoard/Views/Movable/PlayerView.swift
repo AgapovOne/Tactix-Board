@@ -13,8 +13,14 @@ class PlayerView: MovableView {
 
     var num: String?
 
-    convenience init(id: Int, color: UIColor, num: String?, center: CGPoint) {
-        self.init(frame: CGRect(x: center.x - PlayerView.size.width / 2, y: center.y - PlayerView.size.height / 2, width: PlayerView.size.width, height: PlayerView.size.height))
+    convenience init(id: Int,
+                     color: UIColor,
+                     num: String?,
+                     center: CGPoint) {
+        self.init(frame: CGRect(x: center.x - PlayerView.size.width / 2,
+                                y: center.y - PlayerView.size.height / 2,
+                                width: PlayerView.size.width,
+                                height: PlayerView.size.height))
         self.id = id
 
         self.layer.borderColor = Color.white.cgColor

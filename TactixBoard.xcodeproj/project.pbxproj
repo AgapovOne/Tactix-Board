@@ -31,6 +31,8 @@
 		56743339D0F8772A47A83FD6 /* Pods_TactixBoard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D8546945CD977668288E4F /* Pods_TactixBoard.framework */; };
 		8D17100E1BB9B9350007F919 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D17100D1BB9B9350007F919 /* LineView.swift */; };
 		8D1710101BB9BF740007F919 /* MovableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D17100F1BB9BF740007F919 /* MovableView.swift */; };
+		8D27C5311E255FC0004D1BB3 /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D27C5301E255FC0004D1BB3 /* PlayerTests.swift */; };
+		8D27C5331E255FD7004D1BB3 /* TactixBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D27C5321E255FD7004D1BB3 /* TactixBoardTests.swift */; };
 		8D5F87561BCC106200FFE288 /* AddMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F87551BCC106200FFE288 /* AddMenu.swift */; };
 		8D5F875C1BCCE35B00FFE288 /* DeleteMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F875B1BCCE35B00FFE288 /* DeleteMenu.swift */; };
 		8D5F875E1BCCEDFD00FFE288 /* MenuType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F875D1BCCEDFD00FFE288 /* MenuType.swift */; };
@@ -44,6 +46,16 @@
 		8DA4E1A81B9E11AB00001794 /* BoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1A71B9E11AB00001794 /* BoardVC.swift */; };
 		8DA4E1AA1B9E13D900001794 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1A91B9E13D900001794 /* Buttons.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8D27C52B1E255F7C004D1BB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8DA4E1731B9AD9B800001794 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DA4E17A1B9AD9B800001794;
+			remoteInfo = TactixBoard;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		372969EF1DACC41D00831162 /* DrawingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
@@ -71,6 +83,10 @@
 		8D17100D1BB9B9350007F919 /* LineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		8D17100F1BB9BF740007F919 /* MovableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovableView.swift; sourceTree = "<group>"; };
 		8D19EDEC1BA9DAD100A82FD9 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		8D27C5261E255F7C004D1BB3 /* TactixBoardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TactixBoardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D27C52A1E255F7C004D1BB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D27C5301E255FC0004D1BB3 /* PlayerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTests.swift; sourceTree = "<group>"; };
+		8D27C5321E255FD7004D1BB3 /* TactixBoardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TactixBoardTests.swift; sourceTree = "<group>"; };
 		8D5F87551BCC106200FFE288 /* AddMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMenu.swift; sourceTree = "<group>"; };
 		8D5F875B1BCCE35B00FFE288 /* DeleteMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteMenu.swift; sourceTree = "<group>"; };
 		8D5F875D1BCCEDFD00FFE288 /* MenuType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuType.swift; sourceTree = "<group>"; };
@@ -90,6 +106,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8D27C5231E255F7C004D1BB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DA4E1781B9AD9B800001794 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -187,6 +210,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		8D27C5271E255F7C004D1BB3 /* TactixBoardTests */ = {
+			isa = PBXGroup;
+			children = (
+				8D27C52A1E255F7C004D1BB3 /* Info.plist */,
+				8D27C5321E255FD7004D1BB3 /* TactixBoardTests.swift */,
+				8D27C5301E255FC0004D1BB3 /* PlayerTests.swift */,
+			);
+			path = TactixBoardTests;
+			sourceTree = "<group>";
+		};
 		8D5F875A1BCCE2A600FFE288 /* Sidebar */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				8DA4E17D1B9AD9B800001794 /* TactixBoard */,
+				8D27C5271E255F7C004D1BB3 /* TactixBoardTests */,
 				88460CEA1FD3BD8FDD2CFEF4 /* Frameworks */,
 				9B8C3CA1BC5F48EB268585B4 /* Pods */,
 				8DA4E17C1B9AD9B800001794 /* Products */,
@@ -236,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				8DA4E17B1B9AD9B800001794 /* TactixBoard.app */,
+				8D27C5261E255F7C004D1BB3 /* TactixBoardTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -303,6 +338,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8D27C5251E255F7C004D1BB3 /* TactixBoardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D27C52D1E255F7C004D1BB3 /* Build configuration list for PBXNativeTarget "TactixBoardTests" */;
+			buildPhases = (
+				8D27C5221E255F7C004D1BB3 /* Sources */,
+				8D27C5231E255F7C004D1BB3 /* Frameworks */,
+				8D27C5241E255F7C004D1BB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D27C52C1E255F7C004D1BB3 /* PBXTargetDependency */,
+			);
+			name = TactixBoardTests;
+			productName = TactixBoardTests;
+			productReference = 8D27C5261E255F7C004D1BB3 /* TactixBoardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		8DA4E17A1B9AD9B800001794 /* TactixBoard */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8DA4E19A1B9AD9B800001794 /* Build configuration list for PBXNativeTarget "TactixBoard" */;
@@ -332,10 +385,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftMigration = 0700;
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = agapov.one.ru;
 				TargetAttributes = {
+					8D27C5251E255F7C004D1BB3 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7J9NCU659T;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8DA4E17A1B9AD9B800001794;
+					};
 					8DA4E17A1B9AD9B800001794 = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = 7J9NCU659T;
@@ -358,11 +417,19 @@
 			projectRoot = "";
 			targets = (
 				8DA4E17A1B9AD9B800001794 /* TactixBoard */,
+				8D27C5251E255F7C004D1BB3 /* TactixBoardTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8D27C5241E255F7C004D1BB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DA4E1791B9AD9B800001794 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -455,6 +522,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8D27C5221E255F7C004D1BB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D27C5311E255FC0004D1BB3 /* PlayerTests.swift in Sources */,
+				8D27C5331E255FD7004D1BB3 /* TactixBoardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DA4E1771B9AD9B800001794 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -493,6 +569,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8D27C52C1E255F7C004D1BB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DA4E17A1B9AD9B800001794 /* TactixBoard */;
+			targetProxy = 8D27C52B1E255F7C004D1BB3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		8DA4E1841B9AD9B800001794 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -515,6 +599,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8D27C52E1E255F7C004D1BB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 7J9NCU659T;
+				INFOPLIST_FILE = TactixBoardTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = one.agapov.TactixBoardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TactixBoard.app/TactixBoard";
+			};
+			name = Debug;
+		};
+		8D27C52F1E255F7C004D1BB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7J9NCU659T;
+				INFOPLIST_FILE = TactixBoardTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = one.agapov.TactixBoardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TactixBoard.app/TactixBoard";
+			};
+			name = Release;
+		};
 		8DA4E1981B9AD9B800001794 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -648,6 +772,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8D27C52D1E255F7C004D1BB3 /* Build configuration list for PBXNativeTarget "TactixBoardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D27C52E1E255F7C004D1BB3 /* Debug */,
+				8D27C52F1E255F7C004D1BB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		8DA4E1761B9AD9B800001794 /* Build configuration list for PBXProject "TactixBoard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

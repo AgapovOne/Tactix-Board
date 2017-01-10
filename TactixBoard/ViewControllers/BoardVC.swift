@@ -61,7 +61,7 @@ class BoardVC: UIViewController {
     fileprivate func resetBoard() {
         let bounds = UIScreen.main.bounds
         let center = CGPoint(x: bounds.midX + 30, y: bounds.midY)
-        tactic = MovableManager.shared.defaultTactic(for: center)
+        tactic = MovableTactic.defaultTactic(for: center)
         cleanView()
         setupBoard()
     }

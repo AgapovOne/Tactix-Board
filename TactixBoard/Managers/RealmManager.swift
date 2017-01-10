@@ -11,6 +11,7 @@ import RealmSwift
 class RealmManager {
     static let shared = RealmManager()
     private init() {}
+    
     var defaultRealm: Realm {
         // swiftlint:disable:next force_try
         let realm = try! Realm()
