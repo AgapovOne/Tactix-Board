@@ -779,6 +779,7 @@
 				8D27C52F1E255F7C004D1BB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8DA4E1761B9AD9B800001794 /* Build configuration list for PBXProject "TactixBoard" */ = {
 			isa = XCConfigurationList;

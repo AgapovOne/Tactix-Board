@@ -17,7 +17,7 @@ class Alert {
         appearance.titleFont = UIFont.systemFont(ofSize: 18, weight: UIFontWeightLight)
         appearance.titleColor = Color.Alert.titleColor
         appearance.messageFont = UIFont.systemFont(ofSize: 14, weight: UIFontWeightLight)
-        appearance.messageColor = Color.Alert.titleColor
+        appearance.messageColor = Color.Alert.textColor
 
         // Customize default button appearance
         let db = DefaultButton.appearance()
@@ -39,7 +39,21 @@ class Alert {
         overlayAppearance.blurEnabled = false
         overlayAppearance.opacity = 0.7
     }
-
+    
+    static func PopupWithOK(title: String, message: String? = nil, completion: (() -> ())? = nil) -> PopupDialog {
+        let popup = PopupDialog(title: title, message: message, image: nil, buttonAlignment: .horizontal, transitionStyle: .bounceUp, gestureDismissal: true, completion: nil)
+        
+        let buttonOne = CancelButton(title: "Отменить") {
+            print("Cancelled button clicked")
+        }
+        
+        let buttonTwo = DefaultButton(title: "Ок") {
+            completion?()
+        }
+        popup.addButtons([buttonOne, buttonTwo])
+        return popup
+    }
+    
     static func PopupWithTextField(title: String, completion: @escaping (String) -> ()) -> PopupDialog {
         let textFieldAlert = TextFieldAlertVC(nibName: "TextFieldAlertVC", bundle: nil)
         textFieldAlert.titleLabelText = title

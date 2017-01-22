@@ -96,7 +96,7 @@ class BoardVC: UIViewController {
             self.tactic?.states[frame].positions.forEach({ (el, position) in
                 el.center = position
             })
-            }, completion: completion)
+        }, completion: completion)
     }
 
     // MARK: - Sidebar Menu
@@ -154,24 +154,20 @@ class BoardVC: UIViewController {
     // MARK: Save
     fileprivate func saveImage() {
         // make screenshot
-        // TODO: Screenshot only for board view, without sidebar.
-        // 1 option
-        UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, false, 0)
-        self.view.drawHierarchy(in: view.bounds.offsetBy(dx: -60, dy: 0), afterScreenUpdates: true)
-        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-
-        let popup = Alert.PopupWithTextField(title: "Введите название:") { name in
-            print(name) // use name somehow.
-
+        
+        let popup = Alert.PopupWithOK(title: "Хотите сохранить?", message: "Доска будет сохранена в ваших фотографиях") {
+            UIGraphicsBeginImageContext(self.boardView.bounds.size)
+            self.boardView.layer.render(in: UIGraphicsGetCurrentContext()!)
+            let screenshot = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            
             // save to photos
-            //UIImageWriteToSavedPhotosAlbum(cropped, self, #selector(self.image(_:didFinishSavingWithError:contextInfo:)), nil)
-            // TODO: Save to db/documents to use later in trainings :)
+            if let image = screenshot {
+                UIImageWriteToSavedPhotosAlbum(image, self, #selector(self.image(_:didFinishSavingWithError:contextInfo:)), nil)
+            }
         }
 
-        present(popup, animated: true) {
-            //textFieldAlert.textField.becomeFirstResponder()
-        }
+        present(popup, animated: true, completion: nil)
     }
 
     // MARK: Recording
@@ -244,7 +240,6 @@ class BoardVC: UIViewController {
         }
 
         present(popup, animated: true) {
-            //textFieldAlert.textField.becomeFirstResponder()
         }
     }
 
