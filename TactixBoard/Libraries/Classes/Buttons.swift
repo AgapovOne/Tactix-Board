@@ -12,7 +12,7 @@ import UIKit
 class BorderButton: UIButton {
   
   let borderWidth: CGFloat = 2
-  let borderColor = UIColor.white.withAlphaComponent(0.4).cgColor // CGColor!
+  let borderColor = UIColor.white.withAlphaComponent(0.4).cgColor
   let cornerRadius: CGFloat = 44
   
   required init?(coder aDecoder: NSCoder) {
@@ -22,5 +22,4 @@ class BorderButton: UIButton {
     self.layer.borderColor = self.borderColor
     self.layer.borderWidth = self.borderWidth
   }
-  
 }

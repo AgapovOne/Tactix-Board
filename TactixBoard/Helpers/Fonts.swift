@@ -8,5 +8,6 @@
 
 import UIKit
 
-//let numberFont = UIFont.systemFontOfSize(24, weight: UIFontWeightBold)
-let numberFont = UIFont.systemFont(ofSize: 24, weight: UIFontWeightBold)//(name: "AvenirNext-Bold", size: 24)
+struct Fonts {
+    static let numberFont = UIFont.systemFont(ofSize: 24, weight: UIFontWeightBold)
+}

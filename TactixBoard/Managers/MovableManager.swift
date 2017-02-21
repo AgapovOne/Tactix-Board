@@ -10,8 +10,7 @@ import UIKit
 
 class MovableManager {
     static let shared = MovableManager()
-    private init() {
-    }
-    var movableZone: CGRect = .zero
+    private init() {}
 
+    var movableZone: CGRect = .zero
 }

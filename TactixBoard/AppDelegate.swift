@@ -18,18 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        // RUN ONLY ON FIRST TIME
-        let hasLaunchedKey = "HasLaunched"
-        let defaults = UserDefaults.standard
-        let hasLaunched = defaults.bool(forKey: hasLaunchedKey)
-        
-        if !hasLaunched {
-            UserDefaults.standard.setValue("thin", forKey: "currentLineType")
-            
-            defaults.set(true, forKey: hasLaunchedKey)
-        }
-
 
         Alert.setup()
 
