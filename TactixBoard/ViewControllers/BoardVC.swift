@@ -156,8 +156,10 @@ class BoardVC: UIViewController {
         // make screenshot
         
         let popup = Alert.PopupWithOK(title: "Хотите сохранить?", message: "Доска будет сохранена в ваших фотографиях") {
-            UIGraphicsBeginImageContext(self.boardView.bounds.size)
-            self.boardView.layer.render(in: UIGraphicsGetCurrentContext()!)
+            UIGraphicsBeginImageContextWithOptions(self.boardView.bounds.size, false, 0.0)
+            let context = UIGraphicsGetCurrentContext()!
+            context.translateBy(x: -self.boardView.frame.minX, y: 0)
+            self.boardView.superview?.layer.render(in: context)
             let screenshot = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
             
@@ -411,7 +413,7 @@ extension BoardVC {
             ac.addAction(UIAlertAction(title: "OK", style: .default))
             present(ac, animated: true)
         } else {
-            let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved to your photos.", preferredStyle: .alert)
+            let ac = UIAlertController(title: "Saved!", message: "Image has been saved to your photos.", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .default))
             present(ac, animated: true)
         }
