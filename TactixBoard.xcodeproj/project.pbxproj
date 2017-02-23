@@ -18,9 +18,9 @@
 		372C1F961DBF27590006315B /* TextFieldAlertVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 372C1F951DBF27590006315B /* TextFieldAlertVC.xib */; };
 		37625D7E1DB4FBE00048EE01 /* SidebarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37625D7D1DB4FBE00048EE01 /* SidebarMenu.swift */; };
 		37701C021DAE641D007EB0E9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37701C011DAE641D007EB0E9 /* Images.xcassets */; };
-		37701C041DAE7D53007EB0E9 /* Tactic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37701C031DAE7D53007EB0E9 /* Tactic.swift */; };
-		37701C061DAF4955007EB0E9 /* MovableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37701C051DAF4955007EB0E9 /* MovableObject.swift */; };
-		37701C081DAF4BCE007EB0E9 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37701C071DAF4BCE007EB0E9 /* State.swift */; };
+		37701C041DAE7D53007EB0E9 /* RealmTactic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37701C031DAE7D53007EB0E9 /* RealmTactic.swift */; };
+		37701C061DAF4955007EB0E9 /* RealmMovable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37701C051DAF4955007EB0E9 /* RealmMovable.swift */; };
+		37701C081DAF4BCE007EB0E9 /* RealmState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37701C071DAF4BCE007EB0E9 /* RealmState.swift */; };
 		378D9DAB1DAD0C50007AFE1D /* MovableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D9DAA1DAD0C50007AFE1D /* MovableManager.swift */; };
 		37B056961DC0C6A3002F639E /* LoadTacticAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B056941DC0C6A3002F639E /* LoadTacticAlertVC.swift */; };
 		37B056971DC0C6A3002F639E /* LoadTacticAlertVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37B056951DC0C6A3002F639E /* LoadTacticAlertVC.xib */; };
@@ -33,6 +33,8 @@
 		8D1710101BB9BF740007F919 /* MovableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D17100F1BB9BF740007F919 /* MovableView.swift */; };
 		8D27C5311E255FC0004D1BB3 /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D27C5301E255FC0004D1BB3 /* PlayerTests.swift */; };
 		8D27C5331E255FD7004D1BB3 /* TactixBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D27C5321E255FD7004D1BB3 /* TactixBoardTests.swift */; };
+		8D3F584B1E5EBDD80035B68E /* MovableState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3F584A1E5EBDD80035B68E /* MovableState.swift */; };
+		8D3F58501E5ED44F0035B68E /* RealmPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3F584C1E5EBE9A0035B68E /* RealmPosition.swift */; };
 		8D5F87561BCC106200FFE288 /* AddMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F87551BCC106200FFE288 /* AddMenu.swift */; };
 		8D5F875C1BCCE35B00FFE288 /* DeleteMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F875B1BCCE35B00FFE288 /* DeleteMenu.swift */; };
 		8D5F875E1BCCEDFD00FFE288 /* MenuType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F875D1BCCEDFD00FFE288 /* MenuType.swift */; };
@@ -69,9 +71,9 @@
 		372C1F951DBF27590006315B /* TextFieldAlertVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldAlertVC.xib; sourceTree = "<group>"; };
 		37625D7D1DB4FBE00048EE01 /* SidebarMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarMenu.swift; sourceTree = "<group>"; };
 		37701C011DAE641D007EB0E9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		37701C031DAE7D53007EB0E9 /* Tactic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tactic.swift; sourceTree = "<group>"; };
-		37701C051DAF4955007EB0E9 /* MovableObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovableObject.swift; sourceTree = "<group>"; };
-		37701C071DAF4BCE007EB0E9 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		37701C031DAE7D53007EB0E9 /* RealmTactic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmTactic.swift; sourceTree = "<group>"; };
+		37701C051DAF4955007EB0E9 /* RealmMovable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmMovable.swift; sourceTree = "<group>"; };
+		37701C071DAF4BCE007EB0E9 /* RealmState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmState.swift; sourceTree = "<group>"; };
 		378D9DAA1DAD0C50007AFE1D /* MovableManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovableManager.swift; sourceTree = "<group>"; };
 		37B056941DC0C6A3002F639E /* LoadTacticAlertVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadTacticAlertVC.swift; sourceTree = "<group>"; };
 		37B056951DC0C6A3002F639E /* LoadTacticAlertVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadTacticAlertVC.xib; sourceTree = "<group>"; };
@@ -87,6 +89,8 @@
 		8D27C52A1E255F7C004D1BB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D27C5301E255FC0004D1BB3 /* PlayerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTests.swift; sourceTree = "<group>"; };
 		8D27C5321E255FD7004D1BB3 /* TactixBoardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TactixBoardTests.swift; sourceTree = "<group>"; };
+		8D3F584A1E5EBDD80035B68E /* MovableState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovableState.swift; sourceTree = "<group>"; };
+		8D3F584C1E5EBE9A0035B68E /* RealmPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmPosition.swift; sourceTree = "<group>"; };
 		8D5F87551BCC106200FFE288 /* AddMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMenu.swift; sourceTree = "<group>"; };
 		8D5F875B1BCCE35B00FFE288 /* DeleteMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteMenu.swift; sourceTree = "<group>"; };
 		8D5F875D1BCCEDFD00FFE288 /* MenuType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuType.swift; sourceTree = "<group>"; };
@@ -127,8 +131,8 @@
 		372969F11DACE63800831162 /* Movable */ = {
 			isa = PBXGroup;
 			children = (
-				372969F31DACE66900831162 /* BallView.swift */,
 				8D17100F1BB9BF740007F919 /* MovableView.swift */,
+				372969F31DACE66900831162 /* BallView.swift */,
 				372969F51DACE6D900831162 /* PlayerView.swift */,
 			);
 			path = Movable;
@@ -157,9 +161,10 @@
 		372C1F871DBA34C20006315B /* Realm */ = {
 			isa = PBXGroup;
 			children = (
-				37701C051DAF4955007EB0E9 /* MovableObject.swift */,
-				37701C071DAF4BCE007EB0E9 /* State.swift */,
-				37701C031DAE7D53007EB0E9 /* Tactic.swift */,
+				37701C051DAF4955007EB0E9 /* RealmMovable.swift */,
+				37701C071DAF4BCE007EB0E9 /* RealmState.swift */,
+				37701C031DAE7D53007EB0E9 /* RealmTactic.swift */,
+				8D3F584C1E5EBE9A0035B68E /* RealmPosition.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				372C1F891DBA34F50006315B /* MovableTactic.swift */,
+				8D3F584A1E5EBDD80035B68E /* MovableState.swift */,
 			);
 			path = Movable;
 			sourceTree = "<group>";
@@ -536,6 +542,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D7A4F711E01D4F400048C3D /* Array+Extensions.swift in Sources */,
+				8D3F58501E5ED44F0035B68E /* RealmPosition.swift in Sources */,
 				8D8BB1801DB3F5AF00514F87 /* RoundView.swift in Sources */,
 				8D17100E1BB9B9350007F919 /* LineView.swift in Sources */,
 				372C1F911DBDEC200006315B /* TextFieldAlertVC.swift in Sources */,
@@ -544,13 +551,14 @@
 				372C1F941DBE25EC0006315B /* Alert.swift in Sources */,
 				37B056961DC0C6A3002F639E /* LoadTacticAlertVC.swift in Sources */,
 				372969F61DACE6D900831162 /* PlayerView.swift in Sources */,
-				37701C081DAF4BCE007EB0E9 /* State.swift in Sources */,
-				37701C041DAE7D53007EB0E9 /* Tactic.swift in Sources */,
+				37701C081DAF4BCE007EB0E9 /* RealmState.swift in Sources */,
+				37701C041DAE7D53007EB0E9 /* RealmTactic.swift in Sources */,
+				8D3F584B1E5EBDD80035B68E /* MovableState.swift in Sources */,
 				372C1F8A1DBA34F50006315B /* MovableTactic.swift in Sources */,
 				37B0569C1DC0E6F0002F639E /* TacticAlertCell.swift in Sources */,
 				8D5F87601BCCF72B00FFE288 /* Fonts.swift in Sources */,
 				8D884B241BCD62F100279F13 /* LineTypeMenu.swift in Sources */,
-				37701C061DAF4955007EB0E9 /* MovableObject.swift in Sources */,
+				37701C061DAF4955007EB0E9 /* RealmMovable.swift in Sources */,
 				37BAE7E01DAFA3710075DBC5 /* DrawManager.swift in Sources */,
 				372969F01DACC41D00831162 /* DrawingView.swift in Sources */,
 				8DA4E1A81B9E11AB00001794 /* BoardVC.swift in Sources */,

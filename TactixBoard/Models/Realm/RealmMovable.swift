@@ -1,5 +1,5 @@
 //
-//  MovableObject.swift
+//  RealmMovable.swift
 //  TactixBoard
 //
 //  Created by Aleksey Agapov on 13/10/2016.
@@ -8,7 +8,7 @@
 
 import RealmSwift
 
-class MovableObject: Object {
+class RealmMovable: Object {
     dynamic var id: Int = 1
     dynamic var type = ""
     

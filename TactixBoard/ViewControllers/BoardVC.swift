@@ -48,6 +48,8 @@ class BoardVC: UIViewController {
 
     // MARK: - Players part
     fileprivate func setupBoard() {
+//        PercentPointManager.shared.boardSize = self.boardView.bounds.size
+
         tactic?.movableViews.forEach {
             boardView.superview?.addSubview($0)
         }
@@ -68,7 +70,7 @@ class BoardVC: UIViewController {
 
     fileprivate func cleanView() {
         boardView.superview?.subviews.forEach {
-            if let view = $0 as? MovableView {
+            if let view = $0 as? BMovable {
                 view.removeFromSuperview()
             }
         }
@@ -108,7 +110,7 @@ class BoardVC: UIViewController {
     fileprivate func addPlayerWithColor(_ color: UIColor, num: String = "P") {
         var id = 0
         // Can make number generation here.
-        let movableViews = self.view.subviews.filter({ $0 is MovableView }) as! [MovableView]
+        let movableViews = self.view.subviews.filter({ $0 is BMovable }) as! [BMovable]
         movableViews.forEach {
             if $0.id >= id {
                 id = $0.id + 1
@@ -121,14 +123,14 @@ class BoardVC: UIViewController {
 
     // MARK: Delete players
     fileprivate func removePlayerWithColor(_ color: UIColor) {
-        let movableViews = self.view.subviews.filter({ $0 is MovableView && $0.backgroundColor == color }) as! [MovableView]
+        let movableViews = self.view.subviews.filter({ $0 is BMovable && $0.backgroundColor == color }) as! [BMovable]
         if movableViews.isEmpty == false {
             movableViews.last?.removeFromSuperview()
         }
     }
 
     fileprivate func removeTeamWithColor(_ color: UIColor) {
-        let movableViews = self.view.subviews.filter({ $0 is MovableView && $0.backgroundColor == color }) as! [MovableView]
+        let movableViews = self.view.subviews.filter({ $0 is BMovable && $0.backgroundColor == color }) as! [BMovable]
         if movableViews.isEmpty == false {
             movableViews.forEach { $0.removeFromSuperview() }
         }
@@ -140,8 +142,8 @@ class BoardVC: UIViewController {
         drawView.isUserInteractionEnabled = enabled
 
         for view in self.view.subviews {
-            if view is MovableView {
-                let movableView = view as! MovableView
+            if view is BMovable {
+                let movableView = view as! BMovable
                 movableView.toggleMoves(enabled: !enabled)
             }
         }
@@ -178,8 +180,8 @@ class BoardVC: UIViewController {
     }
 
     fileprivate func saveState() {
-        let movableViews = self.view.subviews.filter({ $0 is MovableView }) as! [MovableView]
-        var positions: [MovableView: CGPoint] = [:]
+        let movableViews = self.view.subviews.filter({ $0 is BMovable }) as! [BMovable]
+        var positions: [BMovable: CGPoint] = [:]
         for el in movableViews {
             positions[el] = el.center
         }
@@ -225,8 +227,10 @@ class BoardVC: UIViewController {
 
         let popup = Alert.PopupWithTextField(title: "Введите название:") { [weak self] name in
             do {
-                if let tactic = self?.tactic?.toTactic(name: name) {
+                if let unwrappedTactic = self?.tactic {
                     let realm = RealmManager.shared.defaultRealm
+
+                    let tactic = RealmTactic(tactic: unwrappedTactic, name: name)
 
                     try realm.write {
                         realm.add(tactic)
@@ -255,7 +259,7 @@ class BoardVC: UIViewController {
         if isPlaying {
             let realm = RealmManager.shared.defaultRealm
 
-            let tactics = Array(realm.objects(Tactic.self))
+            let tactics = Array(realm.objects(RealmTactic.self))
 
             let (table, popup) = Alert.PopupWithTactics(title: "", tactics: tactics)
             table.delegate = self
@@ -395,9 +399,9 @@ extension BoardVC: SidebarDelegate {
 }
 
 extension BoardVC: LoadTacticAlertDelegate {
-    func didClick(with tactic: Tactic) {
+    func didClick(with tactic: RealmTactic) {
         print("Hello it's a click!")
-        self.tactic = tactic.toMovableTactic()
+        self.tactic = MovableTactic(tactic)
         dismiss(animated: true) {
             self.cleanView()
             self.setupBoard()

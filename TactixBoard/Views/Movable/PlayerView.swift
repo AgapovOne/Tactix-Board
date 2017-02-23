@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PlayerView: MovableView {
+class PlayerView: BMovable {
     fileprivate static let size: CGSize = CGSize(width: 44, height: 44)
 
     var num: String?
@@ -39,7 +39,7 @@ class PlayerView: MovableView {
         self.addSubview(number)
     }
 
-    convenience init(movableObject: MovableObject) {
+    convenience init(movableObject: RealmMovable) {
         self.init(id: movableObject.id,
                   color: UIColor(hexString: movableObject.color!)!,
                   num: movableObject.number,
@@ -57,10 +57,11 @@ class PlayerView: MovableView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
 
-    // MARK: Public methods
-    override func toMovableObject() -> MovableObject {
-        let object = MovableObject()
+extension PlayerView {
+    override var realmMovable: RealmMovable {
+        let object = RealmMovable()
         object.color = self.backgroundColor?.hexValue()
         object.id = self.id
         object.type = "player"

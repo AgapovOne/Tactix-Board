@@ -8,37 +8,37 @@
 
 import UIKit
 
-struct MovableState {
-    var frame: Int
-    var positions: [MovableView: CGPoint]
-
-    func toState() -> State {
-        let state = State()
-        state.frame = self.frame
-        let positions = self.positions.map {
-            Position(id: $0.key.id, center: $0.value)
-        }
-        state.positions.append(objectsIn: positions)
-        return state
-    }
-}
-
 struct MovableTactic {
     var states: [MovableState]
-    var movableViews: [MovableView]
+    var movableViews: [BMovable]
 
-    func toTactic(name: String) -> Tactic {
-        let states = self.states.map { $0.toState() }
-        let movableObjects: [MovableObject] = self.movableViews.map {
-            if let view = $0 as? PlayerView {
-                return view.toMovableObject()
+    init(states: [MovableState], movableViews: [BMovable]) {
+        self.states = states
+        self.movableViews = movableViews
+    }
+
+    init(_ tactic: RealmTactic) {
+        let movableViews: [BMovable] = tactic.movableObjects.map {
+            switch $0.type {
+            case "player":
+                return PlayerView(id: $0.id, color: Color.color(hex: $0.color ?? Color.Player.black.hexValue())!, num: $0.number, center: CGPoint(x: $0.centerX, y: $0.centerY))
+            case "ball":
+                return BallView(centerX: CGFloat($0.centerX), centerY: CGFloat($0.centerY))
+            default:
+                return PlayerView(id: $0.id, color: Color.Player.black, num: "?", center: CGPoint(x: $0.centerX, y: $0.centerY))
             }
-            if let view = $0 as? BallView {
-                return view.toMovableObject()
-            }
-            return $0.toMovableObject()
         }
-        return Tactic(name: name, states: states, movableObjects: movableObjects)
+
+        let states: [MovableState] = tactic.states.map {
+            var positions: [BMovable: CGPoint] = [:]
+            for position in Array($0.positions) {
+                let key = movableViews.filter { $0.id == position.id }[0]
+                positions[key] = CGPoint(x: position.centerX, y: position.centerY)
+            }
+            return MovableState(frame: $0.frame, positions: positions)
+        }
+
+        self.init(states: states, movableViews: movableViews)
     }
 }
 

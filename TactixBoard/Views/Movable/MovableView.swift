@@ -1,5 +1,5 @@
 //
-//  MovableView.swift
+//  BMovable.swift
 //  TactixBoard
 //
 //  Created by Алексей Агапов on 28/09/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MovableView: UIView {
+class BMovable: UIView {
     var id: Int = 0
     var lastLocation: CGPoint = CGPoint(x: 0, y: 0)
 
@@ -26,7 +26,7 @@ class MovableView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        let panRecognizer = UIPanGestureRecognizer(target:self, action:#selector(MovableView.detectPan(_:)))
+        let panRecognizer = UIPanGestureRecognizer(target:self, action:#selector(BMovable.detectPan(_:)))
         self.gestureRecognizers = [panRecognizer]
 
         self.layer.shadowOpacity = 0.7
@@ -91,22 +91,25 @@ class MovableView: UIView {
 
     func toggleMoves(enabled: Bool) {
         self.gestureRecognizers = enabled == true
-            ? [UIPanGestureRecognizer(target:self, action:#selector(MovableView.detectPan(_:)))]
+            ? [UIPanGestureRecognizer(target:self, action:#selector(BMovable.detectPan(_:)))]
             : []
 
         self.isUserInteractionEnabled = enabled
     }
+}
 
-    // MARK: Public methods
-    func toMovableObject() -> MovableObject {
-        let object = MovableObject()
-        object.color = self.backgroundColor?.hexValue()
-        object.id = self.id
-        object.type = "default"
+extension BMovable {
+    var realmMovable: RealmMovable {
+        get {
+            let object = RealmMovable()
+            object.color = self.backgroundColor?.hexValue()
+            object.id = self.id
+            object.type = "default"
 
-        object.centerX = Double(self.center.x)
-        object.centerY = Double(self.center.y)
+            object.centerX = Double(self.center.x)
+            object.centerY = Double(self.center.y)
 
-        return object
+            return object
+        }
     }
 }

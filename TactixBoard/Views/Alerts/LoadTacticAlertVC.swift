@@ -9,14 +9,14 @@
 import UIKit
 
 protocol LoadTacticAlertDelegate: class {
-    func didClick(with tactic: Tactic)
+    func didClick(with tactic: RealmTactic)
 }
 
 class LoadTacticAlertVC: UIViewController {
     @IBOutlet private var tableView: UITableView!
 
     weak var delegate: LoadTacticAlertDelegate?
-    var tactics: [Tactic] = []
+    var tactics: [RealmTactic] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()

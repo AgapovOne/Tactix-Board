@@ -71,7 +71,7 @@ class Alert {
         return popup
     }
 
-    static func PopupWithTactics(title: String, tactics: [Tactic]) -> (LoadTacticAlertVC, PopupDialog) {
+    static func PopupWithTactics(title: String, tactics: [RealmTactic]) -> (LoadTacticAlertVC, PopupDialog) {
         let loadTacticAlert = LoadTacticAlertVC(nibName: String(describing: LoadTacticAlertVC.self), bundle: nil)
         loadTacticAlert.tactics = tactics
 
