@@ -4,7 +4,7 @@ use_frameworks!
 target 'TactixBoard' do
 
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
-  pod 'SnapKit', '~> 3.1.2'
+  pod 'SnapKit'
   pod 'SwiftyAttributes'
   #pod 'StatusBarNotificationCenter', :git => 'https://github.com/36Kr-Mobile/StatusBarNotificationCenter.git'
   pod 'PopupDialog'
