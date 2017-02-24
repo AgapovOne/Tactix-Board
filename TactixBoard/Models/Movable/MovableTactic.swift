@@ -6,7 +6,7 @@
 //  Copyright © 2016 agapov.one.ru. All rights reserved.
 //
 
-import UIKit
+import CoreGraphics
 
 struct MovableTactic {
     var states: [MovableState]
@@ -21,21 +21,29 @@ struct MovableTactic {
         let movableViews: [BMovable] = tactic.movableObjects.map {
             switch $0.type {
             case "player":
-                return PlayerView(id: $0.id, color: Color.color(hex: $0.color ?? Color.Player.black.hexValue())!, num: $0.number, center: CGPoint(x: $0.centerX, y: $0.centerY))
+                return PlayerView(id: $0.id,
+                                  color: Color.color(hex: $0.color ?? Color.Player.black.hexValue())!,
+                                  num: $0.number,
+                                  center: CGPoint($0.center!))
             case "ball":
-                return BallView(centerX: CGFloat($0.centerX), centerY: CGFloat($0.centerY))
+                return BallView(center: CGPoint($0.center!))
             default:
-                return PlayerView(id: $0.id, color: Color.Player.black, num: "?", center: CGPoint(x: $0.centerX, y: $0.centerY))
+                return PlayerView(id: $0.id,
+                                  color: Color.Player.black,
+                                  num: "?",
+                                  center: CGPoint($0.center!))
             }
         }
 
-        let states: [MovableState] = tactic.states.map {
+        let states: [MovableState] = tactic.states.map { state in
             var positions: [BMovable: CGPoint] = [:]
-            for position in Array($0.positions) {
-                let key = movableViews.filter { $0.id == position.id }[0]
-                positions[key] = CGPoint(x: position.centerX, y: position.centerY)
+            state.positions.forEach { position in
+                if let key = movableViews.first(where: { $0.id == position.id }),
+                    let center = position.center {
+                    positions[key] = CGPoint(center)
+                }
             }
-            return MovableState(frame: $0.frame, positions: positions)
+            return MovableState(frame: state.frame, positions: positions)
         }
 
         self.init(states: states, movableViews: movableViews)
@@ -56,7 +64,7 @@ extension MovableTactic {
             PlayerView(id: 8, color:Color.Player.blue, num:"6", center: CGPoint(x: center.x + 80, y: center.y + 200)),
             PlayerView(id: 9, color:Color.Player.blue, num:"8", center: CGPoint(x: center.x - 80, y: center.y + 200)),
             PlayerView(id: 10, color:Color.Player.green, num:"G", center: CGPoint(x: center.x, y: center.y + 420)),
-            BallView(centerX: center.x, centerY: center.y)
+            BallView(center: center)
             ])
     }
 }

@@ -17,6 +17,5 @@ class RealmMovable: Object {
     dynamic var image: String? = ""
 
     // Initial center
-    dynamic var centerX: Double = 0.0
-    dynamic var centerY: Double = 0.0
+    dynamic var center: RealmPercentPoint?
 }

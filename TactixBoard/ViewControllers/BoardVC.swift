@@ -230,7 +230,7 @@ class BoardVC: UIViewController {
                 if let unwrappedTactic = self?.tactic {
                     let realm = RealmManager.shared.defaultRealm
 
-                    let tactic = RealmTactic(tactic: unwrappedTactic, name: name)
+                    let tactic = RealmTactic(name: name, tactic: unwrappedTactic)
 
                     try realm.write {
                         realm.add(tactic)
@@ -260,7 +260,6 @@ class BoardVC: UIViewController {
             let realm = RealmManager.shared.defaultRealm
 
             let tactics = Array(realm.objects(RealmTactic.self))
-
             let (table, popup) = Alert.PopupWithTactics(title: "", tactics: tactics)
             table.delegate = self
             present(popup, animated: true) {

@@ -10,9 +10,9 @@ import UIKit
 
 class BMovable: UIView {
     var id: Int = 0
-    var lastLocation: CGPoint = CGPoint(x: 0, y: 0)
+    private var lastLocation: CGPoint = CGPoint(x: 0, y: 0)
 
-    var currentPosition: CGPoint = CGPoint.zero {
+    private var currentPosition: CGPoint = CGPoint.zero {
         didSet {
             self.center = currentPosition
         }
@@ -106,8 +106,7 @@ extension BMovable {
             object.id = self.id
             object.type = "default"
 
-            object.centerX = Double(self.center.x)
-            object.centerY = Double(self.center.y)
+            object.center = RealmPercentPoint(self.center)
 
             return object
         }

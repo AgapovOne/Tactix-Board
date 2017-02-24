@@ -43,7 +43,7 @@ class PlayerView: BMovable {
         self.init(id: movableObject.id,
                   color: UIColor(hexString: movableObject.color!)!,
                   num: movableObject.number,
-                  center: CGPoint(x: movableObject.centerX, y: movableObject.centerY))
+                  center: CGPoint(movableObject.center!))
     }
 
     convenience init() {
@@ -67,8 +67,7 @@ extension PlayerView {
         object.type = "player"
         object.number = self.num
 
-        object.centerX = Double(self.center.x)
-        object.centerY = Double(self.center.y)
+        object.center = RealmPercentPoint(self.center)
 
         return object
     }

@@ -9,8 +9,8 @@
 import UIKit
 
 class BallView: BMovable {
-    convenience init(centerX: CGFloat, centerY: CGFloat) {
-        self.init(frame: CGRect(x: centerX - 18, y: centerY - 18, width: 36.0, height: 36.0))
+    convenience init(center: CGPoint) {
+        self.init(frame: CGRect(x: center.x - 18, y: center.y - 18, width: 36.0, height: 36.0))
         self.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "ball"))
         self.layer.zPosition = 11
     }
@@ -24,8 +24,7 @@ extension BallView {
             object.id = self.id
             object.type = "ball"
 
-            object.centerX = Double(self.center.x)
-            object.centerY = Double(self.center.y)
+            object.center = RealmPercentPoint(self.center)
 
             return object
         }

@@ -10,13 +10,11 @@ import RealmSwift
 
 class RealmPosition: Object {
     dynamic var id: Int = 0
-    dynamic var centerX: Double = 0.0
-    dynamic var centerY: Double = 0.0
+    dynamic var center: RealmPercentPoint?
 
     convenience init(id: Int, center: CGPoint) {
         self.init()
         self.id = id
-        self.centerX = Double(center.x)
-        self.centerY = Double(center.y)
+        self.center = RealmPercentPoint(center)
     }
 }
