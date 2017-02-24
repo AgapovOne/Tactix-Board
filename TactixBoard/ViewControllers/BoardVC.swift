@@ -93,8 +93,8 @@ class BoardVC: UIViewController {
         }
     }
 
-    fileprivate func movePlayers(to frame: Int, completion: ((Bool) -> ())? = nil) {
-        UIView.animate(withDuration: 0.75, animations: {
+    fileprivate func movePlayers(to frame: Int, duration: TimeInterval = 0.75, completion: ((Bool) -> ())? = nil) {
+        UIView.animate(withDuration: duration, animations: {
             self.tactic?.states[frame].positions.forEach({ (el, position) in
                 el.center = position
             })
@@ -221,31 +221,33 @@ class BoardVC: UIViewController {
         guard tactic != nil, tactic!.states.isEmpty == false else {
             return
         }
-        movePlayers(to: 0)
-        currentFrame = 0
-        sidebarMenu.setBase(number: currentFrame)
+        movePlayers(to: 0, duration: 0.25) { finished in
+            self.currentFrame = 0
+            self.sidebarMenu.setBase(number: 0)
 
-        let popup = Alert.PopupWithTextField(title: "Введите название:") { [weak self] name in
-            do {
-                if let unwrappedTactic = self?.tactic {
-                    let realm = RealmManager.shared.defaultRealm
+            let popup = Alert.PopupWithTextField(title: "Введите название:") { [weak self] name in
+                do {
+                    if let unwrappedTactic = self?.tactic {
+                        let realm = RealmManager.shared.defaultRealm
 
-                    let tactic = RealmTactic(name: name, tactic: unwrappedTactic)
+                        let tactic = RealmTactic(name: name, tactic: unwrappedTactic)
 
-                    try realm.write {
-                        realm.add(tactic)
-                        print("Saved")
+                        try realm.write {
+                            realm.add(tactic)
+                            print("Saved")
 
-//                        self.tactic?.states = []
-                        self?.resetBoard()
+                            //self.tactic?.states = []
+                            self?.resetBoard()
+                        }
                     }
+                } catch(let err) {
+                    self?.present(PopupDialog(title: "Ошибка", message: err.localizedDescription), animated: true, completion: nil)
                 }
-            } catch(let err) {
-                self?.present(PopupDialog(title: "Ошибка", message: err.localizedDescription), animated: true, completion: nil)
             }
-        }
 
-        present(popup, animated: true) {
+            self.present(popup, animated: true) {
+                popup.viewController.becomeFirstResponder()
+            }
         }
     }
 
