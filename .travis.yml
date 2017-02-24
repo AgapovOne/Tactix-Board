@@ -1,0 +1,4 @@
+osx_image: xcode8.2
+language: swift
+xcode_workspace: TactixBoard.xcworkspace # path to your xcodeproj folder
+xcode_scheme: TactixBoard
