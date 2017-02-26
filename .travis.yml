@@ -1,4 +1,6 @@
 osx_image: xcode8.2
 language: objective-c
-xcode_workspace: TactixBoard.xcworkspace # path to your xcodeproj folder
+xcode_workspace: TactixBoard.xcworkspace
 xcode_scheme: TactixBoard
+script:
+    - xcodebuild clean build -sdk iphonesimulator -workspace TactixBoard.xcworkspace -scheme TactixBoard CODE_SIGNING_REQUIRED=NO
