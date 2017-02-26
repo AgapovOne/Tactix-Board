@@ -107,7 +107,7 @@ class BoardVC: UIViewController {
     }
 
     // MARK: Add players
-    fileprivate func addPlayerWithColor(_ color: UIColor, num: String = "P") {
+    fileprivate func addPlayerWithColor(_ color: PlayerView.PlayerColor, num: String = "P") {
         var id = 0
         // Can make number generation here.
         let movableViews = self.view.subviews.filter({ $0 is BMovable }) as! [BMovable]
@@ -122,18 +122,14 @@ class BoardVC: UIViewController {
     }
 
     // MARK: Delete players
-    fileprivate func removePlayerWithColor(_ color: UIColor) {
-        let movableViews = self.view.subviews.filter({ $0 is BMovable && $0.backgroundColor == color }) as! [BMovable]
-        if movableViews.isEmpty == false {
-            movableViews.last?.removeFromSuperview()
-        }
+    fileprivate func removePlayerWithColor(_ color: PlayerView.PlayerColor) {
+        let movableViews = self.view.subviews.filter({ ($0 as? PlayerView)?.color == color })
+        movableViews.last?.removeFromSuperview()
     }
 
-    fileprivate func removeTeamWithColor(_ color: UIColor) {
-        let movableViews = self.view.subviews.filter({ $0 is BMovable && $0.backgroundColor == color }) as! [BMovable]
-        if movableViews.isEmpty == false {
-            movableViews.forEach { $0.removeFromSuperview() }
-        }
+    fileprivate func removeTeamWithColor(_ color: PlayerView.PlayerColor) {
+        let movableViews = self.view.subviews.filter({ ($0 as? PlayerView)?.color == color })
+        movableViews.forEach { $0.removeFromSuperview() }
     }
 
     // MARK: Drawing
@@ -301,29 +297,29 @@ extension BoardVC: SidebarDelegate {
         switch type {
         // Add
         case .addRed:
-            addPlayerWithColor(Color.Player.red)
+            addPlayerWithColor(.red)
         case .addBlue:
-            addPlayerWithColor(Color.Player.blue)
+            addPlayerWithColor(.blue)
         case .addBlack:
-            addPlayerWithColor(Color.Player.black)
+            addPlayerWithColor(.black)
         case .addOrangeGK:
-            addPlayerWithColor(Color.Player.orange, num: "G")
+            addPlayerWithColor(.orange, num: "G")
         case .addGreenGK:
-            addPlayerWithColor(Color.Player.green, num: "G")
+            addPlayerWithColor(.green, num: "G")
 
         // Delete
         case .deleteRed:
-            removePlayerWithColor(Color.Player.red)
+            removePlayerWithColor(.red)
         case .deleteBlue:
-            removePlayerWithColor(Color.Player.blue)
+            removePlayerWithColor(.blue)
         case .deleteBlack:
-            removePlayerWithColor(Color.Player.black)
+            removePlayerWithColor(.black)
         case .deleteBlueTeam:
-            removeTeamWithColor(Color.Player.blue)
+            removeTeamWithColor(.blue)
         case .deleteOrangeGK:
-            removePlayerWithColor(Color.Player.orange)
+            removePlayerWithColor(.orange)
         case .deleteGreenGK:
-            removePlayerWithColor(Color.Player.green)
+            removePlayerWithColor(.green)
 
         // Draw
         case .draw:

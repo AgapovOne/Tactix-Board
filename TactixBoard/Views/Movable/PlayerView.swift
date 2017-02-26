@@ -9,12 +9,64 @@
 import UIKit
 
 class PlayerView: BMovable {
+    enum PlayerColor {
+        case
+        red,
+        blue,
+        black,
+        orange,
+        green
+
+        var uiColor: UIColor {
+            switch self {
+            case .red:
+                return Color.Player.red
+            case .blue:
+                return Color.Player.blue
+            case .black:
+                return Color.Player.black
+            case .orange:
+                return Color.Player.orange
+            case .green:
+                return Color.Player.green
+            }
+        }
+
+        var hexValue: String {
+            return uiColor.hexValue()
+        }
+
+        static func color(for hexValue: String) -> PlayerColor {
+            var color: PlayerColor = PlayerColor.black
+            switch hexValue {
+            case Color.Player.red.hexValue():
+                color = PlayerColor.red
+            case Color.Player.blue.hexValue():
+                color = PlayerColor.blue
+            case Color.Player.black.hexValue():
+                color = PlayerColor.black
+            case Color.Player.orange.hexValue():
+                color = PlayerColor.orange
+            case Color.Player.green.hexValue():
+                color = PlayerColor.green
+            default:
+                break
+            }
+            return color
+        }
+    }
+
     fileprivate static let size: CGSize = CGSize(width: 44, height: 44)
 
     var num: String?
+    var color: PlayerColor! {
+        didSet {
+            self.backgroundColor = color.uiColor
+        }
+    }
 
     convenience init(id: Int,
-                     color: UIColor,
+                     color: PlayerColor,
                      num: String?,
                      center: CGPoint) {
         self.init(frame: CGRect(x: center.x - PlayerView.size.width / 2,
@@ -22,11 +74,11 @@ class PlayerView: BMovable {
                                 width: PlayerView.size.width,
                                 height: PlayerView.size.height))
         self.id = id
+        self.color = color
+        self.backgroundColor = color.uiColor
 
         self.layer.borderColor = Color.white.cgColor
         self.layer.borderWidth = 2.0
-
-        self.backgroundColor = color
 
         let number = UILabel(frame:CGRect(x: 0, y: 0, width: PlayerView.size.width, height: PlayerView.size.height))
         number.text = num
@@ -41,13 +93,13 @@ class PlayerView: BMovable {
 
     convenience init(movableObject: RealmMovable) {
         self.init(id: movableObject.id,
-                  color: UIColor(hexString: movableObject.color!)!,
+                  color: .color(for: movableObject.color!),
                   num: movableObject.number,
                   center: CGPoint(movableObject.center!))
     }
 
     convenience init() {
-        self.init(id: 0, color: Color.Player.black, num: nil, center: CGPoint(x: 400, y: 400))
+        self.init(id: 0, color: .black, num: nil, center: CGPoint(x: PercentPointManager.shared.maximumX / 2, y: PercentPointManager.shared.maximumY / 2))
     }
 
     override init(frame: CGRect) {

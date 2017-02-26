@@ -22,14 +22,14 @@ struct MovableTactic {
             switch $0.type {
             case "player":
                 return PlayerView(id: $0.id,
-                                  color: Color.color(hex: $0.color ?? Color.Player.black.hexValue())!,
+                                  color: .color(for: $0.color!),
                                   num: $0.number,
                                   center: CGPoint($0.center!))
             case "ball":
                 return BallView(center: CGPoint($0.center!))
             default:
                 return PlayerView(id: $0.id,
-                                  color: Color.Player.black,
+                                  color: .black,
                                   num: "?",
                                   center: CGPoint($0.center!))
             }
@@ -54,16 +54,16 @@ struct MovableTactic {
 extension MovableTactic {
     static func defaultTactic(for center: CGPoint) -> MovableTactic {
         return MovableTactic(states: [], movableViews: [
-            PlayerView(id: 1, color: Color.Player.orange, num: "G", center: CGPoint(x: center.x, y: center.y - 420)),
-            PlayerView(id: 2, color:Color.Player.red, num:"1", center: CGPoint(x: center.x + 80, y: center.y - 200)),
-            PlayerView(id: 3, color:Color.Player.red, num:"3", center: CGPoint(x: center.x - 80, y: center.y - 200)),
-            PlayerView(id: 4, color:Color.Player.red, num:"5", center: CGPoint(x: center.x + 80, y: center.y - 100)),
-            PlayerView(id: 5, color:Color.Player.red, num:"7", center: CGPoint(x: center.x - 80, y: center.y - 100)),
-            PlayerView(id: 6, color:Color.Player.blue, num:"2", center: CGPoint(x: center.x + 80, y: center.y + 100)),
-            PlayerView(id: 7, color:Color.Player.blue, num:"4", center: CGPoint(x: center.x - 80, y: center.y + 100)),
-            PlayerView(id: 8, color:Color.Player.blue, num:"6", center: CGPoint(x: center.x + 80, y: center.y + 200)),
-            PlayerView(id: 9, color:Color.Player.blue, num:"8", center: CGPoint(x: center.x - 80, y: center.y + 200)),
-            PlayerView(id: 10, color:Color.Player.green, num:"G", center: CGPoint(x: center.x, y: center.y + 420)),
+            PlayerView(id: 1, color: .orange, num: "G", center: CGPoint(x: center.x, y: center.y - 420)),
+            PlayerView(id: 2, color: .red, num:"1", center: CGPoint(x: center.x + 80, y: center.y - 200)),
+            PlayerView(id: 3, color: .red, num:"3", center: CGPoint(x: center.x - 80, y: center.y - 200)),
+            PlayerView(id: 4, color: .red, num:"5", center: CGPoint(x: center.x + 80, y: center.y - 100)),
+            PlayerView(id: 5, color: .red, num:"7", center: CGPoint(x: center.x - 80, y: center.y - 100)),
+            PlayerView(id: 6, color: .blue, num:"2", center: CGPoint(x: center.x + 80, y: center.y + 100)),
+            PlayerView(id: 7, color: .blue, num:"4", center: CGPoint(x: center.x - 80, y: center.y + 100)),
+            PlayerView(id: 8, color: .blue, num:"6", center: CGPoint(x: center.x + 80, y: center.y + 200)),
+            PlayerView(id: 9, color: .blue, num:"8", center: CGPoint(x: center.x - 80, y: center.y + 200)),
+            PlayerView(id: 10, color: .green, num:"G", center: CGPoint(x: center.x, y: center.y + 420)),
             BallView(center: center)
             ])
     }

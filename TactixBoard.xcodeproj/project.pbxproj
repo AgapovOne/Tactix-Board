@@ -37,13 +37,9 @@
 		8D3F584B1E5EBDD80035B68E /* MovableState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3F584A1E5EBDD80035B68E /* MovableState.swift */; };
 		8D3F584D1E5EBE9A0035B68E /* RealmPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3F584C1E5EBE9A0035B68E /* RealmPosition.swift */; };
 		8D3F584F1E5EC03E0035B68E /* RealmPercentPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3F584E1E5EC03E0035B68E /* RealmPercentPoint.swift */; };
-		8D3F58521E5F77030035B68E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D3F58511E5F77030035B68E /* GoogleService-Info.plist */; };
-		8D5F87561BCC106200FFE288 /* AddMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F87551BCC106200FFE288 /* AddMenu.swift */; };
-		8D5F875C1BCCE35B00FFE288 /* DeleteMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F875B1BCCE35B00FFE288 /* DeleteMenu.swift */; };
 		8D5F875E1BCCEDFD00FFE288 /* MenuType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F875D1BCCEDFD00FFE288 /* MenuType.swift */; };
 		8D5F87601BCCF72B00FFE288 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F875F1BCCF72B00FFE288 /* Fonts.swift */; };
 		8D7A4F711E01D4F400048C3D /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A4F701E01D4F400048C3D /* Array+Extensions.swift */; };
-		8D884B241BCD62F100279F13 /* LineTypeMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D884B231BCD62F100279F13 /* LineTypeMenu.swift */; };
 		8D8BB1801DB3F5AF00514F87 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8BB17F1DB3F5AF00514F87 /* RoundView.swift */; };
 		8DA4E1811B9AD9B800001794 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1801B9AD9B800001794 /* AppDelegate.swift */; };
 		8DA4E1861B9AD9B800001794 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DA4E1841B9AD9B800001794 /* Main.storyboard */; };
@@ -96,13 +92,9 @@
 		8D3F584A1E5EBDD80035B68E /* MovableState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovableState.swift; sourceTree = "<group>"; };
 		8D3F584C1E5EBE9A0035B68E /* RealmPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmPosition.swift; sourceTree = "<group>"; };
 		8D3F584E1E5EC03E0035B68E /* RealmPercentPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmPercentPoint.swift; sourceTree = "<group>"; };
-		8D3F58511E5F77030035B68E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		8D5F87551BCC106200FFE288 /* AddMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMenu.swift; sourceTree = "<group>"; };
-		8D5F875B1BCCE35B00FFE288 /* DeleteMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteMenu.swift; sourceTree = "<group>"; };
 		8D5F875D1BCCEDFD00FFE288 /* MenuType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuType.swift; sourceTree = "<group>"; };
 		8D5F875F1BCCF72B00FFE288 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		8D7A4F701E01D4F400048C3D /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
-		8D884B231BCD62F100279F13 /* LineTypeMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineTypeMenu.swift; sourceTree = "<group>"; };
 		8D8BB17F1DB3F5AF00514F87 /* RoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 		8DA4E17B1B9AD9B800001794 /* TactixBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TactixBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA4E17F1B9AD9B800001794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -237,9 +229,6 @@
 		8D5F875A1BCCE2A600FFE288 /* Sidebar */ = {
 			isa = PBXGroup;
 			children = (
-				8D5F87551BCC106200FFE288 /* AddMenu.swift */,
-				8D5F875B1BCCE35B00FFE288 /* DeleteMenu.swift */,
-				8D884B231BCD62F100279F13 /* LineTypeMenu.swift */,
 				8D5F875D1BCCEDFD00FFE288 /* MenuType.swift */,
 				372C1F851DB8A49E0006315B /* SidebarButton.swift */,
 				37625D7D1DB4FBE00048EE01 /* SidebarMenu.swift */,
@@ -302,7 +291,6 @@
 				8DA4E1801B9AD9B800001794 /* AppDelegate.swift */,
 				37701C011DAE641D007EB0E9 /* Images.xcassets */,
 				8DA4E17F1B9AD9B800001794 /* Info.plist */,
-				8D3F58511E5F77030035B68E /* GoogleService-Info.plist */,
 			);
 			path = TactixBoard;
 			sourceTree = "<group>";
@@ -455,7 +443,6 @@
 				8DA4E1861B9AD9B800001794 /* Main.storyboard in Resources */,
 				8DA4E18B1B9AD9B800001794 /* LaunchScreen.xib in Resources */,
 				37701C021DAE641D007EB0E9 /* Images.xcassets in Resources */,
-				8D3F58521E5F77030035B68E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,7 +554,6 @@
 				372C1F8A1DBA34F50006315B /* MovableTactic.swift in Sources */,
 				37B0569C1DC0E6F0002F639E /* TacticAlertCell.swift in Sources */,
 				8D5F87601BCCF72B00FFE288 /* Fonts.swift in Sources */,
-				8D884B241BCD62F100279F13 /* LineTypeMenu.swift in Sources */,
 				37701C061DAF4955007EB0E9 /* RealmMovable.swift in Sources */,
 				37BAE7E01DAFA3710075DBC5 /* DrawManager.swift in Sources */,
 				372969F01DACC41D00831162 /* DrawingView.swift in Sources */,
@@ -575,7 +561,6 @@
 				8D3F584D1E5EBE9A0035B68E /* RealmPosition.swift in Sources */,
 				372969F91DACE84E00831162 /* Colors.swift in Sources */,
 				378D9DAB1DAD0C50007AFE1D /* MovableManager.swift in Sources */,
-				8D5F875C1BCCE35B00FFE288 /* DeleteMenu.swift in Sources */,
 				372969F41DACE66900831162 /* BallView.swift in Sources */,
 				8DA4E1811B9AD9B800001794 /* AppDelegate.swift in Sources */,
 				8DA4E1AA1B9E13D900001794 /* Buttons.swift in Sources */,
@@ -583,7 +568,6 @@
 				8D1710101BB9BF740007F919 /* BMovable.swift in Sources */,
 				372C1F861DB8A49E0006315B /* SidebarButton.swift in Sources */,
 				8D3F58491E5E13F20035B68E /* PercentPointManager.swift in Sources */,
-				8D5F87561BCC106200FFE288 /* AddMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
