@@ -1,4 +1,5 @@
 # TactixBoard
+[![Build Status](https://travis-ci.org/AgapovOne/Tactix-Board.svg?branch=master)](https://travis-ci.org/AgapovOne/Tactix-Board)
 
 Board app to use in futsal tactic building. Let's you move players, assign tactics and remember moves for every player.
 
